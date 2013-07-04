@@ -2956,7 +2956,7 @@ input.error {
 
 /* line 726, ../sass/main.scss */
 .addressContainer {
-  border: 1px solid #c2c2c2;
+  border: 1px solid #5e5e57;
   border-radius: 3px;
   width: 367px;
 }
@@ -2994,7 +2994,7 @@ input.error {
 }
 /* line 760, ../sass/main.scss */
 .showMap a {
-  color: #c2c2c2;
+  color: #5e5e57;
 }
 /* line 764, ../sass/main.scss */
 .showMap.active .s {
@@ -3109,7 +3109,7 @@ input[type="submit"].getTaxi.disabled:hover {
 .pay {
   float: right;
   font-size: 12px;
-  color: #c2c2c2;
+  color: #5e5e57;
   margin-right: 30px;
   padding: 10px 0 0 0;
 }
@@ -3128,7 +3128,7 @@ input[type="submit"].getTaxi.disabled:hover {
 
 /* line 881, ../sass/main.scss */
 .addressWapper {
-  border: 1px solid #c2c2c2;
+  border: 1px solid #5e5e57;
   border-left: 0px;
   border-right: 0px;
   padding: 0px;
@@ -3140,7 +3140,7 @@ input[type="submit"].getTaxi.disabled:hover {
   padding: 10px;
   border: 0;
   box-shadow: 0 0 0 0;
-  color: #c2c2c2;
+  color: #5e5e57;
   font-size: 16px;
   height: 100px;
 }
@@ -3437,7 +3437,7 @@ footer .layer3 {
 
 /* line 1152, ../sass/main.scss */
 .ccTitle {
-  color: #c2c2c2;
+  color: #5e5e57;
   width: 40%;
   font-size: 12px;
   float: left;
@@ -3448,7 +3448,7 @@ footer .layer3 {
 
 /* line 1163, ../sass/main.scss */
 .ccRight p {
-  color: #c2c2c2;
+  color: #5e5e57;
   float: right;
   text-align: right;
   margin: 0;
@@ -3457,7 +3457,7 @@ footer .layer3 {
 
 /* line 1171, ../sass/main.scss */
 .ccID {
-  color: #c2c2c2;
+  color: #5e5e57;
   margin-left: 40px;
 }
 
