@@ -621,12 +621,16 @@ position: relative;
 }
 .buttonWapper{
 	margin-bottom:15px;
-	float:left;
+	float:right;
 	padding:15px 0 0 0;
+
 	input{
 		border: 0;
 		box-shadow: none;
 		background: #CCC;
+
+padding: 5px 10px 3px 10px;
+@include border-radius(3px);
 
 		&:hover{
 			background:#F8DA15;
@@ -1119,7 +1123,8 @@ footer{
 	h3{
 	color:$daGray;
 	font-size:24px;
-	margin-top:0;
+	margin-top: 14px;
+	margin-bottom: 10px;
 }
 }
 
@@ -1196,7 +1201,7 @@ footer{
 
 .white{
 	margin-top:20px;
-	width:317px;
+	width:307px;
 	float: left;
 	margin-right:20px;
 }

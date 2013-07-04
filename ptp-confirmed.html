@@ -25,17 +25,26 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script -->
 
-    <div class="main">
+     <div class="main">
         <div class="bgimg">
             <div class="row">
-                <div class="topBox">  <!-- Top box -->
+                <div class="topBox">  <!-- Header box -->
                     <div class="large-10-1 columns paddingTop-s">
                         <div class="row">
                             <div class="large-4 columns">
-                                <a href="#"><img src="img/logo.png"></a>
+                                <a href="#"><img src="img/logo.png" alt="" /></a>
                             </div>
                             <div class="large-6 columns paddZero">
-                                <p class="normal lineHeight-m"><span class="small-m">Hi <b>Aashish</b></span><br />You have travelled 30 Km.</p>
+                                <div class="normal lineHeight-m">
+                                    <div class="location">  <!-- Select City Drop down -->
+                                        <div class="control-group"> 
+                                            <div class="controls arrow blank"> 
+                                                <input type="text" id="location" value="Bangalore">
+                                                <i class="icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>   <!-- Select City Drop down -->
+                                </div>
                             </div>
                             <div class="large-6 columns TellNumberWapper">
                                 <div class="row">
@@ -49,7 +58,7 @@
                                     </div>
                                     <div class="large-10 columns paddingL-none">
                                         <div class="dialBox">
-                                            <img src="img/tell.jpg" />
+                                            <img src="img/tell.jpg" alt="" />
                                         </div>
                                     </div>
                                 </div>
@@ -60,18 +69,18 @@
                     </div>
                     <div class="large-6-1 columns topIconBox last">
                         <ul>
-                            <!-- <li><a href="#"><span><i class="icon icall"></i></span><em>Call back</em></a></li>
+                            <!-- li><a href="#"><span><i class="icon icall"></i></span><em>Call back</em></a></li>
                             <li><a href="#"><span><i class="icon ilogin"></i></span><em>Login</em></a></li>
-                            <li><a href="#"><span><i class="icon iregister"></i></span><em>Register</em></a></li> -->
+                            <li><a href="#"><span><i class="icon iregister"></i></span><em>Register</em></a></li -->
                              <li><a href="#"><span><i class="icon ibooking"></i></span><em>Booking</em><q>3</q></a></li>
                              <li><a href="#"><span><i class="icon isetting"></i></span><em>Setting</em></a></li>
                              <li><a href="#"><span><i class="icon ilogout"></i></span><em>Logout</em></a></li>
                         </ul>
                     </div>
-                </div>    <!-- .Top box --> 
+                </div>    <!-- .Header box --> 
             </div>
-            <div class="row">
-                <div class="large-10-1 columns padding-none">
+            <div class="row"><!-- content -->
+                <div class="large-10-1 columns padding-none">  <!-- Left content -->
 
                     <div class="leftSlideWapper shadow">
                         <nav class="tab-menu">
