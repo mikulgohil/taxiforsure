@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Taxi for sure</title>  
+    
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <link rel="stylesheet" href="stylesheets/main.css">
+        <!--script src="js/vendor/modernizr-2.6.2.min.js"></script -->
+    </head>
+    <style>
+    .trow{
+
+    }
+    </style>
+    <body>
+
+        <!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script -->
+        <!-- script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script -->
+
+    <div class="main">
+        <div class="bgimg">
+            <div class="row">
+                <div class="topBox">  <!-- Top box -->
+                    <div class="large-10-1 columns paddingTop-s">
+                        <div class="row">
+                            <div class="large-4 columns">
+                                <a href="#"><img src="img/logo.png" alt="" /></a>
+                            </div>
+                            <div class="large-6 columns paddZero">
+                                <p class="normal lineHeight-m"><span class="small-m">HI</span><br />You are yet to travel with us</p>
+                            </div>
+                            <div class="large-6 columns TellNumberWapper">
+                                <div class="row">
+                                    <div class="large-6 columns textR tellNumber">
+                                        <span class="small-m">
+                                            BLR <b>080</b>
+                                        </span>
+                                        <span class="small-m">
+                                            DEL <b>011</b>
+                                        </span>
+                                    </div>
+                                    <div class="large-10 columns paddingL-none">
+                                        <div class="dialBox">
+                                            <img src="img/tell.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>      
+                    </div>
+                    <div class="large-6-1 columns topIconBox last">
+                        <ul>
+                            <li><a href="#"><span><i class="icon icall"></i></span><em>Call back</em></a></li>
+                            <li><a href="#"><span><i class="icon ilogin"></i></span><em>Login</em></a></li>
+                            <li><a href="#"><span><i class="icon iregister"></i></span><em>Register</em></a></li>
+                             <!-- <li><a href="#"><span><i class="icon ibooking"></i></span><em>Booking</em><q>3</q></a></li> -->
+                             <!-- <li><a href="#"><span><i class="icon isetting"></i></span><em>Setting</em></a></li>
+                             <li><a href="#"><span><i class="icon ilogout"></i></span><em>Logout</em></a></li> -->
+                        </ul>
+                    </div>
+                </div>    <!-- .Top box --> 
+            </div>
+            <div class="row">
+                <div class="large-10-1 columns padding-none">
+
+                    <div class="leftSlideWapper">
+                        <nav class="tab-menu">
+                            <a href="index.html" ><i class="icon iptp"></i>Point to Point</a>
+                            <a href="airport-transfer.html"><i class="icon iat"></i>Airport Transfer</a>
+                            <a  href="half-full-day.html" class="active"><i class="icon ihd"></i>Half/full Day</a>
+                            <a href="outstation.html"><i class="icon iout"></i>Outstation</a>
+                        </nav>
+                        <div class="contain">
+
+                            <div class="boldLine">Get from one place to another. Hassle free! </div>
+                            <section class="formBlock cf">
+                                <div class="count">01</div>
+                                <div class="formContain cf">
+                                <div class="trow">
+                                    <div class="inputWapper wrapNormal">
+                                        <div class="pre styled">
+                                            <span class="preIcon"><i class="icon iLocation"></i></span>
+                                            <select name="city" id="city" tabindex="1">
+                                                <option value="Select">Select</option>
+                                                <option value="Bangalore">Bangalore</option>
+                                                <option value="Delhi">Delhi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="trow">
+                                    <div class="inputWapper wrapNormal">
+                                            <label for="pick">Pick Up Area</label>
+                                           <div class="list"> 
+                                            <input type="text" id="pick" tabindex="2">
+                                            <span class="icon"></span>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="inputWapper wrapNormal">
+                                            <label for="city">Package</label>
+                                            <div class=" styled"> 
+                                            <select class="dropdown" id="id_package" name="package">
+                                                    <option value="">Select Package Type</option>            
+                                                    <option value="">4 Hours 40Kms</option>
+                                                    <option value="">8 Hours 80Kms</option>
+                                                     </select>
+                                                 </div>
+                                    </div>
+                                </div>
+
+                            <div class="trow">
+                                    <div class="inputWapper wrapNormal">
+                                            <label for="city">Pick up Date</label>
+                                           <div class="textbox"> 
+                                            <input type="text" id="datepicker" placeholder="Date" tabindex="2">
+
+                                        </div>
+                                    </div>
+                                
+                                     <div class="inputWapper wapmidd">
+                                            <label for="time">Pick Up Time</label>
+                                           <div class=" styled"> 
+                                            <!-- input type="text" id="timepicker" placeholder="Time" tabindex="2" -->
+
+                                            <select class="dropdown" id="id_pickup_time_0" name="pickup_time_0">
+                                                                                                   
+                                                    
+                                                    <option value="">​12:00am​</option>
+                                                    <option value="">​12:30am​</option>
+                                                    <option value="">​1:00am​</option>
+                                                    <option value="">​1:30am​</option>
+                                                    <option value="">​2:00am​</option>
+                                                    <option value="">​2:30am​</option>
+                                                    <option value="">​3:00am​</option>
+                                                    <option value="">​3:30am​</option>
+                                                    <option value="">​4:00am​</option>
+                                                    <option value="">​4:30am​</option>
+                                                    <option value="">​5:00am​</option>
+                                                    <option value="">​5:30am​</option>
+                                                    <option value="">​6:00am​</option>
+                                                    <option value="">​6:30am​</option>
+                                                    <option value="">​7:00am​</option>
+                                                    <option value="">​7:30am​</option>
+                                                    <option value="">​8:00am​</option>
+                                                    <option value="">​8:30am​</option>
+                                                    <option value="">9:00am​</option>
+                                                    <option value="">9:30am​</option>
+                                                    <option value="">10:00am​</option>
+                                                    <option value="">10:30am​</option>
+                                                    <option value="">11:00am​</option>
+                                                    <option value="">11:30am​</option>
+                                                    <option value="">12:00pm​</option>
+                                                    <option value="">12:30pm​</option>
+                                                    <option value="">1:00pm​</option>
+                                                    <option value="">1:30pm​</option>
+                                                    <option value="">2:00pm​</option>
+                                                    <option value="">2:30pm​</option>
+                                                    <option value="">3:00pm​</option>
+                                                    <option value="">3:30pm​</option>
+                                                    <option value="">4:00pm​</option>
+                                                    <option value="">4:30pm​</option>
+                                                    <option value="">5:00pm​</option>
+                                                    <option value="">5:30pm​</option>
+                                                    <option value="">6:00pm​</option>
+                                                    <option value="">6:30pm​</option>
+                                                    <option value="">7:00pm​</option>
+                                                    <option value="">7:30pm​</option>
+                                                    <option value="">8:00pm​</option>
+                                                    <option value="">8:30pm​</option>
+                                                    <option value="">9:00pm​</option>
+                                                    <option value="">9:30pm​</option>
+                                                    <option value="">10:00pm​</option>
+                                                    <option value="">10:30pm​</option>
+                                                    <option value="">11:00pm​</option>
+                                                    <option value="">11:30pm​</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </section> 
+                        <form class="custom" action="">
+                            <section class="formBlock selectCar cf ">
+                                
+                                <div class="count">02</div>
+                                <div class="formContain cf ">
+                                    <div class="trow">
+                                    <div class="disableBox">
+                                        Select detail above
+                                    </div></div>
+                                    <div class="trow">
+                                </div>
+                                    <table class="carList">
+                                      <thead>
+                                        <tr>
+                                            <th colspan="2">Select Car</th>
+                                            <th>Seats</th>
+                                            <th>First 10 km</th>
+                                            <th>AFTER FIRST 10 Km</th>
+                                      </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                          <td><input type="radio" class="p2pFare" name="p2p_fare" value="1" tabindex="4"></td>
+                                          <td>Tata Indica (Non-AC)</td>
+                                          <td>4</td>
+                                          <td><span class="WebRupee">Rs.</span> 200.00</td>
+                                          <td><span class="WebRupee">Rs.</span> 13.00</td>
+                                        </tr>
+                                      
+                                        <tr>
+                                          <td><input type="radio" class="p2pFare" name="p2p_fare" value="5" tabindex="5"></td>
+                                          <td>Tata Indica (AC)</td>
+                                          <td>4</td>
+                                          <td><span class="WebRupee">Rs.</span> 200.00</td>
+                                          <td><span class="WebRupee">Rs.</span> 14.00</td>
+                                        </tr>
+                                      
+                                    </tbody></table> 
+                                 </div>   
+                            </section>
+
+                            <section class="formBlock loginSection cf">
+                                <div class="count">03</div>
+                                
+                                <div class="formContain cf">
+                                   
+                                   <div class="trow">
+                                    <div class="loginRadioWapper cf ">
+                                        
+                                        <div class="radioWapper loginRadio">
+                                            <label for="login"><input name="login" type="radio" id="login" style="display:none;" checked="" class="hidden-field" tabindex="6"><span class="custom radio"></span>Login</label>
+                                        </div>
+                                        <div class="radioWapper registerRadio">
+                                            <label for="register"><input name="login" type="radio" id="register" style="display:none;" checked="" class="hidden-field" tabindex="7"><span class="custom radio "></span>Register</label>
+                                        </div>
+
+                                    </div>   
+                                    </div>
+                                    <div class="trow">
+                                    <div class="logWapper">
+                                        <div class="trow">
+                                        <div class="inputWapper wrapNormal">
+                                                <label for="name">Name/Mobile Number</label>
+                                               <div class="textbox"> 
+                                                <input type="text" name="name" placeholder="Name" tabindex="8">
+                                            </div>
+                                        </div>
+
+                                        <div class="inputWapper wrapNormal">
+                                                <label for="Mobile">Password</label>
+                                               <div class="textbox"> 
+                                                <input type="Password" placeholder="Password" tabindex="9">
+                                            </div>
+                                        </div>
+                                         <div class="buttonWapper wrapNormal">
+                                                <input type="submit" class="disabled"  tabindex="13">
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                                <div class="trow">
+                                    <div class="regWapper">
+                                        <div class="trow">
+                                        <div class="inputWapper wrapNormal">
+                                                <label for="name">Name</label>
+                                               <div class="textbox"> 
+                                                <input type="text" name="name" placeholder="What do we call you" tabindex="8">
+                                            </div>
+                                        </div>
+
+                                        <div class="inputWapper wrapNormal">
+                                                <label for="Mobile">Mobile Number</label>
+                                               <div class="textbox"> 
+                                                <input type="text" placeholder="Your 10 digit number" tabindex="9">
+                                            </div>
+                                        </div>
+
+                                         <div class="inputWapper wrapNormal">
+                                                <label for="city">Email</label>
+                                               <div class="textbox"> 
+                                                <input type="text" placeholder="The one you use" tabindex="10">
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <div class="clearDiv"></div>
+                                        <div class="trow">
+                                        <div class="inputWapper wrapNormal">
+                                                <label for="city">Password</label>
+                                               <div class="textbox"> 
+                                                <input type="password" placeholder="Some thing you remember" tabindex="11">
+                                            </div>
+                                        </div>
+                                        <div class="inputWapper wrapNormal">
+                                                <label for="city">Confirm Password</label>
+                                               <div class="textbox"> 
+                                                <input type="password" placeholder="Again" tabindex="12">
+                                            </div>
+                                        </div>
+                                        <div class="buttonWapper wrapNormal">
+                                                <input type="submit" class="disabled" tabindex="13">
+                                        </div>
+                                    </div>
+                                    </div>   
+                                    </div> 
+                    </section> 
+</form>
+                             <section class="formBlock pickupSection cf">
+                                <div class="count">04</div>
+                                <div class="formContain cf">
+                                    <div class="trow">
+                                    <div class="inputWapper wrapNormal">
+                                            <label for="name">Pick up Address</label>
+                                           <div class="styled"> 
+                                            <select name="address" id="address">
+                                                <option value="1">Address 1</option>
+                                                <option value="1">Address 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                     <div class="trow">
+                                    <div class="addressBox cf">
+                                       <div class="addressContainer styled fl emptyAddress" >
+                                            <div class="addSingleBlock areaWapper">
+                                                <span class="dfText">Area: </span>
+                                                <!-- span class="inText">Jayanagar</span -->
+                                                <input type="text" class="areaAddress">
+                                            </div>
+                                            <div class="addressWapper">
+                                                <textarea name="" id="dumy" cols="30" rows="5"></textarea>
+                                                <!-- 301/ 34 th A Cross, First Floor 9th Main, 4th Block.  -->
+
+                                            </div>
+                                            <div class="addSingleBlock landMarkWapper">
+                                                <span class="dfText">Landmark:</span>
+                                                <!-- span class="inText">Near Venakestwara Sweet</span -->
+                                                <input type="text" class="areaAddress">
+                                            </div>
+                                        </div>  
+                                    
+                                    <div class="addressContainer fl fillAddress">
+                                            <div class="addSingleBlock areaWapper">
+                                                <span class="dfText">Area: </span>
+                                                <span class="inText">Jayanagar</span>
+                                            </div>
+                                            <div class="addressWapper">
+                                                301/ 34 th A Cross, First Floor 9th Main, 4th Block.
+                                            </div>
+                                            <div class="addSingleBlock landMarkWapper">
+                                                <span class="dfText">Landmark:</span>
+                                                <span class="inText">Near Venakestwara Sweet</span>
+                                            </div>
+                                        </div>  
+
+
+
+                                     
+                                        
+                                        <div class="SaveAddress   fl">
+                                            <input type="checkbox"> <span class="small-ss">Save New Address As</span>
+                                            <div class="textbox wapmidd"> 
+                                                <input type="text" placeholder="Home/office">
+                                            </div>
+                                        </div> 
+
+                                        <div class="showMap mapGap cf">
+                                                <a href=""><i class="icon sMap"></i> <span class="small-ss s">Show on Map</span><span class="small-ss h">Hide on Map</span></a>
+                                        </div>
+                                    </div> 
+                                    </div> 
+                                    <div class="trow">
+                                    <div class="bookelse cf">
+                                        <span class="beWapper"> <input class="bbCheck" type="checkbox" name="book" value="book"> <span class="small-ss">BOOKING TAXI FOR SOMEONE ELSE ?</span></span>
+                                        <div class="clearDiv"></div>
+                                        <div class="beContain">
+                                            <div class="inputWapper wrapNormal ">
+                                               <div class="textbox"> 
+                                                    <input type="text" placeholder="Name">
+                                                </div>
+                                            </div>    
+                                            <div class="inputWapper wrapNormal">
+                                               <div class="textbox"> 
+                                                    <input type="text" placeholder="Mobile number">
+                                                </div>
+                                            </div>    
+                                            <div class="inputWapper wrapNormal">
+                                               <div class="textbox"> 
+                                                    <input type="text" placeholder="Email">
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    </div>
+                                  
+
+                                </div>
+                            </section>   
+
+                            <div class="trow">
+                        <div class="submitWapper">
+                            <input type="submit" disabled="disabled" class="icon getTaxi disabled">
+                            <span class="pay">Pay directly to the driver</span>
+                        </div>  
+                        </div>                                
+                        </div>
+                    </div>
+                </div>
+                <div class="large-6-1 columns">
+                    <div class="premium">
+                            <a href="#"><i class="icon ipremium"></i>Premium car</a>
+                        </div>
+                    <div class="rightSlideWapper">
+                        <div class="googleMap mapHome">
+                            <!-- div id="map-canvas"></div -->
+                            
+                        </div>
+                        <div class="rightSlider">
+                             <div class="highlight">
+                            <ul class="highlightAds cf">
+                                <li>
+                                    <img src="img/block.jpg" alt="" />
+                                </li>
+                                <li class="last">
+                                    <img src="img/block1.jpg" alt="" />
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="commentWapper">
+                            <div class="commentBox">
+                                <div class="icon iconBox imedia">
+                                    
+                                </div>
+                                <div class="quoteWapper ">
+                                    <div class="quote">
+                                        <span class="quoteImg"><img src="img/comment-logo.png" alt="" /></span>
+                                        “TaxiForSure.com’s first of its kind initiative to create health awareness among taxi drivers”.
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class="commentBox">
+                                <div class="icon iconBox  ifb">
+                                    
+                                </div>
+                                <div class="quoteWapper">
+                                    <div class="quote">
+                                        “TaxiForSure.com’s first of its kind initiative to create health awareness among taxi drivers”.
+                                    </div>
+                                    <div class="quoteBy">
+                                        - Apoorv via Facebook
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class="commentBox last">
+                                <div class="icon iconBox  imail">
+                                    
+                                </div>
+                                <div class="quoteWapper">
+                                    <div class="quote">
+                                        “Every time I use your cabs my experience is getting better and your service is really great and if I want taxi I can't think of anything other than Taxi for Sure! Keep it up team.”
+                                    </div>
+                                    <div class="quoteBy">
+                                        - Pankaj on mail
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>    
+                        
+                       
+                        <div class="highlight">
+                            <span class="mobileText">Download on mobile for free.</span>
+                            <a href="#"><img src="img/apps.jpg" alt="" /></a>
+                            <a href="#"><img src="img/play.jpg" alt="" /></a>
+                        </div>
+                     </div>   
+                    </div>
+                </div>
+            </div>
+
+            
+                <footer>
+                    <div class="layer1">
+                        <div class="row">
+                            <h3>Read about us</h3>
+                           <div id="gallery-wrap">
+                                <div class="gg">
+                                    <ul id="gallery" class="cf">
+                                        <li><a href="#"><img src="img/bangalore-mirror.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/live-mint.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/the-economic-times.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/bangalore-mirror.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/the-economic-times.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/the-times-of-india.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/bangalore-mirror.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/live-mint.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/the-economic-times.png" alt="" /></a></li>
+                                    </ul>
+                                </div>    
+                                <div class="gc">
+                                    <div id="gallery-controls">
+                                        <a href="#" id="gallery-prev"><img src="img/prev.png" alt="" /></a><a href="#" id="gallery-next"><img src="img/next.png" alt="" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="layer2">
+                        <div class="row">
+                            <h3>TaxiForSure has enabled <b>4590</b> customers travel <b>2189400</b> kms </h3>
+
+                            
+                            <div class="footerMenu">
+                                <nav>
+                                    <a href="#">About Us</a>
+                                    <a href="#">Blog</a>
+                                    <a href="#">FAQ</a>
+                                    <a href="#">Press</a>
+                                    <a href="#">Careers</a>
+                                    <a href="#">Services</a>
+                                    <a href="#">Our Partners</a>
+                                    <a class="last" href="#">Contact Us</a>
+                                </nav>
+                                <span class="copyright">© 2011 Serendipity Infolabs Pvt. Ltd</span> <a href="#">Privacy Policy</a> <a class="last" href="#">Terms of Use</a>
+
+                                <div class="otherSite">
+                                    <div class="large-8 columns">
+                                        <nav class="footerCity">
+                                            <a href="#">bangalore</a><a class="last" href="">Delhi</a>
+                                        </nav>
+                                        <a  class="mobileSite last" href="">Goto to Mobile site</a>
+                                    </div>
+                                    <div class="large-8 columns">
+                                        <div class="netbramha">
+                                            <a  class="last" href="#">Designed by NetBramha Studios</a>
+                                        </div>    
+                                    </div>
+                                </div>
+
+
+                           </div> 
+                        <div class="brand">
+                            <img src="img/taxi.png" alt="" />
+                        </div>
+
+                            
+                        </div>
+
+                       
+                        
+                    </div>
+                    <div class="layer3">
+                        <div class="row">
+                            <span>Popular Cars: Toyota Innova Taxi Cab, Tata Indica Taxi Cab, Tata Indigo Taxi Cab, Chevrolet Tavera Taxi Cab, Mercedes Benz Taxi Cab</span>
+                            
+                        </div>
+                        
+                    </div>
+                </footer>
+            
+        </div>  
+    </div>        
+
+
+
+    
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="javascripts/foundation.min.js"></script>
+  <script src="javascripts/jquery.timepicker.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+  <script src="javascripts/gmap.js"></script>
+<script src="javascripts/css3-mediaqueries.js"></script>
+<script src="javascripts/taxiforsure.js"></script>
+
+  <!-- script src="javascripts/jquery-ui-timepicker-addon.js"></script -->
+
+<script>
+ $(document).ready(function() {
+    $(document).foundation();
+                taxiforsure.Init();
+            });
+    
+</script>
+  
+  
+  <script>
+
+  </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Taxi for sure</title>  
+    
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" type="text/css" href="http://cdn.webrupee.com/font">
+        <link rel="stylesheet" href="stylesheets/main.css">
+        <!--script src="js/vendor/modernizr-2.6.2.min.js"></script -->
+    </head>
+    <style>
+    .ftotal_fare{
+        font-weight: bold;
+color: #5e5e57;
+    }
+    .paynow{
+       overflow: hidden;
+border-bottom: 1px solid #ccc;
+margin-bottom: 20px;
+padding: 26px 35px 20px 33px;
+background: #e9e9e9 url(http://localhost:8888/html/img/planeicon.png) no-repeat 40px 10px;
+}.confirmedHead {
+    margin-bottom: 0px;
+}.paynowtxt {
+
+float: left;
+display: inline-block;
+margin-left: 5px;
+font-size: 16px;
+font-weight: bold;
+color: #5e5e57;
+}.paynowtxt p{
+    font-weight: normal;
+font-size: 12px;
+}
+.buttonpaynoww{
+    float: right;
+    display: inline-block;
+}.buttonWapper{
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+    </style>
+
+    <body>
+
+        <!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script -->
+        <!-- script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script -->
+
+    <div class="main">
+        <div class="bgimg">
+            <div class="row">
+                <div class="topBox">  <!-- Top box -->
+                    <div class="large-10-1 columns paddingTop-s">
+                        <div class="row">
+                            <div class="large-4 columns">
+                                <a href="#"><img src="img/logo.png"></a>
+                            </div>
+                            <div class="large-6 columns paddZero">
+                                <p class="normal lineHeight-m"><span class="small-m">Hi <b>Aashish</b></span><br />You have travelled 30 Km.</p>
+                            </div>
+                            <div class="large-6 columns TellNumberWapper">
+                                <div class="row">
+                                    <div class="large-6 columns textR tellNumber">
+                                        <span class="small-m">
+                                            BLR <b>080</b>
+                                        </span>
+                                        <span class="small-m">
+                                            DEL <b>011</b>
+                                        </span>
+                                    </div>
+                                    <div class="large-10 columns paddingL-none">
+                                        <div class="dialBox">
+                                            <img src="img/tell.jpg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>      
+                    </div>
+                    <div class="large-6-1 columns topIconBox last">
+                        <ul>
+                            <!-- <li><a href="#"><span><i class="icon icall"></i></span><em>Call back</em></a></li>
+                            <li><a href="#"><span><i class="icon ilogin"></i></span><em>Login</em></a></li>
+                            <li><a href="#"><span><i class="icon iregister"></i></span><em>Register</em></a></li> -->
+                             <li><a href="#"><span><i class="icon ibooking"></i></span><em>Booking</em><q>3</q></a></li>
+                             <li><a href="#"><span><i class="icon isetting"></i></span><em>Setting</em></a></li>
+                             <li><a href="#"><span><i class="icon ilogout"></i></span><em>Logout</em></a></li>
+                        </ul>
+                    </div>
+                </div>    <!-- .Top box --> 
+            </div>
+            <div class="row">
+                <div class="large-10-1 columns padding-none">
+
+                    <div class="leftSlideWapper shadow">
+                        <nav class="tab-menu">
+                            <a class="active" href="#"><i class="icon iptp"></i>Point to Point</a>
+                            <a href="#"><i class="icon iat"></i>Airport Transfer</a>
+                            <a href="#"><i class="icon ihd"></i>Half/full Day</a>
+                            <a href="#"><i class="icon iout"></i>Outstation</a>
+                        </nav>
+                        <div class="contain">
+                            <div class="confirmed">
+                                <div class="confirmedHead">
+                                    <div class="cchalf">
+                                        <h3><i class="icon iConf"></i>Booking Confirmed</h3>
+                                        <div class="ccID">Your BOOKING ID is <strong>BNXMLS.</strong></div>
+                                    </div>
+                                    <div class="cchalf ccRight">
+                                        <p>Want to modify booking?<br />
+                                        Please <a href="#">click here</a></p>
+                                    </div>
+                                </div>
+                                <div class="paynow cf">
+                                    <input type="checkbox" class="checkbox fl "></input>
+                                    <div class="paynowtxt">
+                                        Pay<span style="padding-left: 5px;"class="WebRupee">Rs.</span> 680 (total fare)in advance.  >>
+                                        <p>(optional)</p>
+                                    </div>
+                                    <div class="buttonpaynoww buttonWapper">
+                                <input type="submit" value="PAY NOW" class="" />
+                            </div>
+
+                                </div>
+                                  <div class="confirmedContain cf">
+                                    <div class="cchalf">
+                                        <div class="ccWp cf">
+                                            <div class="ccTitle">Taxi :</div>
+                                            <div class="ccDetail"> A/C Indica 4 Seater</div>
+                                        </div>
+                                        <div class="ccWp cf">
+                                            <div class="ccTitle">DATE &amp; TIME:</div>
+                                            <div class="ccDetail">12 March, 6:45PM</div>
+                                        </div>
+                                        <div class="ccWp cf">
+                                            <div class="ccTitle">FLAT FARE:</div>
+                                            <div class="ccDetail"><span class="WebRupee">Rs.</span> 680</div>
+                                        </div>
+                                        <div class="ccWp cf">
+                                            <div class="ccTitle ftotal_fare">TOTAL FARE:</div>
+                                            <div class="ccDetail ftotal_fare"><span class="WebRupee">Rs.</span> 680</div>
+                                        </div>
+                                    </div>
+                                    <div class="cchalf">
+                                        <div class="ccWp cf">
+                                        <div class="ccDetail">PICK UP ADDRESS</div>
+                                    </div>
+                                        <div class="ccWp cf">
+                                            <div class="ccTitle">AREA:</div>
+                                            <div class="ccDetail">
+                                            Jayanagar 4th Block<br />
+                                            301/ 34 th A Cross, First Floor,<br />
+                                            9th Main, 4th Block.<br />
+                                            </div>
+                                        </div>
+                                       
+                                       <div class="ccWp cf">
+                                            <div class="ccTitle">LANDMARK:</div>
+                                            <div class="ccDetail">Near Venakestwara Sweets</div>
+                                        </div>
+                                        <div class="ccWp cf">
+                                            <div class="ccTitle">AIRPORT:</div>
+                                            <div class="ccDetail">Bengaluru International Airport (BIAL)</div>
+                                        </div>
+
+                                        <div class="ccWp cf">
+                                            <div class="ccTitle">FLIGHT NUMBER:</div>
+                                            <div class="ccDetail">AL2W3
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                               
+                        </div>
+                        
+                    </div>
+                    <div class="white">
+                        <div class="Round bagain cf">
+                                <span class="rtext">Do you want to book an another taxi ?</span>
+                            <div class="buttonWapper">
+                                <input type="submit" value="Book Return" class="" />
+                            </div>
+
+                        </div>    
+                    </div>
+                    <div class="white last">
+                        <div class="Round bagain cf">
+                                <span class="rtext">Do you want to repeat this booking ?</span>
+                            <div class="buttonWapper">
+                                <input type="submit" value="Repeat Now" class="" />
+                            </div>
+                        </div>    
+                    </div>
+                </form>
+                </div>
+                <div class="large-6-1 columns">
+                    <div class="premium">
+                            <a href="#"><i class="icon ipremium"></i>Premium car</a>
+                        </div>
+                    <div class="rightSlideWapper">
+                        <div class="rightSlider">
+                          
+                        
+
+                        <div class="highlight">
+                            <ul class="highlightAds cf">
+                                <li>
+                                    <img src="img/block.jpg">
+                                </li>
+                                <li class="last">
+                                    <img src="img/block1.jpg">
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="highlight">
+                            <span class="mobileText">Download on mobile for free.</span>
+                            <a href="#"><img src="img/apps.jpg"></a>
+                            <a href="#"><img src="img/play.jpg"></a>
+                        </div>
+
+                        <div class="commentWapper">
+                            <div class="commentBox">
+                                <div class="icon iconBox imedia">
+                                    
+                                </div>
+                                <div class="quoteWapper ">
+                                    <div class="quote">
+                                        <span class="quoteImg"><img src="img/comment-logo.png" alt=""></span>
+                                        “TaxiForSure.com’s first of its kind initiative to create health awareness among taxi drivers”.
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class="commentBox">
+                                <div class="icon iconBox  ifb">
+                                    
+                                </div>
+                                <div class="quoteWapper">
+                                    <div class="quote">
+                                        “TaxiForSure.com’s first of its kind initiative to create health awareness among taxi drivers”.
+                                    </div>
+                                    <div class="quoteBy">
+                                        - Apoorv via Facebook
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class="commentBox last">
+                                <div class="icon iconBox  imail">
+                                    
+                                </div>
+                                <div class="quoteWapper">
+                                    <div class="quote">
+                                        “Every time I use your cabs my experience is getting better and your service is really great and if I want taxi I can't think of anything other than Taxi for Sure! Keep it up team.”
+                                    </div>
+                                    <div class="quoteBy">
+                                        - Pankaj on mail
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>  
+
+                     </div>   
+                    </div>
+                </div>
+            </div>
+
+            
+                <footer>
+                    <div class="layer1">
+                        <div class="row">
+                            <h3>Read about us</h3>
+                           <div id="gallery-wrap">
+                                <div class="gg">
+                                    <ul id="gallery" class="cf">
+                                        <li><a href="#"><img src="img/bangalore-mirror.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/live-mint.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/the-economic-times.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/bangalore-mirror.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/the-economic-times.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/the-times-of-india.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/bangalore-mirror.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/live-mint.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/the-economic-times.png" alt="" /></a></li>
+                                    </ul>
+                                </div>    
+                                <div class="gc">
+                                    <div id="gallery-controls">
+                                        <a href="#" id="gallery-prev"><img src="img/prev.png" alt="" /></a><a href="#" id="gallery-next"><img src="img/next.png" alt="" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="layer2">
+                        <div class="row">
+                            <h3>TaxiForSure has enabled <b>4590</b> customers travel <b>2189400</b> kms </h3>
+
+                            
+                            <div class="footerMenu">
+                                <nav>
+                                    <a href="#">About Us</a>
+                                    <a href="#">Blog</a>
+                                    <a href="#">FAQ</a>
+                                    <a href="#">Press</a>
+                                    <a href="#">Careers</a>
+                                    <a href="#">Services</a>
+                                    <a href="#">Our Partners</a>
+                                    <a class="last" href="#">Contact Us</a>
+                                </nav>
+                                <span class="copyright">© 2011 Serendipity Infolabs Pvt. Ltd</span> <a href="#">Privacy Policy</a> <a class="last" href="#">Terms of Use</a>
+
+                                <div class="otherSite">
+                                    <div class="large-8 columns">
+                                        <nav class="footerCity">
+                                            <a href="#">bangalore</a><a class="last" href="">Delhi</a>
+                                        </nav>
+                                        <a  class="mobileSite last" href="" class="mobileSite">Goto to Mobile site</a>
+                                    </div>
+                                    <div class="large-8 columns">
+                                        <div class="netbramha">
+                                            <a  class="last" href="#">Designed by NetBramha Studios</a>
+                                        </div>    
+                                    </div>
+                                </div>
+
+
+                           </div> 
+                        <div class="brand">
+                            <img src="img/taxi.png">
+                        </div>
+
+                            
+                        </div>
+
+                       
+                        
+                    </div>
+                    <div class="layer3">
+                        <div class="row">
+                            <span>Popular Cars: Toyota Innova Taxi Cab, Tata Indica Taxi Cab, Tata Indigo Taxi Cab, Chevrolet Tavera Taxi Cab, Mercedes Benz Taxi Cab</span>
+                            
+                        </div>
+                        
+                    </div>
+                </footer>
+            
+        </div>  
+    </div>        
+
+
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="javascripts/foundation.min.js"></script>
+  <script src="javascripts/jquery.timepicker.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+  <script src="javascripts/gmap.js"></script>
+<script src="javascripts/css3-mediaqueries.js"></script>
+<script src="javascripts/taxiforsure.js"></script>
+
+
+<script>
+ $(document).ready(function() {
+    $(document).foundation();
+                taxiforsure.Init();
+            });
+    
+</script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

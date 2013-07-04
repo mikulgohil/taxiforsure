@@ -1,0 +1,236 @@
+/* ----------------------------------------------  Reset form elements ---------------------------------------------- */
+	
+	input, select, textarea {
+		margin:0; padding:0; font-size:0.85em; outline:none;
+		font-family:inherit;	
+		-moz-box-sizing:border-box; /* Firefox */
+		-webkit-box-sizing:border-box; /* Safari */
+		box-sizing:border-box;}
+
+/* ----------------------------------------------  Inputs, textareas and selects  ---------------------------------------------- */
+
+
+	input[type="text"],input, textarea, select, div.styled, input {  
+		 border-radius:2px; border: solid 1px #ccc; padding:0.4em; @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.2));}
+	
+	div.styled, select, input[type="submit"], input[type="button"], 
+	input[type="file"]:after {
+		background: white url(../img/formelements-select.png) no-repeat 95% center;
+		-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2); 
+		box-shadow: 0 1px 3px rgba(0,0,0,0.2);}	
+	div.styled.dd{background: white url(../img/formelements-select.png) no-repeat 90% center;}
+	input, textarea, input[type="file"] { 
+		background-color: #fff;
+		-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);}
+	
+		.ie9 input { line-height:normal; } /* Get the stuff to line up right */
+	
+	textarea { width:100%; height:10em; }
+	
+/* ----------------------------------------------  Select menu  ---------------------------------------------- */
+	
+	/* For IE and Firefox */
+
+	div.styled { overflow:hidden; padding:0; margin:0; @include border-radius(3px); }
+		
+		.ie7 div.styled {border:none;}
+
+	div.styled select {	
+		width:115%; background-color:transparent; background-image:none;
+		-webkit-appearance: none; border:none; box-shadow:none;}
+.pre.styled select{
+	width: 140px;
+	padding-top: 7px;
+	cursor: pointer;
+}		
+		.ie7 div.styled select {
+			width:100%; background-color:#fff; border: solid 1px #ccc; 
+			padding:0.3em 0.5em;}	
+	
+/* ----------------------------------------------  File field  ----------------------------------------------  */
+
+	/* Webkit Only */
+	
+	input[type="file"] { 
+		position: relative; 
+		-webkit-appearance: none;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;	width: 40%;	padding:0;}
+		
+	input[type=file]::-webkit-file-upload-button {
+		width: 0; padding: 0; margin: 0;-webkit-appearance: none; border: none;}	
+		
+	input[type="file"]:after {
+		content: 'Upload File';
+		margin:0 0 0 0.5em;
+		display: inline-block; left: 100%; position: relative;
+		background:white url(../img/formelements-select.png) no-repeat 95% center;
+		padding:0.3em 0.5em; border: solid 1px #ccc !important;
+		-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2); 
+		box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+		border-radius:4px;}	
+		
+		
+		input[type="file"]:active:after {box-shadow:none;}
+	
+	
+/* ----------------------------------------------  Checkboxes and Radio inputs  ----------------------------------------------  */	
+		
+	/* input[type="radio"], 
+	// input[type="checkbox"] { position: absolute; left: -999em; }  */
+		
+	/* label:before { 
+	// 	display: inline-block; position: relative; top:0.25em; left:-2px; 
+	// 	content:''; width:25px; height:25px;
+	// 	background-image:url(../img/formelements.png); } */
+	
+	/* input[type="checkbox"] + label:before { background-position: 0 -25px;}
+	input[type="checkbox"]:checked + label:before {background-position: 0 0 ; }
+		 
+	input[type="radio"] + label:before { background:url(../img/icons.png) no-repeat; width:11px; height:11px; background-position: -55px -176px;}	 	
+	input[type="radio"]:checked + label:before { background:url(../img/icons.png) no-repeat;  width:11px; height:11px; background-position: -75px 176px;}
+	*/
+		
+
+/* ---------------------------------------------- Form Submit and Next buttons ---------------------------------------------- */	
+
+	input[type="submit"], 
+	input[type="button"] { 
+		padding:0.5em 1em; line-height:1em; cursor:pointer;
+		border-radius:4px; color:#000; font-weight:bold; font-size:inherit;
+		border:solid 1px #ccc;	box-shadow:0 1px 5px rgba(0,0,0,0.2);
+		background-position: center bottom;}
+		
+		/* Gradient Generator by : http://www.colorzilla.com/gradient-editor/ */
+		
+	input[type="submit"]:active, 
+	input[type="button"]:active {-webkit-box-shadow: none; box-shadow:none;}
+		
+		/* IE7 needs you to change the background to transparent when using image background for submit buttons */	
+
+textarea { 
+    resize: none; 
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+form.custom {
+margin: 0;
+}
+
+.ui-menu-item .ui-corner-all{
+
+}
+.ui-menu .ui-menu-item a.ui-state-focus, .ui-menu .ui-menu-item a.ui-state-active{
+	background:#ccc;
+	margin:0;
+
+}
+.ui-menu .ui-menu-item a{
+	font-size:12px;
+	@include border-radius(0);
+	border:0;
+}
+.ui-autocomplete { max-height: 200px; overflow-y: scroll; overflow-x: hidden; font-size:12px;}
+ .ui-autocomplete a{ }
+.cf {
+    *zoom: 1;
+}
+
+select{
+	color:$daGray;
+}
+
+#ui-datepicker-div{font-size:14px;} 
+
+/* .ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+.ui-timepicker-rtl{ direction: rtl; }
+.ui-timepicker-rtl dl { text-align: right; }
+.ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }  */
+
+.ui-timepicker-wrapper {
+	overflow-y: auto;
+	height: 150px;
+	width: 140px;
+	background: #fff;
+	border: 1px solid #ddd;
+	@include box-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
+	outline: none;
+	z-index: 10001;
+}
+
+.ui-timepicker-wrapper.ui-timepicker-with-duration {
+	width: 11em;
+}
+
+.ui-timepicker-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ui-timepicker-duration {
+	margin-left: 5px; color: #888;
+}
+
+.ui-timepicker-list:hover .ui-timepicker-duration {
+	color: #888;
+}
+
+.ui-timepicker-list li {
+	padding: 3px 0 3px 5px;
+	cursor: pointer;
+	white-space: nowrap;
+	color: #000;
+	list-style: none;
+	margin: 0;
+}
+
+.ui-timepicker-list:hover .ui-timepicker-selected {
+	background: #fff; color: #000;
+}
+
+li.ui-timepicker-selected,
+.ui-timepicker-list li:hover,
+.ui-timepicker-list .ui-timepicker-selected:hover {
+	background: #1980EC; color: #fff;
+}
+
+li.ui-timepicker-selected .ui-timepicker-duration,
+.ui-timepicker-list li:hover .ui-timepicker-duration {
+	color: #ccc;
+}
+
+.ui-timepicker-list li.ui-timepicker-disabled,
+.ui-timepicker-list li.ui-timepicker-disabled:hover,
+.ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
+	color: #888;
+	cursor: default;
+}
+
+.ui-timepicker-list li.ui-timepicker-disabled:hover,
+.ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
+	background: #f2f2f2;
+}
