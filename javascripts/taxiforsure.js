@@ -30,6 +30,8 @@ window.taxiforsure = {
 		taxiforsure.Step3();
 		taxiforsure.PickupSection();
 		taxiforsure.Modify();
+
+		taxiforsure.airportTransfer();
 		//taxiforsure.dataSubmit();
 		
 
@@ -63,7 +65,53 @@ window.taxiforsure = {
 	//     e.preventDefault();
 	// });
 	
+	airportTransfer:function(){
+		var airport = ["International Airport","Domestic airport"];
+		$('#airport').autocomplete({
+		        //select : showRoute,
+		        source: airport,
+		        minLength: 0
+		        }).focus(function(){            
+		                $(this).autocomplete("search");
+		        });
 
+
+
+		var EnableTab = $('[data-target]');
+
+			EnableTab.click(function(event) {
+				var getClass = $(this).attr('data-target');
+				PickDropAirportInput(getClass);
+				$('.airWap').hide();
+				$('.'+getClass).show();
+				$('.toggleAirPort a').removeClass('active');
+				$(this).addClass('active');
+			 	event.preventDefault();
+			});
+
+			function PickDropAirportInput(data){
+				if(data == "goingAirSelect"){
+					$('.airportPick').show();
+					$('.airportDrop').hide();
+					$('.airportPick').find('input').attr('data-validate','step1');
+					$('.airportDrop').find('input').attr('data-validate','');
+				}else{
+					$('.airportPick').hide();
+					$('.airportDrop').show();
+					$('.airportDrop').find('input').attr('data-validate','step1');
+					$('.airportPick').find('input').attr('data-validate','');
+				}
+
+			}
+
+
+
+		EnableTab.each(function(index) {
+			var gt = $(this).attr('data-target');
+		});        
+
+
+	},
 	CitySection: function () {
 		var city = ["Bangalore","New Delhi"];
 		$('#location').autocomplete({
@@ -302,11 +350,14 @@ window.taxiforsure = {
 					$(this).removeClass('error');
 				}
 
-				$(this).bind('blur',function(event) {
+				$(this).bind('blur change focus',function(event) {
 					if($(this).val()){
 						$(this).removeClass('error');
 					}
 				});
+				
+
+
 			});
 
 			if(errors > 0){
@@ -435,29 +486,6 @@ window.taxiforsure = {
 				$('#timepicker').attr('data-validate',"");
 				$('.bdetailWap').removeClass('Ti');
 			}
-		});
-
-
-
-
-		var EnableTab = $('[data-target]');
-
-			EnableTab.click(function(event) {
-				var getClass = $(this).attr('data-target');
-				$('.airWap').hide();
-				$('.'+getClass).show();
-
-				$('.toggleAirPort a').removeClass('active');
-				$(this).addClass('active');
-			 	event.preventDefault();
-			});
-
-
-
-		EnableTab.each(function(index) {
-			var gt = $(this).attr('data-target');
-
-			
 		});
 	}
 }

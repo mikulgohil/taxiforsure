@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html ng-app class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -13,6 +13,7 @@
 
         <meta name="viewport" content="width=device-width">
 
+<link rel="shortcut icon" type="image/ico" href="http://www.taxiforsure.com/static/favicon.ico"/>
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
         <link rel="stylesheet" href="stylesheets/main.css">
@@ -22,39 +23,34 @@
     .trow{
 
     }
-.fitalic{
-    font-style: italic;
-}
-.styledtime{
-    width: 27%;
-    display:inline-block;
-}
-div.styledtime select {
-    width: 27%;
-}
-.styledairport{
-        
-}
-.pre.styled.styledairport select {
-    width: 400px;
-}
-
-
     </style>
+    <body>
 
-
+        <!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script -->
+        <!-- script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script -->
 
     <div class="main">
         <div class="bgimg">
             <div class="row">
-                <div class="topBox">  <!-- Top box -->
+                <div class="topBox">  <!-- Header box -->
                     <div class="large-10-1 columns paddingTop-s">
                         <div class="row">
                             <div class="large-4 columns">
                                 <a href="#"><img src="img/logo.png" alt="" /></a>
                             </div>
                             <div class="large-6 columns paddZero">
-                                <p class="normal lineHeight-m"><span class="small-m">HI</span><br />You are yet to travel with us</p>
+                                <div class="normal lineHeight-m">
+                                    <div class="location">  <!-- Select City Drop down -->
+                                        <div class="control-group"> 
+                                            <div class="controls arrow blank"> 
+                                                <input type="text" id="location" value="Bangalore">
+                                                <i class="icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>   <!-- Select City Drop down -->
+                                </div>
                             </div>
                             <div class="large-6 columns TellNumberWapper">
                                 <div class="row">
@@ -87,348 +83,371 @@ div.styledtime select {
                              <li><a href="#"><span><i class="icon ilogout"></i></span><em>Logout</em></a></li> -->
                         </ul>
                     </div>
-                </div>    <!-- .Top box --> 
+                </div>    <!-- .Header box --> 
             </div>
-            <div class="row">
-                <div class="large-10-1 columns padding-none">
+            <div class="row"><!-- content -->
+                <div class="large-10-1 columns padding-none">  <!-- Left content -->
 
                     <div class="leftSlideWapper">
-                        <nav class="tab-menu">
-                            <a href="index.html"><i class="icon iptp"></i>Point to Point</a>
-                            <a href="airport-transfer.html" class="active"><i class="icon iat"></i>Airport Transfer</a>
-                            <a  href="half-full-day.html"><i class="icon ihd"></i>Half/full Day</a>
-                            <a href="outstation.html"><i class="icon iout"></i>Outstation</a>
-                        </nav>
-
-                        <div class="contain">
-
-                            <div class="boldLine">Airports to and fro now a breeze! </div>
-                            <section class="formBlock cf  style="padding-top:60px;"">
-                                <div class="count">01</div>
-                                <div class="formContain cf">
-                                <div class="trow">
-                                    <div class="inputWapper wrapNormal">
-                                        <div class="pre styled">
-                                            <span class="preIcon"><i class="icon iLocation"></i></span>
-                                            <select name="city" id="city" tabindex="1">
-                                                <option value="Select">Select</option>
-                                                <option value="Bangalore">Bangalore</option>
-                                                <option value="Delhi">Delhi</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
+                            <nav class="tab-menu">  
+                                <a href="index.html"><i class="icon iptp"></i>Point to Point</a>
+                                <a href="airport-transfer.html"  class="active"><i class="icon iat"></i>Airport Transfer</a>
+                                <a href="half-full-day.html"><i class="icon ihd"></i>Half/full Day</a>
+                                <a href="outstation.html"><i class="icon iout"></i>Outstation</a>
+                            </nav>
+                            <div class="content">
+                                <div class="navInfo">  <!-- Nav Info -->
                                     
-                                     <div class="trow">
-                                    <div class="" style="margin-top:20px;">
-                                        <nav class="toggleAirPort" data-tab="true">
-                                            <a href="#" class="goA active" data-target="goingAirSelect"><i class="icon igAir"></i>Going to Airport</a>
-                                            <a href="#" class="coA "  data-target="comingAirSelect"><i class="icon icAir"></i>Coming from Airport</a>
-                                        </nav>
-                                    </div></div>
-                                <div class="trow">
-                                    <div class="inputWapper airWap goingAirSelect">
-                                        <div class="pre styled styledairport">
-                                            <select name="city" id="city" tabindex="1">
-                                                <option value="Select">Select</option>
-                                                <option value="Bangalore">Bangalore International Airport (BIAL)</option>
-                                                <option value="Delhi">Delhi</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="inputWapper airWap comingAirSelect">
-                                        <div class="pre styled styledairport">
-                                            <select name="city" id="city" tabindex="1">
-                                                <option value="Select">Select</option>
-                                                <option value="Bangalore">Bangalore International Airport (BIAL)</option>
-                                                <option value="Delhi">Delhi</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div><!--tabs end-->
-
-                                
-
-                                <div class="trow">
-                                <div class="inputWapper wrapNormal">
-                                            <label for="city">Pick up Area</label>
-                                           <div class="list"> 
-                                            <input type="text" id="drop" tabindex="3">
-                                            <span class="icon"></span>
-                                        </div>
-                                    </div>
-                                
-                            </div>
-                            
-                            <div class="trow">
-                                    <div class="inputWapper wrapNormal">
-                                            <label for="city">Pick up Date</label>
-                                           <div class="textbox"> 
-                                            <input type="text" id="datepicker" placeholder="Date" tabindex="2">
-
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                    <div class="trow">
-                                     <div class="inputWapper wapmidd">
-                                            <label for="time">Pick Up Time</label>
-                                           <div class=" styled"> 
-                                            <!-- input type="text" id="timepicker" placeholder="Time" tabindex="2" -->
-
-                                            <select class="dropdown" id="id_pickup_time_0" name="pickup_time_0">
-                                                                                                   
-                                                    <option value="">​12:00am​</option>
-                                                    <option value="">​12:30am​</option>
-                                                    <option value="">​1:00am​</option>
-                                                    <option value="">​1:30am​</option>
-                                                    <option value="">​2:00am​</option>
-                                                    <option value="">​2:30am​</option>
-                                                    <option value="">​3:00am​</option>
-                                                    <option value="">​3:30am​</option>
-                                                    <option value="">​4:00am​</option>
-                                                    <option value="">​4:30am​</option>
-                                                    <option value="">​5:00am​</option>
-                                                    <option value="">​5:30am​</option>
-                                                    <option value="">​6:00am​</option>
-                                                    <option value="">​6:30am​</option>
-                                                    <option value="">​7:00am​</option>
-                                                    <option value="">​7:30am​</option>
-                                                    <option value="">​8:00am​</option>
-                                                    <option value="">​8:30am​</option>
-                                                    <option value="">9:00am​</option>
-                                                    <option value="">9:30am​</option>
-                                                    <option value="">10:00am​</option>
-                                                    <option value="">10:30am​</option>
-                                                    <option value="">11:00am​</option>
-                                                    <option value="">11:30am​</option>
-                                                    <option value="">12:00pm​</option>
-                                                    <option value="">12:30pm​</option>
-                                                    <option value="">1:00pm​</option>
-                                                    <option value="">1:30pm​</option>
-                                                    <option value="">2:00pm​</option>
-                                                    <option value="">2:30pm​</option>
-                                                    <option value="">3:00pm​</option>
-                                                    <option value="">3:30pm​</option>
-                                                    <option value="">4:00pm​</option>
-                                                    <option value="">4:30pm​</option>
-                                                    <option value="">5:00pm​</option>
-                                                    <option value="">5:30pm​</option>
-                                                    <option value="">6:00pm​</option>
-                                                    <option value="">6:30pm​</option>
-                                                    <option value="">7:00pm​</option>
-                                                    <option value="">7:30pm​</option>
-                                                    <option value="">8:00pm​</option>
-                                                    <option value="">8:30pm​</option>
-                                                    <option value="">9:00pm​</option>
-                                                    <option value="">9:30pm​</option>
-                                                    <option value="">10:00pm​</option>
-                                                    <option value="">10:30pm​</option>
-                                                    <option value="">11:00pm​</option>
-                                                    <option value="">11:30pm​</option>
-                                                </select>
+                                    <div class="contentRow bdetailWap">
+                                       <div class="dIntro">
+                                           Book your taxi in 3 easy steps
+                                       </div>
+                                       <div class="bdetail">
+                                            <div class="contentRow showAr">
+                                                <div class="textPickup fontL">Jayanagar 4th T Block</div>
+                                                <div class="textDroparea fontL">Kormangla</div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div><!-- -->
-                            </div>
-                    </section>
-
-                     <section class="formBlock selectCar cf">
-                                
-                                <div class="count">02</div>
-                                <div class="formContain cf ">
-                                    <div class="trow">
-                                    <div class="disableBox">
-                                        Select detail above
-                                    </div></div>
-                                    <div class="trow">
-                                         <nav class="airPortFFTab" data-tab="true">
-                                        <a href="#" class="active ffTab" >Flat Fare</a>
-                                        <a href="#" class="ffpTab">Extra fare per Km</a>
-                                    </nav>
-                                    </div>
-                                    <div class="trow">
-                                    <table class="carList ffTabTarget" >
-                                      <thead>
-                                        <tr>
-                                            <th colspan="2">Select Car</th>
-                                            <th>Seats</th>
-                                            <th>Flat Fare</th>
-                                      </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                          <td><input type="radio" class="p2pFare" name="p2p_fare" value="1" tabindex="4"></td>
-                                          <td>Tata Indica (Non-AC)</td>
-                                          <td>4</td>
-                                          <td><span class="WebRupee">Rs.</span> 200.00</td>
-                                          
-                                        </tr>
-                                      
-                                        <tr>
-                                          <td><input type="radio" class="p2pFare" name="p2p_fare" value="5" tabindex="5"></td>
-                                          <td>Tata Indica (AC)</td>
-                                          <td>4</td>
-                                          <td><span class="WebRupee">Rs.</span> 200.00</td>
-                                          
-                                        </tr>
-                                      
-                                    </tbody></table> 
-                                    <!--table 2-->
-                                    <table class="carList ffpTabTarget" >
-                                      <thead>
-                                        <tr>
-                                            <th colspan="2">Select Car</th>
-                                            <th>Seats</th>
-                                            <th>First 10 km</th>
-                                            <th>AFTER FIRST 10 Km</th>
-                                      </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                          <td><input type="radio" class="p2pFare" name="p2p_fare" value="1" tabindex="4"></td>
-                                          <td>Tata Indica (Non-AC)</td>
-                                          <td>4</td>
-                                          <td><span class="WebRupee">Rs.</span> 200.00</td>
-                                          <td><span class="WebRupee">Rs.</span> 13.00</td>
-                                        </tr>
-                                      
-                                        <tr>
-                                          <td><input type="radio" class="p2pFare" name="p2p_fare" value="5" tabindex="5"></td>
-                                          <td>Tata Indica (AC)</td>
-                                          <td>4</td>
-                                          <td><span class="WebRupee">Rs.</span> 200.00</td>
-                                          <td><span class="WebRupee">Rs.</span> 14.00</td>
-                                        </tr>
-                                      
-                                    </tbody></table>
-                                </div>
-                                 </div>   
-                            </section>
-
-                                <section class="formBlock pickupSection cf">
-                                <div class="count">03</div>
-                                <div class="formContain cf">
-                                    <div class="trow">
-                                    <div class="inputWapper wrapNormal">
-                                            <label for="name">Drop Address</label>
-                                           <div class="styled"> 
-                                            <select name="address" id="address">
-                                                <option value="1">New address</option>
-                                                <option value="1">Address 1</option>
-                                                <option value="1">Address 2</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
- <div class="trow">
-                                    <div class="addressBox cf">
-                                       <div class="addressContainer styled fl emptyAddress" >
-                                            <div class="addSingleBlock areaWapper">
-                                                <span class="dfText">Area: </span>
-                                                <!-- span class="inText">Jayanagar</span -->
-                                                <input type="text" class="areaAddress">
+                                            <div class="contentRow showTi">
+                                                <span class="on fontY">On</span>
+                                                <span class="textDate fontNL">Tue, 21st June</span>
+                                                <span class="at fontY">at</span>
+                                                <span class="textTime fontNL">9:00 am</span>
                                             </div>
-                                            <div class="addressWapper">
-                                                <textarea name="" id="dumy" cols="30" rows="5"></textarea>
-                                                <!-- 301/ 34 th A Cross, First Floor 9th Main, 4th Block.  -->
-
-                                            </div>
-                                            <div class="addSingleBlock landMarkWapper">
-                                                <span class="dfText">Landmark:</span>
-                                                <!-- span class="inText">Near Venakestwara Sweet</span -->
-                                                <input type="text" class="areaAddress">
-                                            </div>
-                                        </div>  
+                                             <div class="contentRow showCr">
+                                                    <div class="carBookDetail">
+                                                        <div class="carBookCol">
+                                                            <p class="carBFont200">TATA Manza</p>
+                                                            <p class="carBFont100">5 seater AC</p>
+                                                        </div>
+                                                        <div class="carBookCol">
+                                                            <p class="carBFont100">first 10 kms</p>
+                                                            <p class="carBFont300"><span class="WebRupee">Rs.</span> 200</p>
+                                                        </div>
+                                                        <div class="carBookCol">
+                                                            <p class="carBFont100">after 10 kms</p>
+                                                            <p class="carBFont300"><span class="WebRupee">Rs.</span> 15/km</p>
+                                                        </div>
+                                                    </div>
+                                             </div>
+                                       </div>
+                                   </div>
                                     
-                                    <div class="addressContainer fl fillAddress">
-                                            <div class="addSingleBlock areaWapper">
-                                                <span class="dfText">Area: </span>
-                                                <span class="inText">Jayanagar</span>
+
+                                       
+                                </div>   <!-- Nav Info -->
+
+                                <div class="stepWap">
+                                   <ul >
+                                       <li class="stepFirst active"><span class="count">01</span> Location</li>
+                                       <li class="stepSecond"><span class="count">02</span> Taxi</li>
+                                       <li class="stepThird"><span class="count">03</span> Pickup Detail</li>
+                                   </ul>
+                                </div>
+
+                                   <div class="stepContentWap FirstStepContain" data-modal="step1">  <!-- Step 1 -->
+            
+                                    <div class="stepContent">
+                                        <div class="contentRow">
+
+                                            <nav class="toggleAirPort" data-tab="true">
+                                                <a href="#" class="goA active" data-target="goingAirSelect"><i class="icon igAir"></i>Going to Airport</a>
+                                                <a href="#" class="coA "  data-target="comingAirSelect"><i class="icon icAir"></i>Coming from Airport</a>
+                                            </nav>
+
+
+                                            <div class="trow">
+                                                <div class="inputWapper airWap goingAirSelect">
+                                                    <div class="pre styled styledairport">
+                                                        <div class="control-group">
+                                                                
+                                                                <div class="controls arrow">
+                                                                  <input type="text" id="airport" data-validate="step1" placeholder="Select">
+                                                                  <i class="icon"></i>
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inputWapper airWap comingAirSelect">
+                                                    <div class="pre styled styledairport">
+                                                        <div class="control-group">
+                                                                
+                                                                <div class="controls arrow">
+                                                                  <input type="text" id="dropArea" data-validate="step1" placeholder="Select">
+                                                                  <i class="icon"></i>
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                             </div><!--tabs end-->
+                                        </div>    
+                                        
+                                         <div class="contentRow">
+                                            
+
+                                            <div class="stepContentColumn">
+                                                <div class="stepContentColumn">
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="datepicker">Pick up Date</label>
+                                                        <div class="controls date">
+                                                          <input type="text" id="datepicker" class="dateInput" placeholder="Select" data-validate="step1">
+                                                          <i class="icon"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="stepContentColumn">
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="timepicker">Pick up Time</label>
+                                                        <div class="controls time">
+                                                          <input type="text" id="timepicker" class="timeInput" placeholder="Select" data-validate="step1">
+                                                          <i class="icon"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="addressWapper">
-                                                301/ 34 th A Cross, First Floor 9th Main, 4th Block.
+                                            
+                                            <div class="stepContentColumn">
+                                                <div class="control-group defAdd airportPick ">
+                                                    <label class="control-label" for="pickArea">Pickup Area</label>
+                                                    <div class="controls arrow">
+                                                      <input type="text" data-error="error message" id="pickArea" data-validate="step1"  placeholder="Select">
+                                                      <i class="icon"></i>
+                                                    </div>
+                                                    <ul class="defAddUl">
+                                                        <li><a href="#">Home</a></li>
+                                                        <li><a href="#">Office</a></li>
+                                                        <li><a href="#">Client Place</a></li>
+                                                    </ul>
+                                                </div>
+
+
+                                                <div class="control-group airportDrop defAdd hide">
+                                                    <label class="control-label" for="dropArea">Drop Area</label>
+                                                    <div class="controls arrow">
+                                                      <input type="text" id="dropArea"  placeholder="Select">
+                                                      <i class="icon"></i>
+                                                    </div>
+                                                    <ul class="defAddUl">
+                                                        <li><a href="#">Home</a></li>
+                                                        <li><a href="#">Office</a></li>
+                                                        <li><a href="#">Client Place</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>    
+                                         </div>  
+                                    </div>
+
+
+                                    <div class="stepFooter">
+                                        <div class="contentRow">
+                                            
+                                            <div class="stepNextButton">
+                                                <button data-step="step2" class="next" data-form="step1" value="Find Taxi">Find Taxi</button>
+                                                <!-- a href="#" data-step="step2" class="next">Find Taxi</a -->
                                             </div>
-                                            <div class="addSingleBlock landMarkWapper">
-                                                <span class="dfText">Landmark:</span>
-                                                <span class="inText">Near Venakestwara Sweet</span>
+                                        </div>
+                                    </div>
+                                </div>    <!-- Step 1 -->
+                                        
+                                
+
+                                <div class="stepContentWap SecondStepContain step2" >   <!-- Step 2 -->
+                                    <div class="stepContent">
+                                        <div class="contentRow">
+                                        <div class="carPrice">
+                                            <table class="carList">
+                                                  <thead>
+                                                    <tr>
+                                                        <th colspan="2" class="firstTh">Select Car</th>
+                                                        <th>First 10 km</th>
+                                                        <th>AFTER 10 Km</th>
+                                                  </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr class="carTr">
+                                                      <td><input type="radio" class="p2pFare" name="p2p_fare" value="1" tabindex="1"></td>
+                                                      <td>
+                                                        <div class="taxiInfo">
+                                                            <div class="taxiIcon hasBack"></div>
+                                                            <div class="taxiData">
+                                                                <p class="taxiName">Tata Indica</p>
+                                                                <p class="taxiCondi">4 Seater AC</p>
+                                                            </div>
+                                                        </div>    
+                                                      </td>
+                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 200</td>
+                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 15 / km</td>
+                                                    </tr>
+                                                  
+                                                    <tr class="carTr">
+                                                      <td><input type="radio" class="p2pFare" name="p2p_fare" value="1" tabindex="2"></td>
+                                                      <td>
+                                                        <div class="taxiInfo">
+                                                            <div class="taxiIcon sedan"></div>
+                                                            <div class="taxiData">
+                                                                <p class="taxiName">Tata Manzar</p>
+                                                                <p class="taxiCondi">5 Seater AC</p>
+                                                            </div>
+                                                        </div>    
+                                                      </td>
+                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 200</td>
+                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 15 / km</td>
+                                                    </tr>
+
+                                                     <tr class="carTr">
+                                                      <td><input type="radio" class="p2pFare" name="p2p_fare" value="1" tabindex="3"></td>
+                                                      <td>
+                                                        <div class="taxiInfo">
+                                                            <div class="taxiIcon suv"></div>
+                                                            <div class="taxiData">
+                                                                <p class="taxiName">Tata Innova</p>
+                                                                <p class="taxiCondi">8 Seater AC</p>
+                                                            </div>
+                                                        </div>    
+                                                      </td>
+                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 200</td>
+                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 15 / km</td>
+                                                    </tr>
+                                                      
+                                                    </tbody>
+                                                </table> 
                                             </div>
-                                        </div>  
+                                        </div>
+                                    </div>
+
+                                     <div class="stepFooter"> <!-- stepFooter  -->
+                                        <div class="contentRow">
+                                             <div class="modiLink"><span data-step="step1">modify details</span></div>
+                                            <div class="stepNextButton">
+                                            <button data-step="step3" data-form="step2" class="next" value="Find Taxi">Select Taxi</button>
+                                                <!-- a href="#" class="next" data-step="step3">Enter your detail</a -->
+                                            </div>
+                                        </div>
+                                    </div>   <!--  stepFooter  -->
+                                </div>   <!-- Step 2 -->
+
+
+                                <div class="stepContentWap ThirdStepContain step3" >   <!-- Step 3 -->
+
+                                    <div class="stepContent">
+                                        <div class="contentRow">
+                                            <div class="stepContentColumn">
+                                                <div class="control-group">
+                                                    <label class="control-label" for="dropArea">Address</label>
+                                                    <div class="controls arrow">
+                                                      <input type="text" id="savedAdd" placeholder="Select">
+                                                      <i class="icon"></i>
+                                                    </div>
+                                                </div>
+                                            </div>    
+                                        </div>    
+                                    
+
+                                     <div class="contentRow">
+                                        <div class="addressBox cf">
+                                           <div class="addressContainer styled fl emptyAddress" >
+                                                <div class="addSingleBlock areaWapper">
+                                                    <span class="dfText">Area: </span>
+                                                    <!-- span class="inText">Jayanagar</span -->
+                                                    <input type="text" class="areaAddress" placeholder="Pickup Area">
+                                                </div>
+                                                <div class="addressWapper">
+                                                    <textarea name="" class="textAreaAddress" cols="47" placeholder="Pickup Address" rows="5"></textarea>
+                                                    <!-- 301/ 34 th A Cross, First Floor 9th Main, 4th Block.  -->
+
+                                                </div>
+                                                <div class="addSingleBlock landMarkWapper">
+                                                    <span class="dfText">Landmark:</span>
+                                                    <!-- span class="inText">Near Venakestwara Sweet</span -->
+                                                    <input type="text" class="landMark" placeholder="Landmark">
+                                                </div>
+                                            </div>  
+                                    
+                                            <div class="addressContainer fl fillAddress">
+                                                <div class="addSingleBlock areaWapper">
+                                                    <span class="dfText">Area: </span>
+                                                    <span class="inText">Jayanagar</span>
+                                                </div>
+                                                <div class="addressWapper">
+                                                    301/ 34 th A Cross, First Floor 9th Main, 4th Block.
+                                                </div>
+                                                <div class="addSingleBlock landMarkWapper">
+                                                    <span class="dfText">Landmark:</span>
+                                                    <span class="inText">Near Venakestwara Sweet</span>
+                                                </div>
+                                            </div>  
 
 
 
                                      
                                         
-                                        <div class="SaveAddress   fl">
-                                            <input type="checkbox"> <span class="small-ss">Save New Address As</span>
-                                            <div class="textbox wapmidd"> 
-                                                <input type="text" placeholder="Home/office">
-                                            </div>
-                                        </div> 
+                                            <div class="SaveAddress   fl">
+                                                <input type="checkbox" id="savAdd" class="saveCheck"> <label for="savAdd" class="small-ss">Save New Address As</label>
+                                                <div class="control-group saveAddressBox">
+                                                    <div class="controls">
+                                                      <input type="text" id="home" class="homeOffice" placeholder="Home/Office">
+                                                    </div>
+                                                </div>
+                                            </div> 
 
-                                        <div class="showMap mapGap cf">
-                                                <a href=""><i class="icon sMap"></i> <span class="small-ss s">Show on Map</span><span class="small-ss h">Hide on Map</span></a>
-                                        </div>
+                                            <div class="showMap mapGap cf">
+                                                    <div><i class="icon sMap"></i> <span class="small-ss s">Show on Map</span><span class="small-ss h">Hide on Map</span></div>
+                                            </div>
                                     </div> 
                                     </div> 
-                                    <div class="trow">
-                                        <div class="bookelse cf">
-                                            <span class="beWapper"> <input class="bbCheck" type="checkbox" name="book" value="book"> <span class="small-ss">BOOKING TAXI FOR SOMEONE ELSE ?</span></span>
-                                            
+                                    <div class="contentRow">
+                                            <div class="beWapper"> <input class="bbCheck" id="bookElse" type="checkbox" name="book" value="book"> <label for="bookElse" class="small-ss">BOOKING TAXI FOR SOMEONE ELSE ?</label></div>
+                                     <div class="bookElse" >       
                                             <div class="beContain">
-                                                <div class="inputWapper wrapNormal ">
-                                                   <div class="textbox"> 
-                                                        <input type="text" placeholder="Name">
+                                                <div class="control-group">
+                                                    <div class="controls">
+                                                      <input type="text" id="eName" placeholder="Name">
                                                     </div>
-                                                </div>    
-                                                <div class="inputWapper wrapNormal">
-                                                   <div class="textbox"> 
-                                                        <input type="text" placeholder="Mobile number">
+                                                </div>
+
+                                                <div class="control-group">
+                                                    <div class="controls">
+                                                      <input type="text" id="eMobile" placeholder="Mobile">
                                                     </div>
-                                                </div>    
-                                                <div class="inputWapper wrapNormal">
-                                                   <div class="textbox"> 
-                                                        <input type="text" placeholder="Email">
+                                                </div>
+
+                                                <div class="control-group">
+                                                    <div class="controls">
+                                                      <input type="text" id="eEmail" placeholder="Email">
                                                     </div>
-                                                </div> 
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div class="trow">
-                                            <div class="inputWapper wrapNormal flightNumber">
-                                                <label for="name">Flight Number</label>
-                                               <div class="textbox"> 
-                                                <input type="text" name="name" placeholder="Flight Number" tabindex="8">
+
+                                    <div class="stepFooter"> <!-- stepFooter  -->
+                                        <div class="contentRow">
+                                             <div class="modiLink"><span data-step="step2">modify details</span></div>
+                                            <div class="stepNextButton">
+                                            <button class="next booked" data-form="step3" >Confirm &amp; Book Taxi</button>
+                                                <!-- a  href="#" class="next booked">Book Taxi</a -->
                                             </div>
                                         </div>
-                                  
+                                    </div>   <!--  stepFooter  -->
 
-                                </div>
-                            </section>   
 
-                            <div class="trow">
-                        <div class="submitWapper">
-                            <input type="submit" class="icon getTaxi">
-                            <span class="pay fitalic">
-                                <div>Select and Confirm your taxi</div>
-                                <div>Pay directly to the driver</div>                              
-                            </span>
-                        </div>  
-                        </div>                                
-                        </div>
-                    
-                </div>
-                <div class="large-6-1 columns">
+                                </div>      <!-- Step 3 -->   
+
+                            </div>
+                    </div>
+                </div>  <!-- Left content -->
+
+                <div class="large-6-1 columns">  <!-- Right content -->
                     <div class="premium">
                             <a href="#"><i class="icon ipremium"></i>Premium car</a>
                         </div>
                     <div class="rightSlideWapper">
                         <div class="googleMap mapHome">
-                            <!-- div id="map-canvas"></div -->
-                            
+                            <div id="map-canvas"></div>
                         </div>
+
                         <div class="rightSlider">
                              <div class="highlight">
                             <ul class="highlightAds cf">
@@ -489,11 +508,11 @@ div.styledtime select {
                         </div>
                      </div>   
                     </div>
-                </div>
-            </div>
+                </div>  <!-- Right content -->
+            </div><!-- content -->
 
             
-                <footer>
+                <footer> <!-- Footer -->
                     <div class="layer1">
                         <div class="row">
                             <h3>Read about us</h3>
@@ -537,33 +556,27 @@ div.styledtime select {
                                     <a href="#">Our Partners</a>
                                     <a class="last" href="#">Contact Us</a>
                                 </nav>
-                                <span class="copyright">© 2011 Serendipity Infolabs Pvt. Ltd</span> <a href="#">Privacy Policy</a> <a class="last" href="#">Terms of Use</a>
+                            <span class="copyright">© 2011 Serendipity Infolabs Pvt. Ltd</span> 
+                            <a href="#">Privacy Policy</a> <a class="last" href="#">Terms of Use</a>
 
-                                <div class="otherSite">
-                                    <div class="large-8 columns">
-                                        <nav class="footerCity">
-                                            <a href="#">bangalore</a><a class="last" href="">Delhi</a>
-                                        </nav>
-                                        <a  class="mobileSite last" href="">Goto to Mobile site</a>
-                                    </div>
-                                    <div class="large-8 columns">
-                                        <div class="netbramha">
-                                            <a  class="last" href="#">Designed by NetBramha Studios</a>
-                                        </div>    
-                                    </div>
+                            <div class="otherSite">
+                                <div class="large-8 columns">
+                                    <nav class="footerCity">
+                                        <a href="#">bangalore</a><a class="last" href="">Delhi</a>
+                                    </nav>
+                                    <a  class="mobileSite last" href="">Goto to Mobile site</a>
                                 </div>
-
-
+                                <div class="large-8 columns">
+                                    <div class="netbramha">
+                                        <a  class="last" href="#">Designed by NetBramha Studios</a>
+                                    </div>    
+                                </div>
+                            </div>
                            </div> 
                         <div class="brand">
                             <img src="img/taxi.png" alt="" />
                         </div>
-
-                            
                         </div>
-
-                       
-                        
                     </div>
                     <div class="layer3">
                         <div class="row">
@@ -572,33 +585,79 @@ div.styledtime select {
                         </div>
                         
                     </div>
-                </footer>
+                </footer><!-- Footer -->
             
         </div>  
     </div>        
 
+<div class="popupWapper">
+    <div class="popup">
+        <div class="popupHead">
+            <div class="popupRow">
+            <h4>Login</h4>
+        </div>
+        </div>
+        <div class="popupContain">
+            <div class="popupRow">
+                <div class="popupLoginWap">
+                    <input type="text" value="EMAIL">
+                    <input type="password" value="PASSWORD">
+                </div>
+            </div>
+            <div class="popupRow">
+                <div class="popupButtonWap">
+                    <div class="popupBforgetPass">
+                        <a href="#">Forget your password ?</a>
+                    </div>
+                    <div class="popupBlogin">
+                        <div class="button">Login</div>
+                    </div>
+                </div>    
+            </div>
+            
+                <div class="popupOr">
+                    <span>or</span>
+                </div>
 
+                <div class="socialButton">
+                    <div class="popupRow">
+                        <a href="#">
+                            <img src="img/facebook-login.png" />
+                        </a>
+                    </div>
+                    <div class="popupRow">
+                        <a href="#">
+                            <img src="img/google-login.png" />
+                        </a>
+                    </div>
+                        
+                </div>
+            </div>
+            <div class="popupFooter">
+                <div class="popupRow">
+                    <a href="#">Nah... I want to register with my email id</a>
+                </div>    
+             </div>   
+    </div>
+</div>
 
     
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-  <script src="javascripts/foundation.min.js"></script>
-  <script src="javascripts/jquery.timepicker.js"></script>
+
       <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 
   <script src="javascripts/gmap.js"></script>
 <script src="javascripts/css3-mediaqueries.js"></script>
 <script src="javascripts/taxiforsure.js"></script>
 
-  <!-- script src="javascripts/jquery-ui-timepicker-addon.js"></script -->
+  <script src="javascripts/jquery-ui-timepicker-addon.js"></script>
+<script src="http://cdn.webrupee.com/js" type="text/javascript"></script>
 
 <script>
  $(document).ready(function() {
-
     
-
-            $(document).foundation();
                 taxiforsure.Init();
             });
     
