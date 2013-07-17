@@ -724,7 +724,7 @@ input.error{
 
 
 	.addressContainer{
-		border:1px solid $meGray;
+		border:1px solid #c2c2c2;
 		border-radius:3px;
 		width: 367px;
 
@@ -879,7 +879,7 @@ input[type="submit"].getTaxi.disabled:hover{
 	color:$daGray;
 }
 .addressWapper{
-	border:1px solid $meGray;
+	border:1px solid #c2c2c2;
 	border-left:0px;
 	border-right:0px;
 	padding:0px;
@@ -926,16 +926,18 @@ input[type="submit"].getTaxi.disabled:hover{
 	position: absolute;
 	top:0;
 	left:0px;
-	z-index: 5;
+	z-index: 1;
 	width: 325px;
 	height: 619px;
 
 	border-top:4px solid #F8DA15;
+
 &.mapCon{
 	left:0;
 }
 	&.active{
 		left:0;
+		z-index: 5;
 	}
 }
 .rightSlider{
@@ -1274,7 +1276,7 @@ header,nav,section,{display:block}
 
 
 .toggleAirPort a {
-  padding: 14px 10px 10px 10px;
+  padding: 7px 10px 7px 10px;
   font-size: 16px;
   color: #b8b8b5;
   background-color: #e7e7e6;
@@ -1435,3 +1437,4 @@ margin-bottom: 9px;
 		}
 	}
 }
+

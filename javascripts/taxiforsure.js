@@ -67,7 +67,7 @@ window.taxiforsure = {
 	
 	airportTransfer:function(){
 		var airport = ["International Airport","Domestic airport"];
-		$('#airport').autocomplete({
+		$('.airportGoing').autocomplete({
 		        //select : showRoute,
 		        source: airport,
 		        minLength: 0
@@ -75,6 +75,13 @@ window.taxiforsure = {
 		                $(this).autocomplete("search");
 		        });
 
+		 $('.airportComing').autocomplete({
+		        //select : showRoute,
+		        source: airport,
+		        minLength: 0
+		        }).focus(function(){            
+		                $(this).autocomplete("search");
+		        });
 
 
 		var EnableTab = $('[data-target]');
@@ -309,7 +316,6 @@ window.taxiforsure = {
 		});
 
 		$('.showMap').click(function(event) {
-			console.log("hello");
 		    $('.googleMap').toggleClass('active');
 		    calcRoute("jayanagar, bangalore","jp nagar, bangalore");
 		    $('.showMap').toggleClass('active');
@@ -397,6 +403,9 @@ window.taxiforsure = {
 			$('.stepFirst,.stepSecond').addClass('done');
 			$('.bdetailWap').addClass('Cr');
 			$('.stepThird').addClass('active');
+		}
+		if(ele == "step3"){
+			
 		}
 	},	
 	SubmitEnable:function(){

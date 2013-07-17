@@ -453,6 +453,7 @@ ul{
 	.modiLink{
 		padding:18px 0 0 0;	
 		float: left;
+		cursor: pointer;
 		span{
 			font-size: 12px;
 			text-decoration: underline;
@@ -521,7 +522,7 @@ display:none;
 	margin-top:5px;
 }
 .carTr{
-	&:hover, &.active{
+	 &.active{
 		.taxiIcon{
 			opacity: 1;
 			left: 140px;
@@ -879,7 +880,7 @@ input.error,textarea.error{
 	border:0!important;
 }
 .ui-widget{
-	font-family: ProximaNovaS-Regular!important; 
+	
 }
 .ui-datepicker td{
 	border:0;
@@ -904,3 +905,6 @@ z-index:60;
 		display: none!important;
 	}	
 
+.flightNumberWap{
+	width:150px;
+}
