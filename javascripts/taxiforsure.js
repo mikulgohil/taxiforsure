@@ -393,31 +393,55 @@ window.taxiforsure = {
 
 		});
 	},
-	UpdateView:function(ele){
-		if(ele == "step1"){
-			$('.bdetailWap').addClass('Ar');
-			$('.stepSecond').addClass('active');
-			$('.stepFirst').addClass('done');
+	UpdateView:function(ele,section){
+		if(section == "ptp"){
+			console.log("ptp");
+			if(ele == "step1"){
+				$('.bdetailWap').addClass('Ar');
+				$('.stepSecond').addClass('active');
+				$('.stepFirst').addClass('done');
+			}
+			if(ele == "step2"){
+				$('.stepFirst,.stepSecond').addClass('done');
+				$('.bdetailWap').addClass('Cr');
+				$('.stepThird').addClass('active');
+			}
+			if(ele == "step3"){
+
+			}
+		}else if(section == "airport"){
+			console.log("airport");
+			if(ele == "step1"){
+				$('.bdetailWap').addClass('Ar');
+				$('.stepSecond').addClass('active');
+				$('.stepFirst').addClass('done');
+			}
+			if(ele == "step2"){
+				$('.stepFirst,.stepSecond').addClass('done');
+				$('.bdetailWap').addClass('Cr');
+				$('.stepThird').addClass('active');
+			}
+			if(ele == "step3"){
+
+			}
+
+		}else{
+
 		}
-		if(ele == "step2"){
-			$('.stepFirst,.stepSecond').addClass('done');
-			$('.bdetailWap').addClass('Cr');
-			$('.stepThird').addClass('active');
-		}
-		if(ele == "step3"){
-			
-		}
+		
 	},	
 	SubmitEnable:function(){
+
 		$('.stepNextButton button,.stepNextButton a').bind('click', function(event) {
 			var getFormValidation = $(this).attr('data-form');
+			var getSection = $(this).attr('data-section');
 			console.log(taxiforsure.validateForm(getFormValidation));
 			if(taxiforsure.validateForm(getFormValidation)){
 				var showStep = $(this).attr('data-step');
 				$(this).parents('.stepContentWap').hide();
 				$("."+showStep).show();	
 
-				taxiforsure.UpdateView(getFormValidation);
+				taxiforsure.UpdateView(getFormValidation,getSection);
 
 				
 			};
