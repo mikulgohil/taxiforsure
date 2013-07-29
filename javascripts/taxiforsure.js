@@ -32,6 +32,7 @@ window.taxiforsure = {
 		taxiforsure.Modify();
 
 		taxiforsure.airportTransfer();
+		taxiforsure.popup();
 		//taxiforsure.dataSubmit();
 		
 
@@ -100,11 +101,15 @@ window.taxiforsure = {
 				if(data == "goingAirSelect"){
 					$('.airportPick').show();
 					$('.airportDrop').hide();
+					$('.airportGoing').attr('data-validate','step1');
+					$('.airportComing').attr('data-validate','');
 					$('.airportPick').find('input').attr('data-validate','step1');
 					$('.airportDrop').find('input').attr('data-validate','');
 				}else{
 					$('.airportPick').hide();
 					$('.airportDrop').show();
+					$('.airportGoing').attr('data-validate','');
+					$('.airportComing').attr('data-validate','step1');
 					$('.airportDrop').find('input').attr('data-validate','step1');
 					$('.airportPick').find('input').attr('data-validate','');
 				}
@@ -338,6 +343,27 @@ window.taxiforsure = {
 		});				
 	},
 
+	popup:function(){
+		$('.openPopup').bind('click', function(event) {
+			var getPopup = $(this).attr('data-popup');
+			$('.popupWapper').attr('class','popupWapper');
+			$('.popupWapper').addClass(getPopup+'Active');
+			event.preventDefault();
+		});
+
+		$('.overClose,.popupWapper').bind('click', function(event) {
+			$('.popupWapper').attr('class','popupWapper');
+			event.preventDefault();
+		});
+
+
+		$('.popup').click(function(e) {
+		    e.stopPropagation();
+		});
+
+		
+	},
+
 	map:function(){
 		calcRoute("jayanagar, bangalore","jp nagar, bangalore");
 	},
@@ -409,7 +435,7 @@ window.taxiforsure = {
 			if(ele == "step3"){
 
 			}
-		}else if(section == "airport"){
+		}else if(section == "at"){
 			console.log("airport");
 			if(ele == "step1"){
 				$('.bdetailWap').addClass('Ar');

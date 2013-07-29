@@ -11,6 +11,7 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
 
+
         <meta name="viewport" content="width=device-width">
 
 <link rel="shortcut icon" type="image/ico" href="http://www.taxiforsure.com/static/favicon.ico"/>
@@ -90,10 +91,10 @@
 
                     <div class="leftSlideWapper">
                             <nav class="tab-menu">  
-                                <a href="index.html"><i class="icon iptp"></i>Point to Point</a>
+                                <a href="index.html" class="active"><i class="icon iptp"></i>Point to Point</a>
                                 <a href="airport-transfer.html"><i class="icon iat"></i>Airport Transfer</a>
                                 <a href="half-full-day.html"><i class="icon ihd"></i>Half/full Day</a>
-                                <a href="outstation.html"  class="active"><i class="icon iout"></i>Outstation</a>
+                                <a href="outstation.html"><i class="icon iout"></i>Outstation</a>
                             </nav>
                             <div class="content">
                                 <div class="navInfo">  <!-- Nav Info -->
@@ -138,303 +139,31 @@
 
                                 <div class="stepWap">
                                    <ul >
-                                       <li class="stepFirst active"><span class="count">01</span> Location</li>
-                                       <li class="stepSecond"><span class="count">02</span> Taxi</li>
+                                       <li class="stepFirst "><span class="count">01</span> Location</li>
+                                       <li class="stepSecond active"><span class="count">02</span> Taxi</li>
                                        <li class="stepThird"><span class="count">03</span> Pickup Detail</li>
                                    </ul>
                                 </div>
 
-                                   <div class="stepContentWap FirstStepContain" data-modal="step1">  <!-- Step 1 -->
+                                   <div class="stepContentWap WaitingStepContain" data-modal="">  <!-- Step 1 -->
             
-                                    <div class="stepContent">
-                                        <div class="contentRow">
-                                            <div class="stepContentColumn">
-                                                <div class="control-group defAdd">
-                                                    <label class="control-label" for="pickArea">From</label>
-                                                    <div class="controls arrow">
-                                                      <input type="text" data-error="error message" id="pickArea" data-validate="step1"  placeholder="Select">
-                                                      <i class="icon"></i>
-                                                    </div>
-                                                    <ul class="defAddUl">
-                                                        <li><a href="#">Home</a></li>
-                                                        <li><a href="#">Office</a></li>
-                                                        <li><a href="#">Client Place</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="stepContentColumn">
-                                                <div class="control-group">
-                                                    <label class="control-label" for="dropArea">To</label>
-                                                    <div class="controls arrow">
-                                                      <input type="text" id="dropArea" data-validate="step1" placeholder="Select">
-                                                      <i class="icon"></i>
-                                                      <div class="inputAdd">
-                                                            <span class="add">+</span>
-                                                      </div>
-                                                    </div>
-                                                    
-                                                </div>
-
-                                                <div class="control-group">
-                                                    <div class="controls arrow">
-                                                      <input type="text" id="dropArea" data-validate="step1" placeholder="Select">
-                                                      <i class="icon"></i>
-                                                      <div class="inputAdd">
-                                                            <span class="remove">+</span>
-                                                      </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="control-group">
-                                                    <div class="controls arrow">
-                                                      <input type="text" id="dropArea" data-validate="step1" placeholder="Select">
-                                                      <i class="icon"></i>
-                                                      <div class="inputAdd">
-                                                            <span class="remove">+</span>
-                                                      </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>  
-
-                                         <div class="contentRow">
-                                            <div class="stepContentColumn">
-                                                <div class="control-group defAdd">
-                                                    <label class="control-label" for="pickArea">Pickup Area</label>
-                                                    <div class="controls arrow">
-                                                      <input type="text" data-error="error message" id="pickArea" data-validate="step1"  placeholder="Select">
-                                                      <i class="icon"></i>
-                                                    </div>
-                                                    <ul class="defAddUl">
-                                                        <li><a href="#">Home</a></li>
-                                                        <li><a href="#">Office</a></li>
-                                                        <li><a href="#">Client Place</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                            <div class="stepContentColumn ">
-                                                <div class="stepContentColumn">
-                                                    <div class="control-group">
-                                                        <label class="control-label" for="datepicker">Pick up Date</label>
-                                                        <div class="controls date">
-                                                          <input type="text" id="datepicker" placeholder="Select">
-                                                          <i class="icon"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="stepContentColumn">
-                                                    <div class="control-group">
-                                                        <label class="control-label" for="timepicker">Pick up Time</label>
-                                                        <div class="controls time">
-                                                          <input type="text" id="timepicker" placeholder="Select">
-                                                          <i class="icon"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                         </div>  
-                                    </div>
-
-
-                                    <div class="stepFooter">
-                                        <div class="contentRow">
-                                            
-                                            <div class="stepNextButton">
-                                                <button data-step="step2" class="next" data-section="ptp" data-form="step1" value="Find Taxi">Find Taxi</button>
-                                                <!-- a href="#" data-step="step2" class="next">Find Taxi</a -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>    <!-- Step 1 -->
-                                        
-                                
-
-                                <div class="stepContentWap SecondStepContain step2" >   <!-- Step 2 -->
-                                    <div class="stepContent">
-                                        <div class="contentRow">
-                                        <div class="carPrice">
-                                            <table class="carList">
-                                                  <thead>
-                                                    <tr>
-                                                        <th colspan="2" class="firstTh">Select Car</th>
-                                                        <th>First 10 km</th>
-                                                        <th>AFTER 10 Km</th>
-                                                  </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                    <tr class="carTr">
-                                                      <td><input type="radio" class="p2pFare" name="p2p_fare" value="1" tabindex="1"></td>
-                                                      <td>
-                                                        <div class="taxiInfo">
-                                                            <div class="taxiIcon hasBack"></div>
-                                                            <div class="taxiData">
-                                                                <p class="taxiName">Tata Indica</p>
-                                                                <p class="taxiCondi">4 Seater AC</p>
-                                                            </div>
-                                                        </div>    
-                                                      </td>
-                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 200</td>
-                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 15 / km</td>
-                                                    </tr>
-                                                  
-                                                    <tr class="carTr">
-                                                      <td><input type="radio" class="p2pFare" name="p2p_fare" value="1" tabindex="2"></td>
-                                                      <td>
-                                                        <div class="taxiInfo">
-                                                            <div class="taxiIcon sedan"></div>
-                                                            <div class="taxiData">
-                                                                <p class="taxiName">Tata Manzar</p>
-                                                                <p class="taxiCondi">5 Seater AC</p>
-                                                            </div>
-                                                        </div>    
-                                                      </td>
-                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 200</td>
-                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 15 / km</td>
-                                                    </tr>
-
-                                                     <tr class="carTr">
-                                                      <td><input type="radio" class="p2pFare" name="p2p_fare" value="1" tabindex="3"></td>
-                                                      <td>
-                                                        <div class="taxiInfo">
-                                                            <div class="taxiIcon suv"></div>
-                                                            <div class="taxiData">
-                                                                <p class="taxiName">Tata Innova</p>
-                                                                <p class="taxiCondi">8 Seater AC</p>
-                                                            </div>
-                                                        </div>    
-                                                      </td>
-                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 200</td>
-                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 15 / km</td>
-                                                    </tr>
-                                                      
-                                                    </tbody>
-                                                </table> 
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                     <div class="stepFooter"> <!-- stepFooter  -->
-                                        <div class="contentRow">
-                                             <div class="modiLink"><span data-step="step1">modify details</span></div>
-                                            <div class="stepNextButton">
-                                            <button data-step="step3" data-form="step2"  class="next" value="Find Taxi">Select Taxi</button>
-                                                <!-- a href="#" class="next" data-step="step3">Enter your detail</a -->
-                                            </div>
-                                        </div>
-                                    </div>   <!--  stepFooter  -->
-                                </div>   <!-- Step 2 -->
-
-
-                                <div class="stepContentWap ThirdStepContain step3" >   <!-- Step 3 -->
-
-                                    <div class="stepContent">
-                                        <div class="contentRow">
-                                            <div class="stepContentColumn">
-                                                <div class="control-group">
-                                                    <label class="control-label" for="dropArea">Address</label>
-                                                    <div class="controls arrow">
-                                                      <input type="text" id="savedAdd" placeholder="Select">
-                                                      <i class="icon"></i>
-                                                    </div>
-                                                </div>
-                                            </div>    
-                                        </div>    
-                                    
-
-                                     <div class="contentRow">
-                                        <div class="addressBox cf">
-                                           <div class="addressContainer styled fl emptyAddress" >
-                                                <div class="addSingleBlock areaWapper">
-                                                    <span class="dfText">Area: </span>
-                                                    <!-- span class="inText">Jayanagar</span -->
-                                                    <input type="text" class="areaAddress" placeholder="Pickup Area">
-                                                </div>
-                                                <div class="addressWapper">
-                                                    <textarea name="" class="textAreaAddress" cols="47" placeholder="Pickup Address" rows="5"></textarea>
-                                                    <!-- 301/ 34 th A Cross, First Floor 9th Main, 4th Block.  -->
-
-                                                </div>
-                                                <div class="addSingleBlock landMarkWapper">
-                                                    <span class="dfText">Landmark:</span>
-                                                    <!-- span class="inText">Near Venakestwara Sweet</span -->
-                                                    <input type="text" class="landMark" placeholder="Landmark">
-                                                </div>
-                                            </div>  
-                                    
-                                            <div class="addressContainer fl fillAddress">
-                                                <div class="addSingleBlock areaWapper">
-                                                    <span class="dfText">Area: </span>
-                                                    <span class="inText">Jayanagar</span>
-                                                </div>
-                                                <div class="addressWapper">
-                                                    301/ 34 th A Cross, First Floor 9th Main, 4th Block.
-                                                </div>
-                                                <div class="addSingleBlock landMarkWapper">
-                                                    <span class="dfText">Landmark:</span>
-                                                    <span class="inText">Near Venakestwara Sweet</span>
-                                                </div>
-                                            </div>  
-
-
-
-                                     
-                                        
-                                            <div class="SaveAddress   fl">
-                                                <input type="checkbox" id="savAdd" class="saveCheck"> <label for="savAdd" class="small-ss">Save New Address As</label>
-                                                <div class="control-group saveAddressBox">
-                                                    <div class="controls">
-                                                      <input type="text" id="home" class="homeOffice" placeholder="Home/Office">
-                                                    </div>
-                                                </div>
-                                            </div> 
-
-                                            <div class="showMap mapGap cf">
-                                                    <div><i class="icon sMap"></i> <span class="small-ss s">Show on Map</span><span class="small-ss h">Hide on Map</span></div>
-                                            </div>
-                                    </div> 
-                                    </div> 
                                     <div class="contentRow">
-                                            <div class="beWapper"> <input class="bbCheck" id="bookElse" type="checkbox" name="book" value="book"> <label for="bookElse" class="small-ss">BOOKING TAXI FOR SOMEONE ELSE ?</label></div>
-                                     <div class="bookElse" >       
-                                            <div class="beContain">
-                                                <div class="control-group">
-                                                    <div class="controls">
-                                                      <input type="text" id="eName" placeholder="Name">
-                                                    </div>
-                                                </div>
-
-                                                <div class="control-group">
-                                                    <div class="controls">
-                                                      <input type="text" id="eMobile" placeholder="Mobile">
-                                                    </div>
-                                                </div>
-
-                                                <div class="control-group">
-                                                    <div class="controls">
-                                                      <input type="text" id="eEmail" placeholder="Email">
-                                                    </div>
-                                                </div>
+                                        <p class="waitHead">Please wait while we find a taxi for you...</p>
+                                    </div>
+                                    
+                                    <div class="contentRow">
+                                        <div class="waitingWap">
+                                            <div class="waitingWapHead">Contacting nearest Taxis....</div>
+                                            <div class="wwContain">
+                                                <div class="wwContainText">We found a Taxi near you</div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
 
-                                    <div class="stepFooter"> <!-- stepFooter  -->
-                                        <div class="contentRow">
-                                             <div class="modiLink"><span data-step="step2">modify details</span></div>
-                                            <div class="stepNextButton">
-                                            <button class="next booked" data-form="step3" >Confirm &amp; Book Taxi</button>
-                                                <!-- a  href="#" class="next booked">Book Taxi</a -->
-                                            </div>
-                                        </div>
-                                    </div>   <!--  stepFooter  -->
 
-
-                                </div>      <!-- Step 3 -->   
+                                  
+                                </div>    <!-- Step 1 -->
 
                             </div>
                     </div>

@@ -10,6 +10,27 @@
 	display:inline-block;
 }
 
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+@mixin animation ($name,$time) {
+    -webkit-animation: $name $time infinite; /* Safari 4+ */
+  -moz-animation:    $name $time infinite; /* Fx 5+ */
+  -o-animation:      $name $time infinite; /* Opera 12+ */
+  animation:         $name $time infinite; /* IE 10+ */
+}
 .content{
 	@include clearfix;
 	margin-top:14px;
@@ -297,6 +318,36 @@ ul{
 	}
 }
 
+.inputAdd{
+	display:inline-block;
+	background:#ccc;
+	position: relative;
+	top: -3px;
+	cursor: pointer;
+	@include border-radius(3px);
+	margin-left: 5px;
+
+	span{
+		font-size:12px;
+		color:#fff;
+		padding:5px;
+		width: 26px;
+		height: 26px;
+	
+		&.add{
+			text-indent: -9999px;
+			@include icon;
+			background-position:-169px -264px;
+		}	
+		&.remove{
+			text-indent: -9999px;
+			@include icon;
+			background-position:-141px -263px;
+		}	
+	}
+	
+}
+
 .controls.blank{
 	width:120px;
 	background:url(../img/drop.png) no-repeat left center;
@@ -515,6 +566,11 @@ ul{
 .ThirdStepContain{
 display:none;	
 }
+
+.WaitingStepContain{
+
+}
+
 .bookElse{
 	display:none;
 }
@@ -623,8 +679,8 @@ display:none;
 		position: relative;
 		li{
 			background:#ffffd4;
-			padding:4px 5px;
-			font-size: 14px;
+			padding: 3px 5px 2px 5px;
+			font-size: 12px;
 			float: left;
 			margin-right: 5px;
 			border:1px solid #ddd6d0;
@@ -645,6 +701,20 @@ display:none;
 .saveAddressBox{
 	display:none;
 }
+
+.hfDaysl{
+	.control-group{
+		width: 50%;
+	}
+	.controls.date .icon{
+		right:32px;
+	}
+	.controls.time .icon{
+		right:32px;	
+	}
+}
+
+
 .ui-widget{
 	
 }
@@ -672,29 +742,58 @@ display:none;
 	left:0;
 	right:0;
 	bottom:0;
-	background:#555;
+	background:rgba(0, 0, 0, 0.6);
 	z-index: 50;
-	display:none;
+display:none;
+	
 
 	.popup{
-		position: absolute;
+		position: relative;
 		z-index: 55;
 		width: 300px;
 		margin:0 auto;
 		background:#fff;
 		@include border-radius(4px);
+		left: 50%;
+		margin-left: -150px;
+		top: 105px;
+		display:none;
+		z-index: 60;
 		
+	}
+
+	&.loginActive{
+		display: block;
+		.popup.login{
+			display: block;
+		}
+	}
+
+	&.registerActive{
+		display: block;
+		.popup.register{
+			display: block;
+		}
+	}
+
+	&.forgetPassActive{
+		display: block;
+		.popup.forgetPass{
+			display: block;
+		}	
 	}
 
 	.popupHead{
 		background:#eaeaea;
 		padding:13px 0;
+		@include border-radius(4px 4px 0 0);
 
 		h4{
 			margin:0;
 			padding:0;
 			font-size: 24px;
 			color: #5e5e57;
+			float: left;
 		}
 
 	}
@@ -708,38 +807,52 @@ display:none;
 		padding:10px 0;
 
 		input{
-			@include border-radius(4px);
-			background-color: #fff;
-			@include box-shadow(0 2px 2px rgba(0,1,1,.1));
-			border: solid 1px #c2c2c2;
-			padding:10px;
-			width: 252px;
-			@include bold;	
-			font-size: 12px;
-			color: #5e5e57;
-			margin-top: -1px;
-			&:first-child{
-				margin-top: 0;
-				@include border-radius(4px 4px 0 0);
+			
+				background-color: #fff;
+				@include box-shadow(0 2px 2px rgba(0,1,1,.1));
+				border: solid 1px #c2c2c2;
+				padding:10px;
+				width: 252px;
+				@include bold;	
+				font-size: 14px;
+				color: #5e5e57;
+				margin-top: -1px;
+				z-index: 0;
+				position:relative;
+
+				
+				
+				&:focus{
+					z-index: 1;
+				}
 			}
-			&:last-child{
-				@include border-radius(0 0 4px 4px);
+
+			.popupLoginWap.multiInput{
+				input{
+					&:first-child{
+						margin-top: 0;
+						@include border-radius(4px 4px 0 0);
+					}
+					&:last-child{
+						@include border-radius(0 0 4px 4px);
+					}	
+				}		
 			}
 		}
-	}
+
 	.forgetPass{
 
 	}
 	.popupBforgetPass{
 		display: inline-block;
-		padding: 10px 0;
+		padding: 10px 0 0 0;
 		overflow: hidden;
 		margin-right: 30px;
+		float:left;
+		margin-top: 4px;
 		a{
 			font-size: 13px;
 			color: #5e5e57;
-			text-decoration: underline;	
-
 		}
 		
 	}
@@ -751,6 +864,19 @@ display:none;
 		cursor: pointer;
 		display: inline-block;
 		@include border-radius(3px);
+		float:right;
+
+		@include animate(.2s);
+		@include translateY(3px);
+
+		&:hover{
+			
+		@include box-shadow(0 3px 0 #bda61a);
+			  @include translateY(0px);
+
+			
+			
+		}
 	}
 	.popupOr{
 		width: 100%;
@@ -780,8 +906,18 @@ display:none;
 	}
 	.socialButton{
 		padding:10px 0;
+
+		a:hover{
+				opacity:.8;
+		}
+		a{
+			display:block;
+		}
+		.popFb{
+			margin-bottom:15px;
+		}
 		img{
-			width: auto;
+			
 		}
 		
 	}
@@ -794,6 +930,7 @@ display:none;
 	.popupFooter{
 		background:#eaeaea;
 		padding: 20px 0;
+		@include border-radius(0 0 4px 4px);
 		a{
 			color: #343333;
 			font-size: 14px;
@@ -801,6 +938,29 @@ display:none;
 		}
 	}
 }
+
+.popupHead{
+
+}
+.overClose{
+	float:right;
+	margin:0;
+	cursor: pointer;
+	position: relative;
+	top: -25px;
+	right: -35px;
+
+	span,a{
+		width:26px;
+		height:26px;
+		padding:7px;
+		display:block;
+		background:url(../img/close_btn.png) no-repeat;
+		text-indent: -9999px;
+
+	}
+}
+
 
 input.error,textarea.error{
 	
@@ -907,4 +1067,8 @@ z-index:60;
 
 .flightNumberWap{
 	width:150px;
+}
+
+.fRight{
+	float:right;
 }

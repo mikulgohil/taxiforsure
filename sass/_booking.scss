@@ -1,0 +1,311 @@
+
+
+
+.bookingSlideWapper{
+	background:#fff;
+	@include border-radius(0 3px 3px 3px);
+	border-top:4px solid #f8da15;
+	margin-top: 65px;
+padding-bottom: 10px;
+}
+
+
+.wwTaxiDetail{
+	margin:0;
+	padding:15px 0 0 35px;
+	list-style:none;
+
+	li{
+		float:left;
+		padding-right:20px;
+
+	span{
+		clear:both;
+		display:block;
+		overflow:hidden;
+		color:#5e5e57;
+		padding:0;
+	}
+
+		.wwTextBold{
+			@include bold;
+			font-size:13px;
+		}
+
+		.wwTextNormal{
+			@include light;	
+			font-size:18px;
+		}
+	}
+}
+
+.booking-row{
+	width:965px;
+	margin:0 auto;
+
+	&:before,
+&:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+&:after {
+    clear: both;
+}
+}
+
+.booking-row{
+
+}
+h1.booking{
+	color:#5e5e57;
+	@include bold;
+	font-size:18px;
+	padding:20px 0 0 0;
+	margin:0;
+
+}
+
+.booking-tab{
+	width:100%;
+	border-bottom:1px solid #e7e7e7;
+	padding:0;
+
+	li{
+		margin-right:10px;
+		@include border-radius(3px 3px 0 0);
+		background:#e7e7e6;
+		float:left;
+		
+
+		span{
+			padding:10px 15px;
+			font-size:14px;
+			color:#666666;	
+			display:block;
+		}
+
+		&.active{
+			background:#666666;
+
+			span{
+				color:#fff;
+			}
+		}
+	}
+}
+.bdhalf{
+	width:40%;
+}
+.bdlf{ width:60%;}
+.bdrowWap{
+	padding:10px;
+	border-bottom:1px solid #c2c2c2;
+
+	&:before,
+&:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+&:after {
+    clear: both;
+}
+
+&:last-child{
+	border-bottom:0;
+}
+}
+
+
+.bookingDetailBox{
+	border:1px solid #c2c2c2;
+	@include border-radius(4px);
+	width:472px;
+}
+.bookingDetailHead{
+	background:#f0f0f0;
+	@include border-radius(4px 4px 0 0);
+	padding:10px 10px;
+
+}
+
+.bdFrom{
+	font-size:16px;
+	color:#5e5e57;
+	float:left;
+	width:45%;
+	
+}
+
+.bdtoIcon{
+	float:left;	
+	background:#fff;
+	color:#999999;
+	font-size:14px;
+	margin:0 10px;
+	padding:4px 5px;
+	@include border-radius(11px);
+	display:block;
+}
+
+.bdTo{
+	width:45%;
+	float:left;
+	font-size:16px;
+	color:#5e5e57;	
+	
+}
+
+.bdTimeWap{
+	float:left;
+	span{
+		font-size:16px;
+		color:#5e5e57;
+	}
+
+	.bdDay{
+		font-size:32px;
+		color:#5e5e57;
+		float:left;
+	}
+
+	.bdMonth{
+		font-size:12px;
+		color:#5e5e57;
+		display:block;
+		line-height: 9px;
+		padding-top: 3px;
+	}
+	.bdYear{
+		font-size:12px;
+		color:#5e5e57;
+	}
+}
+
+.bdTime{
+	float:left;
+		font-size:16px;
+		color:#5e5e57;
+	
+}
+
+.bdFontLarge{
+		font-size:26px;
+		color:#5e5e57;
+		float:left;
+		@include bold;
+
+		.m{
+			@include normal;			
+		}
+}
+
+.bdFontMid{
+	font-size:16px;
+	@include bold;
+}
+
+.bdFontSmall{
+	font-size:14px;
+	color:#999999;
+
+}
+.bdFontRate{
+	@include bold;
+	font-size:24px;
+}
+.assignWap{
+	background:#33cc66;
+	.atYou,.bdBookedBy{
+		color:#fff;		
+	}
+}
+
+.bdEvents{
+	margin:0;
+	padding:0;
+	li{
+		display:inline-block;
+		margin:0 8px;
+
+		i{
+			width:15px;
+			height:15px;
+			@include icon;
+		}
+
+		&.bdEdit{
+			i{
+				background-position:-215px -267px; 	
+			}
+		}
+		&.bdDel{
+			i{
+				background-position:-246px -268px; 	
+			}
+		}
+		&.dbPrint{
+			i{
+				background-position:-272px -267px; 	
+			}
+		}
+		&.dbMessage{
+			i{
+				background-position:-297px -267px; 	
+			}
+		}
+		&.dbComment{
+			i{
+				background-position:-322px -266px; 	
+			}
+		}
+		
+	}
+}
+
+.atTrack{
+	position:relative;
+}
+.ddWap{
+	position:absolute;
+	background: #fff;
+	width: 100%;
+	left: -10px;
+	padding: 0px 10px 0 10px;
+	top:29px;
+	border:1px solid #c2c2c2;
+	z-index:1000;
+	@include border-radius(0 0 4px 4px);
+}
+
+.ddetail{
+	float:left;
+	padding:0;
+	margin: 10px 0;
+	li{
+		
+		padding:3px 0;
+		width:100%;
+		float:left;
+
+	
+		.lsec{
+			@include normal;
+			width:50%;
+			display:block;
+			float:left;
+		}
+		.rsec{
+			@include bold;
+			font-size:14px;	
+			width:50%;
+			display:block;
+			float:left;
+		}
+	}
+}

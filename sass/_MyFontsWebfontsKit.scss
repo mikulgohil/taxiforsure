@@ -5,12 +5,12 @@
 @font-face {font-family: 'ProximaNovaS-Regular';src: url('../webfonts/26794B_0_0.eot');src: url('../webfonts/26794B_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/26794B_0_0.woff') format('woff'),url('../webfonts/26794B_0_0.ttf') format('truetype');}   
 @font-face {font-family: 'ProximaNovaS-Semibold';src: url('../webfonts/26794B_1_0.eot');src: url('../webfonts/26794B_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/26794B_1_0.woff') format('woff'),url('../webfonts/26794B_1_0.ttf') format('truetype');}  
 @font-face {font-family: 'ProximaNovaA-Light';src: url('../webfonts/26794B_2_0.eot');src: url('../webfonts/26794B_2_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/26794B_2_0.woff') format('woff'),url('../webfonts/26794B_2_0.ttf') format('truetype');}
-@font-face {font-family: 'ProximaNovaA-Semibold';src: url('../webfonts/26794B_3_0.eot');src: url('../webfonts/26794B_3_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/26794B_3_0.woff') format('woff'),url('../webfonts/26794B_3_0.ttf') format('truetype');}
+@font-face {font-family: 'TaxiForSure-SemiBold';src: url('../webfonts/26794B_3_0.eot');src: url('../webfonts/26794B_3_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/26794B_3_0.woff') format('woff'),url('../webfonts/26794B_3_0.ttf') format('truetype');}
 @font-face {font-family: 'ProximaNovaA-Regular';src: url('../webfonts/26794B_4_0.eot');src: url('../webfonts/26794B_4_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/26794B_4_0.woff') format('woff'),url('../webfonts/26794B_4_0.ttf') format('truetype');}
 @font-face {font-family: 'ProximaNovaS-Light';src: url('../webfonts/26794B_5_0.eot');src: url('../webfonts/26794B_5_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/26794B_5_0.woff') format('woff'),url('../webfonts/26794B_5_0.ttf') format('truetype');}
-@font-face {font-family: 'ProximaNova-Light';src: url('../webfonts/26794B_6_0.eot');src: url('../webfonts/26794B_6_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/26794B_6_0.woff') format('woff'),url('../webfonts/26794B_6_0.ttf') format('truetype');}
-@font-face {font-family: 'ProximaNova-Semibold';src: url('../webfonts/26794B_7_0.eot');src: url('../webfonts/26794B_7_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/26794B_7_0.woff') format('woff'),url('../webfonts/26794B_7_0.ttf') format('truetype');}
-@font-face {font-family: 'ProximaNova-Regular';src: url('../webfonts/26794B_8_0.eot');src: url('../webfonts/26794B_8_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/26794B_8_0.woff') format('woff'),url('../webfonts/26794B_8_0.ttf') format('truetype');}
+@font-face {font-family: 'TaxiForSure-Light';src: url('../webfonts/26794B_6_0.eot');src: url('../webfonts/26794B_6_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/26794B_6_0.woff') format('woff'),url('../webfonts/26794B_6_0.ttf') format('truetype');}
+@font-face {font-family: 'TaxiForSure-Bold';src: url('../webfonts/26794B_7_0.eot');src: url('../webfonts/26794B_7_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/26794B_7_0.woff') format('woff'),url('../webfonts/26794B_7_0.ttf') format('truetype');}
+@font-face {font-family: 'TaxiForSure-Normal';src: url('../webfonts/26794B_8_0.eot');src: url('../webfonts/26794B_8_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/26794B_8_0.woff') format('woff'),url('../webfonts/26794B_8_0.ttf') format('truetype');}
  
 
 
@@ -100,30 +100,30 @@
 .ProximaNovaS-Regular { font-family: ProximaNovaS-Regular; }
 .ProximaNovaS-Semibold { font-family: ProximaNovaS-Semibold; }
 .ProximaNovaA-Light { font-family: ProximaNovaA-Light; }
-.ProximaNovaA-Semibold { font-family: ProximaNovaA-Semibold; }
+.TaxiForSure-SemiBold { font-family: TaxiForSure-SemiBold; }
 .ProximaNovaA-Regular { font-family: ProximaNovaA-Regular; }
 .ProximaNovaS-Light { font-family: ProximaNovaS-Light; }
-.ProximaNova-Light { font-family: ProximaNova-Light; }
-.ProximaNova-Semibold { font-family: ProximaNova-Semibold; }
-.ProximaNova-Regular { font-family: ProximaNova-Regular; }
+.TaxiForSure-Light { font-family: TaxiForSure-Light; }
+.TaxiForSure-Bold { font-family: TaxiForSure-Bold; }
+.TaxiForSure-Normal { font-family: TaxiForSure-Normal; }
 
 
 @mixin normal {
-  font-family: 'ProximaNova-Regular',sans-serif;
+  font-family: 'TaxiForSure-Normal',sans-serif;
   font-weight: normal;
 }
 
 @mixin bold {
-  font-family: 'ProximaNova-Semibold',sans-serif;
+  font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
 }
 
 @mixin light {
-  font-family: 'ProximaNova-Light',sans-serif;
+  font-family: 'TaxiForSure-Light',sans-serif;
   font-weight: normal;
 }
 
 @mixin semibold {
-  font-family: 'ProximaNovaA-Semibold',sans-serif;
+  font-family: 'TaxiForSure-SemiBold',sans-serif;
   font-weight: normal;
 } 

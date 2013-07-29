@@ -5,7 +5,8 @@
 //@import "_foundation.scss";
 //@import "_form.scss";
 @import "_base.scss";
-@import "_timepicker.scss";
+@import "_datatimepicker.scss";
+
 
 .cf:before,
 .cf:after {
@@ -334,14 +335,8 @@ animation:myfirst 0.1s;
 
 .leftSlideWapper{
 	background:#fff;
-	
-	-webkit-border-radius:0 3px 3px 3px;
--moz-border-radius: 0 3px 3px 3px;
--ms-border-radius: 0 3px 3px 3px;
--o-border-radius: 0 3px 3px 3px;
-border-radius: 0 3px 3px 3px;
-
-	border-top:4px solid #f8da15;
+	@include border-radius(0 3px 3px 3px);
+	border-top: 4px solid #f8da15;
 	margin-top: 65px;
 padding-bottom: 10px;
 }
@@ -1438,3 +1433,5 @@ margin-bottom: 9px;
 	}
 }
 
+@import "_waiting.scss";
+@import "_booking.scss";

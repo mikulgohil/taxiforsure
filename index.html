@@ -76,8 +76,8 @@
                     <div class="large-6-1 columns topIconBox last">
                         <ul>
                             <li><a href="#"><span><i class="icon icall"></i></span><em>Call back</em></a></li>
-                            <li><a href="#"><span><i class="icon ilogin"></i></span><em>Login</em></a></li>
-                            <li><a href="#"><span><i class="icon iregister"></i></span><em>Register</em></a></li>
+                            <li><a href="#" class="openPopup" data-popup="login"><span><i class="icon ilogin"></i></span><em>Login</em></a></li>
+                            <li><a href="#" class="openPopup"  data-popup="register"><span><i class="icon iregister"></i></span><em>Register</em></a></li>
                              <!-- <li><a href="#"><span><i class="icon ibooking"></i></span><em>Booking</em><q>3</q></a></li> -->
                              <!-- <li><a href="#"><span><i class="icon isetting"></i></span><em>Setting</em></a></li>
                              <li><a href="#"><span><i class="icon ilogout"></i></span><em>Logout</em></a></li> -->
@@ -295,7 +295,7 @@
                                         <div class="contentRow">
                                              <div class="modiLink"><span data-step="step1">modify details</span></div>
                                             <div class="stepNextButton">
-                                            <button data-step="step3" data-form="step2" data-section="ptp" class="next" value="Find Taxi">Select Taxi</button>
+                                            <button data-step="step3" data-form="step2"  class="next" value="Find Taxi">Select Taxi</button>
                                                 <!-- a href="#" class="next" data-step="step3">Enter your detail</a -->
                                             </div>
                                         </div>
@@ -402,7 +402,7 @@
                                         <div class="contentRow">
                                              <div class="modiLink"><span data-step="step2">modify details</span></div>
                                             <div class="stepNextButton">
-                                            <button class="next booked" data-form="step3" data-section="ptp" >Confirm &amp; Book Taxi</button>
+                                            <button class="next booked" data-form="step3" >Confirm &amp; Book Taxi</button>
                                                 <!-- a  href="#" class="next booked">Book Taxi</a -->
                                             </div>
                                         </div>
@@ -567,23 +567,25 @@
     </div>        
 
 <div class="popupWapper">
-    <div class="popup">
-        <div class="popupHead">
+    <div class="popup login">
+        <div class="popupHead cf">
             <div class="popupRow">
-            <h4>Login</h4>
-        </div>
+                <h4>Login</h4>
+                <div class="overClose"><span>Close</span></div>
+            </div>
+
         </div>
         <div class="popupContain">
             <div class="popupRow">
-                <div class="popupLoginWap">
-                    <input type="text" value="EMAIL">
-                    <input type="password" value="PASSWORD">
+                <div class="popupLoginWap multiInput">
+                    <input type="text" placeholder="Email">
+                    <input type="password" placeholder="Password">
                 </div>
             </div>
             <div class="popupRow">
-                <div class="popupButtonWap">
+                <div class="popupButtonWap cf">
                     <div class="popupBforgetPass">
-                        <a href="#">Forget your password ?</a>
+                        <a href="#" class="openPopup" data-popup="forgetPass">Forget your password ?</a>
                     </div>
                     <div class="popupBlogin">
                         <div class="button">Login</div>
@@ -597,13 +599,13 @@
 
                 <div class="socialButton">
                     <div class="popupRow">
-                        <a href="#">
-                            <img src="img/facebook-login.png" />
+                        <a class="popFb" href="#">
+                            <img src="img/btn_fb.png" width="252" height="41" />
                         </a>
                     </div>
                     <div class="popupRow">
-                        <a href="#">
-                            <img src="img/google-login.png" />
+                        <a  class="popGl" href="#">
+                            <img src="img/btn_google.png" width="252" height="41" />
                         </a>
                     </div>
                         
@@ -615,6 +617,91 @@
                 </div>    
              </div>   
     </div>
+
+    <!-- Register -->
+
+    <div class="popup register">
+        <div class="popupHead">
+            <div class="popupRow cf">
+                <h4>Register</h4>
+                <div class="overClose"><span>Close</span></div>
+            </div>
+
+        </div>
+        <div class="popupContain">
+            <div class="popupRow">
+                <div class="popupLoginWap multiInput">
+                    <input type="text"  placeholder="Name">
+                    <input type="text"  placeholder="Email">
+                    <input type="text"  placeholder="Mobile">
+                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Confirm Password">
+                </div>
+            </div>
+            <div class="popupRow">
+                <div class="popupButtonWap cf">
+                    
+                    <div class="popupBlogin">
+                        <div class="button">Register</div>
+                    </div>
+                </div>    
+            </div>
+            
+                <div class="popupOr">
+                    <span>or</span>
+                </div>
+
+                <div class="socialButton">
+                    <div class="popupRow">
+                        <a class="popFb" href="#">
+                            <img src="img/btn_fb.png" width="252" height="41" />
+                        </a>
+                    </div>
+                    <div class="popupRow">
+                        <a  class="popGl" href="#">
+                            <img src="img/btn_google.png" width="252" height="41" />
+                        </a>
+                    </div>
+                        
+                </div>
+            </div>
+            <div class="popupFooter">
+                <div class="popupRow">
+                    <a href="#">Nah... I want to register with my email id</a>
+                </div>    
+             </div>   
+    </div>
+
+    <!-- Register -->
+
+    <!-- Forgot password -->
+    
+    <div class="popup forgetPass">
+        <div class="popupHead cf">
+            <div class="popupRow">
+                <h4>Forget Password</h4>
+                <div class="overClose"><span>Close</span></div>
+            </div>
+
+        </div>
+        <div class="popupContain">
+            <div class="popupRow">
+                <div class="popupLoginWap">
+                    <input type="text" placeholder="Email">
+                </div>
+            </div>
+            <div class="popupRow">
+                <div class="popupButtonWap cf">
+                    <div class="popupBlogin">
+                        <div class="button">Send</div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Forget password -->
 </div>
 
     
@@ -633,10 +720,8 @@
 
 <script>
  $(document).ready(function() {
-    
                 taxiforsure.Init();
             });
-    
 </script>
   
   

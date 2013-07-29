@@ -90,10 +90,10 @@
 
                     <div class="leftSlideWapper">
                             <nav class="tab-menu">  
-                                <a href="index.html"><i class="icon iptp"></i>Point to Point</a>
+                                <a href="index.html" class="active"><i class="icon iptp"></i>Point to Point</a>
                                 <a href="airport-transfer.html"><i class="icon iat"></i>Airport Transfer</a>
                                 <a href="half-full-day.html"><i class="icon ihd"></i>Half/full Day</a>
-                                <a href="outstation.html"  class="active"><i class="icon iout"></i>Outstation</a>
+                                <a href="outstation.html"><i class="icon iout"></i>Outstation</a>
                             </nav>
                             <div class="content">
                                 <div class="navInfo">  <!-- Nav Info -->
@@ -144,60 +144,10 @@
                                    </ul>
                                 </div>
 
-                                   <div class="stepContentWap FirstStepContain" data-modal="step1">  <!-- Step 1 -->
+                                   <div class="stepContentWap FirstStepContain hide" data-modal="step1">  <!-- Step 1 -->
             
                                     <div class="stepContent">
                                         <div class="contentRow">
-                                            <div class="stepContentColumn">
-                                                <div class="control-group defAdd">
-                                                    <label class="control-label" for="pickArea">From</label>
-                                                    <div class="controls arrow">
-                                                      <input type="text" data-error="error message" id="pickArea" data-validate="step1"  placeholder="Select">
-                                                      <i class="icon"></i>
-                                                    </div>
-                                                    <ul class="defAddUl">
-                                                        <li><a href="#">Home</a></li>
-                                                        <li><a href="#">Office</a></li>
-                                                        <li><a href="#">Client Place</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="stepContentColumn">
-                                                <div class="control-group">
-                                                    <label class="control-label" for="dropArea">To</label>
-                                                    <div class="controls arrow">
-                                                      <input type="text" id="dropArea" data-validate="step1" placeholder="Select">
-                                                      <i class="icon"></i>
-                                                      <div class="inputAdd">
-                                                            <span class="add">+</span>
-                                                      </div>
-                                                    </div>
-                                                    
-                                                </div>
-
-                                                <div class="control-group">
-                                                    <div class="controls arrow">
-                                                      <input type="text" id="dropArea" data-validate="step1" placeholder="Select">
-                                                      <i class="icon"></i>
-                                                      <div class="inputAdd">
-                                                            <span class="remove">+</span>
-                                                      </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="control-group">
-                                                    <div class="controls arrow">
-                                                      <input type="text" id="dropArea" data-validate="step1" placeholder="Select">
-                                                      <i class="icon"></i>
-                                                      <div class="inputAdd">
-                                                            <span class="remove">+</span>
-                                                      </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>  
-
-                                         <div class="contentRow">
                                             <div class="stepContentColumn">
                                                 <div class="control-group defAdd">
                                                     <label class="control-label" for="pickArea">Pickup Area</label>
@@ -212,8 +162,31 @@
                                                     </ul>
                                                 </div>
                                             </div>
+                                            <div class="stepContentColumn">
+                                                <div class="control-group">
+                                                    <label class="control-label" for="dropArea">Drop Area</label>
+                                                    <div class="controls arrow">
+                                                      <input type="text" id="dropArea" data-validate="step1" placeholder="Select">
+                                                      <i class="icon"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
 
-                                            <div class="stepContentColumn ">
+                                         <div class="contentRow">
+                                            <div class="stepContentColumn">
+                                                <div class="control-group">
+                                                    <label class="control-label" for="pickupArea">When</label>
+                                                    <div class="controls switch">
+                                                        <ul class="cf toggleLater" >
+                                                            <li data-modal="immediate" class="active">Immediately</li>
+                                                            <li data-modal="later" >Later</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="stepContentColumn laterBox">
                                                 <div class="stepContentColumn">
                                                     <div class="control-group">
                                                         <label class="control-label" for="datepicker">Pick up Date</label>
@@ -234,7 +207,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+                                            <div class="stepContentColumn immediateBox">
+                                                <p>Today at <span class="currentTime">12:00 PM</span></p>
+                                            </div>
                                          </div>  
                                     </div>
 
@@ -252,9 +227,45 @@
                                         
                                 
 
-                                <div class="stepContentWap SecondStepContain step2" >   <!-- Step 2 -->
+                                <div class="stepContentWap SecondStepContain step2" style="display:block">   <!-- Step 2 -->
                                     <div class="stepContent">
+                                        
+                                    <div class="contentRow">
+                                        <p class="waitHead">Please wait while we find a taxi for you...</p>
+                                    </div>
+                                    
+                                    <div class="contentRow">
+                                        <div class="waitingWap">
+                                            <div class="waitingWapHead">
+                                                <span class="waitIcon"><i class="iDots"></i></span>
+                                                    Contacting nearest Taxis....</div>
+                                            <div class="wwContain cf">
+                                                <div class="wwContainText">
+                                                    <span class="waitIcon"><i class="wIcon"></i></span>
+                                                    We found a Taxi near you
+                                                </div>
+
+                                                    <ul class="wwTaxiDetail">
+                                                        <li>
+                                                            <span class="wwTextBold">Pickup Location</span> 
+                                                            <span class="wwTextNormal">Koramangla</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="wwTextBold">Your taxi is</span> 
+                                                            <span class="wwTextNormal">1 km away</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="wwTextBold">Taxi will reach you in</span> 
+                                                            <span class="wwTextNormal">10 mins</span>
+                                                        </li>
+                                                    </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+
                                         <div class="contentRow">
+                                        
                                         <div class="carPrice">
                                             <table class="carList">
                                                   <thead>
@@ -266,7 +277,7 @@
                                                     </thead>
                                                     <tbody>
                                                     <tr class="carTr">
-                                                      <td><input type="radio" class="p2pFare" name="p2p_fare" value="1" tabindex="1"></td>
+                                                      <td></td>
                                                       <td>
                                                         <div class="taxiInfo">
                                                             <div class="taxiIcon hasBack"></div>
@@ -276,38 +287,8 @@
                                                             </div>
                                                         </div>    
                                                       </td>
-                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 200</td>
-                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 15 / km</td>
-                                                    </tr>
-                                                  
-                                                    <tr class="carTr">
-                                                      <td><input type="radio" class="p2pFare" name="p2p_fare" value="1" tabindex="2"></td>
-                                                      <td>
-                                                        <div class="taxiInfo">
-                                                            <div class="taxiIcon sedan"></div>
-                                                            <div class="taxiData">
-                                                                <p class="taxiName">Tata Manzar</p>
-                                                                <p class="taxiCondi">5 Seater AC</p>
-                                                            </div>
-                                                        </div>    
-                                                      </td>
-                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 200</td>
-                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 15 / km</td>
-                                                    </tr>
-
-                                                     <tr class="carTr">
-                                                      <td><input type="radio" class="p2pFare" name="p2p_fare" value="1" tabindex="3"></td>
-                                                      <td>
-                                                        <div class="taxiInfo">
-                                                            <div class="taxiIcon suv"></div>
-                                                            <div class="taxiData">
-                                                                <p class="taxiName">Tata Innova</p>
-                                                                <p class="taxiCondi">8 Seater AC</p>
-                                                            </div>
-                                                        </div>    
-                                                      </td>
-                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 200</td>
-                                                      <td class="carCost"><span class="WebRupee">Rs.</span> 15 / km</td>
+                                                      <td class="carCost"></td>
+                                                      <td class="carCost"></td>
                                                     </tr>
                                                       
                                                     </tbody>
@@ -592,13 +573,11 @@
     </div>        
 
 <div class="popupWapper">
-    <div class="popup login">
-        <div class="popupHead cf">
+    <div class="popup">
+        <div class="popupHead">
             <div class="popupRow">
-                <h4>Login</h4>
-                <div class="overClose"><span>Close</span></div>
-            </div>
-
+            <h4>Login</h4>
+        </div>
         </div>
         <div class="popupContain">
             <div class="popupRow">
@@ -608,7 +587,7 @@
                 </div>
             </div>
             <div class="popupRow">
-                <div class="popupButtonWap cf">
+                <div class="popupButtonWap">
                     <div class="popupBforgetPass">
                         <a href="#">Forget your password ?</a>
                     </div>
@@ -642,62 +621,6 @@
                 </div>    
              </div>   
     </div>
-
-    <!-- Register -->
-
-    <div class="popup register">
-        <div class="popupHead">
-            <div class="popupRow cf">
-                <h4>Register</h4>
-                <div class="overClose"><span>Close</span></div>
-            </div>
-
-        </div>
-        <div class="popupContain">
-            <div class="popupRow">
-                <div class="popupLoginWap">
-                    <input type="text"  placeholder="Name">
-                    <input type="text"  placeholder="Email">
-                    <input type="text"  placeholder="Mobile">
-                    <input type="password" placeholder="Password">
-                    <input type="password" placeholder="Confirm Password">
-                </div>
-            </div>
-            <div class="popupRow">
-                <div class="popupButtonWap cf">
-                    
-                    <div class="popupBlogin">
-                        <div class="button">Register</div>
-                    </div>
-                </div>    
-            </div>
-            
-                <div class="popupOr">
-                    <span>or</span>
-                </div>
-
-                <div class="socialButton">
-                    <div class="popupRow">
-                        <a href="#">
-                            <img src="img/facebook-login.png" />
-                        </a>
-                    </div>
-                    <div class="popupRow">
-                        <a href="#">
-                            <img src="img/google-login.png" />
-                        </a>
-                    </div>
-                        
-                </div>
-            </div>
-            <div class="popupFooter">
-                <div class="popupRow">
-                    <a href="#">Nah... I want to register with my email id</a>
-                </div>    
-             </div>   
-    </div>
-
-    <!-- Register -->
 </div>
 
     

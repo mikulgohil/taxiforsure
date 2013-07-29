@@ -432,7 +432,7 @@ table {
 }
 
 @font-face {
-  font-family: 'ProximaNovaA-Semibold';
+  font-family: 'TaxiForSure-SemiBold';
   src: url("../webfonts/26794B_3_0.eot");
   src: url("../webfonts/26794B_3_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/26794B_3_0.woff") format("woff"), url("../webfonts/26794B_3_0.ttf") format("truetype");
 }
@@ -450,19 +450,19 @@ table {
 }
 
 @font-face {
-  font-family: 'ProximaNova-Light';
+  font-family: 'TaxiForSure-Light';
   src: url("../webfonts/26794B_6_0.eot");
   src: url("../webfonts/26794B_6_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/26794B_6_0.woff") format("woff"), url("../webfonts/26794B_6_0.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'ProximaNova-Semibold';
+  font-family: 'TaxiForSure-Bold';
   src: url("../webfonts/26794B_7_0.eot");
   src: url("../webfonts/26794B_7_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/26794B_7_0.woff") format("woff"), url("../webfonts/26794B_7_0.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'ProximaNova-Regular';
+  font-family: 'TaxiForSure-Normal';
   src: url("../webfonts/26794B_8_0.eot");
   src: url("../webfonts/26794B_8_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/26794B_8_0.woff") format("woff"), url("../webfonts/26794B_8_0.ttf") format("truetype");
 }
@@ -531,8 +531,8 @@ table {
 }
 
 /* line 103, ../sass/_MyFontsWebfontsKit.scss */
-.ProximaNovaA-Semibold {
-  font-family: ProximaNovaA-Semibold;
+.TaxiForSure-SemiBold {
+  font-family: TaxiForSure-SemiBold;
 }
 
 /* line 104, ../sass/_MyFontsWebfontsKit.scss */
@@ -546,18 +546,18 @@ table {
 }
 
 /* line 106, ../sass/_MyFontsWebfontsKit.scss */
-.ProximaNova-Light {
-  font-family: ProximaNova-Light;
+.TaxiForSure-Light {
+  font-family: TaxiForSure-Light;
 }
 
 /* line 107, ../sass/_MyFontsWebfontsKit.scss */
-.ProximaNova-Semibold {
-  font-family: ProximaNova-Semibold;
+.TaxiForSure-Bold {
+  font-family: TaxiForSure-Bold;
 }
 
 /* line 108, ../sass/_MyFontsWebfontsKit.scss */
-.ProximaNova-Regular {
-  font-family: ProximaNova-Regular;
+.TaxiForSure-Normal {
+  font-family: TaxiForSure-Normal;
 }
 
 /* line 66, ../sass/_base.scss */
@@ -581,7 +581,7 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: 'ProximaNova-Regular',sans-serif;
+  font-family: 'TaxiForSure-Normal',sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -614,7 +614,7 @@ img {
 
 /* line 104, ../sass/_base.scss */
 b, strong {
-  font-family: 'ProximaNova-Semibold',sans-serif;
+  font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
 }
 
@@ -768,61 +768,585 @@ select {
   float: left;
 }
 
-/* line 1, ../sass/_timepicker.scss */
-.ui-datepicker-current {
+/* Bootstrap datepicker CSS */
+/* line 2, ../sass/_datatimepicker.scss */
+.dropdown {
+  position: relative;
+}
+
+/* line 3, ../sass/_datatimepicker.scss */
+.dropdown-toggle {
+  *margin-bottom: -3px;
+}
+
+/* line 4, ../sass/_datatimepicker.scss */
+.dropdown-toggle:active, .open .dropdown-toggle {
+  outline: 0;
+}
+
+/* line 5, ../sass/_datatimepicker.scss */
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  text-indent: -99999px;
+  *text-indent: 0;
+  vertical-align: top;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #000000;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  content: "\2193";
+}
+
+/* line 19, ../sass/_datatimepicker.scss */
+.dropdown .caret {
+  margin-top: 8px;
+  margin-left: 2px;
+}
+
+/* line 23, ../sass/_datatimepicker.scss */
+.dropdown:hover .caret, .open.dropdown .caret {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/* line 27, ../sass/_datatimepicker.scss */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  display: none;
+  min-width: 160px;
+  max-width: 220px;
+  _width: 160px;
+  padding: 4px 0;
+  margin: 0;
+  list-style: none;
+  background-color: #ffffff;
+  border-color: #cccccc;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+}
+
+/* line 57, ../sass/_datatimepicker.scss */
+.dropdown-menu.bottom-up {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 2px;
+}
+
+/* line 62, ../sass/_datatimepicker.scss */
+.dropdown-menu .divider {
+  height: 1px;
+  margin: 5px 1px;
+  overflow: hidden;
+  background-color: #e5e5e5;
+  border-bottom: 1px solid #ffffff;
+  *width: 100%;
+  *margin: -5px 0 5px;
+}
+
+/* line 71, ../sass/_datatimepicker.scss */
+.dropdown-menu a {
+  display: block;
+  padding: 3px 15px;
+  clear: both;
+  font-weight: normal;
+  line-height: 18px;
+  color: #555555;
+  white-space: nowrap;
+}
+
+/* line 80, ../sass/_datatimepicker.scss */
+.dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #0060b6;
+}
+
+/* line 85, ../sass/_datatimepicker.scss */
+.dropdown.open {
+  *z-index: 1000;
+}
+
+/* line 86, ../sass/_datatimepicker.scss */
+.dropdown.open .dropdown-toggle {
+  color: #ffffff;
+  background: #cccccc;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* line 91, ../sass/_datatimepicker.scss */
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+/* line 92, ../sass/_datatimepicker.scss */
+.typeahead {
+  margin-top: 2px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/*
+ * Datepicker for Bootstrap
+ *
+ * Copyright 2012 Stefan Petre
+ * Improvements by Andrew Rowls
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+/* line 107, ../sass/_datatimepicker.scss */
+.datepicker {
+  top: 0;
+  left: 0;
+  padding: 4px;
+  margin-top: 1px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  /*.dow {
+    border-top: 1px solid #ddd !important;
+  }*/
+}
+
+/* line 120, ../sass/_datatimepicker.scss */
+.datepicker:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: -7px;
+  left: 6px;
+}
+
+/* line 131, ../sass/_datatimepicker.scss */
+.datepicker:after {
+  content: '';
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  position: absolute;
+  top: -6px;
+  left: 7px;
+}
+
+/* line 141, ../sass/_datatimepicker.scss */
+.datepicker > div {
   display: none;
 }
 
-/* line 2, ../sass/_timepicker.scss */
-.ui-timepicker-div .ui-widget-header {
-  margin-bottom: 8px;
+/* line 144, ../sass/_datatimepicker.scss */
+.datepicker.days div.datepicker-days {
+  display: block;
 }
 
-/* line 3, ../sass/_timepicker.scss */
-.ui-timepicker-div dl {
-  text-align: left;
+/* line 147, ../sass/_datatimepicker.scss */
+.datepicker.months div.datepicker-months {
+  display: block;
 }
 
-/* line 4, ../sass/_timepicker.scss */
-.ui-timepicker-div dl dt {
-  height: 25px;
-  margin-bottom: -25px;
+/* line 150, ../sass/_datatimepicker.scss */
+.datepicker.years div.datepicker-years {
+  display: block;
 }
 
-/* line 5, ../sass/_timepicker.scss */
-.ui-timepicker-div dl dd {
-  margin: 0 10px 10px 65px;
+/* line 153, ../sass/_datatimepicker.scss */
+.datepicker table {
+  margin: 0;
 }
 
-/* line 6, ../sass/_timepicker.scss */
-.ui-timepicker-div td {
-  font-size: 90%;
+/* line 156, ../sass/_datatimepicker.scss */
+.datepicker td,
+.datepicker th {
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 
-/* line 7, ../sass/_timepicker.scss */
-.ui-tpicker-grid-label {
+/* line 165, ../sass/_datatimepicker.scss */
+.datepicker td.day:hover {
+  background: #eeeeee;
+  cursor: pointer;
+}
+
+/* line 169, ../sass/_datatimepicker.scss */
+.datepicker td.old,
+.datepicker td.new {
+  color: #999999;
+}
+
+/* line 173, ../sass/_datatimepicker.scss */
+.datepicker td.disabled,
+.datepicker td.disabled:hover {
   background: none;
-  border: none;
+  color: #999999;
+  cursor: default;
+}
+
+/* line 179, ../sass/_datatimepicker.scss */
+.datepicker td.today,
+.datepicker td.today:hover,
+.datepicker td.today.disabled,
+.datepicker td.today.disabled:hover {
+  background-color: #fde19a;
+  background-image: -moz-linear-gradient(top, #fdd49a, #fdf59a);
+  background-image: -ms-linear-gradient(top, #fdd49a, #fdf59a);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fdd49a), to(#fdf59a));
+  background-image: -webkit-linear-gradient(top, #fdd49a, #fdf59a);
+  background-image: -o-linear-gradient(top, #fdd49a, #fdf59a);
+  background-image: linear-gradient(top, #fdd49a, #fdf59a);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdd49a', endColorstr='#fdf59a', GradientType=0);
+  border-color: #fdf59a #fdf59a #fbed50;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+/* line 196, ../sass/_datatimepicker.scss */
+.datepicker td.today:hover,
+.datepicker td.today:hover:hover,
+.datepicker td.today.disabled:hover,
+.datepicker td.today.disabled:hover:hover,
+.datepicker td.today:active,
+.datepicker td.today:hover:active,
+.datepicker td.today.disabled:active,
+.datepicker td.today.disabled:hover:active,
+.datepicker td.today.active,
+.datepicker td.today:hover.active,
+.datepicker td.today.disabled.active,
+.datepicker td.today.disabled:hover.active,
+.datepicker td.today.disabled,
+.datepicker td.today:hover.disabled,
+.datepicker td.today.disabled.disabled,
+.datepicker td.today.disabled:hover.disabled,
+.datepicker td.today[disabled],
+.datepicker td.today:hover[disabled],
+.datepicker td.today.disabled[disabled],
+.datepicker td.today.disabled:hover[disabled] {
+  background-color: #fdf59a;
+}
+
+/* line 218, ../sass/_datatimepicker.scss */
+.datepicker td.today:active,
+.datepicker td.today:hover:active,
+.datepicker td.today.disabled:active,
+.datepicker td.today.disabled:hover:active,
+.datepicker td.today.active,
+.datepicker td.today:hover.active,
+.datepicker td.today.disabled.active,
+.datepicker td.today.disabled:hover.active {
+  background-color: #fbf069 \9;
+}
+
+/* line 228, ../sass/_datatimepicker.scss */
+.datepicker td.active,
+.datepicker td.active:hover,
+.datepicker td.active.disabled,
+.datepicker td.active.disabled:hover {
+  background-color: #006dcc;
+  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+  background-image: linear-gradient(top, #0088cc, #0044cc);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
+  border-color: #0044cc #0044cc #002a80;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* line 247, ../sass/_datatimepicker.scss */
+.datepicker td.active:hover,
+.datepicker td.active:hover:hover,
+.datepicker td.active.disabled:hover,
+.datepicker td.active.disabled:hover:hover,
+.datepicker td.active:active,
+.datepicker td.active:hover:active,
+.datepicker td.active.disabled:active,
+.datepicker td.active.disabled:hover:active,
+.datepicker td.active.active,
+.datepicker td.active:hover.active,
+.datepicker td.active.disabled.active,
+.datepicker td.active.disabled:hover.active,
+.datepicker td.active.disabled,
+.datepicker td.active:hover.disabled,
+.datepicker td.active.disabled.disabled,
+.datepicker td.active.disabled:hover.disabled,
+.datepicker td.active[disabled],
+.datepicker td.active:hover[disabled],
+.datepicker td.active.disabled[disabled],
+.datepicker td.active.disabled:hover[disabled] {
+  background-color: #0044cc;
+}
+
+/* line 269, ../sass/_datatimepicker.scss */
+.datepicker td.active:active,
+.datepicker td.active:hover:active,
+.datepicker td.active.disabled:active,
+.datepicker td.active.disabled:hover:active,
+.datepicker td.active.active,
+.datepicker td.active:hover.active,
+.datepicker td.active.disabled.active,
+.datepicker td.active.disabled:hover.active {
+  background-color: #003399 \9;
+}
+
+/* line 279, ../sass/_datatimepicker.scss */
+.datepicker td span {
+  display: block;
+  width: 23%;
+  height: 54px;
+  line-height: 54px;
+  float: left;
+  margin: 1%;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 291, ../sass/_datatimepicker.scss */
+.datepicker td span:hover {
+  background: #eeeeee;
+}
+
+/* line 294, ../sass/_datatimepicker.scss */
+.datepicker td span.disabled,
+.datepicker td span.disabled:hover {
+  background: none;
+  color: #999999;
+  cursor: default;
+}
+
+/* line 300, ../sass/_datatimepicker.scss */
+.datepicker td span.active,
+.datepicker td span.active:hover,
+.datepicker td span.active.disabled,
+.datepicker td span.active.disabled:hover {
+  background-color: #006dcc;
+  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+  background-image: linear-gradient(top, #0088cc, #0044cc);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
+  border-color: #0044cc #0044cc #002a80;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* line 319, ../sass/_datatimepicker.scss */
+.datepicker td span.active:hover,
+.datepicker td span.active:hover:hover,
+.datepicker td span.active.disabled:hover,
+.datepicker td span.active.disabled:hover:hover,
+.datepicker td span.active:active,
+.datepicker td span.active:hover:active,
+.datepicker td span.active.disabled:active,
+.datepicker td span.active.disabled:hover:active,
+.datepicker td span.active.active,
+.datepicker td span.active:hover.active,
+.datepicker td span.active.disabled.active,
+.datepicker td span.active.disabled:hover.active,
+.datepicker td span.active.disabled,
+.datepicker td span.active:hover.disabled,
+.datepicker td span.active.disabled.disabled,
+.datepicker td span.active.disabled:hover.disabled,
+.datepicker td span.active[disabled],
+.datepicker td span.active:hover[disabled],
+.datepicker td span.active.disabled[disabled],
+.datepicker td span.active.disabled:hover[disabled] {
+  background-color: #0044cc;
+}
+
+/* line 341, ../sass/_datatimepicker.scss */
+.datepicker td span.active:active,
+.datepicker td span.active:hover:active,
+.datepicker td span.active.disabled:active,
+.datepicker td span.active.disabled:hover:active,
+.datepicker td span.active.active,
+.datepicker td span.active:hover.active,
+.datepicker td span.active.disabled.active,
+.datepicker td span.active.disabled:hover.active {
+  background-color: #003399 \9;
+}
+
+/* line 351, ../sass/_datatimepicker.scss */
+.datepicker td span.old {
+  color: #999999;
+}
+
+/* line 354, ../sass/_datatimepicker.scss */
+.datepicker th.switch {
+  width: 145px;
+}
+
+/* line 357, ../sass/_datatimepicker.scss */
+.datepicker thead tr:first-child th,
+.datepicker tfoot tr:first-child th {
+  cursor: pointer;
+}
+
+/* line 361, ../sass/_datatimepicker.scss */
+.datepicker thead tr:first-child th:hover,
+.datepicker tfoot tr:first-child th:hover {
+  background: #eeeeee;
+}
+
+/* line 365, ../sass/_datatimepicker.scss */
+.input-append.date .add-on i,
+.input-prepend.date .add-on i {
+  display: block;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+/* line 373, ../sass/_datatimepicker.scss */
+[class^="icon-"], [class*=" icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("glyphicons-halflings.png");
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+}
+
+/* line 384, ../sass/_datatimepicker.scss */
+[class^="icon-"]:last-child, [class*=" icon-"]:last-child {
+  *margin-left: 0;
+}
+
+/* line 385, ../sass/_datatimepicker.scss */
+.icon-arrow-left {
+  background-position: -240px -96px;
+}
+
+/* line 386, ../sass/_datatimepicker.scss */
+.icon-arrow-right {
+  background-position: -264px -96px;
+}
+
+/* line 392, ../sass/_datatimepicker.scss */
+.ui-timepicker-wrapper {
+  overflow-y: auto;
+  height: 150px;
+  width: 6.5em;
+  background: #fff;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  outline: none;
+  z-index: 10001;
+  margin: 0;
+}
+
+/* line 406, ../sass/_datatimepicker.scss */
+.ui-timepicker-wrapper.ui-timepicker-with-duration {
+  width: 11em;
+}
+
+/* line 410, ../sass/_datatimepicker.scss */
+.ui-timepicker-list {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-/* line 9, ../sass/_timepicker.scss */
-.ui-timepicker-rtl {
-  direction: rtl;
+/* line 416, ../sass/_datatimepicker.scss */
+.ui-timepicker-duration {
+  margin-left: 5px;
+  color: #888;
 }
 
-/* line 10, ../sass/_timepicker.scss */
-.ui-timepicker-rtl dl {
-  text-align: right;
+/* line 420, ../sass/_datatimepicker.scss */
+.ui-timepicker-list:hover .ui-timepicker-duration {
+  color: #888;
 }
 
-/* line 11, ../sass/_timepicker.scss */
-.ui-timepicker-rtl dl dd {
-  margin: 0 65px 10px 10px;
+/* line 424, ../sass/_datatimepicker.scss */
+.ui-timepicker-list li {
+  padding: 3px 0 3px 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #000;
+  list-style: none;
+  margin: 0;
 }
 
-/* line 10, ../sass/main.scss */
+/* line 435, ../sass/_datatimepicker.scss */
+.ui-timepicker-list:hover .ui-timepicker-selected {
+  background: #fff;
+  color: #000;
+}
+
+/* line 439, ../sass/_datatimepicker.scss */
+li.ui-timepicker-selected,
+.ui-timepicker-list li:hover,
+.ui-timepicker-list .ui-timepicker-selected:hover {
+  background: #1980EC;
+  color: #fff;
+}
+
+/* line 445, ../sass/_datatimepicker.scss */
+li.ui-timepicker-selected .ui-timepicker-duration,
+.ui-timepicker-list li:hover .ui-timepicker-duration {
+  color: #ccc;
+}
+
+/* line 450, ../sass/_datatimepicker.scss */
+.ui-timepicker-list li.ui-timepicker-disabled,
+.ui-timepicker-list li.ui-timepicker-disabled:hover,
+.ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
+  color: #888;
+  cursor: default;
+}
+
+/* line 457, ../sass/_datatimepicker.scss */
+.ui-timepicker-list li.ui-timepicker-disabled:hover,
+.ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
+  background: #f2f2f2;
+}
+
+/* line 11, ../sass/main.scss */
 .cf:before,
 .cf:after {
   content: " ";
@@ -831,23 +1355,23 @@ select {
   /* 2 */
 }
 
-/* line 18, ../sass/main.scss */
+/* line 19, ../sass/main.scss */
 .cf:after {
   clear: both;
 }
 
-/* line 22, ../sass/main.scss */
+/* line 23, ../sass/main.scss */
 .large-8 {
   width: 50%;
 }
 
-/* line 25, ../sass/main.scss */
+/* line 26, ../sass/main.scss */
 .large-10-1 {
   position: relative;
   width: 634px;
 }
 
-/* line 29, ../sass/main.scss */
+/* line 30, ../sass/main.scss */
 .large-6-1 {
   position: relative;
   width: 342px;
@@ -855,57 +1379,57 @@ select {
   float: right;
 }
 
-/* line 36, ../sass/main.scss */
+/* line 37, ../sass/main.scss */
 .large-4 {
   position: relative;
   width: 25%;
 }
 
-/* line 41, ../sass/main.scss */
+/* line 42, ../sass/main.scss */
 .large-6 {
   position: relative;
   width: 37.5%;
 }
 
-/* line 46, ../sass/main.scss */
+/* line 47, ../sass/main.scss */
 .large-10 {
   position: relative;
   width: 62.5%;
 }
 
-/* line 50, ../sass/main.scss */
+/* line 51, ../sass/main.scss */
 body {
   background: url(../img/bg_image.png) fixed;
   background-size: cover;
 }
 
-/* line 54, ../sass/main.scss */
+/* line 55, ../sass/main.scss */
 .fl {
   float: left;
 }
 
-/* line 57, ../sass/main.scss */
+/* line 58, ../sass/main.scss */
 .fr {
   float: right;
 }
 
-/* line 60, ../sass/main.scss */
+/* line 61, ../sass/main.scss */
 a {
   color: #5e5e57;
   text-decoration: none;
 }
 
-/* line 64, ../sass/main.scss */
+/* line 65, ../sass/main.scss */
 em {
   font-style: normal;
 }
 
-/* line 68, ../sass/main.scss */
+/* line 69, ../sass/main.scss */
 ul li {
   list-style-type: none;
 }
 
-/* line 75, ../sass/main.scss */
+/* line 76, ../sass/main.scss */
 .trow:after {
   visibility: hidden;
   display: block;
@@ -915,33 +1439,33 @@ ul li {
   height: 0;
 }
 
-/* line 84, ../sass/main.scss */
+/* line 85, ../sass/main.scss */
 .trow {
   display: inline-block;
 }
 
 /* start commented backslash hack \*/
-/* line 89, ../sass/main.scss */
+/* line 90, ../sass/main.scss */
 * html .trow {
   height: 1%;
 }
 
-/* line 93, ../sass/main.scss */
+/* line 94, ../sass/main.scss */
 .trow {
   display: block;
 }
 
-/* line 99, ../sass/main.scss */
+/* line 100, ../sass/main.scss */
 .textLight {
   color: #e6e6e6;
 }
 
-/* line 103, ../sass/main.scss */
+/* line 104, ../sass/main.scss */
 .textDark {
   color: #5e5e57;
 }
 
-/* line 106, ../sass/main.scss */
+/* line 107, ../sass/main.scss */
 .clearDiv {
   overflow: hidden;
   *zoom: 1;
@@ -949,104 +1473,104 @@ ul li {
   height: 0;
 }
 
-/* line 112, ../sass/main.scss */
+/* line 113, ../sass/main.scss */
 .icon {
   background: url(../img/icons.png) no-repeat;
   display: inline-block;
 }
 
-/* line 117, ../sass/main.scss */
+/* line 118, ../sass/main.scss */
 .lineHeight-m {
   line-height: 16px;
 }
 
-/* line 120, ../sass/main.scss */
+/* line 121, ../sass/main.scss */
 .paddZero {
   padding: 0;
 }
 
-/* line 123, ../sass/main.scss */
+/* line 124, ../sass/main.scss */
 .small-ss {
   font-size: 10px;
   font-family: verdana;
   color: #5e5e57;
 }
 
-/* line 128, ../sass/main.scss */
+/* line 129, ../sass/main.scss */
 .small-s {
   font-size: 12px;
 }
 
-/* line 131, ../sass/main.scss */
+/* line 132, ../sass/main.scss */
 .small-m {
   font-size: 14px;
 }
 
-/* line 134, ../sass/main.scss */
+/* line 135, ../sass/main.scss */
 .small-l {
   font-size: 16px;
 }
 
-/* line 137, ../sass/main.scss */
+/* line 138, ../sass/main.scss */
 .small-lx {
   font-size: 18px;
 }
 
-/* line 140, ../sass/main.scss */
+/* line 141, ../sass/main.scss */
 .bold {
-  font-family: 'ProximaNova-Semibold',sans-serif;
+  font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
 }
 
-/* line 143, ../sass/main.scss */
+/* line 144, ../sass/main.scss */
 .normal {
   font-size: 12px;
   color: #5e5e57;
 }
 
-/* line 150, ../sass/main.scss */
+/* line 151, ../sass/main.scss */
 .paddingTop-s {
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
-/* line 154, ../sass/main.scss */
+/* line 155, ../sass/main.scss */
 .padding-none {
   padding: 0;
 }
 
-/* line 157, ../sass/main.scss */
+/* line 158, ../sass/main.scss */
 .paddingL-none {
   padding-left: 0;
 }
 
-/* line 160, ../sass/main.scss */
+/* line 161, ../sass/main.scss */
 .paddingR-none {
   padding-right: 0;
 }
 
-/* line 163, ../sass/main.scss */
+/* line 164, ../sass/main.scss */
 .textR {
   text-align: right;
 }
 
-/* line 166, ../sass/main.scss */
+/* line 167, ../sass/main.scss */
 .TellNumberWapper {
   padding: 15px 0;
 }
 
-/* line 169, ../sass/main.scss */
+/* line 170, ../sass/main.scss */
 .tellNumber {
   padding-right: 6px;
   padding-top: 2px;
 }
-/* line 172, ../sass/main.scss */
+/* line 173, ../sass/main.scss */
 .tellNumber span {
   display: block;
   color: #666;
 }
 
-/* line 177, ../sass/main.scss */
+/* line 178, ../sass/main.scss */
 .dialBox {
   overflow: hidden;
   *zoom: 1;
@@ -1056,25 +1580,25 @@ ul li {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 181, ../sass/main.scss */
+/* line 182, ../sass/main.scss */
 .dialBox .dial {
   padding: 5px 0;
   text-align: center;
-  font-family: 'ProximaNova-Semibold',sans-serif;
+  font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
 }
-/* line 187, ../sass/main.scss */
+/* line 188, ../sass/main.scss */
 .dialBox .y {
   background: #f8da15;
   color: #333;
 }
-/* line 191, ../sass/main.scss */
+/* line 192, ../sass/main.scss */
 .dialBox .b {
   background: #000;
   color: #fff;
 }
 
-/* line 199, ../sass/main.scss */
+/* line 200, ../sass/main.scss */
 .topBox {
   overflow: hidden;
   *zoom: 1;
@@ -1086,23 +1610,23 @@ ul li {
   border-radius: 0 0 3px 3px;
 }
 
-/* line 206, ../sass/main.scss */
+/* line 207, ../sass/main.scss */
 .topIconBox ul {
   display: block;
   float: right;
   margin: 7px 10px 7px 0;
 }
-/* line 210, ../sass/main.scss */
+/* line 211, ../sass/main.scss */
 .topIconBox ul li {
   float: left;
   padding: 0 8px;
 }
-/* line 213, ../sass/main.scss */
+/* line 214, ../sass/main.scss */
 .topIconBox ul li a {
   position: relative;
   display: block;
 }
-/* line 217, ../sass/main.scss */
+/* line 218, ../sass/main.scss */
 .topIconBox ul li span {
   display: block;
   width: 52px;
@@ -1114,7 +1638,7 @@ ul li {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 224, ../sass/main.scss */
+/* line 225, ../sass/main.scss */
 .topIconBox ul li em {
   font-size: 11px;
   color: #003399;
@@ -1122,7 +1646,7 @@ ul li {
   width: 100%;
   display: inline-block;
 }
-/* line 231, ../sass/main.scss */
+/* line 232, ../sass/main.scss */
 .topIconBox ul li q {
   position: absolute;
   background: #EA0000;
@@ -1137,7 +1661,7 @@ ul li {
   quotes: "";
 }
 
-/* line 248, ../sass/main.scss */
+/* line 249, ../sass/main.scss */
 .topIconBox i {
   -o-transition: all .2s linear;
   -ms-transition: all .2s linear;
@@ -1146,7 +1670,7 @@ ul li {
   transition: all .2s linear;
 }
 
-/* line 255, ../sass/main.scss */
+/* line 256, ../sass/main.scss */
 .icall {
   background-position: -9px -48px;
   width: 25px;
@@ -1154,14 +1678,14 @@ ul li {
   margin: 12px 0 0 12px;
 }
 
-/* line 263, ../sass/main.scss */
+/* line 264, ../sass/main.scss */
 .topIconBox a:hover .icall {
   animation: myfirst 0.1s;
   -webkit-animation: myfirst 0.1s;
   /* Safari and Chrome */
 }
 
-/* line 269, ../sass/main.scss */
+/* line 270, ../sass/main.scss */
 .ilogin {
   background-position: -66px -50px;
   width: 17px;
@@ -1169,14 +1693,14 @@ ul li {
   margin: 16px 0 0 16px;
 }
 
-/* line 275, ../sass/main.scss */
+/* line 276, ../sass/main.scss */
 .topIconBox a:hover .ilogin {
   animation: myfirst 0.1s;
   -webkit-animation: myfirst 0.1s;
   /* Safari and Chrome */
 }
 
-/* line 280, ../sass/main.scss */
+/* line 281, ../sass/main.scss */
 .iregister {
   background-position: -117px -50px;
   width: 20px;
@@ -1184,7 +1708,7 @@ ul li {
   margin: 16px 0 0 16px;
 }
 
-/* line 286, ../sass/main.scss */
+/* line 287, ../sass/main.scss */
 .topIconBox a:hover .iregister {
   animation: myfirst 0.1s;
   -webkit-animation: myfirst 0.1s;
@@ -1267,7 +1791,7 @@ ul li {
   }
 }
 
-/* line 298, ../sass/main.scss */
+/* line 299, ../sass/main.scss */
 .ibooking {
   background-position: -162px -49px;
   width: 24px;
@@ -1275,14 +1799,14 @@ ul li {
   margin: 16px 0 0 16px;
 }
 
-/* line 304, ../sass/main.scss */
+/* line 305, ../sass/main.scss */
 .topIconBox a:hover .ibooking {
   animation: myfirst 0.1s;
   -webkit-animation: myfirst 0.1s;
   /* Safari and Chrome */
 }
 
-/* line 309, ../sass/main.scss */
+/* line 310, ../sass/main.scss */
 .isetting {
   background-position: -204px -48px;
   width: 24px;
@@ -1290,14 +1814,14 @@ ul li {
   margin: 16px 0 0 16px;
 }
 
-/* line 315, ../sass/main.scss */
+/* line 316, ../sass/main.scss */
 .topIconBox a:hover .isetting {
   animation: myfirst 0.1s;
   -webkit-animation: myfirst 0.1s;
   /* Safari and Chrome */
 }
 
-/* line 320, ../sass/main.scss */
+/* line 321, ../sass/main.scss */
 .ilogout {
   background-position: -248px -50px;
   width: 25px;
@@ -1305,7 +1829,7 @@ ul li {
   margin: 16px 0 0 16px;
 }
 
-/* line 326, ../sass/main.scss */
+/* line 327, ../sass/main.scss */
 .topIconBox a:hover .ilogout {
   animation: myfirst 0.1s;
   -webkit-animation: myfirst 0.1s;
@@ -1313,7 +1837,7 @@ ul li {
 }
 
 /*  Left section */
-/* line 335, ../sass/main.scss */
+/* line 336, ../sass/main.scss */
 .leftSlideWapper {
   background: #fff;
   -webkit-border-radius: 0 3px 3px 3px;
@@ -1326,11 +1850,11 @@ ul li {
   padding-bottom: 10px;
 }
 
-/* line 349, ../sass/main.scss */
+/* line 344, ../sass/main.scss */
 .tab-menu {
   margin-top: -40px;
 }
-/* line 351, ../sass/main.scss */
+/* line 346, ../sass/main.scss */
 .tab-menu a {
   background: #fff;
   -webkit-border-radius: 3px 3px 0 0;
@@ -1339,95 +1863,95 @@ ul li {
   padding: 14px 10px 10px 10px;
   font-size: 16px;
   color: #b8b8b8;
-  font-family: 'ProximaNova-Semibold',sans-serif;
+  font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
 }
-/* line 360, ../sass/main.scss */
+/* line 355, ../sass/main.scss */
 .tab-menu a i {
   margin-right: 10px;
   vertical-align: text-bottom;
 }
-/* line 364, ../sass/main.scss */
+/* line 359, ../sass/main.scss */
 .tab-menu a:hover, .tab-menu a.active {
   background: #f8da15;
   color: #000;
   padding: 18px 10px 10px 10px;
 }
 
-/* line 372, ../sass/main.scss */
+/* line 367, ../sass/main.scss */
 .tab-menu .iptp {
   background-position: -45px -135px;
   width: 20px;
   height: 20px;
 }
-/* line 377, ../sass/main.scss */
+/* line 372, ../sass/main.scss */
 .tab-menu .iat {
   background-position: -91px -132px;
   width: 23px;
   height: 23px;
 }
-/* line 382, ../sass/main.scss */
+/* line 377, ../sass/main.scss */
 .tab-menu .ihd {
   background-position: -141px -132px;
   width: 27px;
   height: 22px;
 }
-/* line 387, ../sass/main.scss */
+/* line 382, ../sass/main.scss */
 .tab-menu .iout {
   background-position: -195px -127px;
   width: 26px;
   height: 26px;
 }
-/* line 393, ../sass/main.scss */
+/* line 388, ../sass/main.scss */
 .tab-menu .active .iptp, .tab-menu a:hover .iptp {
   background-position: -45px -94px;
 }
-/* line 397, ../sass/main.scss */
+/* line 392, ../sass/main.scss */
 .tab-menu .active .iat, .tab-menu a:hover .iat {
   background-position: -91px -92px;
 }
-/* line 401, ../sass/main.scss */
+/* line 396, ../sass/main.scss */
 .tab-menu .active .ihd, .tab-menu a:hover .ihd {
   background-position: -141px -91px;
 }
-/* line 405, ../sass/main.scss */
+/* line 400, ../sass/main.scss */
 .tab-menu .active .iout, .tab-menu a:hover .iout {
   background-position: -195px -86px;
 }
 
-/* line 13, ../sass/_contain.scss */
+/* line 34, ../sass/_contain.scss */
 .content {
   overflow: hidden;
   *zoom: 1;
   margin-top: 14px;
 }
 
-/* line 18, ../sass/_contain.scss */
+/* line 39, ../sass/_contain.scss */
 .navInfo {
   width: 100%;
   background: #5e5d58;
   padding: 25px 0px 35px 0;
 }
 
-/* line 25, ../sass/_contain.scss */
+/* line 46, ../sass/_contain.scss */
 .contentRow {
   width: 560px;
   margin: 0 auto 10px auto;
   *zoom: 1;
 }
 
-/* line 30, ../sass/_contain.scss */
+/* line 51, ../sass/_contain.scss */
 .contentRow:before, .contentRow:after {
   content: " ";
   display: table;
 }
 
-/* line 35, ../sass/_contain.scss */
+/* line 56, ../sass/_contain.scss */
 .contentRow:after {
   clear: both;
 }
 
-/* line 38, ../sass/_contain.scss */
+/* line 59, ../sass/_contain.scss */
 .iloc {
   background: url(../img/icons.png) no-repeat;
   display: inline-block;
@@ -1436,16 +1960,16 @@ ul li {
   background-position: -293px -49px;
 }
 
-/* line 44, ../sass/_contain.scss */
+/* line 65, ../sass/_contain.scss */
 .location {
   margin-top: 10px;
 }
 
-/* line 47, ../sass/_contain.scss */
+/* line 68, ../sass/_contain.scss */
 .stepContentWap {
   padding-top: 35px;
 }
-/* line 50, ../sass/_contain.scss */
+/* line 71, ../sass/_contain.scss */
 .stepContentWap h2 {
   color: #c8c8c8;
   text-transform: uppercase;
@@ -1455,71 +1979,71 @@ ul li {
   margin: 0;
 }
 
-/* line 60, ../sass/_contain.scss */
+/* line 81, ../sass/_contain.scss */
 .stepContent {
   padding: 25px 0;
 }
 
-/* line 64, ../sass/_contain.scss */
+/* line 85, ../sass/_contain.scss */
 .control-group {
   padding: 5px 0;
 }
 
-/* line 67, ../sass/_contain.scss */
+/* line 88, ../sass/_contain.scss */
 .control-label {
   font-size: 12px;
   color: #5e5e57;
-  font-family: 'ProximaNova-Semibold',sans-serif;
+  font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
   text-transform: uppercase;
 }
 
-/* line 74, ../sass/_contain.scss */
+/* line 95, ../sass/_contain.scss */
 .dIntro {
   font-size: 24px;
   color: #fff;
 }
 
-/* line 84, ../sass/_contain.scss */
+/* line 105, ../sass/_contain.scss */
 .showTi, .showAr, .showCr {
   display: none;
 }
 
-/* line 88, ../sass/_contain.scss */
+/* line 109, ../sass/_contain.scss */
 .bdetail {
   display: block;
 }
 
-/* line 93, ../sass/_contain.scss */
+/* line 114, ../sass/_contain.scss */
 .bdetailWap.Ar {
   margin-bottom: 0;
 }
-/* line 95, ../sass/_contain.scss */
+/* line 116, ../sass/_contain.scss */
 .bdetailWap.Ar .showAr {
   display: block;
 }
-/* line 101, ../sass/_contain.scss */
+/* line 122, ../sass/_contain.scss */
 .bdetailWap.Ar.Ti .showTi {
   display: block;
 }
-/* line 106, ../sass/_contain.scss */
+/* line 127, ../sass/_contain.scss */
 .bdetailWap.Ar.Cr .showCr {
   display: block;
   margin-bottom: 0;
 }
-/* line 112, ../sass/_contain.scss */
+/* line 133, ../sass/_contain.scss */
 .bdetailWap.Ar .dIntro {
   display: none;
 }
 
-/* line 119, ../sass/_contain.scss */
+/* line 140, ../sass/_contain.scss */
 .textPickup {
   float: left;
   padding-right: 25px;
   position: relative;
   margin-right: 25px;
 }
-/* line 125, ../sass/_contain.scss */
+/* line 146, ../sass/_contain.scss */
 .textPickup:after {
   position: absolute;
   width: 7px;
@@ -1532,79 +2056,79 @@ ul li {
   content: "";
 }
 
-/* line 137, ../sass/_contain.scss */
+/* line 158, ../sass/_contain.scss */
 .laterBox {
   display: none;
 }
 
-/* line 141, ../sass/_contain.scss */
+/* line 162, ../sass/_contain.scss */
 .immediateBox p {
   margin: 10px 0;
   padding: 17px 0 0 0;
   font-size: 14px;
   color: #5e5e57;
 }
-/* line 149, ../sass/_contain.scss */
+/* line 170, ../sass/_contain.scss */
 .immediateBox p .currentTime {
   font-size: 14px;
 }
 
-/* line 154, ../sass/_contain.scss */
+/* line 175, ../sass/_contain.scss */
 .fontL {
   font-size: 24px;
   color: #fff;
   font-family: 'SansationRegular';
 }
 
-/* line 159, ../sass/_contain.scss */
+/* line 180, ../sass/_contain.scss */
 .fontNL {
   font-size: 16px;
   color: #cccccc;
   font-family: 'SansationRegular';
 }
 
-/* line 164, ../sass/_contain.scss */
+/* line 185, ../sass/_contain.scss */
 .fontY {
   color: #f8da15;
   font-size: 16px;
   font-family: 'SansationRegular';
 }
 
-/* line 170, ../sass/_contain.scss */
+/* line 191, ../sass/_contain.scss */
 .carBookCol {
   float: left;
   margin: 10px 20px 0 0;
 }
-/* line 174, ../sass/_contain.scss */
+/* line 195, ../sass/_contain.scss */
 .carBookCol p {
   margin: 0;
   padding: 0 0 5px 0;
   color: #fff;
 }
 
-/* line 181, ../sass/_contain.scss */
+/* line 202, ../sass/_contain.scss */
 .carBFont200 {
   font-size: 14px;
   font-family: 'SansationBold';
 }
 
-/* line 185, ../sass/_contain.scss */
+/* line 206, ../sass/_contain.scss */
 .carBFont300 {
   font-size: 18px;
   font-family: 'SansationRegular';
 }
 
-/* line 190, ../sass/_contain.scss */
+/* line 211, ../sass/_contain.scss */
 .carBFont100 {
   font-size: 14px;
   font-family: 'SansationRegular';
 }
 
-/* line 196, ../sass/_contain.scss */
+/* line 217, ../sass/_contain.scss */
 .controls {
   position: relative;
 }
-/* line 199, ../sass/_contain.scss */
+/* line 220, ../sass/_contain.scss */
 .controls input {
   width: 80%;
   -webkit-border-radius: 4px;
@@ -1621,7 +2145,7 @@ ul li {
   color: #5e5e57;
   font-size: 14px;
 }
-/* line 212, ../sass/_contain.scss */
+/* line 233, ../sass/_contain.scss */
 .controls .icon {
   width: 18px;
   height: 18px;
@@ -1632,25 +2156,25 @@ ul li {
   position: absolute;
   cursor: pointer;
 }
-/* line 223, ../sass/_contain.scss */
+/* line 244, ../sass/_contain.scss */
 .controls.arrow .icon {
   background-position: -259px -181px;
   right: 62px;
   top: 5px;
 }
-/* line 230, ../sass/_contain.scss */
+/* line 251, ../sass/_contain.scss */
 .controls.date .icon {
   background-position: -248px -223px;
   top: 5px;
   right: 20px;
 }
-/* line 237, ../sass/_contain.scss */
+/* line 258, ../sass/_contain.scss */
 .controls.time .icon {
   background-position: -208px -223px;
   top: 5px;
   right: 20px;
 }
-/* line 246, ../sass/_contain.scss */
+/* line 267, ../sass/_contain.scss */
 .controls.switch ul {
   margin: 0;
   padding: 0;
@@ -1665,7 +2189,7 @@ ul li {
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
-/* line 254, ../sass/_contain.scss */
+/* line 275, ../sass/_contain.scss */
 .controls.switch li {
   width: 110px;
   display: inline-block;
@@ -1676,12 +2200,12 @@ ul li {
   font-size: 14px;
   float: left;
 }
-/* line 265, ../sass/_contain.scss */
+/* line 286, ../sass/_contain.scss */
 .controls.switch li.active, .controls.switch li:hover {
   background: #5e5e57;
   color: #fff;
 }
-/* line 270, ../sass/_contain.scss */
+/* line 291, ../sass/_contain.scss */
 .controls.switch li:first-child {
   border-right: 1px solid #c2c2c2;
   -webkit-border-radius: 5px 0 0 5px;
@@ -1690,11 +2214,11 @@ ul li {
   -o-border-radius: 5px 0 0 5px;
   border-radius: 5px 0 0 5px;
 }
-/* line 274, ../sass/_contain.scss */
+/* line 295, ../sass/_contain.scss */
 .controls.switch li:first-child.active, .controls.switch li:first-child:hover {
   border-right: 0;
 }
-/* line 281, ../sass/_contain.scss */
+/* line 302, ../sass/_contain.scss */
 .controls.switch li:last-child {
   margin-left: -1px;
   border-left: 1px solid #c2c2c2;
@@ -1704,21 +2228,58 @@ ul li {
   -o-border-radius: 0 5px 5px 0;
   border-radius: 0 5px 5px 0;
 }
-/* line 286, ../sass/_contain.scss */
+/* line 307, ../sass/_contain.scss */
 .controls.switch li:last-child.active, .controls.switch li:last-child:hover {
   border-left: 0;
 }
 
-/* line 300, ../sass/_contain.scss */
+/* line 321, ../sass/_contain.scss */
+.inputAdd {
+  display: inline-block;
+  background: #ccc;
+  position: relative;
+  top: -3px;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+/* line 330, ../sass/_contain.scss */
+.inputAdd span {
+  font-size: 12px;
+  color: #fff;
+  padding: 5px;
+  width: 26px;
+  height: 26px;
+}
+/* line 337, ../sass/_contain.scss */
+.inputAdd span.add {
+  text-indent: -9999px;
+  background: url(../img/icons.png) no-repeat;
+  display: inline-block;
+  background-position: -169px -264px;
+}
+/* line 342, ../sass/_contain.scss */
+.inputAdd span.remove {
+  text-indent: -9999px;
+  background: url(../img/icons.png) no-repeat;
+  display: inline-block;
+  background-position: -141px -263px;
+}
+
+/* line 351, ../sass/_contain.scss */
 .controls.blank {
   width: 120px;
   background: url(../img/drop.png) no-repeat left center;
 }
-/* line 305, ../sass/_contain.scss */
+/* line 356, ../sass/_contain.scss */
 .controls.blank .icon {
   right: 5px;
 }
-/* line 308, ../sass/_contain.scss */
+/* line 359, ../sass/_contain.scss */
 .controls.blank input {
   background: none;
   box-shadow: 0 0 0;
@@ -1727,34 +2288,34 @@ ul li {
   outline: 0;
 }
 
-/* line 317, ../sass/_contain.scss */
+/* line 368, ../sass/_contain.scss */
 .FirstHeadingWap {
   margin-bottom: 0;
 }
 
-/* line 320, ../sass/_contain.scss */
+/* line 371, ../sass/_contain.scss */
 .FirstStepContain {
   padding-top: 30px;
 }
 
-/* line 324, ../sass/_contain.scss */
+/* line 375, ../sass/_contain.scss */
 .stepContentColumn {
   width: 50%;
   float: left;
 }
-/* line 329, ../sass/_contain.scss */
+/* line 380, ../sass/_contain.scss */
 .stepContentColumn .stepContentColumn input {
   width: 90%;
 }
 
-/* line 336, ../sass/_contain.scss */
+/* line 387, ../sass/_contain.scss */
 .stepWap {
   position: relative;
   bottom: 15px;
   width: 560px;
   margin: 0 auto;
 }
-/* line 343, ../sass/_contain.scss */
+/* line 394, ../sass/_contain.scss */
 .stepWap ul {
   padding: 0;
   margin: 0;
@@ -1762,11 +2323,11 @@ ul li {
   z-index: 2;
   float: left;
 }
-/* line 351, ../sass/_contain.scss */
+/* line 402, ../sass/_contain.scss */
 .stepWap ul li {
   width: 186px;
   border: 1px solid #c2c2c2;
-  font-family: 'ProximaNova-Semibold',sans-serif;
+  font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
   font-size: 13px;
   color: #999999;
@@ -1778,11 +2339,11 @@ ul li {
   text-transform: uppercase;
   position: relative;
 }
-/* line 365, ../sass/_contain.scss */
+/* line 416, ../sass/_contain.scss */
 .stepWap ul li .count {
   margin-right: 10px;
 }
-/* line 368, ../sass/_contain.scss */
+/* line 419, ../sass/_contain.scss */
 .stepWap ul li:after {
   width: 0;
   height: 0;
@@ -1794,7 +2355,7 @@ ul li {
   top: 0;
   content: "";
 }
-/* line 379, ../sass/_contain.scss */
+/* line 430, ../sass/_contain.scss */
 .stepWap ul li:before {
   width: 0;
   height: 0;
@@ -1806,7 +2367,7 @@ ul li {
   top: 0;
   content: "";
 }
-/* line 390, ../sass/_contain.scss */
+/* line 441, ../sass/_contain.scss */
 .stepWap ul li.stepFirst {
   -webkit-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
@@ -1815,21 +2376,21 @@ ul li {
   border-radius: 4px 0 0 4px;
   z-index: 10;
 }
-/* line 394, ../sass/_contain.scss */
+/* line 445, ../sass/_contain.scss */
 .stepWap ul li.stepFirst:after {
   z-index: 7;
 }
-/* line 398, ../sass/_contain.scss */
+/* line 449, ../sass/_contain.scss */
 .stepWap ul li.stepSecond {
   z-index: 5;
   position: relative;
   padding-left: 30px;
 }
-/* line 404, ../sass/_contain.scss */
+/* line 455, ../sass/_contain.scss */
 .stepWap ul li.stepSecond:after {
   z-index: 4;
 }
-/* line 408, ../sass/_contain.scss */
+/* line 459, ../sass/_contain.scss */
 .stepWap ul li.stepThird {
   -webkit-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
@@ -1839,53 +2400,53 @@ ul li {
   padding-left: 30px;
   z-index: 2;
 }
-/* line 413, ../sass/_contain.scss */
+/* line 464, ../sass/_contain.scss */
 .stepWap ul li.stepThird:after {
   display: none;
 }
-/* line 416, ../sass/_contain.scss */
+/* line 467, ../sass/_contain.scss */
 .stepWap ul li.stepThird:before {
   display: none;
 }
-/* line 421, ../sass/_contain.scss */
+/* line 472, ../sass/_contain.scss */
 .stepWap ul li.active {
   background: #c2c2c2;
   color: #5e5e57;
 }
-/* line 424, ../sass/_contain.scss */
+/* line 475, ../sass/_contain.scss */
 .stepWap ul li.active:after {
   border-left: 15px solid #c2c2c2;
 }
-/* line 432, ../sass/_contain.scss */
+/* line 483, ../sass/_contain.scss */
 .stepWap ul li.done {
   background: #f1f1f1;
   color: #353533;
 }
-/* line 435, ../sass/_contain.scss */
+/* line 486, ../sass/_contain.scss */
 .stepWap ul li.done:after {
   border-left: 15px solid #f1f1f1;
 }
 
-/* line 449, ../sass/_contain.scss */
+/* line 500, ../sass/_contain.scss */
 .stepFooter {
   width: 100%;
   border-top: #ececec 1px solid;
   padding: 20px 0 10px 0;
 }
-/* line 453, ../sass/_contain.scss */
+/* line 504, ../sass/_contain.scss */
 .stepFooter .modiLink {
   padding: 18px 0 0 0;
   float: left;
   cursor: pointer;
 }
-/* line 457, ../sass/_contain.scss */
+/* line 508, ../sass/_contain.scss */
 .stepFooter .modiLink span {
   font-size: 12px;
   text-decoration: underline;
   color: #5e5e57;
   font-family: 'SansationRegular';
 }
-/* line 465, ../sass/_contain.scss */
+/* line 516, ../sass/_contain.scss */
 .stepFooter .stepNextButton {
   background: #fadc1a;
   -webkit-border-radius: 3px;
@@ -1905,7 +2466,7 @@ ul li {
   -o-transform: translateY(3px);
   transform: translateY(3px);
 }
-/* line 473, ../sass/_contain.scss */
+/* line 524, ../sass/_contain.scss */
 .stepFooter .stepNextButton:hover {
   -webkit-box-shadow: 0 3px 0 #bda61a;
   -moz-box-shadow: 0 3px 0 #bda61a;
@@ -1916,7 +2477,7 @@ ul li {
   -o-transform: translateY(0px);
   transform: translateY(0px);
 }
-/* line 481, ../sass/_contain.scss */
+/* line 532, ../sass/_contain.scss */
 .stepFooter .stepNextButton button, .stepFooter .stepNextButton a {
   font-size: 18px;
   color: #5e5e57;
@@ -1925,10 +2486,10 @@ ul li {
   position: relative;
   background: none;
   border: 0;
-  font-family: 'ProximaNova-Semibold',sans-serif;
+  font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
 }
-/* line 491, ../sass/_contain.scss */
+/* line 542, ../sass/_contain.scss */
 .stepFooter .stepNextButton button:before, .stepFooter .stepNextButton a:before {
   position: absolute;
   background: url(../img/icons.png) no-repeat;
@@ -1941,43 +2502,43 @@ ul li {
   top: 17px;
 }
 
-/* line 512, ../sass/_contain.scss */
+/* line 563, ../sass/_contain.scss */
 .SecondStepContain {
   display: none;
 }
 
-/* line 515, ../sass/_contain.scss */
+/* line 566, ../sass/_contain.scss */
 .ThirdStepContain {
   display: none;
 }
 
-/* line 518, ../sass/_contain.scss */
+/* line 574, ../sass/_contain.scss */
 .bookElse {
   display: none;
 }
 
-/* line 521, ../sass/_contain.scss */
+/* line 577, ../sass/_contain.scss */
 .beWapper {
   margin-top: 5px;
 }
 
-/* line 526, ../sass/_contain.scss */
+/* line 582, ../sass/_contain.scss */
 .carTr.active .taxiIcon {
   opacity: 1;
   left: 140px;
 }
-/* line 531, ../sass/_contain.scss */
+/* line 587, ../sass/_contain.scss */
 .carTr.active .taxiData {
   left: -50px;
   background: #fdf9dd;
 }
 
-/* line 538, ../sass/_contain.scss */
+/* line 594, ../sass/_contain.scss */
 .taxiInfo {
   float: left;
   position: relative;
 }
-/* line 544, ../sass/_contain.scss */
+/* line 600, ../sass/_contain.scss */
 .taxiInfo .taxiIcon {
   float: left;
   background: url(../img/icons.png) no-repeat;
@@ -1993,23 +2554,23 @@ ul li {
   -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
-/* line 554, ../sass/_contain.scss */
+/* line 610, ../sass/_contain.scss */
 .taxiInfo .taxiIcon.hasBack {
   background-position: -320px -221px;
 }
-/* line 557, ../sass/_contain.scss */
+/* line 613, ../sass/_contain.scss */
 .taxiInfo .taxiIcon.sedan {
   width: 59px;
   height: 22px;
   background-position: -322px -173px;
 }
-/* line 563, ../sass/_contain.scss */
+/* line 619, ../sass/_contain.scss */
 .taxiInfo .taxiIcon.suv {
   width: 59px;
   height: 32px;
   background-position: -322px -111px;
 }
-/* line 571, ../sass/_contain.scss */
+/* line 627, ../sass/_contain.scss */
 .taxiInfo .taxiData {
   float: left;
   position: relative;
@@ -2020,16 +2581,16 @@ ul li {
   -webkit-transition: left .4s ease-out;
   transition: left .4s ease-out;
 }
-/* line 585, ../sass/_contain.scss */
+/* line 641, ../sass/_contain.scss */
 .taxiInfo .taxiData .taxiName {
   font-size: 20px;
-  font-family: 'ProximaNova-Semibold',sans-serif;
+  font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
   color: #3f3f3c;
   padding: 0;
   margin: 0;
 }
-/* line 593, ../sass/_contain.scss */
+/* line 649, ../sass/_contain.scss */
 .taxiInfo .taxiData .taxiCondi {
   font-size: 14px;
   color: #3f3f3c;
@@ -2037,57 +2598,70 @@ ul li {
   margin: 0;
 }
 
-/* line 603, ../sass/_contain.scss */
+/* line 659, ../sass/_contain.scss */
 .beContain .control-group {
   width: 33%;
   float: left;
 }
-/* line 607, ../sass/_contain.scss */
+/* line 663, ../sass/_contain.scss */
 .beContain .control-group input {
   width: 90%;
 }
 
-/* line 615, ../sass/_contain.scss */
+/* line 671, ../sass/_contain.scss */
 .defAdd .controls {
   position: relative;
   z-index: 1;
 }
-/* line 619, ../sass/_contain.scss */
+/* line 675, ../sass/_contain.scss */
 .defAdd .defAddUl {
   margin: 0;
   left: 0;
   padding: 0 0 0 10px;
   position: relative;
 }
-/* line 624, ../sass/_contain.scss */
+/* line 680, ../sass/_contain.scss */
 .defAdd .defAddUl li {
   background: #ffffd4;
-  padding: 4px 5px;
-  font-size: 14px;
+  padding: 3px 5px 2px 5px;
+  font-size: 12px;
   float: left;
   margin-right: 5px;
   border: 1px solid #ddd6d0;
 }
 
-/* line 635, ../sass/_contain.scss */
+/* line 691, ../sass/_contain.scss */
 .SaveAddress label {
   text-transform: uppercase;
 }
-/* line 638, ../sass/_contain.scss */
+/* line 694, ../sass/_contain.scss */
 .SaveAddress input[type="checkbox"] {
   width: auto;
 }
-/* line 641, ../sass/_contain.scss */
+/* line 697, ../sass/_contain.scss */
 .SaveAddress input {
   width: 100%;
 }
 
-/* line 645, ../sass/_contain.scss */
+/* line 701, ../sass/_contain.scss */
 .saveAddressBox {
   display: none;
 }
 
-/* line 652, ../sass/_contain.scss */
+/* line 706, ../sass/_contain.scss */
+.hfDaysl .control-group {
+  width: 50%;
+}
+/* line 709, ../sass/_contain.scss */
+.hfDaysl .controls.date .icon {
+  right: 32px;
+}
+/* line 712, ../sass/_contain.scss */
+.hfDaysl .controls.time .icon {
+  right: 32px;
+}
+
+/* line 722, ../sass/_contain.scss */
 .ui-autocomplete {
   max-height: 200px;
   overflow-y: scroll;
@@ -2095,13 +2669,13 @@ ul li {
   font-size: 12px;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-menu .ui-menu-item a.ui-state-focus, .ui-menu .ui-menu-item a.ui-state-active {
   background: #ccc;
   margin: 0;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-menu .ui-menu-item a {
   font-size: 12px;
   -webkit-border-radius: 0;
@@ -2112,7 +2686,7 @@ ul li {
   border: 0;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-autocomplete {
   max-height: 200px;
   overflow-y: scroll;
@@ -2120,22 +2694,22 @@ ul li {
   font-size: 12px;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .cf {
   *zoom: 1;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 select {
   color: #5e5e57;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 #ui-datepicker-div {
   font-size: 14px;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-timepicker-wrapper {
   overflow-y: auto;
   height: 150px;
@@ -2149,30 +2723,30 @@ select {
   z-index: 10001;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-timepicker-wrapper.ui-timepicker-with-duration {
   width: 11em;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-timepicker-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-timepicker-duration {
   margin-left: 5px;
   color: #888;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-timepicker-list:hover .ui-timepicker-duration {
   color: #888;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-timepicker-list li {
   padding: 3px 0 3px 5px;
   cursor: pointer;
@@ -2182,66 +2756,66 @@ select {
   margin: 0;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-timepicker-list:hover .ui-timepicker-selected {
   background: #fff;
   color: #000;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 li.ui-timepicker-selected, .ui-timepicker-list li:hover, .ui-timepicker-list .ui-timepicker-selected:hover {
   background: #1980EC;
   color: #fff;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 li.ui-timepicker-selected .ui-timepicker-duration, .ui-timepicker-list li:hover .ui-timepicker-duration {
   color: #ccc;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-timepicker-list li.ui-timepicker-disabled, .ui-timepicker-list li.ui-timepicker-disabled:hover, .ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
   color: #888;
   cursor: default;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-timepicker-list li.ui-timepicker-disabled:hover, .ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
   background: #f2f2f2;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-datepicker-current {
   display: none;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-timepicker-div .ui-widget-header {
   margin-bottom: 8px;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-timepicker-div dl {
   text-align: left;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-timepicker-div dl dt {
   height: 25px;
   margin-bottom: -25px;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-timepicker-div dl dd {
   margin: 0 10px 10px 65px;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-timepicker-div td {
   font-size: 90%;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-tpicker-grid-label {
   background: none;
   border: none;
@@ -2249,69 +2823,69 @@ li.ui-timepicker-selected .ui-timepicker-duration, .ui-timepicker-list li:hover 
   padding: 0;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-timepicker-rtl {
   direction: rtl;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-timepicker-rtl dl {
   text-align: right;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .ui-timepicker-rtl dl dd {
   margin: 0 65px 10px 10px;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 body {
   background: url(../img/bg_image.png) fixed;
   background-size: cover;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .fl {
   float: left;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 .fr {
   float: right;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 a {
   color: #5e5e57;
   text-decoration: none;
 }
 
-/* line 660, ../sass/_contain.scss */
+/* line 730, ../sass/_contain.scss */
 em {
   font-style: normal;
 }
 
-/* line 662, ../sass/_contain.scss */
+/* line 732, ../sass/_contain.scss */
 .ui-menu .ui-menu-item a.ui-state-focus, .ui-menu .ui-menu-item a.ui-state-active {
   background: #5E5E57;
   color: #fff;
   cursor: pointer;
 }
 
-/* line 669, ../sass/_contain.scss */
+/* line 739, ../sass/_contain.scss */
 .popupWapper {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: #555;
+  background: rgba(0, 0, 0, 0.6);
   z-index: 50;
   display: none;
 }
-/* line 679, ../sass/_contain.scss */
+/* line 750, ../sass/_contain.scss */
 .popupWapper .popup {
-  position: absolute;
+  position: relative;
   z-index: 55;
   width: 300px;
   margin: 0 auto;
@@ -2321,36 +2895,66 @@ em {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  left: 50%;
+  margin-left: -150px;
+  top: 105px;
+  display: none;
+  z-index: 60;
 }
-/* line 689, ../sass/_contain.scss */
+/* line 765, ../sass/_contain.scss */
+.popupWapper.loginActive {
+  display: block;
+}
+/* line 767, ../sass/_contain.scss */
+.popupWapper.loginActive .popup.login {
+  display: block;
+}
+/* line 772, ../sass/_contain.scss */
+.popupWapper.registerActive {
+  display: block;
+}
+/* line 774, ../sass/_contain.scss */
+.popupWapper.registerActive .popup.register {
+  display: block;
+}
+/* line 779, ../sass/_contain.scss */
+.popupWapper.forgetPassActive {
+  display: block;
+}
+/* line 781, ../sass/_contain.scss */
+.popupWapper.forgetPassActive .popup.forgetPass {
+  display: block;
+}
+/* line 786, ../sass/_contain.scss */
 .popupWapper .popupHead {
   background: #eaeaea;
   padding: 13px 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -ms-border-radius: 4px 4px 0 0;
+  -o-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
 }
-/* line 693, ../sass/_contain.scss */
+/* line 791, ../sass/_contain.scss */
 .popupWapper .popupHead h4 {
   margin: 0;
   padding: 0;
   font-size: 24px;
   color: #5e5e57;
+  float: left;
 }
-/* line 701, ../sass/_contain.scss */
+/* line 800, ../sass/_contain.scss */
 .popupWapper .popupRow {
   width: 100%;
   clear: both;
   padding: 0 25px;
 }
-/* line 707, ../sass/_contain.scss */
+/* line 806, ../sass/_contain.scss */
 .popupWapper .popupContain {
   padding: 10px 0;
 }
-/* line 710, ../sass/_contain.scss */
+/* line 809, ../sass/_contain.scss */
 .popupWapper .popupContain input {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
   background-color: #fff;
   -webkit-box-shadow: 0 2px 2px rgba(0, 1, 1, 0.1);
   -moz-box-shadow: 0 2px 2px rgba(0, 1, 1, 0.1);
@@ -2358,14 +2962,20 @@ em {
   border: solid 1px #c2c2c2;
   padding: 10px;
   width: 252px;
-  font-family: 'ProximaNova-Semibold',sans-serif;
+  font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 14px;
   color: #5e5e57;
   margin-top: -1px;
+  z-index: 0;
+  position: relative;
 }
-/* line 721, ../sass/_contain.scss */
-.popupWapper .popupContain input:first-child {
+/* line 825, ../sass/_contain.scss */
+.popupWapper .popupContain input:focus {
+  z-index: 1;
+}
+/* line 832, ../sass/_contain.scss */
+.popupWapper .popupContain .popupLoginWap.multiInput input:first-child {
   margin-top: 0;
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
@@ -2373,28 +2983,29 @@ em {
   -o-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-/* line 725, ../sass/_contain.scss */
-.popupWapper .popupContain input:last-child {
+/* line 836, ../sass/_contain.scss */
+.popupWapper .popupContain .popupLoginWap.multiInput input:last-child {
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   -ms-border-radius: 0 0 4px 4px;
   -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-/* line 733, ../sass/_contain.scss */
+/* line 846, ../sass/_contain.scss */
 .popupWapper .popupBforgetPass {
   display: inline-block;
-  padding: 10px 0;
+  padding: 10px 0 0 0;
   overflow: hidden;
   margin-right: 30px;
+  float: left;
+  margin-top: 4px;
 }
-/* line 738, ../sass/_contain.scss */
+/* line 853, ../sass/_contain.scss */
 .popupWapper .popupBforgetPass a {
   font-size: 13px;
   color: #5e5e57;
-  text-decoration: underline;
 }
-/* line 746, ../sass/_contain.scss */
+/* line 859, ../sass/_contain.scss */
 .popupWapper .popupBlogin {
   background: #f8da15;
   padding: 10px 22px;
@@ -2407,8 +3018,30 @@ em {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
+  float: right;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transform: translateY(3px);
+  -moz-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  -o-transform: translateY(3px);
+  transform: translateY(3px);
 }
-/* line 755, ../sass/_contain.scss */
+/* line 872, ../sass/_contain.scss */
+.popupWapper .popupBlogin:hover {
+  -webkit-box-shadow: 0 3px 0 #bda61a;
+  -moz-box-shadow: 0 3px 0 #bda61a;
+  box-shadow: 0 3px 0 #bda61a;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+/* line 881, ../sass/_contain.scss */
 .popupWapper .popupOr {
   width: 100%;
   clear: both;
@@ -2417,7 +3050,7 @@ em {
   margin: 20px 0;
   height: 10px;
 }
-/* line 764, ../sass/_contain.scss */
+/* line 890, ../sass/_contain.scss */
 .popupWapper .popupOr span {
   position: absolute;
   display: block;
@@ -2427,7 +3060,7 @@ em {
   -o-border-radius: 18px;
   border-radius: 18px;
   font-size: 14px;
-  font-family: 'ProximaNova-Semibold',sans-serif;
+  font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
   color: #5e5e57;
   top: -10px;
@@ -2438,94 +3071,126 @@ em {
   margin-left: -15px;
   text-transform: uppercase;
 }
-/* line 781, ../sass/_contain.scss */
+/* line 907, ../sass/_contain.scss */
 .popupWapper .socialButton {
   padding: 10px 0;
 }
-/* line 783, ../sass/_contain.scss */
-.popupWapper .socialButton img {
-  width: auto;
+/* line 910, ../sass/_contain.scss */
+.popupWapper .socialButton a:hover {
+  opacity: .8;
 }
-/* line 788, ../sass/_contain.scss */
+/* line 913, ../sass/_contain.scss */
+.popupWapper .socialButton a {
+  display: block;
+}
+/* line 916, ../sass/_contain.scss */
+.popupWapper .socialButton .popFb {
+  margin-bottom: 15px;
+}
+/* line 924, ../sass/_contain.scss */
 .popupWapper .popupLoginWap {
   padding: 20px 0;
 }
-/* line 791, ../sass/_contain.scss */
+/* line 927, ../sass/_contain.scss */
 .popupWapper .popupButtonWap {
   padding: 10px 0;
 }
-/* line 794, ../sass/_contain.scss */
+/* line 930, ../sass/_contain.scss */
 .popupWapper .popupFooter {
   background: #eaeaea;
   padding: 20px 0;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
 }
-/* line 797, ../sass/_contain.scss */
+/* line 934, ../sass/_contain.scss */
 .popupWapper .popupFooter a {
   color: #343333;
   font-size: 14px;
 }
 
-/* line 808, ../sass/_contain.scss */
+/* line 945, ../sass/_contain.scss */
+.overClose {
+  float: right;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  top: -25px;
+  right: -35px;
+}
+/* line 953, ../sass/_contain.scss */
+.overClose span, .overClose a {
+  width: 26px;
+  height: 26px;
+  padding: 7px;
+  display: block;
+  background: url(../img/close_btn.png) no-repeat;
+  text-indent: -9999px;
+}
+
+/* line 968, ../sass/_contain.scss */
 .ui-widget {
   z-index: 30 !important;
 }
 
-/* line 811, ../sass/_contain.scss */
+/* line 971, ../sass/_contain.scss */
 .ui-widget-header {
   background: #f1f1f1;
 }
 
-/* line 814, ../sass/_contain.scss */
+/* line 974, ../sass/_contain.scss */
 .ui-datepicker-month, .ui-datepicker-year {
   color: #62635e;
   font-weight: 400;
 }
 
-/* line 818, ../sass/_contain.scss */
+/* line 978, ../sass/_contain.scss */
 .ui-datepicker th {
   color: #62635e;
   font-weight: 400;
 }
 
-/* line 822, ../sass/_contain.scss */
+/* line 982, ../sass/_contain.scss */
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   background: #f1f1f1;
   border: 0;
 }
 
-/* line 826, ../sass/_contain.scss */
+/* line 986, ../sass/_contain.scss */
 .ui-state-active {
   background: #f6e780 !important;
 }
 
-/* line 829, ../sass/_contain.scss */
+/* line 989, ../sass/_contain.scss */
 .ui-timepicker-div .ui-widget-header {
   display: none;
 }
 
-/* line 832, ../sass/_contain.scss */
+/* line 992, ../sass/_contain.scss */
 .ui-timepicker-div dl dt.ui_tpicker_time_label, .ui-timepicker-div dl dd.ui_tpicker_time {
   display: none;
 }
 
-/* line 835, ../sass/_contain.scss */
+/* line 995, ../sass/_contain.scss */
 .ui-slider-horizontal {
   background: #dfdfdf !important;
   height: 1px !important;
 }
 
-/* line 839, ../sass/_contain.scss */
+/* line 999, ../sass/_contain.scss */
 .ui_tpicker_hour {
   margin-bottom: 25px !important;
 }
 
-/* line 843, ../sass/_contain.scss */
+/* line 1003, ../sass/_contain.scss */
 .ui-timepicker-div .ui-state-default {
   top: -12px !important;
   background: #F4E580 !important;
   width: 14px !important;
 }
-/* line 849, ../sass/_contain.scss */
+/* line 1009, ../sass/_contain.scss */
 .ui-timepicker-div .ui-state-default:after {
   position: absolute;
   width: 0;
@@ -2538,12 +3203,12 @@ em {
   top: 15px;
 }
 
-/* line 861, ../sass/_contain.scss */
+/* line 1021, ../sass/_contain.scss */
 .ui-timepicker-div dl dt.ui_tpicker_hour_label, .ui-timepicker-div dl dt.ui_tpicker_minute_label {
   margin-left: 5px !important;
 }
 
-/* line 866, ../sass/_contain.scss */
+/* line 1026, ../sass/_contain.scss */
 .ui-datepicker .ui-datepicker-buttonpane button {
   background: #5e5d58 !important;
   font-weight: 400 !important;
@@ -2553,49 +3218,54 @@ em {
   margin-bottom: 10px;
 }
 
-/* line 875, ../sass/_contain.scss */
+/* line 1035, ../sass/_contain.scss */
 .ui-timepicker-div dl dt {
   height: 30px !important;
 }
 
-/* line 879, ../sass/_contain.scss */
+/* line 1039, ../sass/_contain.scss */
 .ui-datepicker-buttonpane.ui-widget-content {
   border: 0 !important;
 }
 
-/* line 885, ../sass/_contain.scss */
+/* line 1045, ../sass/_contain.scss */
 .ui-datepicker td {
   border: 0;
   padding: 0;
 }
 
-/* line 890, ../sass/_contain.scss */
+/* line 1050, ../sass/_contain.scss */
 .googleMap {
   opacity: 0;
   z-index: -10;
 }
-/* line 894, ../sass/_contain.scss */
+/* line 1054, ../sass/_contain.scss */
 .googleMap.active {
   opacity: 1;
   z-index: 60;
 }
 
-/* line 899, ../sass/_contain.scss */
+/* line 1059, ../sass/_contain.scss */
 .showMap {
   cursor: pointer;
 }
 
-/* line 904, ../sass/_contain.scss */
+/* line 1064, ../sass/_contain.scss */
 .ui-tpicker-grid-label {
   display: none !important;
 }
 
-/* line 908, ../sass/_contain.scss */
+/* line 1068, ../sass/_contain.scss */
 .flightNumberWap {
   width: 150px;
 }
 
-/* line 415, ../sass/main.scss */
+/* line 1072, ../sass/_contain.scss */
+.fRight {
+  float: right;
+}
+
+/* line 410, ../sass/main.scss */
 .boldLine {
   color: #5e5e57;
   font-size: 26px;
@@ -2604,67 +3274,67 @@ em {
   *zoom: 1;
 }
 
-/* line 422, ../sass/main.scss */
+/* line 417, ../sass/main.scss */
 .formBlock {
   padding: 0px 0px 10px 0px;
 }
-/* line 425, ../sass/main.scss */
+/* line 420, ../sass/main.scss */
 .formBlock.disable {
   border-left-color: #d9d9d9;
 }
-/* line 429, ../sass/main.scss */
+/* line 424, ../sass/main.scss */
 .formBlock.disable label {
   color: #d9d9d9;
 }
-/* line 433, ../sass/main.scss */
+/* line 428, ../sass/main.scss */
 .formBlock.disable input::-webkit-input-placeholder {
   color: #d9d9d9;
 }
-/* line 436, ../sass/main.scss */
+/* line 431, ../sass/main.scss */
 .formBlock.disable input:-moz-placeholder {
   color: #d9d9d9;
 }
-/* line 439, ../sass/main.scss */
+/* line 434, ../sass/main.scss */
 .formBlock.disable input::-moz-placeholder {
   /* Firefox 19+ */
   color: #d9d9d9;
 }
-/* line 442, ../sass/main.scss */
+/* line 437, ../sass/main.scss */
 .formBlock.disable input:-ms-input-placeholder {
   color: #d9d9d9;
 }
-/* line 447, ../sass/main.scss */
+/* line 442, ../sass/main.scss */
 .formBlock.disable input, .formBlock.disable .inText, .formBlock.disable .dfText, .formBlock.disable .dfText, .formBlock.disable .addressWapper {
   color: #d9d9d9;
 }
-/* line 450, ../sass/main.scss */
+/* line 445, ../sass/main.scss */
 .formBlock.disable .disableBox {
   display: block;
 }
-/* line 453, ../sass/main.scss */
+/* line 448, ../sass/main.scss */
 .formBlock.disable .carList {
   display: none;
 }
 
-/* line 461, ../sass/main.scss */
+/* line 456, ../sass/main.scss */
 input.error::-webkit-input-placeholder, textarea.error::-webkit-input-placeholder {
   color: #cc3333;
 }
-/* line 464, ../sass/main.scss */
+/* line 459, ../sass/main.scss */
 input.error:-moz-placeholder, textarea.error:-moz-placeholder {
   color: #cc3333;
 }
-/* line 467, ../sass/main.scss */
+/* line 462, ../sass/main.scss */
 input.error::-moz-placeholder, textarea.error::-moz-placeholder {
   /* Firefox 19+ */
   color: #cc3333;
 }
-/* line 470, ../sass/main.scss */
+/* line 465, ../sass/main.scss */
 input.error:-ms-input-placeholder, textarea.error:-ms-input-placeholder {
   color: #cc3333;
 }
 
-/* line 481, ../sass/main.scss */
+/* line 476, ../sass/main.scss */
 .disableBox {
   display: none;
   background: #eaeaea;
@@ -2682,12 +3352,12 @@ input.error:-ms-input-placeholder, textarea.error:-ms-input-placeholder {
   width: 555px;
 }
 
-/* line 494, ../sass/main.scss */
+/* line 489, ../sass/main.scss */
 .formContain {
   margin: 0 0 0 41px;
 }
 
-/* line 501, ../sass/main.scss */
+/* line 496, ../sass/main.scss */
 .carList {
   display: table;
   border-collapse: collapse;
@@ -2701,7 +3371,7 @@ input.error:-ms-input-placeholder, textarea.error:-ms-input-placeholder {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 511, ../sass/main.scss */
+/* line 506, ../sass/main.scss */
 .carList thead {
   -webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;
@@ -2709,56 +3379,56 @@ input.error:-ms-input-placeholder, textarea.error:-ms-input-placeholder {
   -o-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
 }
-/* line 517, ../sass/main.scss */
+/* line 512, ../sass/main.scss */
 .carList thead tr {
   background: #eaeaea;
 }
-/* line 521, ../sass/main.scss */
+/* line 516, ../sass/main.scss */
 .carList thead tr th {
   vertical-align: top;
   text-transform: uppercase;
   color: #5e5e57;
   padding: 10px 0;
   font-size: 13px;
-  font-family: 'ProximaNova-Semibold',sans-serif;
+  font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
 }
-/* line 529, ../sass/main.scss */
+/* line 524, ../sass/main.scss */
 .carList thead tr th.firstTh {
   text-align: left;
   width: 320px;
   padding-left: 10px;
 }
-/* line 538, ../sass/main.scss */
+/* line 533, ../sass/main.scss */
 .carList tbody tr {
   background: #fff;
   border-bottom: 1px solid #e6e6e6;
   cursor: pointer;
 }
-/* line 542, ../sass/main.scss */
+/* line 537, ../sass/main.scss */
 .carList tbody tr:hover, .carList tbody tr.active {
   background: rgba(248, 218, 21, 0.14);
 }
-/* line 546, ../sass/main.scss */
+/* line 541, ../sass/main.scss */
 .carList tbody tr td {
   vertical-align: middle;
   color: #5e5e57;
   padding: 16px 5px;
 }
-/* line 551, ../sass/main.scss */
+/* line 546, ../sass/main.scss */
 .carList tbody tr td.carCost {
   text-align: center;
 }
-/* line 555, ../sass/main.scss */
+/* line 550, ../sass/main.scss */
 .carList tbody tr td:first-child {
   padding: 0;
   width: 30px;
 }
-/* line 560, ../sass/main.scss */
+/* line 555, ../sass/main.scss */
 .carList tbody tr td input[type="radio"] {
   margin: 0 0 0 10px;
 }
-/* line 565, ../sass/main.scss */
+/* line 560, ../sass/main.scss */
 .carList tbody tr:last-child {
   -webkit-border-radius: 0 0 3px 3px;
   -moz-border-radius: 0 0 3px 3px;
@@ -2767,56 +3437,56 @@ input.error:-ms-input-placeholder, textarea.error:-ms-input-placeholder {
   border-radius: 0 0 3px 3px;
 }
 
-/* line 574, ../sass/main.scss */
+/* line 569, ../sass/main.scss */
 .loginRadio {
   width: 100%;
 }
 
-/* line 577, ../sass/main.scss */
+/* line 572, ../sass/main.scss */
 .logWapper {
   display: none;
 }
 
-/* line 580, ../sass/main.scss */
+/* line 575, ../sass/main.scss */
 .radioWapper {
   float: left;
   width: 165px;
   margin: 0 20px 10px 0;
   padding: 0 0 0 0px;
 }
-/* line 586, ../sass/main.scss */
+/* line 581, ../sass/main.scss */
 .radioWapper input[type="radio"] {
   margin: 0;
   display: inline-block;
 }
-/* line 590, ../sass/main.scss */
+/* line 585, ../sass/main.scss */
 .radioWapper label {
   display: inline-block;
 }
-/* line 593, ../sass/main.scss */
+/* line 588, ../sass/main.scss */
 .radioWapper label .radio {
   margin-right: 5px;
 }
 
-/* line 598, ../sass/main.scss */
+/* line 593, ../sass/main.scss */
 .inputWapper {
   margin-bottom: 15px;
   float: left;
 }
-/* line 602, ../sass/main.scss */
+/* line 597, ../sass/main.scss */
 .inputWapper label {
   color: #5e5e57;
   text-transform: uppercase;
   font-size: 12px;
-  font-family: 'ProximaNova-Semibold',sans-serif;
+  font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
 }
 
-/* line 609, ../sass/main.scss */
+/* line 604, ../sass/main.scss */
 .list {
   position: relative;
 }
-/* line 611, ../sass/main.scss */
+/* line 606, ../sass/main.scss */
 .list span.icon {
   background: url(../img/formelements-select.png) no-repeat 2px center;
   width: 20px;
@@ -2828,13 +3498,13 @@ input.error:-ms-input-placeholder, textarea.error:-ms-input-placeholder {
   padding-right: 10px;
 }
 
-/* line 622, ../sass/main.scss */
+/* line 617, ../sass/main.scss */
 .buttonWapper {
   margin-bottom: 15px;
   float: right;
   padding: 15px 0 0 0;
 }
-/* line 627, ../sass/main.scss */
+/* line 622, ../sass/main.scss */
 .buttonWapper input {
   border: 0;
   box-shadow: none;
@@ -2846,18 +3516,18 @@ input.error:-ms-input-placeholder, textarea.error:-ms-input-placeholder {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 635, ../sass/main.scss */
+/* line 630, ../sass/main.scss */
 .buttonWapper input:hover {
   background: #F8DA15;
 }
 
-/* line 641, ../sass/main.scss */
+/* line 636, ../sass/main.scss */
 section.disable .buttonWapper input:hover {
   background: #CCC;
   cursor: default;
 }
 
-/* line 646, ../sass/main.scss */
+/* line 641, ../sass/main.scss */
 .preIcon {
   background: #e6e6e6;
   display: block;
@@ -2865,42 +3535,42 @@ section.disable .buttonWapper input:hover {
   padding: 5px 8px;
   border-right: 1px solid #c2c2c2;
 }
-/* line 653, ../sass/main.scss */
+/* line 648, ../sass/main.scss */
 .preIcon .iLocation {
   width: 12px;
   height: 18px;
   background-position: -10px -137px;
 }
 
-/* line 659, ../sass/main.scss */
+/* line 654, ../sass/main.scss */
 .wrapNormal {
   width: 172px;
   margin-right: 20px;
 }
-/* line 663, ../sass/main.scss */
+/* line 658, ../sass/main.scss */
 .wrapNormal input[type="submit"] {
   font-size: 14px;
   margin-top: 3px;
   color: #5e5e57;
 }
 
-/* line 669, ../sass/main.scss */
+/* line 664, ../sass/main.scss */
 .wapmidd {
   width: 172px;
 }
 
-/* line 672, ../sass/main.scss */
+/* line 667, ../sass/main.scss */
 .marginrSmall {
   margin-right: 5px;
 }
 
-/* line 675, ../sass/main.scss */
+/* line 670, ../sass/main.scss */
 .ptopArrow {
   float: left;
   margin-right: 20px;
   width: 50px;
 }
-/* line 679, ../sass/main.scss */
+/* line 674, ../sass/main.scss */
 .ptopArrow .ar {
   width: 8px;
   height: 18px;
@@ -2912,11 +3582,11 @@ section.disable .buttonWapper input:hover {
   padding: 7px;
   border-radius: 7px;
 }
-/* line 690, ../sass/main.scss */
+/* line 685, ../sass/main.scss */
 .ptopArrow hr {
   border: 0;
 }
-/* line 692, ../sass/main.scss */
+/* line 687, ../sass/main.scss */
 .ptopArrow hr:after {
   letter-spacing: 6px;
   font-size: 12px;
@@ -2926,22 +3596,22 @@ section.disable .buttonWapper input:hover {
   display: none;
 }
 
-/* line 702, ../sass/main.scss */
+/* line 697, ../sass/main.scss */
 div.dd {
   width: 105px;
   float: left;
   margin: 0 5px 0 0;
 }
 
-/* line 707, ../sass/main.scss */
+/* line 702, ../sass/main.scss */
 .textbox {
   position: relative;
 }
-/* line 709, ../sass/main.scss */
+/* line 704, ../sass/main.scss */
 .textbox input {
   margin: 0;
 }
-/* line 712, ../sass/main.scss */
+/* line 707, ../sass/main.scss */
 .textbox .ui-datepicker-trigger {
   position: absolute;
   top: 0;
@@ -2949,69 +3619,69 @@ div.dd {
   padding: 4px 5px 5px 5px;
 }
 
-/* line 720, ../sass/main.scss */
+/* line 715, ../sass/main.scss */
 input.error {
   border: 1px solid #cc3333;
   color: #cc3333;
 }
 
-/* line 726, ../sass/main.scss */
+/* line 721, ../sass/main.scss */
 .addressContainer {
   border: 1px solid #c2c2c2;
   border-radius: 3px;
   width: 367px;
 }
 
-/* line 732, ../sass/main.scss */
+/* line 727, ../sass/main.scss */
 .addSingleBlock {
   overflow: hidden;
   *zoom: 1;
   padding: 10px;
 }
 
-/* line 738, ../sass/main.scss */
+/* line 733, ../sass/main.scss */
 .SaveAddress {
   width: 150px;
   margin: 0 0 0 20px;
 }
-/* line 743, ../sass/main.scss */
+/* line 738, ../sass/main.scss */
 .SaveAddress .textbox {
   margin-top: 5px;
 }
 
-/* line 749, ../sass/main.scss */
+/* line 744, ../sass/main.scss */
 .showMap {
   position: absolute;
   right: 92px;
   bottom: 5px;
 }
-/* line 754, ../sass/main.scss */
+/* line 749, ../sass/main.scss */
 .showMap .h {
   display: none;
 }
-/* line 757, ../sass/main.scss */
+/* line 752, ../sass/main.scss */
 .showMap .s {
   display: inline-block;
 }
-/* line 760, ../sass/main.scss */
+/* line 755, ../sass/main.scss */
 .showMap a {
   color: #5e5e57;
 }
-/* line 764, ../sass/main.scss */
+/* line 759, ../sass/main.scss */
 .showMap.active .s {
   display: none;
 }
-/* line 767, ../sass/main.scss */
+/* line 762, ../sass/main.scss */
 .showMap.active .h {
   display: inline-block;
 }
 
-/* line 773, ../sass/main.scss */
+/* line 768, ../sass/main.scss */
 .addressBox {
   position: relative;
 }
 
-/* line 777, ../sass/main.scss */
+/* line 772, ../sass/main.scss */
 .sMap {
   background-position: -238px -94px;
   width: 10px;
@@ -3019,13 +3689,13 @@ input.error {
   vertical-align: top;
 }
 
-/* line 783, ../sass/main.scss */
+/* line 778, ../sass/main.scss */
 #map-canvas {
   width: 325px;
   height: 615px;
 }
 
-/* line 788, ../sass/main.scss */
+/* line 783, ../sass/main.scss */
 input.areaAddress {
   padding: 0;
   box-shadow: 0 0 0;
@@ -3039,7 +3709,7 @@ input.areaAddress {
   color: #5e5e57;
 }
 
-/* line 801, ../sass/main.scss */
+/* line 796, ../sass/main.scss */
 input.landMark {
   padding: 0;
   box-shadow: 0 0 0;
@@ -3053,35 +3723,35 @@ input.landMark {
   color: #5e5e57;
 }
 
-/* line 814, ../sass/main.scss */
+/* line 809, ../sass/main.scss */
 input[type="checkbox"] {
   margin: 0;
 }
 
-/* line 817, ../sass/main.scss */
+/* line 812, ../sass/main.scss */
 .bookelse {
   margin-top: 10px;
 }
-/* line 819, ../sass/main.scss */
+/* line 814, ../sass/main.scss */
 .bookelse .inputWapper {
   margin-top: 5px;
 }
 
-/* line 824, ../sass/main.scss */
+/* line 819, ../sass/main.scss */
 .fillAddress {
   display: none;
 }
-/* line 827, ../sass/main.scss */
+/* line 822, ../sass/main.scss */
 .fillAddress .addressWapper {
   padding: 10px;
 }
 
-/* line 835, ../sass/main.scss */
+/* line 830, ../sass/main.scss */
 #address.select:disabled {
   color: #e6e6e6;
 }
 
-/* line 843, ../sass/main.scss */
+/* line 838, ../sass/main.scss */
 input[type="submit"].getTaxi {
   background: url(../img/icons.png) no-repeat -22px -374px;
   width: 166px;
@@ -3091,22 +3761,22 @@ input[type="submit"].getTaxi {
   border: 0;
 }
 
-/* line 852, ../sass/main.scss */
+/* line 847, ../sass/main.scss */
 input[type="submit"].getTaxi.getTaxi:hover {
   background: url(../img/icons.png) no-repeat -215px -309px;
 }
 
-/* line 856, ../sass/main.scss */
+/* line 851, ../sass/main.scss */
 input[type="submit"].getTaxi.disabled {
   background: url(../img/icons.png) no-repeat -20px -308px;
 }
 
-/* line 860, ../sass/main.scss */
+/* line 855, ../sass/main.scss */
 input[type="submit"].getTaxi.disabled:hover {
   background: url(../img/icons.png) no-repeat -20px -308px;
 }
 
-/* line 864, ../sass/main.scss */
+/* line 859, ../sass/main.scss */
 .pay {
   float: right;
   font-size: 12px;
@@ -3115,19 +3785,19 @@ input[type="submit"].getTaxi.disabled:hover {
   padding: 10px 0 0 0;
 }
 
-/* line 873, ../sass/main.scss */
+/* line 868, ../sass/main.scss */
 .dfText {
   text-transform: uppercase;
   color: #5e5e57;
   font-size: 14px;
 }
 
-/* line 878, ../sass/main.scss */
+/* line 873, ../sass/main.scss */
 .inText {
   color: #5e5e57;
 }
 
-/* line 881, ../sass/main.scss */
+/* line 876, ../sass/main.scss */
 .addressWapper {
   border: 1px solid #c2c2c2;
   border-left: 0px;
@@ -3135,7 +3805,7 @@ input[type="submit"].getTaxi.disabled:hover {
   padding: 0px;
   color: #5e5e57;
 }
-/* line 888, ../sass/main.scss */
+/* line 883, ../sass/main.scss */
 .addressWapper textarea {
   margin: 0;
   padding: 10px;
@@ -3148,21 +3818,21 @@ input[type="submit"].getTaxi.disabled:hover {
   resize: none;
 }
 
-/* line 906, ../sass/main.scss */
+/* line 901, ../sass/main.scss */
 .submitWapper {
   border-top: 1px solid #d9d9d9;
   padding: 20px 0 10px 45px;
 }
 
 /* Right side */
-/* line 919, ../sass/main.scss */
+/* line 914, ../sass/main.scss */
 .rightSlideWapper {
   width: 100%;
   float: left;
   position: relative;
 }
 
-/* line 925, ../sass/main.scss */
+/* line 920, ../sass/main.scss */
 .googleMap {
   position: absolute;
   top: 0;
@@ -3172,23 +3842,23 @@ input[type="submit"].getTaxi.disabled:hover {
   height: 619px;
   border-top: 4px solid #F8DA15;
 }
-/* line 935, ../sass/main.scss */
+/* line 930, ../sass/main.scss */
 .googleMap.mapCon {
   left: 0;
 }
-/* line 938, ../sass/main.scss */
+/* line 933, ../sass/main.scss */
 .googleMap.active {
   left: 0;
   z-index: 5;
 }
 
-/* line 943, ../sass/main.scss */
+/* line 938, ../sass/main.scss */
 .rightSlider {
   position: relative;
   z-index: 2;
 }
 
-/* line 947, ../sass/main.scss */
+/* line 942, ../sass/main.scss */
 .commentWapper {
   background: #fff;
   border-radius: 3px;
@@ -3199,22 +3869,22 @@ input[type="submit"].getTaxi.disabled:hover {
   float: left;
 }
 
-/* line 955, ../sass/main.scss */
+/* line 950, ../sass/main.scss */
 .premium {
   float: right;
   margin: 35px 0 10px 0;
 }
-/* line 959, ../sass/main.scss */
+/* line 954, ../sass/main.scss */
 .premium a {
   color: #fff;
   font-size: 16px;
 }
-/* line 962, ../sass/main.scss */
+/* line 957, ../sass/main.scss */
 .premium a:hover {
   text-decoration: underline;
 }
 
-/* line 967, ../sass/main.scss */
+/* line 962, ../sass/main.scss */
 .ipremium {
   width: 42px;
   height: 18px;
@@ -3223,7 +3893,7 @@ input[type="submit"].getTaxi.disabled:hover {
   margin-right: 10px;
 }
 
-/* line 974, ../sass/main.scss */
+/* line 969, ../sass/main.scss */
 .mobileText {
   color: #6e652a;
   font-size: 14px;
@@ -3231,63 +3901,63 @@ input[type="submit"].getTaxi.disabled:hover {
   float: left;
 }
 
-/* line 980, ../sass/main.scss */
+/* line 975, ../sass/main.scss */
 .quoteWapper {
   margin-left: 30px;
 }
-/* line 983, ../sass/main.scss */
+/* line 978, ../sass/main.scss */
 .quoteWapper .quote, .quoteWapper .quoteBy {
   color: #5e5e57;
 }
 
-/* line 988, ../sass/main.scss */
+/* line 983, ../sass/main.scss */
 .commentBox {
   padding: 10px;
   border-bottom: 1px solid #ccc;
   position: relative;
 }
-/* line 993, ../sass/main.scss */
+/* line 988, ../sass/main.scss */
 .commentBox.last {
   border-bottom: 0;
 }
 
-/* line 995, ../sass/main.scss */
+/* line 990, ../sass/main.scss */
 .iconBox {
   width: 27px;
   height: 28px;
   position: absolute;
   left: 0px;
 }
-/* line 1001, ../sass/main.scss */
+/* line 996, ../sass/main.scss */
 .iconBox.imedia {
   background-position: 0px -3px;
 }
-/* line 1004, ../sass/main.scss */
+/* line 999, ../sass/main.scss */
 .iconBox.imail {
   background-position: -79px -3px;
 }
-/* line 1007, ../sass/main.scss */
+/* line 1002, ../sass/main.scss */
 .iconBox.ifb {
   background-position: -41px -3px;
 }
 
-/* line 1012, ../sass/main.scss */
+/* line 1007, ../sass/main.scss */
 .quote {
   font-style: italic;
 }
 
-/* line 1015, ../sass/main.scss */
+/* line 1010, ../sass/main.scss */
 .quoteBy {
   margin-top: 25px;
 }
 
-/* line 1018, ../sass/main.scss */
+/* line 1013, ../sass/main.scss */
 .quoteImg {
   display: block;
   margin-bottom: 10px;
 }
 
-/* line 1023, ../sass/main.scss */
+/* line 1018, ../sass/main.scss */
 .highlight {
   background: #fbdc1a;
   border-radius: 3px;
@@ -3296,115 +3966,115 @@ input[type="submit"].getTaxi.disabled:hover {
   float: left;
 }
 
-/* line 1030, ../sass/main.scss */
+/* line 1025, ../sass/main.scss */
 .highlightAds {
   margin: 0;
   padding: 0;
 }
-/* line 1033, ../sass/main.scss */
+/* line 1028, ../sass/main.scss */
 .highlightAds li {
   float: left;
   width: 48%;
   margin-right: 10px;
 }
-/* line 1038, ../sass/main.scss */
+/* line 1033, ../sass/main.scss */
 .highlightAds li.last {
   margin-right: 0;
 }
 
-/* line 1046, ../sass/main.scss */
+/* line 1041, ../sass/main.scss */
 .block {
   margin-right: 10px;
 }
 
-/* line 1050, ../sass/main.scss */
+/* line 1045, ../sass/main.scss */
 footer {
   margin-top: 40px;
 }
-/* line 1052, ../sass/main.scss */
+/* line 1047, ../sass/main.scss */
 footer .layer1 {
   background: #fff;
 }
-/* line 1054, ../sass/main.scss */
+/* line 1049, ../sass/main.scss */
 footer .layer1 h3 {
   margin-bottom: 0;
 }
-/* line 1058, ../sass/main.scss */
+/* line 1053, ../sass/main.scss */
 footer .layer2 {
   background: #f6e681;
 }
-/* line 1061, ../sass/main.scss */
+/* line 1056, ../sass/main.scss */
 footer .layer2 .row {
   position: relative;
 }
-/* line 1064, ../sass/main.scss */
+/* line 1059, ../sass/main.scss */
 footer .layer2 .footerMenu {
   margin: 20px 0;
 }
-/* line 1067, ../sass/main.scss */
+/* line 1062, ../sass/main.scss */
 footer .layer2 .footerMenu a {
   color: #5e5e57;
   font-size: 11px;
   text-transform: uppercase;
   border-right: 1px solid #5e5e57;
   padding-right: 5px;
-  font-family: 'ProximaNova-Semibold',sans-serif;
+  font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
 }
-/* line 1075, ../sass/main.scss */
+/* line 1070, ../sass/main.scss */
 footer .layer2 .footerMenu a.last {
   border-right: 0px;
 }
-/* line 1078, ../sass/main.scss */
+/* line 1073, ../sass/main.scss */
 footer .layer2 .footerMenu a:hover {
   text-decoration: underline;
 }
-/* line 1082, ../sass/main.scss */
+/* line 1077, ../sass/main.scss */
 footer .layer2 .footerMenu span.copyright {
   color: #5e5e57;
   font-size: 11px;
 }
-/* line 1087, ../sass/main.scss */
+/* line 1082, ../sass/main.scss */
 footer .layer2 nav.footerCity {
   display: inline-block;
   margin: 20px 0;
 }
-/* line 1091, ../sass/main.scss */
+/* line 1086, ../sass/main.scss */
 footer .layer2 nav.footerCity .last {
   padding-left: 5px;
 }
-/* line 1096, ../sass/main.scss */
+/* line 1091, ../sass/main.scss */
 footer .layer2 .otherSite .columns {
   padding: 0;
 }
-/* line 1100, ../sass/main.scss */
+/* line 1095, ../sass/main.scss */
 footer .layer2 .mobileSite {
   margin-left: 25px;
 }
-/* line 1103, ../sass/main.scss */
+/* line 1098, ../sass/main.scss */
 footer .layer2 .netbramha {
   float: right;
   display: inline-block;
   margin: 20px 0;
 }
-/* line 1108, ../sass/main.scss */
+/* line 1103, ../sass/main.scss */
 footer .layer2 .brand {
   position: absolute;
   right: 0;
   top: -65px;
 }
-/* line 1114, ../sass/main.scss */
+/* line 1109, ../sass/main.scss */
 footer .layer3 {
   background: #f9db1b;
   padding: 15px 0;
 }
 
 /*  Confirmed */
-/* line 1124, ../sass/main.scss */
+/* line 1119, ../sass/main.scss */
 .confirmed {
   margin: 30px;
 }
-/* line 1127, ../sass/main.scss */
+/* line 1122, ../sass/main.scss */
 .confirmed h3 {
   color: #5e5e57;
   font-size: 24px;
@@ -3412,26 +4082,26 @@ footer .layer3 {
   margin-bottom: 10px;
 }
 
-/* line 1135, ../sass/main.scss */
+/* line 1130, ../sass/main.scss */
 .cchalf {
   width: 50%;
   float: left;
 }
-/* line 1138, ../sass/main.scss */
+/* line 1133, ../sass/main.scss */
 .cchalf a {
   color: #039;
 }
-/* line 1141, ../sass/main.scss */
+/* line 1136, ../sass/main.scss */
 .cchalf a:hover {
   text-decoration: underline;
 }
 
-/* line 1147, ../sass/main.scss */
+/* line 1142, ../sass/main.scss */
 .ccWp {
   margin-bottom: 10px;
 }
 
-/* line 1150, ../sass/main.scss */
+/* line 1145, ../sass/main.scss */
 .confirmedHead {
   overflow: hidden;
   border-bottom: 1px solid #ccc;
@@ -3439,7 +4109,7 @@ footer .layer3 {
   margin-bottom: 20px;
 }
 
-/* line 1156, ../sass/main.scss */
+/* line 1151, ../sass/main.scss */
 .ccTitle {
   color: #5e5e57;
   width: 40%;
@@ -3450,7 +4120,7 @@ footer .layer3 {
   text-transform: uppercase;
 }
 
-/* line 1167, ../sass/main.scss */
+/* line 1162, ../sass/main.scss */
 .ccRight p {
   color: #5e5e57;
   float: right;
@@ -3459,13 +4129,13 @@ footer .layer3 {
   margin-top: 32px;
 }
 
-/* line 1175, ../sass/main.scss */
+/* line 1170, ../sass/main.scss */
 .ccID {
   color: #5e5e57;
   margin-left: 40px;
 }
 
-/* line 1179, ../sass/main.scss */
+/* line 1174, ../sass/main.scss */
 .iConf {
   width: 28px;
   height: 22px;
@@ -3474,7 +4144,7 @@ footer .layer3 {
   vertical-align: text-bottom;
 }
 
-/* line 1187, ../sass/main.scss */
+/* line 1182, ../sass/main.scss */
 .iHold {
   width: 28px;
   height: 22px;
@@ -3483,22 +4153,22 @@ footer .layer3 {
   vertical-align: text-bottom;
 }
 
-/* line 1195, ../sass/main.scss */
+/* line 1190, ../sass/main.scss */
 .ccHead .ccTitle {
   width: 100%;
 }
 
-/* line 1198, ../sass/main.scss */
+/* line 1193, ../sass/main.scss */
 .ccDetail {
   color: #5e5e57;
   font-size: 14px;
   float: left;
-  font-family: 'ProximaNova-Semibold',sans-serif;
+  font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
   width: 60%;
 }
 
-/* line 1206, ../sass/main.scss */
+/* line 1201, ../sass/main.scss */
 .white {
   margin-top: 20px;
   width: 307px;
@@ -3506,12 +4176,12 @@ footer .layer3 {
   margin-right: 20px;
 }
 
-/* line 1213, ../sass/main.scss */
+/* line 1208, ../sass/main.scss */
 .white.last {
   margin-right: 0;
 }
 
-/* line 1216, ../sass/main.scss */
+/* line 1211, ../sass/main.scss */
 .Round {
   padding: 15px;
   -webkit-border-radius: 3px;
@@ -3525,14 +4195,14 @@ footer .layer3 {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
 }
 
-/* line 1222, ../sass/main.scss */
+/* line 1217, ../sass/main.scss */
 .shadow {
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
 }
 
-/* line 1227, ../sass/main.scss */
+/* line 1222, ../sass/main.scss */
 .bagain .rtext {
   width: 155px;
   float: left;
@@ -3540,46 +4210,46 @@ footer .layer3 {
   padding-right: 10px;
   color: #5e5e57;
 }
-/* line 1235, ../sass/main.scss */
+/* line 1230, ../sass/main.scss */
 .bagain .buttonWapper {
   margin: 0px;
   padding: 0;
 }
 
-/* line 1241, ../sass/main.scss */
+/* line 1236, ../sass/main.scss */
 del {
   font-family: verdana;
   font-weight: bold;
 }
 
-/* line 1250, ../sass/main.scss */
+/* line 1245, ../sass/main.scss */
 #gallery-wrap {
   overflow: hidden;
   width: 650px;
   position: relative;
 }
 
-/* line 1251, ../sass/main.scss */
+/* line 1246, ../sass/main.scss */
 #gallery {
   position: relative;
   left: 0;
   top: 0;
 }
 
-/* line 1252, ../sass/main.scss */
+/* line 1247, ../sass/main.scss */
 #gallery li {
   float: left;
   list-style: none;
   margin: 0 20px 15px 0;
 }
 
-/* line 1254, ../sass/main.scss */
+/* line 1249, ../sass/main.scss */
 #gallery-controls {
   margin: 0 auto;
   width: 550px;
 }
 
-/* line 1255, ../sass/main.scss */
+/* line 1250, ../sass/main.scss */
 #gallery-prev {
   float: left;
   position: absolute;
@@ -3587,7 +4257,7 @@ del {
   left: 0px;
 }
 
-/* line 1258, ../sass/main.scss */
+/* line 1253, ../sass/main.scss */
 #gallery-next {
   float: right;
   position: absolute;
@@ -3595,31 +4265,31 @@ del {
   right: 10px;
 }
 
-/* line 1262, ../sass/main.scss */
+/* line 1257, ../sass/main.scss */
 .gg {
   width: 550px;
   overflow: hidden;
   margin-left: 45px;
 }
 
-/* line 1267, ../sass/main.scss */
+/* line 1262, ../sass/main.scss */
 .gc {
   display: block;
 }
 
-/* line 1271, ../sass/main.scss */
+/* line 1266, ../sass/main.scss */
 header, nav, section {
   display: block;
 }
 
 /*   Airport Transfer  */
-/* line 1278, ../sass/main.scss */
+/* line 1273, ../sass/main.scss */
 .toggleAirPort a {
   padding: 7px 10px 7px 10px;
   font-size: 16px;
   color: #b8b8b5;
   background-color: #e7e7e6;
-  font-family: 'ProximaNova-Regular',sans-serif;
+  font-family: 'TaxiForSure-Normal',sans-serif;
   font-weight: normal;
   font-weight: normal;
   font-size: 14px;
@@ -3630,7 +4300,7 @@ header, nav, section {
   display: block;
 }
 
-/* line 1294, ../sass/main.scss */
+/* line 1289, ../sass/main.scss */
 .goA {
   -webkit-border-radius: 6px 0 0 0;
   -moz-border-radius: 6px 0 0 0;
@@ -3641,7 +4311,7 @@ header, nav, section {
   border-top: 1px solid #c2c2c2;
 }
 
-/* line 1299, ../sass/main.scss */
+/* line 1294, ../sass/main.scss */
 .coA {
   -webkit-border-radius: 0 6px 0 0;
   -moz-border-radius: 0 6px 0 0;
@@ -3653,7 +4323,7 @@ header, nav, section {
   margin-left: -1px;
 }
 
-/* line 1306, ../sass/main.scss */
+/* line 1301, ../sass/main.scss */
 .goA .igAir {
   width: 8px;
   height: 10px;
@@ -3661,7 +4331,7 @@ header, nav, section {
   margin-right: 5px;
 }
 
-/* line 1314, ../sass/main.scss */
+/* line 1309, ../sass/main.scss */
 .goA:hover .igAir, .goA.active .igAir {
   width: 8px;
   height: 10px;
@@ -3669,7 +4339,7 @@ header, nav, section {
   margin-right: 5px;
 }
 
-/* line 1322, ../sass/main.scss */
+/* line 1317, ../sass/main.scss */
 .icAir {
   width: 8px;
   height: 10px;
@@ -3677,7 +4347,7 @@ header, nav, section {
   margin-right: 5px;
 }
 
-/* line 1329, ../sass/main.scss */
+/* line 1324, ../sass/main.scss */
 .coA:hover .icAir, .coA.active .icAir {
   width: 8px;
   height: 10px;
@@ -3685,11 +4355,11 @@ header, nav, section {
   margin-right: 5px;
 }
 
-/* line 1337, ../sass/main.scss */
+/* line 1332, ../sass/main.scss */
 .airWap {
   width: 353px;
 }
-/* line 1340, ../sass/main.scss */
+/* line 1335, ../sass/main.scss */
 .airWap div.styled {
   -webkit-border-radius: 0 0 3px 3px;
   -moz-border-radius: 0 0 3px 3px;
@@ -3699,13 +4369,13 @@ header, nav, section {
   margin-top: -3px;
 }
 
-/* line 1348, ../sass/main.scss */
+/* line 1343, ../sass/main.scss */
 .airPortFFTab {
   margin-left: 20px;
   margin-bottom: 9px;
 }
 
-/* line 1353, ../sass/main.scss */
+/* line 1348, ../sass/main.scss */
 .airPortFFTab a {
   -webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;
@@ -3720,56 +4390,56 @@ header, nav, section {
   margin-right: 10px;
 }
 
-/* line 1367, ../sass/main.scss */
+/* line 1362, ../sass/main.scss */
 .airPortFFTab a:hover, .airPortFFTab a.active {
   background: #5e5e57;
   color: #ffffff;
 }
 
-/* line 1371, ../sass/main.scss */
+/* line 1366, ../sass/main.scss */
 .flightNumber {
   margin-top: 20px;
 }
 
-/* line 1374, ../sass/main.scss */
+/* line 1369, ../sass/main.scss */
 .comingAirSelect {
   display: none;
 }
 
-/* line 1380, ../sass/main.scss */
+/* line 1375, ../sass/main.scss */
 .toggleAirPort {
   margin-bottom: 12px;
 }
 
-/* line 1384, ../sass/main.scss */
+/* line 1379, ../sass/main.scss */
 .toggleAirPort a:hover, .toggleAirPort a.active {
   background: #5e5e57;
   color: #ffffff;
 }
 
-/* line 1389, ../sass/main.scss */
+/* line 1384, ../sass/main.scss */
 .menu1border {
   border-top: solid 1px #ccc;
 }
 
-/* line 1393, ../sass/main.scss */
+/* line 1388, ../sass/main.scss */
 .addPlaceWapper {
   float: left;
   margin-top: 10px;
 }
 
-/* line 1397, ../sass/main.scss */
+/* line 1392, ../sass/main.scss */
 .addPlaceText {
   float: left;
   font-size: 12px;
-  font-family: 'ProximaNova-Light',sans-serif;
+  font-family: 'TaxiForSure-Light',sans-serif;
   font-weight: normal;
   color: #003399;
   text-align: right;
   padding: 10px 10px 0px 30px;
 }
 
-/* line 1406, ../sass/main.scss */
+/* line 1401, ../sass/main.scss */
 .eveButton {
   background: #eaeaea;
   padding: 10px 10px 7px 10px;
@@ -3782,32 +4452,521 @@ header, nav, section {
   cursor: pointer;
 }
 
-/* line 1414, ../sass/main.scss */
+/* line 1409, ../sass/main.scss */
 .imins {
   width: 12px;
   height: 12px;
   background-position: -147px -224px;
 }
 
-/* line 1419, ../sass/main.scss */
+/* line 1414, ../sass/main.scss */
 .iplus {
   width: 12px;
   height: 12px;
   background-position: -176px -226px;
 }
 
-/* line 1426, ../sass/main.scss */
+/* line 1421, ../sass/main.scss */
 .styledairport .control-group {
   padding: 0;
 }
-/* line 1429, ../sass/main.scss */
+/* line 1424, ../sass/main.scss */
 .styledairport .control-group input {
   border-top: 0;
   width: 99%;
   margin-top: 3px;
   border-radius: 0 0 4px 4px;
 }
-/* line 1435, ../sass/main.scss */
+/* line 1430, ../sass/main.scss */
 .styledairport .control-group .icon {
   right: 10px;
+}
+
+/* line 1, ../sass/_waiting.scss */
+.WaitingStepContain {
+  margin-top: 10px;
+}
+
+/* line 4, ../sass/_waiting.scss */
+.waitHead {
+  font-size: 16px;
+  color: #5e5e57;
+  font-family: 'TaxiForSure-Bold',sans-serif;
+  font-weight: normal;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+/* line 12, ../sass/_waiting.scss */
+.waitingWapHead {
+  font-size: 16px;
+  color: #5e5e57;
+  padding: 10px;
+}
+
+/* line 17, ../sass/_waiting.scss */
+.waitingWap {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #c2c2c2;
+}
+
+/* line 21, ../sass/_waiting.scss */
+.wwContain {
+  border-top: 1px solid #c2c2c2;
+  padding: 10px;
+}
+
+/* line 26, ../sass/_waiting.scss */
+.waitIcon {
+  width: 20px;
+  height: 20px;
+  background: #eaeaea;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin-right: 10px;
+}
+/* line 36, ../sass/_waiting.scss */
+.waitIcon i.wIcon {
+  background: url(../img/icons.png) no-repeat;
+  display: inline-block;
+  background-position: -216px -376px;
+  width: 11px;
+  height: 11px;
+  margin: 5px 0 0 5px;
+}
+/* line 44, ../sass/_waiting.scss */
+.waitIcon .iDots {
+  background: #f8da15;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-animation: load 0.5s infinite;
+  /* Safari 4+ */
+  -moz-animation: load 0.5s infinite;
+  /* Fx 5+ */
+  -o-animation: load 0.5s infinite;
+  /* Opera 12+ */
+  animation: load 0.5s infinite;
+  /* IE 10+ */
+}
+
+@-webkit-keyframes load {
+  /* line 56, ../sass/_waiting.scss */
+  0% {
+    background: #f8da15;
+  }
+
+  /* line 62, ../sass/_waiting.scss */
+  100% {
+    background: #fff;
+  }
+}
+
+@-moz-keyframes load {
+  /* line 56, ../sass/_waiting.scss */
+  0% {
+    background: #f8da15;
+  }
+
+  /* line 62, ../sass/_waiting.scss */
+  100% {
+    background: #fff;
+  }
+}
+
+@-ms-keyframes load {
+  /* line 56, ../sass/_waiting.scss */
+  0% {
+    background: #f8da15;
+  }
+
+  /* line 62, ../sass/_waiting.scss */
+  100% {
+    background: #fff;
+  }
+}
+
+@keyframes load {
+  /* line 56, ../sass/_waiting.scss */
+  0% {
+    background: #f8da15;
+  }
+
+  /* line 62, ../sass/_waiting.scss */
+  100% {
+    background: #fff;
+  }
+}
+
+/* line 4, ../sass/_booking.scss */
+.bookingSlideWapper {
+  background: #fff;
+  -webkit-border-radius: 0 3px 3px 3px;
+  -moz-border-radius: 0 3px 3px 3px;
+  -ms-border-radius: 0 3px 3px 3px;
+  -o-border-radius: 0 3px 3px 3px;
+  border-radius: 0 3px 3px 3px;
+  border-top: 4px solid #f8da15;
+  margin-top: 65px;
+  padding-bottom: 10px;
+}
+
+/* line 13, ../sass/_booking.scss */
+.wwTaxiDetail {
+  margin: 0;
+  padding: 15px 0 0 35px;
+  list-style: none;
+}
+/* line 18, ../sass/_booking.scss */
+.wwTaxiDetail li {
+  float: left;
+  padding-right: 20px;
+}
+/* line 22, ../sass/_booking.scss */
+.wwTaxiDetail li span {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  color: #5e5e57;
+  padding: 0;
+}
+/* line 30, ../sass/_booking.scss */
+.wwTaxiDetail li .wwTextBold {
+  font-family: 'TaxiForSure-Bold',sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+}
+/* line 35, ../sass/_booking.scss */
+.wwTaxiDetail li .wwTextNormal {
+  font-family: 'TaxiForSure-Light',sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+/* line 42, ../sass/_booking.scss */
+.booking-row {
+  width: 965px;
+  margin: 0 auto;
+}
+/* line 46, ../sass/_booking.scss */
+.booking-row:before, .booking-row:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+/* line 54, ../sass/_booking.scss */
+.booking-row:after {
+  clear: both;
+}
+
+/* line 62, ../sass/_booking.scss */
+h1.booking {
+  color: #5e5e57;
+  font-family: 'TaxiForSure-Bold',sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  padding: 20px 0 0 0;
+  margin: 0;
+}
+
+/* line 71, ../sass/_booking.scss */
+.booking-tab {
+  width: 100%;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 0;
+}
+/* line 76, ../sass/_booking.scss */
+.booking-tab li {
+  margin-right: 10px;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  -o-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  background: #e7e7e6;
+  float: left;
+}
+/* line 83, ../sass/_booking.scss */
+.booking-tab li span {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #666666;
+  display: block;
+}
+/* line 90, ../sass/_booking.scss */
+.booking-tab li.active {
+  background: #666666;
+}
+/* line 93, ../sass/_booking.scss */
+.booking-tab li.active span {
+  color: #fff;
+}
+
+/* line 99, ../sass/_booking.scss */
+.bdhalf {
+  width: 40%;
+}
+
+/* line 102, ../sass/_booking.scss */
+.bdlf {
+  width: 60%;
+}
+
+/* line 103, ../sass/_booking.scss */
+.bdrowWap {
+  padding: 10px;
+  border-bottom: 1px solid #c2c2c2;
+}
+/* line 107, ../sass/_booking.scss */
+.bdrowWap:before, .bdrowWap:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+/* line 115, ../sass/_booking.scss */
+.bdrowWap:after {
+  clear: both;
+}
+/* line 119, ../sass/_booking.scss */
+.bdrowWap:last-child {
+  border-bottom: 0;
+}
+
+/* line 125, ../sass/_booking.scss */
+.bookingDetailBox {
+  border: 1px solid #c2c2c2;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  width: 472px;
+}
+
+/* line 130, ../sass/_booking.scss */
+.bookingDetailHead {
+  background: #f0f0f0;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -ms-border-radius: 4px 4px 0 0;
+  -o-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  padding: 10px 10px;
+}
+
+/* line 137, ../sass/_booking.scss */
+.bdFrom {
+  font-size: 16px;
+  color: #5e5e57;
+  float: left;
+  width: 45%;
+}
+
+/* line 145, ../sass/_booking.scss */
+.bdtoIcon {
+  float: left;
+  background: #fff;
+  color: #999999;
+  font-size: 14px;
+  margin: 0 10px;
+  padding: 4px 5px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  display: block;
+}
+
+/* line 156, ../sass/_booking.scss */
+.bdTo {
+  width: 45%;
+  float: left;
+  font-size: 16px;
+  color: #5e5e57;
+}
+
+/* line 164, ../sass/_booking.scss */
+.bdTimeWap {
+  float: left;
+}
+/* line 166, ../sass/_booking.scss */
+.bdTimeWap span {
+  font-size: 16px;
+  color: #5e5e57;
+}
+/* line 171, ../sass/_booking.scss */
+.bdTimeWap .bdDay {
+  font-size: 32px;
+  color: #5e5e57;
+  float: left;
+}
+/* line 177, ../sass/_booking.scss */
+.bdTimeWap .bdMonth {
+  font-size: 12px;
+  color: #5e5e57;
+  display: block;
+  line-height: 9px;
+  padding-top: 3px;
+}
+/* line 184, ../sass/_booking.scss */
+.bdTimeWap .bdYear {
+  font-size: 12px;
+  color: #5e5e57;
+}
+
+/* line 190, ../sass/_booking.scss */
+.bdTime {
+  float: left;
+  font-size: 16px;
+  color: #5e5e57;
+}
+
+/* line 197, ../sass/_booking.scss */
+.bdFontLarge {
+  font-size: 26px;
+  color: #5e5e57;
+  float: left;
+  font-family: 'TaxiForSure-Bold',sans-serif;
+  font-weight: normal;
+}
+/* line 203, ../sass/_booking.scss */
+.bdFontLarge .m {
+  font-family: 'TaxiForSure-Normal',sans-serif;
+  font-weight: normal;
+}
+
+/* line 208, ../sass/_booking.scss */
+.bdFontMid {
+  font-size: 16px;
+  font-family: 'TaxiForSure-Bold',sans-serif;
+  font-weight: normal;
+}
+
+/* line 213, ../sass/_booking.scss */
+.bdFontSmall {
+  font-size: 14px;
+  color: #999999;
+}
+
+/* line 218, ../sass/_booking.scss */
+.bdFontRate {
+  font-family: 'TaxiForSure-Bold',sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+}
+
+/* line 222, ../sass/_booking.scss */
+.assignWap {
+  background: #33cc66;
+}
+/* line 224, ../sass/_booking.scss */
+.assignWap .atYou, .assignWap .bdBookedBy {
+  color: #fff;
+}
+
+/* line 229, ../sass/_booking.scss */
+.bdEvents {
+  margin: 0;
+  padding: 0;
+}
+/* line 232, ../sass/_booking.scss */
+.bdEvents li {
+  display: inline-block;
+  margin: 0 8px;
+}
+/* line 236, ../sass/_booking.scss */
+.bdEvents li i {
+  width: 15px;
+  height: 15px;
+  background: url(../img/icons.png) no-repeat;
+  display: inline-block;
+}
+/* line 243, ../sass/_booking.scss */
+.bdEvents li.bdEdit i {
+  background-position: -215px -267px;
+}
+/* line 248, ../sass/_booking.scss */
+.bdEvents li.bdDel i {
+  background-position: -246px -268px;
+}
+/* line 253, ../sass/_booking.scss */
+.bdEvents li.dbPrint i {
+  background-position: -272px -267px;
+}
+/* line 258, ../sass/_booking.scss */
+.bdEvents li.dbMessage i {
+  background-position: -297px -267px;
+}
+/* line 263, ../sass/_booking.scss */
+.bdEvents li.dbComment i {
+  background-position: -322px -266px;
+}
+
+/* line 271, ../sass/_booking.scss */
+.atTrack {
+  position: relative;
+}
+
+/* line 274, ../sass/_booking.scss */
+.ddWap {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  left: -10px;
+  padding: 0px 10px 0 10px;
+  top: 29px;
+  border: 1px solid #c2c2c2;
+  z-index: 1000;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+}
+
+/* line 286, ../sass/_booking.scss */
+.ddetail {
+  float: left;
+  padding: 0;
+  margin: 10px 0;
+}
+/* line 290, ../sass/_booking.scss */
+.ddetail li {
+  padding: 3px 0;
+  width: 100%;
+  float: left;
+}
+/* line 297, ../sass/_booking.scss */
+.ddetail li .lsec {
+  font-family: 'TaxiForSure-Normal',sans-serif;
+  font-weight: normal;
+  width: 50%;
+  display: block;
+  float: left;
+}
+/* line 303, ../sass/_booking.scss */
+.ddetail li .rsec {
+  font-family: 'TaxiForSure-Bold',sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  width: 50%;
+  display: block;
+  float: left;
 }
