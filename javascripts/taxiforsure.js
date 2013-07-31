@@ -20,7 +20,8 @@ window.taxiforsure = {
 		//taxiforsure.form();
 		taxiforsure.CitySection();
 		
-		taxiforsure.DatePicker();
+		
+		taxiforsure.DateTime();
 		taxiforsure.Gallery();
 		
 		taxiforsure.sideBar();
@@ -170,63 +171,22 @@ window.taxiforsure = {
 				        // taxiforsure.CarSection();
 				    }
 	},
-	DatePicker: function(){
+	
 
-			//$('#timepicker').attr("disabled", "disabled");
-			$( "#datepicker").next('.icon').bind('click', function(event) {
-				$('#datepicker').datepicker('show');
-			});
-			$('#datepicker').focus(function(event) {
-			    $('#datepicker').datepicker('show');
-			}); 
-		    $( "#datepicker" ).datepicker({
-		    	//
-		      //showOn: "button",
-		      //buttonImage: "img/calender.png",
-		      //buttonImageOnly: true,
-		       minDate: 0,
-		         maxDate: +7,
-		      dateFormat: "dd-mm-yy",   
-		      
-		      onSelect: function(dateText) {
-		      	
-		        // var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()).getTime();
+DateTime:function(){
+		$( '#timepicker' ).pickatime({
+		    
+		    interval: 15,
+		    clear: 'Cancel'
+		});
 
-		        // var selected = new Date(dateText).getTime();
-		        // console.log(today+ "  " + selected + "hello");
-		        // if (today > selected) {}
-		        // else if (today > selected){ console.log("normal"); normalDate();}
-		        // else { todayDate();}
-		    }
-		    })
-		  
-		normalDate();
-		function normalDate(){
-
-			$( "#timepicker").next('.icon').bind('click', function(event) {
-				$('#timepicker').datepicker('show');
-			});
-
-			
-			
-		    $('#timepicker').timepicker({
-				hourMin: 1,
-				hourMax: 24,
-				hourGrid: 1,
-				stepMinute:15,
-				//minuteGrid: 30,
-				timeFormat: 'hh:mm tt',
-				 beforeShow: function(input, inst) {
-			        var widget = $(inst).datepicker('widget');
-			        widget.css('margin-left', $(input).outerWidth() - widget.outerWidth());
-			    }
-			});
-		    //$('#timepicker').focus();
-		}
-
-		  
-		},
-
+		$( '#datepicker' ).pickadate({
+			today: false,
+		    min: true,
+    		max: +7,
+		    clear: 'Cancel'
+		})
+	},
 
 	CarSection: function(){
 

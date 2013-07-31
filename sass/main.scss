@@ -8,6 +8,20 @@
 @import "_datatimepicker.scss";
 
 
+@mixin cf(){
+	&:before,
+	&:after {
+	    content: " ";
+	    /* 1 */
+	    display: table;
+	    /* 2 */
+	}
+	&:after {
+	    clear: both;
+	}
+}
+
+
 .cf:before,
 .cf:after {
     content: " ";
@@ -1435,3 +1449,9 @@ margin-bottom: 9px;
 
 @import "_waiting.scss";
 @import "_booking.scss";
+@import "_setting.scss";
+
+
+@import "_default.scss";
+@import "_default.date.scss";
+@import "_default.time.scss";

@@ -1,0 +1,247 @@
+
+.settingSlideWapper{
+	background:#fff;
+	@include border-radius(0 3px 3px 3px);
+	border-top:4px solid #f8da15;
+	margin-top: 65px;
+}
+
+
+.SettingWap{
+	margin-top:14px;
+
+}
+.leftBar{
+	width:16%;
+	min-height:450px;
+	background:#f8da15;
+	float:left;
+}
+
+.leftBarMenu{
+	margin:0;
+	padding:15px 0 0 0;
+	li{
+		width:100%;
+		display:block;
+		float: left;
+		margin-bottom:15px;
+
+		a{
+			color:#1e1e1e;
+			font-size:13px;
+			text-align:center;
+			display:block;
+		}
+	}
+}
+.rightBar{
+	float:left;
+	width:84%;
+	position: relative;
+	min-height: 450px;
+
+	.rightBarRow{
+		margin:5px 30px 0px 30px;
+		padding-bottom:10px;
+		
+		@include cf();
+	}
+}
+.rbrHeadTop{
+	border-bottom:#e0e0e0 1px solid;
+}
+.rightBarTop{
+	margin-top:10px;
+
+	h1{
+		margin:0;
+		padding:0;
+		color:#1e1e1e;
+		font-size:15px;
+
+		.iPersonal{
+			@include icon;
+			width:12px;
+			height:12px;
+			background-position: -267px -379px;
+			margin-right:10px;
+		}
+		.iAddress{
+			@include icon;
+			width:12px;
+			height:17px;
+			background-position: -315px -374px;
+			margin-right:10px;	
+			vertical-align: text-bottom;
+		}
+	}
+}
+
+.rbrFl{
+	float: left;
+}
+
+.rightBarRow{
+	&.rbrtopBorder{
+		margin-top:10px;
+		margin-bottom:10px;
+
+		.btop{
+			border-top:#e0e0e0 1px solid;
+			padding-bottom: 15px;
+		}
+	}
+
+	.controls input[type="text"]{
+		min-width: 160px;
+		margin-right: 50px;
+	}
+
+	.controls input[type="radio"]{
+		display:none;
+	}
+	.controls.date .icon{
+		right:45px;
+	}
+	label.control-label{
+		padding:5px 0;
+		display:block;
+		@include normal;
+	}
+.radioWap{
+	margin-top:5px;
+	.control-label{
+		display:block;	
+		@include normal;
+	}
+	
+	.controls{
+		display:inline-block;
+		margin-top: 7px;
+		margin-right:10px;
+	}
+
+	label{
+		color:#5e5e57;
+		font-size:13px;
+
+	}
+}
+
+input[type="radio"] + .custom::before {
+    width:16px;
+    height:16px;
+    content:"";
+    @include icon;
+    background-position: -100px -194px;
+    position:relative;
+    left:0;
+    top:3px;
+}
+
+input[type="radio"]:checked + .custom::before {
+    width:16px;
+    height:16px;
+    content:"";
+    @include icon;
+    position:relative;
+    left:0;
+    top:3px;
+    background-position: -100px -174px;
+}
+
+.update{
+	@include box-shadow(0 2px 2px rgba(0,0,0,.2));
+	@include background-image(linear-gradient(top, #fbdd1b, #f0d002));
+	@include border-radius(3px);
+	@include bold;
+	padding:10px 20px;
+	border:0;
+	color:#1e1e1e;
+}
+
+}
+
+.rbrupdateWap{
+	position: absolute;
+	bottom: 15px;
+}
+
+
+
+
+/*  Address */
+
+.rightBarAddressContain{
+
+}
+
+.addressLeft{
+	float:left;
+	width:300px;
+}
+.addressRight{
+	float:left;
+}
+.aRHead{
+	font-size:12px;
+	padding:5px 10px;
+}
+.aRBox{
+	float:left;
+	@include box-shadow(1px 2px 2px rgba(0,1,1,.1));
+	border: solid 1px #c2c2c2;
+	@include border-radius(3px);
+	width:245px;
+}
+
+.aRBoxHead{
+	@include border-radius(3px 3px 0 0);	
+	background:#ececec;
+	@include bold;
+	font-size:12px;
+	color:#5e5e57;
+	padding:5px;
+	border-bottom:1px solid #c2c2c2;
+}
+
+.aRBoxAdd{
+	font-size:12px;
+	color:#5e5e57;
+	padding:5px 10px 0 10px;
+	@include bold;
+
+}
+.aRBoxland{
+	@include cf;
+	padding:5px 10px;
+
+}
+
+.aRbLN{
+	font-size:12px;
+	color:#999999;
+}
+.aRbLB{
+	font-size:12px;
+	color:#5e5e57;
+}
+
+.aRBoxdeleteWap{
+	@include cf;	
+
+	@include border-radius(0 0 3px 3px);	
+	background:#ececec;
+
+	ul{
+		margin:0;
+		padding:0;
+
+		li{
+			float:left;
+			padding:5px;
+			font-size:12px;
+		}
+	}
+}

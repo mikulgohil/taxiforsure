@@ -100,25 +100,65 @@ h1.booking{
 	width:40%;
 }
 .bdlf{ width:60%;}
+
 .bdrowWap{
 	padding:10px;
 	border-bottom:1px solid #c2c2c2;
 
 	&:before,
-&:after {
-    content: " ";
-    /* 1 */
-    display: table;
-    /* 2 */
+	&:after {
+	    content: " ";
+	    /* 1 */
+	    display: table;
+	    /* 2 */
+	}
+	&:after {
+	    clear: both;
+	}
+
+	&:last-child{
+		border-bottom:0;
+	}
 }
 
-&:after {
-    clear: both;
+
+.bdrowWap{
+	padding:10px;
+	border-bottom:1px solid #c2c2c2;
+
+	&:before,
+	&:after {
+	    content: " ";
+	    /* 1 */
+	    display: table;
+	    /* 2 */
+	}
+	&:after {
+	    clear: both;
+	}
+
+	&:last-child{
+		border-bottom:0;
+	}
 }
 
-&:last-child{
-	border-bottom:0;
-}
+.bdrowWapNo{
+	border-bottom:1px solid #c2c2c2;
+
+	&:before,
+	&:after {
+	    content: " ";
+	    /* 1 */
+	    display: table;
+	    /* 2 */
+	}
+	&:after {
+	    clear: both;
+	}
+
+	&:last-child{
+		border-bottom:0;
+	}
 }
 
 
@@ -227,7 +267,7 @@ h1.booking{
 }
 
 .bdEvents{
-	margin:0;
+	margin:10px 0 0 0;
 	padding:0;
 	li{
 		display:inline-block;
@@ -270,14 +310,39 @@ h1.booking{
 
 .atTrack{
 	position:relative;
+	padding:8px 0 8px 10px;
+
+&:after{
+		border-top: 8px solid rgba(0, 0, 0, 0);
+		border-bottom: 8px solid rgba(0, 0, 0, 0);
+		border-left: 8px solid #5e5e57;
+		content: "";
+		position: absolute;
+		right: 20px;
+		top: 7px;
+	}
+
+&.active{
+	&:after{
+		border-left: 8px solid rgba(0, 0, 0, 0);
+		border-right: 8px solid rgba(0, 0, 0, 0);
+		border-top: 8px solid #5e5e57;
+		content: "";
+		position: absolute;
+		right: 20px;
+		top: 12px;
+	}
 }
+	
+}
+
 .ddWap{
 	position:absolute;
 	background: #fff;
 	width: 100%;
-	left: -10px;
+	left: 0px;
 	padding: 0px 10px 0 10px;
-	top:29px;
+	top:32px;
 	border:1px solid #c2c2c2;
 	z-index:1000;
 	@include border-radius(0 0 4px 4px);

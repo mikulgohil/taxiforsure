@@ -12,8 +12,36 @@
 .waitingWapHead{
 	font-size:16px;
 	color:#5e5e57;
-	padding:10px;	
+	
 }
+
+.waitingWapHeadText{
+	padding:10px;
+}
+
+.wLine{
+	height:0;
+	border-top:4px solid #555;
+	width:0;
+	display:block;
+	vertical-align: top;
+	@include animation(line, 15s);
+	@include border-radius(3px);
+}
+
+@include keyframes(line) {
+  0% {
+    width:0;
+  }
+  50% {
+    
+  }
+  100% {
+    width:100%;
+  } 
+}
+
+
 .waitingWap{
 	@include border-radius(4px);
 	border:1px solid #c2c2c2;
