@@ -152,7 +152,7 @@
                                                 <div class="control-group defAdd">
                                                     <label class="control-label" for="pickArea">From</label>
                                                     <div class="controls arrow">
-                                                      <input type="text" data-error="error message" id="pickArea" data-validate="step1"  placeholder="Select">
+                                                      <input type="text" data-error="error message" id="outstationFrom" data-validate="step1"  placeholder="Select">
                                                       <i class="icon"></i>
                                                     </div>
                                                     <ul class="defAddUl">
@@ -166,7 +166,7 @@
                                                 <div class="control-group">
                                                     <label class="control-label" for="dropArea">To</label>
                                                     <div class="controls arrow">
-                                                      <input type="text" id="dropArea" data-validate="step1" placeholder="Select">
+                                                      <input type="text" id="dropArea" class="outstationInput" data-validate="step1" placeholder="Select">
                                                       <i class="icon"></i>
                                                       <div class="inputAdd">
                                                             <span class="add">+</span>
@@ -177,7 +177,7 @@
 
                                                 <div class="control-group">
                                                     <div class="controls arrow">
-                                                      <input type="text" id="dropArea" data-validate="step1" placeholder="Select">
+                                                      <input type="text" id="dropArea"  class="outstationInput" data-validate="step1" placeholder="Select">
                                                       <i class="icon"></i>
                                                       <div class="inputAdd">
                                                             <span class="remove">+</span>
@@ -187,7 +187,7 @@
 
                                                 <div class="control-group">
                                                     <div class="controls arrow">
-                                                      <input type="text" id="dropArea" data-validate="step1" placeholder="Select">
+                                                      <input type="text" id="dropArea"  class="outstationInput" data-validate="step1" placeholder="Select">
                                                       <i class="icon"></i>
                                                       <div class="inputAdd">
                                                             <span class="remove">+</span>
@@ -202,7 +202,7 @@
                                                 <div class="control-group defAdd">
                                                     <label class="control-label" for="pickArea">Pickup Area</label>
                                                     <div class="controls arrow">
-                                                      <input type="text" data-error="error message" id="pickArea" data-validate="step1"  placeholder="Select">
+                                                      <input type="text" id="pickArea" data-error="error message" data-validate="step1"  placeholder="Select">
                                                       <i class="icon"></i>
                                                     </div>
                                                     <ul class="defAddUl">
@@ -216,7 +216,7 @@
                                             <div class="stepContentColumn ">
                                                 <div class="stepContentColumn">
                                                     <div class="control-group">
-                                                        <label class="control-label" for="datepicker">Pick up Date</label>
+                                                        <label class="control-label" for="datepicker">Departure Date</label>
                                                         <div class="controls date">
                                                           <input type="text" id="datepicker" placeholder="Select">
                                                           <i class="icon"></i>
@@ -226,9 +226,9 @@
 
                                                 <div class="stepContentColumn">
                                                     <div class="control-group">
-                                                        <label class="control-label" for="timepicker">Pick up Time</label>
-                                                        <div class="controls time">
-                                                          <input type="text" id="timepicker" placeholder="Select">
+                                                        <label class="control-label" for="datepicker">Return Date</label>
+                                                        <div class="controls date">
+                                                          <input type="text" id="datepicker2" placeholder="Select">
                                                           <i class="icon"></i>
                                                         </div>
                                                     </div>
@@ -318,7 +318,7 @@
 
                                      <div class="stepFooter"> <!-- stepFooter  -->
                                         <div class="contentRow">
-                                             <div class="modiLink"><span data-step="step1">modify details</span></div>
+                                             
                                             <div class="stepNextButton">
                                             <button data-step="step3" data-form="step2"  class="next" value="Find Taxi">Select Taxi</button>
                                                 <!-- a href="#" class="next" data-step="step3">Enter your detail</a -->
@@ -425,7 +425,7 @@
 
                                     <div class="stepFooter"> <!-- stepFooter  -->
                                         <div class="contentRow">
-                                             <div class="modiLink"><span data-step="step2">modify details</span></div>
+                                             
                                             <div class="stepNextButton">
                                             <button class="next booked" data-form="step3" >Confirm &amp; Book Taxi</button>
                                                 <!-- a  href="#" class="next booked">Book Taxi</a -->
@@ -451,15 +451,54 @@
 
                         <div class="rightSlider">
                              <div class="highlight">
-                            <ul class="highlightAds cf">
-                                <li>
-                                    <img src="img/block.jpg" alt="" />
-                                </li>
-                                <li class="last">
-                                    <img src="img/block1.jpg" alt="" />
-                                </li>
-                            </ul>
-                        </div>
+                                <ul class="highlightAds cf">
+                                    <li>
+                                        <img src="img/block.jpg" alt="" />
+                                    </li>
+                                    <li class="last">
+                                        <img src="img/block1.jpg" alt="" />
+                                    </li>
+                                </ul>
+                            </div>
+
+                             <div class="sumDetail cf">
+                                <div class="bdetail">
+                                    <div class="bdetailRow">
+                                        <h3>Booking Summary</h3>
+                                    </div>
+                                    <div class="bdetailRow showAr">
+                                        <div class="textPickup fontL">Bangalore</div>
+                                        <div class="textDroparea fontL">Agumbe,Karnataka</div>
+                                    </div>
+                                    <div class="bdetailRow showTi">
+                                        <span class="on fontY">On</span>
+                                        <span class="textDate fontNL">Tue, 21st June</span>
+                                        <span class="at fontY">at</span>
+                                        <span class="textTime fontNL">9:00 am</span>
+                                    </div>
+                                     <div class="bdetailRow showCr">
+                                            <div class="carBookDetail">
+                                                <div class="carBookCol">
+                                                    <p class="carBFont200">TATA Manza</p>
+                                                    <p class="carBFont100">5 seater AC</p>
+                                                </div>
+                                                <div class="carBookCol">
+                                                    <p class="carBFont100">first 10 kms</p>
+                                                    <p class="carBFont300"><span class="WebRupee">Rs.</span> 200</p>
+                                                </div>
+                                                <div class="carBookCol">
+                                                    <p class="carBFont100">after 10 kms</p>
+                                                    <p class="carBFont300"><span class="WebRupee">Rs.</span> 15/km</p>
+                                                </div>
+                                            </div>
+                                     </div>
+                                     <div class="bdetailRow">
+                                        <div class="dbdetailModify">
+                                            <span data-step="step1">modify details</span>
+                                        </div>    
+                                    </div>
+                               </div>
+                            </div> 
 
                         <div class="commentWapper">
                             <div class="commentBox">
@@ -709,9 +748,15 @@
 
   <script src="javascripts/gmap.js"></script>
 <script src="javascripts/css3-mediaqueries.js"></script>
+
+<script  type="text/javascript" src="javascripts/picker.js"></script>
+    <script  type="text/javascript" src="javascripts/picker.date.js"></script>
+    <script  type="text/javascript" src="javascripts/picker.time.js"></script>
+    <script  type="text/javascript" src="javascripts/legacy.js"></script>
+
 <script src="javascripts/taxiforsure.js"></script>
 
-  <script src="javascripts/jquery-ui-timepicker-addon.js"></script>
+  
 <script src="http://cdn.webrupee.com/js" type="text/javascript"></script>
 
 <script>

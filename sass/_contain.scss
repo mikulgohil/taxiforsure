@@ -39,7 +39,7 @@
 .navInfo{
 	width:100%;
 	background:#5e5d58;
-	padding:25px 0px 35px 0;
+	padding:15px 0px 15px 0;
 }
 
 
@@ -110,38 +110,34 @@
 	display:block;
 }
 
-.bdetailWap{
-	&.Ar{
-		margin-bottom:0;
-		.showAr{
-	
-			
-			display: block;
-		}
-		&.Ti{
-			.showTi{
-				display: block;
-			}	
-		}	
-		&.Cr{
-			.showCr{
-				display: block;
-				margin-bottom: 0;
-			}	
-		}	
+.bdetail h3{
+	padding:0;
+	margin:0;
+	color:#f8da15;
+	font-size:17px;
+	@include SansationRegular;
+	font-weight:normal;
+}
 
-		.dIntro{
-			display: none;
-		}
+
+.dbdetailModify{
+	span{
+		@include SansationRegular;
+		color:#f8da15;
+		text-decoration: underline;
+		font-size:13px;	
+		cursor: pointer;
+		display:block;
+		margin-top: 15px;
 	}
 	
 }
 
 .textPickup{
 	float:left;
-	padding-right: 25px;
+	padding-right: 20px;
 	position: relative;
-	margin-right: 25px;
+	margin-right: 10px;
 
 	&:after{
 		position: absolute;
@@ -153,6 +149,12 @@
 		top:6px;
 		content: "";
 
+	}
+
+	&.single{
+		&:after{
+			display:none;
+		}
 	}
 }
 .laterBox{
@@ -176,6 +178,7 @@
 	font-size:24px;
 	color:#fff;
 	@include SansationRegular;
+	margin-bottom: 10px;
 }
 .fontNL{
 	font-size:16px;
@@ -189,8 +192,8 @@
 }
 
 .carBookCol{
-	float:left;
-	margin:10px 20px 0 0;
+	display:inline-block;
+	margin:0px 18px 0 0;
 
 	p{
 		margin:0;
@@ -251,14 +254,14 @@
 		.icon{
 			background-position:-248px -223px;
 			top: 5px;
-			right: 20px;
+			right: 32px;
 		}
 	}
 	&.time{
 		.icon{
 			background-position:-208px -223px;
 			top: 5px;
-			right: 20px;
+			right: 32px;
 		}
 	}
 
@@ -291,7 +294,7 @@ ul{
 			&:first-child{
 				
 					border-right:1px solid #c2c2c2;
-					@include border-radius(5px 0 0 5px);
+					@include border-radius(4px 0 0 4px);
 					&.active,&:hover{
 						border-right:0;
 					}
@@ -303,7 +306,7 @@ ul{
 				margin-left: -1px;
 				
 					border-left:1px solid #c2c2c2;
-					@include border-radius(0 5px 5px 0);
+					@include border-radius(0 4px 4px 0);
 					&.active,&:hover{
 						border-left:0;
 					}
@@ -319,13 +322,18 @@ ul{
 }
 
 .inputAdd{
-	display:inline-block;
+	
 	background:#ccc;
 	position: relative;
 	top: -3px;
 	cursor: pointer;
 	@include border-radius(3px);
 	margin-left: 5px;
+	display:none;
+
+	&.show{
+		display:inline-block;	
+	}
 
 	span{
 		font-size:12px;
@@ -378,7 +386,13 @@ ul{
 
 	.stepContentColumn{
 		input{
-			width: 90%;
+			.date{
+				width: 90%;	
+			}
+			.time{
+				width: 90%;	
+			}
+			
 		}
 	}
 }

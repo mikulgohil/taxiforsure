@@ -16,24 +16,45 @@
 	min-height:450px;
 	background:#f8da15;
 	float:left;
+	position:relative;
 }
 
 .leftBarMenu{
 	margin:0;
-	padding:15px 0 0 0;
+	padding:17px 0 0 0;
 	li{
 		width:100%;
 		display:block;
 		float: left;
 		margin-bottom:15px;
+		text-align: center;
 
 		a{
 			color:#1e1e1e;
 			font-size:13px;
-			text-align:center;
-			display:block;
+
+			&:hover,&.active{
+				text-decoration: underline;
+			}
 		}
 	}
+}
+
+.leftBarMenuBottom{
+	position:absolute;
+	bottom:34px;
+	width:100%;
+	a{
+		color:#1e1e1e;
+		font-size:13px;
+		text-align:center;
+		display:block;
+
+		&:hover,&.active{
+			text-decoration: underline;
+		}	
+	}
+
 }
 .rightBar{
 	float:left;
@@ -75,8 +96,45 @@
 			margin-right:10px;	
 			vertical-align: text-bottom;
 		}
+		.iSubscription{
+			@include icon;
+			width:17px;
+			height:13px;
+			background-position: -402px -378px;
+			margin-right:10px;	
+			vertical-align: text-top;	
+		}
+
+		.icPassword{
+			@include icon;
+			width:12px;
+			height:15px;
+			background-position: -315px -407px;
+			margin-right:10px;	
+			vertical-align: text-top;	
+		}
+
+		.iDeactivate{
+			@include icon;
+			width:16px;
+			height:15px;
+			background-position: -348px -406px;
+			margin-right:10px;	
+			vertical-align: text-top;		
+		}
+		
 	}
 }
+
+.iHeadE{
+			@include icon;
+			width:14px;
+			height:14px;
+			background-position: -216px -269px;						
+			float:right;
+			cursor: pointer;
+		}
+
 
 .rbrFl{
 	float: left;
@@ -153,19 +211,28 @@ input[type="radio"]:checked + .custom::before {
 
 .update{
 	@include box-shadow(0 2px 2px rgba(0,0,0,.2));
-	@include background-image(linear-gradient(top, #fbdd1b, #f0d002));
+	background: #fadc1a;
 	@include border-radius(3px);
 	@include bold;
 	padding:10px 20px;
 	border:0;
 	color:#1e1e1e;
+	line-height: 18px;
+
+		@include animate(.2s);
+		@include translateY(3px);
+
+		&:hover{
+			@include box-shadow(0 3px 0 #bda61a);
+			@include translateY(0px);			
+		}
 }
 
 }
 
 .rbrupdateWap{
-	position: absolute;
-	bottom: 15px;
+	
+
 }
 
 
@@ -174,19 +241,71 @@ input[type="radio"]:checked + .custom::before {
 /*  Address */
 
 .rightBarAddressContain{
-
+  margin:10px 30px 0px 30px;
 }
 
 .addressLeft{
 	float:left;
-	width:300px;
+	width:280px;
+
+
+	.control-label{
+		@include normal;
+		text-transform: none;
+		display:block;
+		margin-bottom:10px;
+		font-size:14px;
+		width:220px;
+	}
+
+	.addressWapper
+	{
+	width:100%;
+	border-top:0;
+		textarea{
+			width:100%;
+			@include border-radius(3px);
+
+		}
+
+	} 
+
+	.landMarkWapper{
+		width:100%;
+		padding:0;
+
+		input.landMark{
+			width:126px;
+		}
+
+		.dfText{
+			padding: 8px 5px 8px 10px;
+			display: inline-block;
+		}
+	}
+
+	.landmarksBor{
+		border:1px solid #ccc;
+		width:224px;
+		@include border-radius(3px);
+	}
+
+	.marginTop{
+		margin-top:20px;
+	}
 }
+
+
+
+
 .addressRight{
 	float:left;
+	width:500px;
 }
 .aRHead{
-	font-size:12px;
-	padding:5px 10px;
+	font-size:14px;
+	padding:5px 10px 10px 0px;
+	color:#5e5e57;
 }
 .aRBox{
 	float:left;
@@ -194,20 +313,54 @@ input[type="radio"]:checked + .custom::before {
 	border: solid 1px #c2c2c2;
 	@include border-radius(3px);
 	width:245px;
+	margin-bottom:10px;
+
+	&.aRBoxEven{
+		margin-right:10px;
+	}
+
+
+input[type="radio"]{
+	display:none;
+}
+
+	input[type="radio"] + .custom::before {
+    width:16px;
+    height:16px;
+    content:"";
+    @include icon;
+    background-position: -100px -194px;
+    position:relative;
+    left:-3px;
+    top:0px;
+    vertical-align: text-bottom;
+}
+
+input[type="radio"]:checked + .custom::before {
+    width:16px;
+    height:16px;
+    content:"";
+    @include icon;
+    position:relative;
+    left:-3px;
+    top:0px;
+    background-position: -100px -174px;
+    vertical-align: text-bottom;
+}
 }
 
 .aRBoxHead{
 	@include border-radius(3px 3px 0 0);	
 	background:#ececec;
 	@include bold;
-	font-size:12px;
+	font-size:14px;
 	color:#5e5e57;
-	padding:5px;
+	padding:7px 5px 5px 10px;
 	border-bottom:1px solid #c2c2c2;
 }
 
 .aRBoxAdd{
-	font-size:12px;
+	font-size:14px;
 	color:#5e5e57;
 	padding:5px 10px 0 10px;
 	@include bold;
@@ -220,11 +373,11 @@ input[type="radio"]:checked + .custom::before {
 }
 
 .aRbLN{
-	font-size:12px;
+	font-size:14px;
 	color:#999999;
 }
 .aRbLB{
-	font-size:12px;
+	font-size:14px;
 	color:#5e5e57;
 }
 
@@ -240,8 +393,131 @@ input[type="radio"]:checked + .custom::before {
 
 		li{
 			float:left;
-			padding:5px;
+			
 			font-size:12px;
+			width:50%;
+			cursor:pointer;
+
+			&:hover{
+				background:#c7c7c7;
+
+				.iDelAdd{
+					background-position: -373px -376px;
+				}
+			}
+
+			&.aRBoxDef label{
+				padding:6px 5px 7px 5px;
+				margin-left: 5px;
+				 cursor: pointer;
+				 color:#5e5e57;
+				 display:inline-block;
+				 width:100%;
+			}
+
+&.aRBoxDeA{
+	padding:6px 5px 7px 5px;
+	span{
+		color:#5e5e57;
+	}
+}
+			.iDelAdd{
+				@include icon;
+				width:15px;
+				height:16px;
+				background-position: -349px -376px;
+				vertical-align: text-bottom;
+				margin-right: 2px;
+				margin-left: 5px;
+			}
 		}
 	}
+}
+
+
+// Subscription
+
+.rbSubTitle,.rbSubCheck{
+	display:inline-block;
+	color:#5e5e57;
+}
+
+.rbSubTitle{
+	padding:10px 0;
+	margin-right:10px;
+}
+.rbSubCheck{
+	margin:0 10px;
+}
+
+.rbSubCheck{
+	label{
+		position:relative;
+		margin-left:15px;
+		cursor: pointer;
+		&:before{
+			width:14px;
+			height:14px;
+			background:#fff;
+			@include box-shadow(1px 2px 2px rgba(0,1,1,.1));
+			border: solid 1px #c2c2c2;
+			content: "";
+			top: 0;
+			left: -20px;
+			position: absolute;
+
+		}
+	}
+	input{
+		display:none;
+	}
+	input:checked + label{
+		&:before{
+			width:14px;
+			height:14px;
+			@include icon;
+			background-position: -215px -375px;
+			@include box-shadow(1px 2px 2px rgba(0,1,1,.1));
+			border: solid 1px #c2c2c2;
+			content: "";
+			top: 0;
+			left: -20px;
+			position: absolute;
+
+		}	
+	}
+}
+
+
+
+
+// Change password 
+.passCg{
+	.control-group{
+		float:left;
+		width:220px;
+	}
+
+	label.control-label{
+		width: 175px;
+		margin-bottom:5px;
+	}
+}
+
+.dAccount{
+	float:left;
+	width:290px;
+	margin-top: 5px;
+}
+.dApass{
+	float:left;
+	margin-top: 5px;
+}
+
+.deActive{
+	background:#e7e7e6;
+	@include border-radius(4px);
+	padding:7px 10px 5px 10px;
+	border:0;
+	font-size:14px;
 }
