@@ -33,7 +33,8 @@ window.taxiforsure = {
 		taxiforsure.airportTransfer();
 		taxiforsure.popup();
 		taxiforsure.SaveAddress();
-		taxiforsure.Outstation();
+
+		taxiforsure.currentBooking();
 		//taxiforsure.dataSubmit();
 		
 
@@ -575,12 +576,19 @@ window.taxiforsure = {
 		});
 	},
 
-	Outstation:function(){
-		$('.outstationInput').change(function(event) {
-			
-			
+	currentBooking:function(){
+		
+		$('.booking-tab li').click(function(event) {
+			$('.booking-tab li').removeClass('active');
+			$(this).addClass('active');
+			var gt = $(this).attr('data-box');
+			$('.currPastBooking').hide();
+			$('.'+gt+'Tab').show();
+			 event.preventDefault();
 		});
 
 
-	}
+	},
+
+
 }

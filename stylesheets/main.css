@@ -4839,7 +4839,7 @@ h1.booking {
   font-weight: normal;
   font-size: 18px;
   padding: 20px 0 0 0;
-  margin: 0;
+  margin: 10px 0 0 0;
 }
 
 /* line 71, ../sass/_booking.scss */
@@ -4858,96 +4858,97 @@ h1.booking {
   border-radius: 3px 3px 0 0;
   background: #e7e7e6;
   float: left;
+  cursor: pointer;
 }
-/* line 83, ../sass/_booking.scss */
+/* line 84, ../sass/_booking.scss */
 .booking-tab li span {
   padding: 10px 15px;
   font-size: 14px;
   color: #666666;
   display: block;
 }
-/* line 90, ../sass/_booking.scss */
+/* line 91, ../sass/_booking.scss */
 .booking-tab li.active {
   background: #666666;
 }
-/* line 93, ../sass/_booking.scss */
+/* line 94, ../sass/_booking.scss */
 .booking-tab li.active span {
   color: #fff;
 }
 
-/* line 99, ../sass/_booking.scss */
+/* line 100, ../sass/_booking.scss */
 .bdhalf {
   width: 40%;
 }
 
-/* line 102, ../sass/_booking.scss */
+/* line 103, ../sass/_booking.scss */
 .bdlf {
   width: 60%;
 }
 
-/* line 104, ../sass/_booking.scss */
+/* line 105, ../sass/_booking.scss */
 .bdrowWap {
   padding: 10px;
   border-bottom: 1px solid #c2c2c2;
 }
-/* line 108, ../sass/_booking.scss */
+/* line 109, ../sass/_booking.scss */
 .bdrowWap:before, .bdrowWap:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */
 }
-/* line 115, ../sass/_booking.scss */
+/* line 116, ../sass/_booking.scss */
 .bdrowWap:after {
   clear: both;
 }
-/* line 119, ../sass/_booking.scss */
+/* line 120, ../sass/_booking.scss */
 .bdrowWap:last-child {
   border-bottom: 0;
 }
 
-/* line 125, ../sass/_booking.scss */
+/* line 126, ../sass/_booking.scss */
 .bdrowWap {
   padding: 10px;
   border-bottom: 1px solid #c2c2c2;
 }
-/* line 129, ../sass/_booking.scss */
+/* line 130, ../sass/_booking.scss */
 .bdrowWap:before, .bdrowWap:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */
 }
-/* line 136, ../sass/_booking.scss */
+/* line 137, ../sass/_booking.scss */
 .bdrowWap:after {
   clear: both;
 }
-/* line 140, ../sass/_booking.scss */
+/* line 141, ../sass/_booking.scss */
 .bdrowWap:last-child {
   border-bottom: 0;
 }
 
-/* line 145, ../sass/_booking.scss */
+/* line 146, ../sass/_booking.scss */
 .bdrowWapNo {
   border-bottom: 1px solid #c2c2c2;
 }
-/* line 148, ../sass/_booking.scss */
+/* line 149, ../sass/_booking.scss */
 .bdrowWapNo:before, .bdrowWapNo:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */
 }
-/* line 155, ../sass/_booking.scss */
+/* line 156, ../sass/_booking.scss */
 .bdrowWapNo:after {
   clear: both;
 }
-/* line 159, ../sass/_booking.scss */
+/* line 160, ../sass/_booking.scss */
 .bdrowWapNo:last-child {
   border-bottom: 0;
 }
 
-/* line 165, ../sass/_booking.scss */
+/* line 166, ../sass/_booking.scss */
 .bookingDetailBox {
   border: 1px solid #c2c2c2;
   -webkit-border-radius: 4px;
@@ -4956,9 +4957,10 @@ h1.booking {
   -o-border-radius: 4px;
   border-radius: 4px;
   width: 472px;
+  margin-bottom: 15px;
 }
 
-/* line 170, ../sass/_booking.scss */
+/* line 172, ../sass/_booking.scss */
 .bookingDetailHead {
   background: #f0f0f0;
   -webkit-border-radius: 4px 4px 0 0;
@@ -4969,15 +4971,35 @@ h1.booking {
   padding: 10px 10px;
 }
 
-/* line 177, ../sass/_booking.scss */
+/* line 179, ../sass/_booking.scss */
 .bdFrom {
   font-size: 16px;
   color: #5e5e57;
   float: left;
-  width: 45%;
+  overflow: hidden;
+  width: auto;
+  max-width: 230px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  padding-right: 35px;
+  margin-top: 8px;
+  margin-right: 15px;
+}
+/* line 195, ../sass/_booking.scss */
+.bdFrom:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid #959595;
+  top: 0;
+  right: 10px;
 }
 
-/* line 185, ../sass/_booking.scss */
+/* line 209, ../sass/_booking.scss */
 .bdtoIcon {
   float: left;
   background: #fff;
@@ -4990,33 +5012,40 @@ h1.booking {
   -ms-border-radius: 11px;
   -o-border-radius: 11px;
   border-radius: 11px;
-  display: block;
+  display: none;
 }
 
-/* line 196, ../sass/_booking.scss */
+/* line 221, ../sass/_booking.scss */
 .bdTo {
-  width: 45%;
   float: left;
   font-size: 16px;
   color: #5e5e57;
+  overflow: hidden;
+  width: auto;
+  max-width: 195px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  margin-top: 8px;
+  margin-right: 5px;
 }
 
-/* line 204, ../sass/_booking.scss */
+/* line 239, ../sass/_booking.scss */
 .bdTimeWap {
   float: left;
 }
-/* line 206, ../sass/_booking.scss */
+/* line 241, ../sass/_booking.scss */
 .bdTimeWap span {
   font-size: 16px;
   color: #5e5e57;
 }
-/* line 211, ../sass/_booking.scss */
+/* line 246, ../sass/_booking.scss */
 .bdTimeWap .bdDay {
   font-size: 32px;
   color: #5e5e57;
   float: left;
 }
-/* line 217, ../sass/_booking.scss */
+/* line 252, ../sass/_booking.scss */
 .bdTimeWap .bdMonth {
   font-size: 12px;
   color: #5e5e57;
@@ -5024,20 +5053,20 @@ h1.booking {
   line-height: 9px;
   padding-top: 3px;
 }
-/* line 224, ../sass/_booking.scss */
+/* line 259, ../sass/_booking.scss */
 .bdTimeWap .bdYear {
   font-size: 12px;
   color: #5e5e57;
 }
 
-/* line 230, ../sass/_booking.scss */
+/* line 265, ../sass/_booking.scss */
 .bdTime {
   float: left;
   font-size: 16px;
   color: #5e5e57;
 }
 
-/* line 237, ../sass/_booking.scss */
+/* line 272, ../sass/_booking.scss */
 .bdFontLarge {
   font-size: 26px;
   color: #5e5e57;
@@ -5045,85 +5074,207 @@ h1.booking {
   font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
 }
-/* line 243, ../sass/_booking.scss */
+/* line 278, ../sass/_booking.scss */
 .bdFontLarge .m {
   font-family: 'TaxiForSure-Normal',sans-serif;
   font-weight: normal;
 }
 
-/* line 248, ../sass/_booking.scss */
+/* line 283, ../sass/_booking.scss */
 .bdFontMid {
   font-size: 16px;
   font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
 }
 
-/* line 253, ../sass/_booking.scss */
+/* line 288, ../sass/_booking.scss */
 .bdFontSmall {
   font-size: 14px;
   color: #999999;
 }
 
-/* line 258, ../sass/_booking.scss */
+/* line 293, ../sass/_booking.scss */
 .bdFontRate {
   font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
   font-size: 24px;
 }
 
-/* line 262, ../sass/_booking.scss */
+/* line 297, ../sass/_booking.scss */
 .assignWap {
   background: #33cc66;
 }
-/* line 264, ../sass/_booking.scss */
+/* line 299, ../sass/_booking.scss */
 .assignWap .atYou, .assignWap .bdBookedBy {
   color: #fff;
 }
 
-/* line 269, ../sass/_booking.scss */
+/* line 304, ../sass/_booking.scss */
 .bdEvents {
-  margin: 10px 0 0 0;
+  margin: 7px 0 0 5px;
   padding: 0;
 }
-/* line 272, ../sass/_booking.scss */
+/* line 307, ../sass/_booking.scss */
 .bdEvents li {
   display: inline-block;
   margin: 0 8px;
 }
-/* line 276, ../sass/_booking.scss */
+/* line 311, ../sass/_booking.scss */
+.bdEvents li span {
+  position: relative;
+}
+/* line 315, ../sass/_booking.scss */
 .bdEvents li i {
+  width: 20px;
+  height: 20px;
+  background: url(../img/icons.png) no-repeat;
+  display: inline-block;
+}
+/* line 322, ../sass/_booking.scss */
+.bdEvents li.bdEdit i {
+  background-position: -134px -455px;
+}
+/* line 327, ../sass/_booking.scss */
+.bdEvents li.bdDel i {
+  background-position: -106px -455px;
+}
+/* line 332, ../sass/_booking.scss */
+.bdEvents li.dbPrint i {
+  background-position: -78px -455px;
+}
+/* line 337, ../sass/_booking.scss */
+.bdEvents li.dbMessage i {
+  background-position: -46px -455px;
+  width: 21px;
+}
+/* line 343, ../sass/_booking.scss */
+.bdEvents li.dbComment i {
+  background-position: -17px -455px;
+}
+/* line 348, ../sass/_booking.scss */
+.bdEvents li.dbRepeat i {
+  background-position: -162px -455px;
+  width: 23px;
+}
+
+/* line 359, ../sass/_booking.scss */
+.bdCurrEvents {
+  margin: 11px 0 6px 5px;
+  padding: 0;
+}
+/* line 362, ../sass/_booking.scss */
+.bdCurrEvents li {
+  display: inline-block;
+  margin: 0 8px;
+  margin: 0 11px;
+  cursor: pointer;
+  position: relative;
+}
+/* line 366, ../sass/_booking.scss */
+.bdCurrEvents li span {
+  position: relative;
+}
+/* line 370, ../sass/_booking.scss */
+.bdCurrEvents li i {
   width: 15px;
   height: 15px;
   background: url(../img/icons.png) no-repeat;
   display: inline-block;
 }
-/* line 283, ../sass/_booking.scss */
-.bdEvents li.bdEdit i {
-  background-position: -215px -267px;
+/* line 377, ../sass/_booking.scss */
+.bdCurrEvents li.bdEdit i {
+  background-position: -297px -457px;
 }
-/* line 288, ../sass/_booking.scss */
-.bdEvents li.bdDel i {
-  background-position: -246px -268px;
+/* line 382, ../sass/_booking.scss */
+.bdCurrEvents li.bdDel i {
+  background-position: -276px -456px;
 }
-/* line 293, ../sass/_booking.scss */
-.bdEvents li.dbPrint i {
-  background-position: -272px -267px;
+/* line 387, ../sass/_booking.scss */
+.bdCurrEvents li.dbPrint i {
+  background-position: -254px -456px;
+  width: 17px;
 }
-/* line 298, ../sass/_booking.scss */
-.bdEvents li.dbMessage i {
-  background-position: -297px -267px;
+/* line 393, ../sass/_booking.scss */
+.bdCurrEvents li.dbMessage i {
+  background-position: -232px -456px;
+  width: 17px;
 }
-/* line 303, ../sass/_booking.scss */
-.bdEvents li.dbComment i {
-  background-position: -322px -266px;
+/* line 399, ../sass/_booking.scss */
+.bdCurrEvents li.dbComment i {
+  background-position: -212px -456px;
+}
+/* line 404, ../sass/_booking.scss */
+.bdCurrEvents li.dbRepeat i {
+  background-position: -317px -456px;
+  width: 17px;
+}
+/* line 417, ../sass/_booking.scss */
+.bdCurrEvents li span {
+  position: relative;
+}
+/* line 419, ../sass/_booking.scss */
+.bdCurrEvents li span:after {
+  position: absolute;
+  background: #555555;
+  padding: 5px;
+  color: #fff;
+  font-size: 11px;
+  content: attr(title);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  top: -45px;
+  opacity: 0;
+  right: -20px;
+  width: 60px;
+  text-align: center;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+/* line 435, ../sass/_booking.scss */
+.bdCurrEvents li span:before {
+  position: absolute;
+  top: -24px;
+  right: 5px;
+  width: 0;
+  height: 0;
+  content: "";
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #555555;
+  opacity: 0;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+/* line 450, ../sass/_booking.scss */
+.bdCurrEvents li:hover {
+  opacity: 1;
+}
+/* line 454, ../sass/_booking.scss */
+.bdCurrEvents li:hover span:after {
+  top: -40px;
+  opacity: 1;
+}
+/* line 458, ../sass/_booking.scss */
+.bdCurrEvents li:hover span:before {
+  top: -19px;
+  opacity: 1;
 }
 
-/* line 311, ../sass/_booking.scss */
+/* line 469, ../sass/_booking.scss */
 .atTrack {
   position: relative;
-  padding: 8px 0 8px 10px;
+  padding: 9px 0 8px 10px;
+  background: #5e5e57;
+  color: #fff;
 }
-/* line 315, ../sass/_booking.scss */
+/* line 475, ../sass/_booking.scss */
 .atTrack:after {
   border-top: 8px solid rgba(0, 0, 0, 0);
   border-bottom: 8px solid rgba(0, 0, 0, 0);
@@ -5133,7 +5284,7 @@ h1.booking {
   right: 20px;
   top: 7px;
 }
-/* line 326, ../sass/_booking.scss */
+/* line 486, ../sass/_booking.scss */
 .atTrack.active:after {
   border-left: 8px solid rgba(0, 0, 0, 0);
   border-right: 8px solid rgba(0, 0, 0, 0);
@@ -5144,7 +5295,7 @@ h1.booking {
   top: 12px;
 }
 
-/* line 339, ../sass/_booking.scss */
+/* line 499, ../sass/_booking.scss */
 .ddWap {
   position: absolute;
   background: #fff;
@@ -5152,7 +5303,6 @@ h1.booking {
   left: 0px;
   padding: 0px 10px 0 10px;
   top: 32px;
-  border: 1px solid #c2c2c2;
   z-index: 1000;
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
@@ -5161,34 +5311,309 @@ h1.booking {
   border-radius: 0 0 4px 4px;
 }
 
-/* line 351, ../sass/_booking.scss */
+/* line 510, ../sass/_booking.scss */
 .ddetail {
   float: left;
   padding: 0;
-  margin: 10px 0;
+  margin: 0px 0;
 }
-/* line 355, ../sass/_booking.scss */
+/* line 514, ../sass/_booking.scss */
 .ddetail li {
   padding: 3px 0;
-  width: 100%;
   float: left;
 }
-/* line 362, ../sass/_booking.scss */
+/* line 520, ../sass/_booking.scss */
 .ddetail li .lsec {
-  font-family: 'TaxiForSure-Normal',sans-serif;
-  font-weight: normal;
-  width: 50%;
-  display: block;
-  float: left;
-}
-/* line 368, ../sass/_booking.scss */
-.ddetail li .rsec {
   font-family: 'TaxiForSure-Bold',sans-serif;
   font-weight: normal;
-  font-size: 14px;
-  width: 50%;
   display: block;
   float: left;
+  font-size: 14px;
+  color: #5e5e57;
+}
+/* line 528, ../sass/_booking.scss */
+.ddetail li .rsec {
+  font-family: 'TaxiForSure-Normal',sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  display: block;
+  float: left;
+  padding: 0 25px 0 5px;
+  color: #5e5e57;
+}
+
+/* line 540, ../sass/_booking.scss */
+.currPastBooking {
+  display: none;
+}
+
+/* line 544, ../sass/_booking.scss */
+.currentTab {
+  display: block;
+}
+
+/* line 548, ../sass/_booking.scss */
+.pastBookingRow {
+  width: 966px;
+  margin: 0 auto;
+}
+/* line 12, ../sass/main.scss */
+.pastBookingRow:before, .pastBookingRow:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+/* line 19, ../sass/main.scss */
+.pastBookingRow:after {
+  clear: both;
+}
+
+/* line 553, ../sass/_booking.scss */
+.bookingDetailWap {
+  width: 50%;
+}
+
+/* line 564, ../sass/_booking.scss */
+.bdCurrentI {
+  width: 60%;
+}
+/* line 567, ../sass/_booking.scss */
+.bdCurrentI .bdEvents {
+  margin: 7px 0 0 22px;
+}
+
+/* line 574, ../sass/_booking.scss */
+.pastTab .bookingDetailBox {
+  width: 100%;
+}
+/* line 577, ../sass/_booking.scss */
+.pastTab .bookingDetailBox .bookingDetailHead {
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+/* line 580, ../sass/_booking.scss */
+.pastTab .bookingDetailBox:hover {
+  border-color: #555;
+}
+/* line 582, ../sass/_booking.scss */
+.pastTab .bookingDetailBox:hover .bookingDetailHead {
+  background: #f8da15;
+}
+/* line 585, ../sass/_booking.scss */
+.pastTab .bookingDetailBox:hover .bdFrom, .pastTab .bookingDetailBox:hover .bdTo {
+  color: #1e1e1e;
+}
+/* line 589, ../sass/_booking.scss */
+.pastTab .bookingDetailBox:hover .bdFrom:after {
+  border-left-color: #1e1e1e;
+}
+/* line 592, ../sass/_booking.scss */
+.pastTab .bookingDetailBox:hover .bDHRepeat .bdEvents {
+  opacity: 1;
+  left: 0;
+}
+/* line 599, ../sass/_booking.scss */
+.pastTab .bookingDetailHead {
+  width: 69%;
+  float: left;
+  min-height: 51px;
+  -webkit-border-radius: 3px 0 0 0;
+  -moz-border-radius: 3px 0 0 0;
+  -ms-border-radius: 3px 0 0 0;
+  -o-border-radius: 3px 0 0 0;
+  border-radius: 3px 0 0 0;
+}
+/* line 604, ../sass/_booking.scss */
+.pastTab .bookingDetailHead .bdlf {
+  width: 50%;
+}
+/* line 609, ../sass/_booking.scss */
+.pastTab .bookingDetailHead .bdFrom {
+  overflow: hidden;
+  width: auto;
+  max-width: 310px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  padding-right: 35px;
+  margin-top: 8px;
+  margin-right: 15px;
+}
+/* line 620, ../sass/_booking.scss */
+.pastTab .bookingDetailHead .bdFrom:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid #959595;
+  top: 0;
+  right: 10px;
+}
+/* line 633, ../sass/_booking.scss */
+.pastTab .bookingDetailHead .bdTo {
+  overflow: hidden;
+  width: auto;
+  max-width: 310px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 8px;
+}
+/* line 643, ../sass/_booking.scss */
+.pastTab .bookingDetailHead .bdtoIcon {
+  display: none;
+}
+/* line 655, ../sass/_booking.scss */
+.pastTab .bookingDetailHead.bDHRepeat {
+  padding: 0;
+  width: 31%;
+  -webkit-border-radius: 0 3px 0 0;
+  -moz-border-radius: 0 3px 0 0;
+  -ms-border-radius: 0 3px 0 0;
+  -o-border-radius: 0 3px 0 0;
+  border-radius: 0 3px 0 0;
+}
+/* line 660, ../sass/_booking.scss */
+.pastTab .bookingDetailHead.bDHRepeat .bdEvents {
+  position: relative;
+  left: 10px;
+  opacity: 0;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+/* line 668, ../sass/_booking.scss */
+.pastTab .bookingDetailHead.bDHRepeat .atTrack {
+  padding: 9px 0px 6px 10px;
+  background: none;
+  margin-left: 30px;
+}
+/* line 673, ../sass/_booking.scss */
+.pastTab .bookingDetailHead.bDHRepeat .atTrack:after {
+  display: none;
+}
+/* line 677, ../sass/_booking.scss */
+.pastTab .bookingDetailHead.bDHRepeat .atTrack .atText {
+  color: #555;
+  padding: 5px 10px;
+  background: #f8da15;
+  float: left;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* line 685, ../sass/_booking.scss */
+.pastTab .bookingDetailHead.bDHRepeat .atTrack .atText:hover {
+  background: rgba(248, 218, 21, 0.65);
+}
+/* line 695, ../sass/_booking.scss */
+.pastTab .bdExpand .bdhalf {
+  width: auto;
+  padding: 0 25px;
+  border-right: 1px solid #CCC;
+}
+/* line 700, ../sass/_booking.scss */
+.pastTab .bdExpand .bdhalf:last-child {
+  border: 0;
+}
+/* line 706, ../sass/_booking.scss */
+.pastTab .bdExpand .bdTime, .pastTab .bdExpand .bdTimeWap {
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 712, ../sass/_booking.scss */
+.pastTab .bdExpand .bdFontSmall {
+  font-size: 12px;
+}
+/* line 715, ../sass/_booking.scss */
+.pastTab .bdExpand .bdFontRate {
+  font-size: 18px;
+}
+/* line 718, ../sass/_booking.scss */
+.pastTab .bdExpand .bdinBlock {
+  display: block;
+  text-transform: uppercase;
+}
+/* line 723, ../sass/_booking.scss */
+.pastTab .bdExpand .bdCabBox {
+  min-width: 150px;
+}
+/* line 728, ../sass/_booking.scss */
+.pastTab .bdIcons {
+  padding: 10px 0;
+}
+/* line 731, ../sass/_booking.scss */
+.pastTab .bdIcons .bdEvents li {
+  margin: 0 11px;
+  cursor: pointer;
+  position: relative;
+}
+/* line 736, ../sass/_booking.scss */
+.pastTab .bdIcons .bdEvents li span {
+  position: relative;
+}
+/* line 738, ../sass/_booking.scss */
+.pastTab .bdIcons .bdEvents li span:after {
+  position: absolute;
+  background: #555555;
+  padding: 5px;
+  color: #fff;
+  font-size: 11px;
+  content: attr(title);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  top: -45px;
+  opacity: 0;
+  right: -20px;
+  width: 60px;
+  text-align: center;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+/* line 754, ../sass/_booking.scss */
+.pastTab .bdIcons .bdEvents li span:before {
+  position: absolute;
+  top: -24px;
+  right: 5px;
+  width: 0;
+  height: 0;
+  content: "";
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #555555;
+  opacity: 0;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+/* line 769, ../sass/_booking.scss */
+.pastTab .bdIcons .bdEvents li:hover {
+  opacity: 1;
+}
+/* line 773, ../sass/_booking.scss */
+.pastTab .bdIcons .bdEvents li:hover span:after {
+  top: -40px;
+  opacity: 1;
+}
+/* line 777, ../sass/_booking.scss */
+.pastTab .bdIcons .bdEvents li:hover span:before {
+  top: -19px;
+  opacity: 1;
 }
 
 /* line 2, ../sass/_setting.scss */
