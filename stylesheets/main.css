@@ -1904,19 +1904,19 @@ ul li {
 }
 /* line 405, ../sass/main.scss */
 .tab-menu .active .iptp, .tab-menu a:hover .iptp {
-  background-position: -45px -94px;
+  background-position: -353px -486px;
 }
 /* line 409, ../sass/main.scss */
 .tab-menu .active .iat, .tab-menu a:hover .iat {
-  background-position: -91px -92px;
+  background-position: -389px -485px;
 }
 /* line 413, ../sass/main.scss */
 .tab-menu .active .ihd, .tab-menu a:hover .ihd {
-  background-position: -141px -91px;
+  background-position: -424px -486px;
 }
 /* line 417, ../sass/main.scss */
 .tab-menu .active .iout, .tab-menu a:hover .iout {
-  background-position: -195px -86px;
+  background-position: -458px -486px;
 }
 
 /* line 34, ../sass/_contain.scss */
@@ -2922,22 +2922,41 @@ em {
   display: block;
 }
 /* line 786, ../sass/_contain.scss */
+.popupWapper.repeatActive {
+  display: block;
+}
+/* line 789, ../sass/_contain.scss */
+.popupWapper.repeatActive .popup.repeat {
+  display: block;
+  width: 405px;
+}
+/* line 795, ../sass/_contain.scss */
 .popupWapper.registerActive {
   display: block;
 }
-/* line 788, ../sass/_contain.scss */
+/* line 797, ../sass/_contain.scss */
 .popupWapper.registerActive .popup.register {
   display: block;
 }
-/* line 793, ../sass/_contain.scss */
+/* line 802, ../sass/_contain.scss */
 .popupWapper.forgetPassActive {
   display: block;
 }
-/* line 795, ../sass/_contain.scss */
+/* line 804, ../sass/_contain.scss */
 .popupWapper.forgetPassActive .popup.forgetPass {
   display: block;
 }
-/* line 800, ../sass/_contain.scss */
+/* line 809, ../sass/_contain.scss */
+.popupWapper.fareActive {
+  display: block;
+}
+/* line 811, ../sass/_contain.scss */
+.popupWapper.fareActive .popup.fare {
+  display: block;
+  width: 700px;
+  left: 40%;
+}
+/* line 818, ../sass/_contain.scss */
 .popupWapper .popupHead {
   background: #eaeaea;
   padding: 13px 0;
@@ -2947,7 +2966,7 @@ em {
   -o-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-/* line 805, ../sass/_contain.scss */
+/* line 823, ../sass/_contain.scss */
 .popupWapper .popupHead h4 {
   margin: 0;
   padding: 0;
@@ -2955,17 +2974,17 @@ em {
   color: #5e5e57;
   float: left;
 }
-/* line 814, ../sass/_contain.scss */
+/* line 832, ../sass/_contain.scss */
 .popupWapper .popupRow {
   width: 100%;
   clear: both;
   padding: 0 25px;
 }
-/* line 820, ../sass/_contain.scss */
+/* line 840, ../sass/_contain.scss */
 .popupWapper .popupContain {
   padding: 10px 0;
 }
-/* line 823, ../sass/_contain.scss */
+/* line 843, ../sass/_contain.scss */
 .popupWapper .popupContain input {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 2px rgba(0, 1, 1, 0.1);
@@ -2982,11 +3001,11 @@ em {
   z-index: 0;
   position: relative;
 }
-/* line 839, ../sass/_contain.scss */
+/* line 859, ../sass/_contain.scss */
 .popupWapper .popupContain input:focus {
   z-index: 1;
 }
-/* line 846, ../sass/_contain.scss */
+/* line 866, ../sass/_contain.scss */
 .popupWapper .popupContain .popupLoginWap.multiInput input:first-child {
   margin-top: 0;
   -webkit-border-radius: 4px 4px 0 0;
@@ -2995,7 +3014,7 @@ em {
   -o-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-/* line 850, ../sass/_contain.scss */
+/* line 870, ../sass/_contain.scss */
 .popupWapper .popupContain .popupLoginWap.multiInput input:last-child {
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
@@ -3003,7 +3022,186 @@ em {
   -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-/* line 860, ../sass/_contain.scss */
+/* line 877, ../sass/_contain.scss */
+.popupWapper .popupRowhalf {
+  width: 45%;
+  float: left;
+}
+/* line 881, ../sass/_contain.scss */
+.popupWapper .popupRowhalf input {
+  width: 100%;
+}
+/* line 885, ../sass/_contain.scss */
+.popupWapper .popupRowhalf .controls.date .icon {
+  top: 9px;
+  right: 10px;
+}
+/* line 890, ../sass/_contain.scss */
+.popupWapper .popupRowhalf:first-child {
+  margin-right: 10%;
+}
+/* line 895, ../sass/_contain.scss */
+.popupWapper .popupRow label {
+  margin-bottom: 5px;
+}
+/* line 900, ../sass/_contain.scss */
+.popupWapper .weekList ul {
+  overflow: hidden;
+  border: 1px solid #c2c2c2;
+  margin: 0;
+  padding: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 908, ../sass/_contain.scss */
+.popupWapper .weekList li {
+  float: left;
+  padding: 10px;
+  text-transform: uppercase;
+  color: #1e1e1e;
+  cursor: pointer;
+}
+/* line 915, ../sass/_contain.scss */
+.popupWapper .weekList li.active, .popupWapper .weekList li:hover {
+  background: #33cc66;
+  color: #fff;
+}
+/* line 923, ../sass/_contain.scss */
+.popupWapper .popupRow .stepFooter {
+  padding: 15px 0 25px 0;
+  overflow: hidden;
+  margin: 15px 0 0 0;
+}
+/* line 928, ../sass/_contain.scss */
+.popupWapper .popupRow .stepFooter button, .popupWapper .popupRow .stepFooter a {
+  padding: 10px 15px 7px 15px;
+}
+/* line 930, ../sass/_contain.scss */
+.popupWapper .popupRow .stepFooter button:before, .popupWapper .popupRow .stepFooter a:before {
+  display: none;
+}
+/* line 938, ../sass/_contain.scss */
+.popupWapper .fareActive .popup.fare {
+  width: 700px !important;
+}
+/* line 943, ../sass/_contain.scss */
+.popupWapper .fareDetailPopup {
+  width: 100%;
+  height: 380px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background: #fff;
+}
+/* line 952, ../sass/_contain.scss */
+.popupWapper .fareDetailPopup .overClose {
+  top: -15px;
+  right: -15px;
+  position: absolute;
+}
+/* line 959, ../sass/_contain.scss */
+.popupWapper .fareBreakCol {
+  float: left;
+  width: 247px;
+}
+/* line 964, ../sass/_contain.scss */
+.popupWapper .fareMap {
+  float: left;
+}
+/* line 968, ../sass/_contain.scss */
+.popupWapper .fareBreakCol {
+  padding-top: 15px;
+}
+/* line 970, ../sass/_contain.scss */
+.popupWapper .fareBreakCol h3 {
+  margin: 0;
+  font-family: 'SansationRegular';
+  font-size: 15px;
+  color: #5e5e57;
+  padding-left: 15px;
+}
+/* line 980, ../sass/_contain.scss */
+.popupWapper .fareBreakDetail {
+  padding: 10px 15px 15px 15px;
+  font-family: 'SansationRegular';
+}
+/* line 984, ../sass/_contain.scss */
+.popupWapper .fareDetail {
+  width: 100%;
+}
+/* line 986, ../sass/_contain.scss */
+.popupWapper .fareDetail td {
+  padding: 5px 0;
+  font-size: 13px;
+  color: #5e5e57;
+}
+/* line 991, ../sass/_contain.scss */
+.popupWapper .fareDetail td:first-child {
+  width: 60%;
+}
+/* line 997, ../sass/_contain.scss */
+.popupWapper .fareTotal {
+  padding: 5px 15px;
+  background: #f8da15;
+}
+/* line 1001, ../sass/_contain.scss */
+.popupWapper .fareTotal td {
+  font-family: 'SansationBold';
+  font-size: 15px;
+  color: #5e5e57;
+  padding: 5px 0;
+}
+/* line 1007, ../sass/_contain.scss */
+.popupWapper .fareTotal td:first-child {
+  width: 60%;
+}
+/* line 1013, ../sass/_contain.scss */
+.popupWapper .termsWap {
+  max-height: 100px;
+  overflow: scroll;
+}
+/* line 1017, ../sass/_contain.scss */
+.popupWapper .termsWap h4 {
+  margin: 15px 15px 0px 15px;
+  font-family: 'SansationBold';
+  font-size: 13px;
+  color: #5e5e57;
+}
+/* line 1024, ../sass/_contain.scss */
+.popupWapper .termsWap ul {
+  margin: 0;
+  padding: 15px;
+}
+/* line 1028, ../sass/_contain.scss */
+.popupWapper .termsWap ul li {
+  position: relative;
+  font-family: 'SansationRegular';
+  margin-left: 12px;
+  font-size: 12px;
+  color: #5e5e57;
+  line-height: 14px;
+}
+/* line 1036, ../sass/_contain.scss */
+.popupWapper .termsWap ul li:before {
+  position: absolute;
+  top: 3px;
+  left: -12px;
+  width: 6px;
+  height: 6px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background: #f8da15;
+  content: "";
+}
+/* line 1053, ../sass/_contain.scss */
 .popupWapper .popupBforgetPass {
   display: inline-block;
   padding: 10px 0 0 0;
@@ -3012,12 +3210,12 @@ em {
   float: left;
   margin-top: 4px;
 }
-/* line 867, ../sass/_contain.scss */
+/* line 1060, ../sass/_contain.scss */
 .popupWapper .popupBforgetPass a {
   font-size: 13px;
   color: #5e5e57;
 }
-/* line 873, ../sass/_contain.scss */
+/* line 1066, ../sass/_contain.scss */
 .popupWapper .popupBlogin {
   background: #f8da15;
   padding: 10px 22px;
@@ -3042,7 +3240,7 @@ em {
   -o-transform: translateY(3px);
   transform: translateY(3px);
 }
-/* line 886, ../sass/_contain.scss */
+/* line 1079, ../sass/_contain.scss */
 .popupWapper .popupBlogin:hover {
   -webkit-box-shadow: 0 3px 0 #bda61a;
   -moz-box-shadow: 0 3px 0 #bda61a;
@@ -3053,7 +3251,7 @@ em {
   -o-transform: translateY(0px);
   transform: translateY(0px);
 }
-/* line 895, ../sass/_contain.scss */
+/* line 1088, ../sass/_contain.scss */
 .popupWapper .popupOr {
   width: 100%;
   clear: both;
@@ -3062,7 +3260,7 @@ em {
   margin: 20px 0;
   height: 10px;
 }
-/* line 904, ../sass/_contain.scss */
+/* line 1097, ../sass/_contain.scss */
 .popupWapper .popupOr span {
   position: absolute;
   display: block;
@@ -3083,31 +3281,31 @@ em {
   margin-left: -15px;
   text-transform: uppercase;
 }
-/* line 921, ../sass/_contain.scss */
+/* line 1114, ../sass/_contain.scss */
 .popupWapper .socialButton {
   padding: 10px 0;
 }
-/* line 924, ../sass/_contain.scss */
+/* line 1117, ../sass/_contain.scss */
 .popupWapper .socialButton a:hover {
   opacity: .8;
 }
-/* line 927, ../sass/_contain.scss */
+/* line 1120, ../sass/_contain.scss */
 .popupWapper .socialButton a {
   display: block;
 }
-/* line 930, ../sass/_contain.scss */
+/* line 1123, ../sass/_contain.scss */
 .popupWapper .socialButton .popFb {
   margin-bottom: 15px;
 }
-/* line 938, ../sass/_contain.scss */
+/* line 1131, ../sass/_contain.scss */
 .popupWapper .popupLoginWap {
   padding: 20px 0;
 }
-/* line 941, ../sass/_contain.scss */
+/* line 1134, ../sass/_contain.scss */
 .popupWapper .popupButtonWap {
   padding: 10px 0;
 }
-/* line 944, ../sass/_contain.scss */
+/* line 1137, ../sass/_contain.scss */
 .popupWapper .popupFooter {
   background: #eaeaea;
   padding: 20px 0;
@@ -3117,13 +3315,13 @@ em {
   -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-/* line 948, ../sass/_contain.scss */
+/* line 1141, ../sass/_contain.scss */
 .popupWapper .popupFooter a {
   color: #343333;
   font-size: 14px;
 }
 
-/* line 959, ../sass/_contain.scss */
+/* line 1152, ../sass/_contain.scss */
 .overClose {
   float: right;
   margin: 0;
@@ -3132,7 +3330,7 @@ em {
   top: -25px;
   right: -35px;
 }
-/* line 967, ../sass/_contain.scss */
+/* line 1160, ../sass/_contain.scss */
 .overClose span, .overClose a {
   width: 26px;
   height: 26px;
@@ -3142,67 +3340,67 @@ em {
   text-indent: -9999px;
 }
 
-/* line 982, ../sass/_contain.scss */
+/* line 1175, ../sass/_contain.scss */
 .ui-widget {
   z-index: 30 !important;
 }
 
-/* line 985, ../sass/_contain.scss */
+/* line 1178, ../sass/_contain.scss */
 .ui-widget-header {
   background: #f1f1f1;
 }
 
-/* line 988, ../sass/_contain.scss */
+/* line 1181, ../sass/_contain.scss */
 .ui-datepicker-month, .ui-datepicker-year {
   color: #62635e;
   font-weight: 400;
 }
 
-/* line 992, ../sass/_contain.scss */
+/* line 1185, ../sass/_contain.scss */
 .ui-datepicker th {
   color: #62635e;
   font-weight: 400;
 }
 
-/* line 996, ../sass/_contain.scss */
+/* line 1189, ../sass/_contain.scss */
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   background: #f1f1f1;
   border: 0;
 }
 
-/* line 1000, ../sass/_contain.scss */
+/* line 1193, ../sass/_contain.scss */
 .ui-state-active {
   background: #f6e780 !important;
 }
 
-/* line 1003, ../sass/_contain.scss */
+/* line 1196, ../sass/_contain.scss */
 .ui-timepicker-div .ui-widget-header {
   display: none;
 }
 
-/* line 1006, ../sass/_contain.scss */
+/* line 1199, ../sass/_contain.scss */
 .ui-timepicker-div dl dt.ui_tpicker_time_label, .ui-timepicker-div dl dd.ui_tpicker_time {
   display: none;
 }
 
-/* line 1009, ../sass/_contain.scss */
+/* line 1202, ../sass/_contain.scss */
 .ui-slider-horizontal {
   background: #dfdfdf !important;
   height: 1px !important;
 }
 
-/* line 1013, ../sass/_contain.scss */
+/* line 1206, ../sass/_contain.scss */
 .ui_tpicker_hour {
   margin-bottom: 25px !important;
 }
 
-/* line 1017, ../sass/_contain.scss */
+/* line 1210, ../sass/_contain.scss */
 .ui-timepicker-div .ui-state-default {
   top: -12px !important;
   background: #F4E580 !important;
   width: 14px !important;
 }
-/* line 1023, ../sass/_contain.scss */
+/* line 1216, ../sass/_contain.scss */
 .ui-timepicker-div .ui-state-default:after {
   position: absolute;
   width: 0;
@@ -3215,12 +3413,12 @@ em {
   top: 15px;
 }
 
-/* line 1035, ../sass/_contain.scss */
+/* line 1228, ../sass/_contain.scss */
 .ui-timepicker-div dl dt.ui_tpicker_hour_label, .ui-timepicker-div dl dt.ui_tpicker_minute_label {
   margin-left: 5px !important;
 }
 
-/* line 1040, ../sass/_contain.scss */
+/* line 1233, ../sass/_contain.scss */
 .ui-datepicker .ui-datepicker-buttonpane button {
   background: #5e5d58 !important;
   font-weight: 400 !important;
@@ -3230,49 +3428,49 @@ em {
   margin-bottom: 10px;
 }
 
-/* line 1049, ../sass/_contain.scss */
+/* line 1242, ../sass/_contain.scss */
 .ui-timepicker-div dl dt {
   height: 30px !important;
 }
 
-/* line 1053, ../sass/_contain.scss */
+/* line 1246, ../sass/_contain.scss */
 .ui-datepicker-buttonpane.ui-widget-content {
   border: 0 !important;
 }
 
-/* line 1059, ../sass/_contain.scss */
+/* line 1252, ../sass/_contain.scss */
 .ui-datepicker td {
   border: 0;
   padding: 0;
 }
 
-/* line 1064, ../sass/_contain.scss */
+/* line 1257, ../sass/_contain.scss */
 .googleMap {
   opacity: 0;
   z-index: -10;
 }
-/* line 1068, ../sass/_contain.scss */
+/* line 1261, ../sass/_contain.scss */
 .googleMap.active {
   opacity: 1;
   z-index: 60;
 }
 
-/* line 1073, ../sass/_contain.scss */
+/* line 1266, ../sass/_contain.scss */
 .showMap {
   cursor: pointer;
 }
 
-/* line 1078, ../sass/_contain.scss */
+/* line 1271, ../sass/_contain.scss */
 .ui-tpicker-grid-label {
   display: none !important;
 }
 
-/* line 1082, ../sass/_contain.scss */
+/* line 1275, ../sass/_contain.scss */
 .flightNumberWap {
   width: 150px;
 }
 
-/* line 1086, ../sass/_contain.scss */
+/* line 1279, ../sass/_contain.scss */
 .fRight {
   float: right;
 }

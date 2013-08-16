@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html ng-app class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Taxi for sure</title>  
+    
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+
+        <meta name="viewport" content="width=device-width">
+        <script  type="text/javascript" src="javascripts/html5.js"></script>
+
+<link rel="shortcut icon" type="image/ico" href="http://www.taxiforsure.com/static/favicon.ico"/>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <link rel="stylesheet" href="stylesheets/main.css">
+        <!--script src="js/vendor/modernizr-2.6.2.min.js"></script -->
+    </head>
+    <style>
+    .trow{
+
+    }
+    </style>
+    <body>
+
+        <!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script -->
+        <!-- script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script -->
+
+    <div class="main">
+        <div class="bgimg">
+            <div class="row">
+                <div class="topBox">  <!-- Header box -->
+                    <div class="large-10-1 columns paddingTop-s">
+                        <div class="row">
+                            <div class="large-4 columns">
+                                <a href="#"><img src="img/logo.png" alt="" /></a>
+                            </div>
+                            <div class="large-6 columns paddZero">
+                                <div class="normal lineHeight-m">
+                                    <div class="location">  <!-- Select City Drop down -->
+                                        <div class="control-group"> 
+                                            <div class="controls arrow blank"> 
+                                                <input type="text" id="location" value="Bangalore">
+                                                <i class="icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>   <!-- Select City Drop down -->
+                                </div>
+                            </div>
+                            <div class="large-6 columns TellNumberWapper">
+                                <div class="row">
+                                    <div class="large-6 columns textR tellNumber">
+                                        <span class="small-m">
+                                            BLR <b>080</b>
+                                        </span>
+                                        <span class="small-m">
+                                            DEL <b>011</b>
+                                        </span>
+                                    </div>
+                                    <div class="large-10 columns paddingL-none">
+                                        <div class="dialBox">
+                                            <img src="img/tell.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>      
+                    </div>
+                    <div class="large-6-1 columns topIconBox last">
+                        <ul>
+                            <li><a href="#"><span><i class="icon icall"></i></span><em>Call back</em></a></li>
+                            <li><a href="#" class="openPopup" data-popup="login"><span><i class="icon ilogin"></i></span><em>Login</em></a></li>
+                            <li><a href="#" class="openPopup"  data-popup="register"><span><i class="icon iregister"></i></span><em>Register</em></a></li>
+                             <!-- <li><a href="#"><span><i class="icon ibooking"></i></span><em>Booking</em><q>3</q></a></li> -->
+                             <!-- <li><a href="#"><span><i class="icon isetting"></i></span><em>Setting</em></a></li>
+                             <li><a href="#"><span><i class="icon ilogout"></i></span><em>Logout</em></a></li> -->
+                        </ul>
+                    </div>
+                </div>    <!-- .Header box --> 
+            </div>
+            <div class="row"><!-- content -->
+                <div class="large-16 columns padding-none">  <!-- Left content -->
+
+                    <div class="bookingSlideWapper">
+                            <nav class="tab-menu">  
+                                <a href="index.html"><i class="icon iptp"></i>Point to Point</a>
+                                <a href="airport-transfer.html"><i class="icon iat"></i>Airport Transfer</a>
+                                <a href="half-full-day.html"><i class="icon ihd"></i>Half/full Day</a>
+                                <a href="outstation.html"><i class="icon iout"></i>Outstation</a>
+                            </nav>
+                            <div class="contentcf cf">
+                                <div class="booking-row">
+                                    <h1 class="booking">My Booking</h1>    
+                                </div>
+                                
+                                <div class="booking-row">
+                                    <ul class="booking-tab cf">
+                                        <li class="active" data-box="current"><span>Current Booking</span></li>
+                                        <li data-box="past"><span>Past Booking</span></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="currPastBooking currentTab">
+                                <div class="booking-row">
+                                <div class="bookingDetailWap">
+                                    <div class="bookingDetailBox">
+                                        <div class="bookingDetailHead cf">
+                                            <div class="bdFrom" title="Bangalore International Exhibition Centre, BIEC">Bangalore International Exhibition Centre, BIEC</div>
+                                            <div class="bdtoIcon">to</div>
+                                            <div class="bdTo" title="Bangalore International Exhibition Centre, BIEC">Bangalore International Exhibition Centre, BIEC</div>
+
+                                             
+                                        </div>
+
+
+                                        <div class="bdExpand">
+                                            <div class="bdrowWap">
+                                                <div class="bdTimeWap bdhalf bdlf">        
+                                                    <div class="bdDateBox">
+                                                            <span class="bdDay">25</span>
+                                                            <span class="bdMonth">July</span>
+                                                            <span class="bdYear">2013</span>
+                                                    </div>        
+                                                </div>
+
+                                                <div class="bdTime bdhalf">
+                                                    <div class="bdCabModel">
+                                                        <div class="bdNameText bdFontMid">Mahindra Logan (AC)</div>
+                                                        <div class="bdCateText bdFontSmall">Outstation</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="bdrowWap">
+                                                <div class="bdTime bdhalf bdlf">
+                                                    <div class="bdFontLarge">
+                                                        3:45 <span class="m">PM</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bdTime bdhalf">
+                                                    <div class="bdCabModel">
+                                                        <div class="bdNameText bdFontMid">TFS-AT-GMGV</div>
+                                                        <div class="bdCateText bdFontSmall">BOOKING ID</div>
+                                                    </div>
+                                                </div>
+                                             </div> 
+
+                                             <div class="bdrowWap">
+                                                <div class="bdTime bdhalf bdlf">
+                                                    <div class="bdCabModel">
+                                                        <div class="bdNameText bdFontRate">240</div>
+                                                        <div class="bdCateText bdFontSmall">Paid 10% advance</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bdTime bdhalf">
+                                                    <div class="bdCabModel">
+                                                        <div class="bdNameText bdFontRate">1234567890</div>
+                                                        <div class="bdCateText bdFontSmall">Estimated Total Fare</div>
+                                                    </div>
+                                                </div>
+                                             </div>
+
+                                             <div class="bdrowWap assignWap">
+                                                <div class="bdTime bdhalf bdlf">
+                                                    <div class="bdCabModel">
+                                                         <div class="atYou">Your taxi is <strong> Not Assigned</strong></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bdTime bdhalf">
+                                                    <div class="bdCabModel">
+                                                        <div class="bdBookedBy">Booked by Rajiv</div>
+                                                    </div>
+                                                </div>
+                                             </div>   
+
+                                             <div class="bdrowWap">
+                                                <ul class="ddetail">
+                                                    <li>
+                                                        <span class="lsec">Driver:</span>
+                                                         <span class="rsec"> Prashanth</span>
+                                                        <span class="rsec">+91.89115 84821</span>
+                                                         <span class="rsec">KA 02 MJ 6787</span>
+                                                    </li>     
+                                                </ul>
+                                             </div>
+
+                                             <div class="bdrowWapNo cf">
+                                                <div class="bdTime bdhalf bdCurrentI">
+                                                    <div class="bdCabModel">
+                                                        <ul class="bdCurrEvents">
+                                                            <li class="dbRepeat openPopup" data-popup="repeat"><span title="Repeat"><i></i></span></li>
+                                                            <li class="bdEdit"><span title="Edit"><i></i></span></li>
+                                                            <li class="bdDel"><span title="Delete"><i></i></span></li>
+                                                            <li class="dbPrint"><span title="Print"><i></i></span></li>
+                                                            <li class="dbMessage"><span title="Message"><i></i></span></li>
+                                                            <li class="dbComment"><span title="Comment"><i></i></span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                             </div> 
+                                           </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="currPastBooking pastTab">
+                            
+
+                            <div class="pastBookingRow">
+                                <div class="bookingDetailBox cf">
+                                    <div class="bookingPastHead cf">
+                                        <div class="bookingDetailHead">
+                                            <div class="bdFrom">Bangalore International Exhibition Centre, BIEC</div>
+                                            <div class="bdtoIcon">to</div>
+                                            <div class="bdTo">Bangalore International Exhibition Centre, BIEC</div>
+                                        </div>
+                                        
+                                    <div class="bookingDetailHead bDHRepeat">
+                                        <div class="bdrowWapNo cf">
+                                                <div class="bdTime bdIcons">
+                                                    <div class="bdCabModel">
+                                                        <ul class="bdEvents">
+                                                            <li class="dbRepeat openPopup" data-popup="repeat"><span title="Repeat"><i></i></span></li>
+
+
+                                                            <li class="bdEdit"><span title="Edit"><i></i></span></li>
+                                                            <li class="bdDel"><span title="Delete"><i></i></span></li>
+                                                            <li class="dbPrint"><span title="Print"><i></i></span></li>
+                                                            <li class="dbMessage"><span title="Message"><i></i></span></li>
+                                                            <li class="dbComment"><span title="Comment"><i></i></span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                             </div> 
+                                        </div>
+                                    </div>    
+
+                                     
+
+
+                                        <div class="bdExpand">
+                                            <div class="bdrowWap">
+                                                <div class="bdTime bdhalf bdlf">        
+                                                    <div class="bdCabModel">
+                                                            <span class="bdFontLarge">25</span>
+                                                            <span class="bdinBlock bdFontMid">Jul</span>
+                                                    </div>        
+                                                </div>
+
+                                                <div class="bdTime bdhalf">
+                                                    <div class="bdCabModel bdCabBox">
+                                                        <div class="bdNameText bdFontMid">Mahindra Logan (AC)</div>
+                                                        <div class="bdCateText bdFontSmall">Outstation</div>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="bdTime bdhalf bdlf">
+                                                    <div class="bdFontLarge">
+                                                        3:45 <span class="m">PM</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bdTime bdhalf">
+                                                    <div class="bdCabModel">
+                                                        <div class="bdNameText bdFontMid">TFS-AT-GMGV</div>
+                                                        <div class="bdCateText bdFontSmall">BOOKING ID</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bdTime bdhalf">
+                                                    <div class="bdCabModel">
+                                                        <div class="bdNameText bdFontRate">240</div>
+                                                        <div class="bdCateText bdFontSmall">Total Fare</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bdTime bdhalf">
+                                                    <div class="bdCabModel">
+                                                        <div class="bdBookedBy">Booked by Rajiv</div>
+                                                    </div>
+                                                </div>
+                                             </div>   
+                                        </div>  
+                                        </div>
+                            </div>
+
+
+
+
+
+                            <div class="pastBookingRow">
+                                <div class="bookingDetailBox cf">
+                                    <div class="bookingPastHead cf">
+                                        <div class="bookingDetailHead">
+                                            <div class="bdFrom">B Narayanapura</div>
+                                            <div class="bdtoIcon">to</div>
+                                            <div class="bdTo">Begur</div>
+                                        </div>
+                                        
+                                    <div class="bookingDetailHead bDHRepeat">
+                                        <div class="bdrowWapNo cf">
+                                                <div class="bdTime bdIcons">
+                                                    <div class="bdCabModel">
+                                                        <ul class="bdEvents">
+                                                            <li class="dbRepeat"><span><i></i></span></li>
+                                                            <li class="bdEdit"><span><i></i></span></li>
+                                                            <li class="bdDel"><span><i></i></span></li>
+                                                            <li class="dbPrint"><span><i></i></span></li>
+                                                            <li class="dbMessage"><span><i></i></span></li>
+                                                            <li class="dbComment"><span><i></i></span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                             </div> 
+                                        </div>
+                                    </div>    
+
+
+                                        <div class="bdExpand">
+                                            <div class="bdrowWap">
+                                                <div class="bdTime bdhalf bdlf">        
+                                                    <div class="bdCabModel">
+                                                            <span class="bdFontLarge">05</span>
+                                                            <span class="bdinBlock bdFontMid">Sep</span>
+                                                    </div>        
+                                                </div>
+
+                                                <div class="bdTime bdhalf">
+                                                    <div class="bdCabModel bdCabBox">
+                                                        <div class="bdNameText bdFontMid">Sedan (AC)</div>
+                                                        <div class="bdCateText bdFontSmall">Airport</div>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="bdTime bdhalf bdlf">
+                                                    <div class="bdFontLarge">
+                                                        1:00 <span class="m">PM</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bdTime bdhalf">
+                                                    <div class="bdCabModel">
+                                                        <div class="bdNameText bdFontMid">TFS-AT-GMGV</div>
+                                                        <div class="bdCateText bdFontSmall">BOOKING ID</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bdTime bdhalf">
+                                                    <div class="bdCabModel">
+                                                        <div class="bdNameText bdFontRate">240</div>
+                                                        <div class="bdCateText bdFontSmall">Total Fare</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bdTime bdhalf">
+                                                    <div class="bdCabModel">
+                                                        <div class="bdBookedBy">Booked by Me</div>
+                                                    </div>
+                                                </div>
+                                             </div>   
+                                        </div>  
+                                        </div>
+                            </div>
+
+
+
+                            <div class="pastBookingRow">
+                                <div class="bookingDetailBox cf">
+                                    <div class="bookingPastHead cf">
+                                        <div class="bookingDetailHead">
+                                            <div class="bdFrom">Jayanagar</div>
+                                            <div class="bdtoIcon">to</div>
+                                            <div class="bdTo">JP nagar</div>
+                                        </div>
+                                        
+                                    <div class="bookingDetailHead bDHRepeat">
+                                        <div class="bdrowWapNo cf">
+                                                <div class="bdTime bdIcons">
+                                                    <div class="bdCabModel">
+                                                        <ul class="bdEvents">
+                                                            <li class="dbRepeat"><span><i></i></span></li>
+                                                            <li class="bdEdit"><span><i></i></span></li>
+                                                            <li class="bdDel"><span><i></i></span></li>
+                                                            <li class="dbPrint"><span><i></i></span></li>
+                                                            <li class="dbMessage"><span><i></i></span></li>
+                                                            <li class="dbComment"><span><i></i></span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                             </div> 
+                                        </div>
+                                    </div>    
+
+
+                                        <div class="bdExpand">
+                                            <div class="bdrowWap">
+                                                <div class="bdTime bdhalf bdlf">        
+                                                    <div class="bdCabModel">
+                                                            <span class="bdFontLarge">12</span>
+                                                            <span class="bdinBlock bdFontMid">Jun</span>
+                                                    </div>        
+                                                </div>
+
+                                                <div class="bdTime bdhalf">
+                                                    <div class="bdCabModel bdCabBox">
+                                                        <div class="bdNameText bdFontMid">TATA Indica (AC)</div>
+                                                        <div class="bdCateText bdFontSmall">Point to Point</div>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="bdTime bdhalf bdlf">
+                                                    <div class="bdFontLarge">
+                                                        3:45 <span class="m">PM</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bdTime bdhalf">
+                                                    <div class="bdCabModel">
+                                                        <div class="bdNameText bdFontMid">TFS-AT-GMGV</div>
+                                                        <div class="bdCateText bdFontSmall">BOOKING ID</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bdTime bdhalf">
+                                                    <div class="bdCabModel">
+                                                        <div class="bdNameText bdFontRate">120</div>
+                                                        <div class="bdCateText bdFontSmall">Total Fare</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bdTime bdhalf">
+                                                    <div class="bdCabModel">
+                                                        <div class="bdBookedBy">Booked by Atul</div>
+                                                    </div>
+                                                </div>
+                                             </div>   
+                                        </div>  
+                                        </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>  <!-- Left content -->
+
+                
+            </div><!-- content -->
+
+            
+                <footer> <!-- Footer -->
+                    <div class="layer1">
+                        <div class="row">
+                            <h3>Read about us</h3>
+                           <div id="gallery-wrap">
+                                <div class="gg">
+                                    <ul id="gallery" class="cf">
+                                        <li><a href="#"><img src="img/bangalore-mirror.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/live-mint.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/the-economic-times.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/bangalore-mirror.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/the-economic-times.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/the-times-of-india.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/bangalore-mirror.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/live-mint.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/the-economic-times.png" alt="" /></a></li>
+                                    </ul>
+                                </div>    
+                                <div class="gc">
+                                    <div id="gallery-controls">
+                                        <a href="#" id="gallery-prev"><img src="img/prev.png" alt="" /></a><a href="#" id="gallery-next"><img src="img/next.png" alt="" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="layer2">
+                        <div class="row">
+                            <h3>TaxiForSure has enabled <b>4590</b> customers travel <b>2189400</b> kms </h3>
+
+                            
+                            <div class="footerMenu">
+                                <nav>
+                                    <a href="#">About Us</a>
+                                    <a href="#">Blog</a>
+                                    <a href="#">FAQ</a>
+                                    <a href="#">Press</a>
+                                    <a href="#">Careers</a>
+                                    <a href="#">Services</a>
+                                    <a href="#">Our Partners</a>
+                                    <a class="last" href="#">Contact Us</a>
+                                </nav>
+                            <span class="copyright">© 2011 Serendipity Infolabs Pvt. Ltd</span> 
+                            <a href="#">Privacy Policy</a> <a class="last" href="#">Terms of Use</a>
+
+                            <div class="otherSite">
+                                <div class="large-8 columns">
+                                    <nav class="footerCity">
+                                        <a href="#">bangalore</a><a class="last" href="">Delhi</a>
+                                    </nav>
+                                    <a  class="mobileSite last" href="">Goto to Mobile site</a>
+                                </div>
+                                <div class="large-8 columns">
+                                    <div class="netbramha">
+                                        <a  class="last" href="#">Designed by NetBramha Studios</a>
+                                    </div>    
+                                </div>
+                            </div>
+                           </div> 
+                        <div class="brand">
+                            <img src="img/taxi.png" alt="" />
+                        </div>
+                        </div>
+                    </div>
+                    <div class="layer3">
+                        <div class="row">
+                            <span>Popular Cars: Toyota Innova Taxi Cab, Tata Indica Taxi Cab, Tata Indigo Taxi Cab, Chevrolet Tavera Taxi Cab, Mercedes Benz Taxi Cab</span>
+                            
+                        </div>
+                        
+                    </div>
+                </footer><!-- Footer -->
+            
+        </div>  
+    </div>        
+
+<div class="popupWapper">
+    <div class="popup login">
+        <div class="popupHead cf">
+            <div class="popupRow">
+                <h4>Login</h4>
+                <div class="overClose"><span>Close</span></div>
+            </div>
+
+        </div>
+        <div class="popupContain">
+            <div class="popupRow">
+                <div class="popupLoginWap multiInput">
+                    <input type="text" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="popupRow">
+                <div class="popupButtonWap cf">
+                    <div class="popupBforgetPass">
+                        <a href="#" class="openPopup" data-popup="forgetPass">Forget your password ?</a>
+                    </div>
+                    <div class="popupBlogin">
+                        <div class="button">Login</div>
+                    </div>
+                </div>    
+            </div>
+            
+                <div class="popupOr">
+                    <span>or</span>
+                </div>
+
+                <div class="socialButton">
+                    <div class="popupRow">
+                        <a class="popFb" href="#">
+                            <img src="img/btn_fb.png" width="252" height="41" />
+                        </a>
+                    </div>
+                    <div class="popupRow">
+                        <a  class="popGl" href="#">
+                            <img src="img/btn_google.png" width="252" height="41" />
+                        </a>
+                    </div>
+                        
+                </div>
+            </div>
+            <div class="popupFooter">
+                <div class="popupRow">
+                    <a href="#">Nah... I want to register with my email id</a>
+                </div>    
+             </div>   
+    </div>
+
+
+<!-- Repeat booking popup -->
+    <div class="popup repeat">
+        <div class="popupHead cf">
+            <div class="popupRow">
+                <h4>Repeat Booking</h4>
+                <div class="overClose"><span>Close</span></div>
+            </div>
+
+        </div>
+        <div class="popupContain">
+            <div class="popupRow">
+                <div class="popupRowhalf">
+                    <div class="control-group">
+                        <label class="control-label" for="datepicker">From Date</label>
+                        <div class="controls date">
+                          <input type="text" id="datepicker" placeholder="Select">
+                          <i class="icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popupRowhalf">
+                    <div class="control-group">
+                        <label class="control-label" for="datepicker">To Date</label>
+                        <div class="controls date">
+                          <input type="text" id="datepicker" placeholder="Select">
+                          <i class="icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="popupRow">
+                <div class="control-group">
+                    <label class="control-label">Days</label>
+                    <div class="controls weekList">
+                        <ul>
+                            <li>Mon</li>
+                            <li>Tue</li>
+                            <li>Wed</li>
+                            <li class="active">Thu</li>
+                            <li>Fri</li>
+                            <li class="active">Sat</li>
+                            <li>Sun</li>
+                        </ul>
+                    </div>    
+
+                 </div>   
+
+            </div>
+        </div>
+        <div class="popupRow">
+            <div class="stepFooter">
+                
+                    <div class="stepNextButton">
+                        <button value="Confirm">Confirm</button>
+                        <!-- a href="#" data-step="step2" class="next">Find Taxi</a -->
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- Repeat booking popup -->
+</div>
+
+
+    
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+  <script src="javascripts/gmap.js"></script>
+<script src="javascripts/css3-mediaqueries.js"></script>
+
+
+<script src="javascripts/taxiforsure.js"></script>
+
+
+  <script src="javascripts/jquery-ui-timepicker-addon.js"></script>
+
+
+
+<script>
+
+
+ $(document).ready(function() {
+
+                taxiforsure.Init();
+
+            });
+</script>
+  
+  
+  <script>
+
+  </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

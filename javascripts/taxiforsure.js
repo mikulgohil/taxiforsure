@@ -21,7 +21,7 @@ window.taxiforsure = {
 		taxiforsure.CitySection();
 		
 		taxiforsure.TeamPage();
-		taxiforsure.DateTime();
+		//taxiforsure.DateTime();
 		taxiforsure.Gallery();
 		taxiforsure.tabClick();
 		taxiforsure.SubmitEnable();
@@ -333,7 +333,18 @@ window.taxiforsure = {
 			var getPopup = $(this).attr('data-popup');
 			$('.popupWapper').attr('class','popupWapper');
 			$('.popupWapper').addClass(getPopup+'Active');
+			console.log($('.'+getPopup).width());
 			event.preventDefault();
+			 
+
+			$.fn.center = function () {
+    this.css("position","absolute");
+    this.css("top", ( $(window).height() - this.height() ) / 2+$(window).scrollTop() + "px");
+    this.css("left", ( $(window).width() - this.width() ) / 2+$(window).scrollLeft() + "px");
+    return this;
+  }
+
+  //$('.'+getPopup).center();
 		});
 
 		$('.overClose,.popupWapper').bind('click', function(event) {
