@@ -1,0 +1,41 @@
+
+.pressRow{
+	overflow:hidden;
+	clear:both;
+	width:100%;
+	padding:10px 20px;
+}
+
+.pressLeft{
+	width:210px;
+	float:left;
+	min-height: 50px;
+vertical-align: middle;
+line-height: 50px;
+	
+}
+
+.pressRight{
+	width:590px;
+	float:left;
+	padding:10px 0;
+}
+
+.pressBlock{
+color:#5e5e57;
+	.pressDate{
+		@include bold;
+	}
+
+	a{
+		color:#003399;
+		text-decoration: underline;
+	}
+}
+
+.pBmulti{
+	margin-top:10px;
+	border-top:1px solid #999999;
+	padding-top:10px;
+}
+

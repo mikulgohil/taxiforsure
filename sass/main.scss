@@ -6,6 +6,8 @@
 //@import "_form.scss";
 @import "_base.scss";
 @import "_datatimepicker.scss";
+$path : "../img";
+
 
 
 @mixin cf(){
@@ -63,8 +65,9 @@
     width: 62.5%; }
   
 body{
-	background: url(../img/bg_image.png) fixed;
+	background: url(#{$path}/bg_image.png) fixed;
 	background-size:cover;
+
 }
 .fl{
 	float: left;
@@ -125,7 +128,7 @@ ul{
 }
 
 .icon{
-	background:url(../img/icons.png) no-repeat;
+	background:url(#{$path}/icons.png) no-repeat;
 	display:inline-block;
 
 }
@@ -379,22 +382,22 @@ margin-top:-40px;
 }
 .tab-menu{
 	.iptp{
-		background-position:-45px -135px;
-		width: 20px;
-		height: 20px;
+		background-position:-353px -446px;
+		width: 26px;
+		height: 26px;
 	}
 	.iat{
-		background-position:-91px -132px;
-		width: 23px;
-		height: 23px;
+		background-position:-389px -445px;
+		width: 26px;
+		height: 26px;
 	}
 	.ihd{
-		background-position:-141px -132px;
-		width: 27px;
-		height: 22px;	
+		background-position:-424px -446px;
+		width: 26px;
+		height: 26px;	
 	}
 	.iout{
-		background-position:-195px -127px;
+		background-position:-458px -446px;
 		width: 26px;
 		height: 26px;
 	}
@@ -618,7 +621,7 @@ input.error{
 .list{
 position: relative;
 	span.icon{
-		background:url(../img/formelements-select.png) no-repeat 2px center;
+		background:url(#{$path}/formelements-select.png) no-repeat 2px center;
 		width: 20px;
 		height: 32px;
 		position: absolute;
@@ -850,7 +853,7 @@ input[type="checkbox"]{
 }
 
 input[type="submit"].getTaxi{
-	background:url(../img/icons.png) no-repeat -22px -374px;
+	background:url(#{$path}/icons.png) no-repeat -22px -374px;
 	
 	width:166px;
 	height:48px;
@@ -859,15 +862,15 @@ input[type="submit"].getTaxi{
 	border:0;
 }
 input[type="submit"].getTaxi.getTaxi:hover{
-	background:url(../img/icons.png) no-repeat -215px -309px;
+	background:url(#{$path}/icons.png) no-repeat -215px -309px;
 	
 }
 input[type="submit"].getTaxi.disabled{
-	background:url(../img/icons.png) no-repeat -20px -308px;
+	background:url(#{$path}/icons.png) no-repeat -20px -308px;
 	
 }
 input[type="submit"].getTaxi.disabled:hover{
-	background:url(../img/icons.png) no-repeat -20px -308px;
+	background:url(#{$path}/icons.png) no-repeat -20px -308px;
 	
 }
 .pay{
@@ -1527,4 +1530,9 @@ margin-bottom: 9px;
 @import "_default.time.scss";
 @import "_static-contain.scss";
 @import "_our-story.scss";
+@import "_our-team.scss";
+@import "_about-us.scss";
+
+@import "_press.scss";
+@import "_our_partner.scss";
 

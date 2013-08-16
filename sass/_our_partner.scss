@@ -1,0 +1,53 @@
+
+
+.ourPartner{
+	
+}
+
+.partnerContain{
+	padding:0 20px;
+	margin:0 0 40px 0;
+
+	a{
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+
+.partnerShowCase{
+	padding:0 20px;
+	ul{
+		border-top:1px solid #999999;
+		margin:0;
+		padding:0 0 20px 0;
+		overflow: hidden;
+	}
+
+	li{
+		margin:0 10px;
+		float: left;
+		line-height: 110px;
+	}
+
+	a{
+		.def{
+
+		}
+
+		.hover{
+			display: none;
+		}
+
+		&:hover{
+			.def{
+					display: none;
+			}
+
+			.hover{
+				display: block;
+			}			
+		}
+	}
+}
+

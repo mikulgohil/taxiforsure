@@ -1,23 +1,79 @@
 .staticConWap{
+position: relative;
+	&:after{
+			position: absolute;
+			content: '';
+			top:50%;
+			left:127px;
+			width: 41px;
+			height:81px;
+			background:url("../img/car.gif") no-repeat;
+		}
 
 	ul{
 		padding:0;
+		overflow: hidden;
+		max-height: 400px;
+		overflow: scroll;
 	}
 
 	li{
-		
+			background:url("../img/road.gif") repeat-y 100px;
+			overflow: hidden;
+			padding:120px 0;
 	}
 
 	.dateWap{
 		@include border-radius(4px);
-		background-color: rgba(196,223,155,0);
+		
 		border: solid 1px #999;
+		display: inline-block;
+		vertical-align: middle;
+		top: 50%;
+		position: relative;
+		margin-top: -25px;
 	}
 	.dwMonth{
+		background: #999999;
+		padding:5px 10px;
+		color:#fff;
+		clear:both;
+		overflow: hidden;
+		float: left;
+
+	}
+	.dwYear{
+		color: #1e1e1e;
+		padding:5px 10px;	
+		clear: both;
+		overflow: hidden;
+		float: left;
+	}
+
+	.storyLine{
+		float: left;
+		width: 500px;
+		margin-left: 200px;
 		
+		h3{
+			margin:0;
+			font-size: 55px;
+
+		}
+		.storyLineDetail{
+			color:#666666;
+			font-size: 14px;
+		}
+	}
+
+	.dateBlock{
+		float: left;
+		height: 100px;
+
 	}
 
 	.our-story{
 		
 	}
 }
+

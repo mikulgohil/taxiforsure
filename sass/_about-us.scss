@@ -1,0 +1,56 @@
+//$path: ../img/;
+
+
+.about-us{
+
+}
+
+.aboutHead{
+	background:url(#{$path}/about-us.jpg);
+	min-height:131px;
+
+}
+
+.aboutText{
+	font-size:28px;
+	padding:37px 0;
+	text-align:center;
+	color:#fff;
+	border-bottom:2px solid #4e4e4e;
+
+	b{
+		@include bold;
+		color:#f8da15;
+	}
+}
+
+
+.aboutContain{
+	background:url(#{$path}/about-right.jpg) no-repeat right bottom;
+	min-height:318px;
+	padding:0 180px 0 40px;
+
+	p{
+		margin:0;
+		padding:0;
+		line-height: 22px;
+	}
+	
+}
+
+.aboutContainHead{
+	font-size:18px;
+	padding:20px 0;
+	border-bottom:1px solid #dcdcdc;
+}
+
+.aboutContainText{
+	padding:20px 0;
+
+	p{
+		padding-bottom:20px;
+		color:#5e5e57;
+		font-size: 13px;
+		line-height: 22px;
+	}
+}

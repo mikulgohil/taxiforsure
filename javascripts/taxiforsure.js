@@ -20,7 +20,7 @@ window.taxiforsure = {
 		//taxiforsure.form();
 		taxiforsure.CitySection();
 		
-		
+		taxiforsure.TeamPage();
 		taxiforsure.DateTime();
 		taxiforsure.Gallery();
 		taxiforsure.tabClick();
@@ -35,7 +35,9 @@ window.taxiforsure = {
 		taxiforsure.SaveAddress();
 
 		taxiforsure.currentBooking();
+		taxiforsure.ourStory();
 		//taxiforsure.dataSubmit();
+		
 		
 
 	},
@@ -590,5 +592,96 @@ window.taxiforsure = {
 
 	},
 
+	TeamPage:function(){
+		
+		$('.teamContain:first-child').addClass('active').addClass('current');
+		
+		$('.teamHeader li').on('click', function () {
+			var cl = $(this).attr('data-click');
+
+			$('.teamHeader li').removeClass('active');
+			$(this).addClass('active');
+
+			$('.teamContain').removeClass('active');
+			$('.'+cl).addClass('active');
+			//$(this).prev().siblings().addClass('prev');
+			console.log($('.current').index());
+			moveCar(cl);
+			$('.teamHeader li').removeClass('current');
+		});
+
+		function moveCar(cl){
+			
+			$('.teamHeader')
+			.animate({
+				    'background-position-x': "-=50",
+				  }, 1000, 'linear');
+
+
+			if(cl == "f2"){
+				$('.carWap').animate({
+				    left: "200",
+				  }, 1000);
+			}
+
+			if(cl == "f1"){
+				$('.carWap').animate({
+				    left: "0",
+				  }, 1000);
+			}
+
+			if(cl == "f3"){
+				$('.carWap').animate({
+				    left: "390",
+				  }, 1000);
+			}
+
+			if(cl == "f4"){
+				$('.carWap').animate({
+				    left: "580",
+				  }, 1000);
+			}
+		}
+	},
+
+	ourStory:function(){
+			//$('div.section').first();
+
+			$('.scrollIt').on('click', function(e) {
+			    e.preventDefault();
+
+			      var t = $(this).text(),
+			      that = $(this);
+
+
+			    if (t === 'next' && $('.current').next('li').length > 0) {
+			        var $next = $('.current').next('li');
+			        var top = $next.offset().top  - 120;
+			      
+
+			        $('.current').removeClass('current');
+			      
+			        $('.our-story ul').animate({
+			          scrollTop: top     
+			        }, function () {
+			               $next.addClass('current');
+			        });
+			  } else if (t === 'prev' && $('.current').prev('li').length > 0) {
+			        var $prev = $('.current').prev('li');
+			        var top = $prev.offset().top - 120;
+			        
+			        $('.current').removeClass('current');
+			      
+			        $('.our-story ul').animate({
+			          scrollTop: top     
+			        }, function () {
+			               $prev.addClass('current');
+			        });
+			  } 
+			});
+
+
+
+	}
 
 }
