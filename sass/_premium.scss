@@ -1,0 +1,260 @@
+.premiumCar{
+	float: right;
+	margin-top: -64px;
+}
+.tab-menu{
+	float: left;
+}
+
+
+.premiumWap{
+
+}
+.premiumHead{
+	padding:0 40px;
+
+	p{
+		text-align: center;
+
+		&.choose{
+			@include bold;
+			text-align: left;
+			padding:15px 0 0 0;
+		}
+	}
+}
+
+.premiumBlock{
+	width:100%;
+	clear:both;
+	overflow:hidden;
+	padding:0 40px;
+}
+
+.premiumB{
+	width: 207px;
+	height: 207px;
+	background-color: #f1f1f1;
+	@include box-shadow(0 2px 2px rgba(0,1,1,.1));
+	border: solid 1px #c2c2c2;
+	text-align:center;
+	padding:10px;
+	float: left;
+	margin:0 30px 40px 0;
+
+	&.last{
+		margin-right: 0;
+	}
+
+	h2{
+		margin:10px 0 10px 0;
+		padding:0;
+		font-size: 18px;
+		color: #1e1e1e; 
+	}
+
+	span{
+		font-size: 15px;
+	}
+}
+
+.premiumCarImg{
+
+}
+
+
+
+.premiumDetailWap{
+	padding:40px;
+}
+
+.premiumLPanal{
+	border:1px solid #c2c2c2;
+	background:#f1f1f1;
+	@include border-radius(2px);
+	width:235px;
+	overflow:hidden;
+}
+
+.ppHilight{
+	background:#5e5d58;
+	padding:10px 12px;
+
+
+
+	.ppText{
+		font-size: 18px;
+		color: #fff;
+	}
+}
+
+.ppDetail{
+	padding:10px 5px;
+
+	td{
+		
+		padding:0 0 5px 5px;
+		font-size: 15px;
+		color: #5e5d58;
+
+		&:first-child{
+			@include bold;
+
+		}
+
+		.starWap{
+			position: relative;
+			@include icon;
+			width:68px;
+			height:12px;
+			
+			&.star5{
+				background-position:-18px -489px;
+			}
+			&.star4{
+				background-position:-18px -504px;
+			}
+			&.star3{
+				background-position:-18px -518px;
+			}
+			&.star2{
+				background-position:-18px -532px;
+			}
+			&.star1{
+				background-position:-18px -546px;
+			}
+		}
+	}
+
+	ul{
+		margin:0;
+		padding:0;
+		padding-left:10px;
+
+		li{
+			font-size: 15px;
+			color: #5e5d58;
+			position: relative;
+			padding:0 0 5px 15px;
+
+
+			&:after{
+				position: absolute;
+				content: "";
+				top:4px;
+				left:0;
+				width:6px;
+				height:6px;
+				@include border-radius(3px);
+				background:#5e5d58;
+			}
+		}
+	}
+}
+
+.premiumDetailLeft{
+	float: left;
+}
+.premiumDetailRight{
+	float: left;
+	width: 685px;
+padding: 0 0 0 30px;
+
+h1{
+	margin:0;
+	font-size:18px;
+	color:#5e5d58;
+	@include bold;
+}
+.pdrContain{
+	padding:0 0 20px 0;
+	overflow:hidden;
+	color:#5e5d58;
+	font-size:14px;
+	line-height:14px;
+}
+
+.pdrCLeft{
+	width:50%;
+	float: left;
+	padding-right:20px;
+}
+
+.pdrCRight{
+	
+	width:305px;
+	float:right;
+}
+
+
+
+}
+
+.pdrCDetail{
+	width:100%;
+	clear:both;
+	overflow:hidden;
+ul{
+	margin:0;
+	padding:0;
+}
+	li{
+		float: left;
+		margin:0 30px 0 0;
+
+		span{
+			display: block;
+			font-size: 15px;
+			color: #5e5d58;
+			line-height: 15px;
+			padding:0 0 5px 0;
+
+			&.sepc{
+				@include bold;
+
+
+			}
+
+		}
+	}
+}
+
+
+.pdrSubmit{
+	overflow:hidden;
+	width:100%;
+	padding:0 0 20px 0;
+	margin: 20px 0 0 0;
+
+	.stepFooter .stepNextButton{
+		float: left;
+
+		button{
+			padding:15px 15px 12px 15px;
+			&:before{
+				display: none;
+			}
+		}
+	}
+}
+
+
+.premium{
+	&.active{
+		background:#fadc1a;
+		margin: 19px 0 10px 0;
+		padding: 15px 10px 8px 10px;
+		@include border-radius(3px 3px 0 0);
+		
+
+		a{
+			color: #1e1e1e;
+			@include bold;
+
+			.ipremium{
+				background-position:-420px -99px;
+			}	
+		}
+	}
+}
+
