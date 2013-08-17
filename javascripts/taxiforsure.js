@@ -21,7 +21,7 @@ window.taxiforsure = {
 		taxiforsure.CitySection();
 		
 		taxiforsure.TeamPage();
-		//taxiforsure.DateTime();
+		taxiforsure.DateTime();
 		taxiforsure.Gallery();
 		taxiforsure.tabClick();
 		taxiforsure.SubmitEnable();

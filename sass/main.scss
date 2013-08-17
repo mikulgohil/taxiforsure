@@ -561,7 +561,14 @@ input.error{
 				padding:16px 5px;
 
 				&.carCost{
+
 					text-align: center;
+
+					a{
+						font-size:13px;
+						text-decoration: underline;
+						display:block;
+					}
 				}
 			
 			&:first-child{
@@ -583,6 +590,17 @@ input.error{
 		}
 	}
 }
+
+.outstationTable{
+	td{
+		&.carCost{
+			width:18%;
+			vertical-align: top;
+		}
+	}
+}
+
+
 .loginRadio{
 	width:100%;
 }
