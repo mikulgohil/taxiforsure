@@ -279,7 +279,7 @@
                                                       </td>
                                                       <td class="carCost"><span class="WebRupee">Rs.</span> 200</td>
                                                       <td class="carCost"><span class="WebRupee">Rs.</span> 6322
-                                                        <a href="#">Fare Detail</a>
+                                                        <a href="#" class="openPopup" data-popup="fare">Fare Detail</a>
                                                       </td>
                                                       <td class="carCost"><span class="WebRupee">Rs.</span> 200</td>
                                                     </tr>
@@ -297,7 +297,7 @@
                                                       </td>
                                                       <td class="carCost"><span class="WebRupee">Rs.</span> 200</td>
                                                       <td class="carCost"><span class="WebRupee">Rs.</span> 4222
-                                                        <a href="#">Fare Detail</a>
+                                                        <a href="#" class="openPopup" data-popup="fare">Fare Detail</a>
                                                       </td>
                                                       <td class="carCost"><span class="WebRupee">Rs.</span> 200</td>
                                                     </tr>
@@ -315,7 +315,7 @@
                                                       </td>
                                                       <td class="carCost"><span class="WebRupee">Rs.</span> 200</td>
                                                       <td class="carCost"><span class="WebRupee">Rs.</span> 4444
-                                                        <a href="#">Fare Detail</a>
+                                                        <a href="#" class="openPopup" data-popup="fare">Fare Detail</a>
                                                       </td>
                                                       <td class="carCost"><span class="WebRupee">Rs.</span> 200</td>
                                                     </tr>
@@ -641,112 +641,65 @@
     </div>        
 
 <div class="popupWapper">
-    <div class="popup login">
-        <div class="popupHead cf">
-            <div class="popupRow">
-                <h4>Login</h4>
-                <div class="overClose"><span>Close</span></div>
-            </div>
+    <div class="popup fare">
+        <div class="fareDetailPopup">
+            <div class="overClose"><span>Close</span></div>
+            <div class="fareBreakCol">
+                <h3>Fare Break Up</h3>
+                <div class="fareBreakDetail">
+                    <table class="fareDetail" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td>Rate per Km</td>
+                            <td>7.00</td>
+                        </tr>
+                        <tr>
+                            <td>Driver Day BA/TA</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>Journey days</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Estimated<br />Distance covered</td>
+                            <td>7.00</td>
+                        </tr>
+                        <tr>
+                            <td>Fare Calculation</td>
+                            <td>(1124 x 7.00) + (200 x 3)</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="fareTotal">
+                    <table class="fareDetail" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td>Total Fare</td>
+                            <td>8,463</td>
+                        </tr>
+                        <tr>
+                            <td>Pay Now</td>
+                            <td>846</td>
+                        </tr>
+                    </table>
+                </div>
 
+                <div class="termsWap">
+                    <h4>Terms and conditaions:</h4>
+                    <ul>
+                        <li>The above estimated fare includes vehicle hiring cost, vehicle fuel expense, driver day BA/TA and driver food allowance.</li>
+                        <li>The above estimated fare includes vehicle hiring cost, vehicle fuel expense, driver day BA/TA and driver food allowance.</li>
+                        <li>The above estimated fare includes vehicle hiring cost, vehicle fuel expense, driver day BA/TA and driver food allowance.</li>
+                        <li>The above estimated fare includes vehicle hiring cost, vehicle fuel expense, driver day BA/TA and driver food allowance.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fareMap">
+                <img src="img/fareMap.jpg" alt="">
+            </div>
         </div>
-        <div class="popupContain">
-            <div class="popupRow">
-                <div class="popupLoginWap">
-                    <input type="text" value="EMAIL">
-                    <input type="password" value="PASSWORD">
-                </div>
-            </div>
-            <div class="popupRow">
-                <div class="popupButtonWap cf">
-                    <div class="popupBforgetPass">
-                        <a href="#">Forget your password ?</a>
-                    </div>
-                    <div class="popupBlogin">
-                        <div class="button">Login</div>
-                    </div>
-                </div>    
-            </div>
-            
-                <div class="popupOr">
-                    <span>or</span>
-                </div>
-
-                <div class="socialButton">
-                    <div class="popupRow">
-                        <a href="#">
-                            <img src="img/facebook-login.png" />
-                        </a>
-                    </div>
-                    <div class="popupRow">
-                        <a href="#">
-                            <img src="img/google-login.png" />
-                        </a>
-                    </div>
-                        
-                </div>
-            </div>
-            <div class="popupFooter">
-                <div class="popupRow">
-                    <a href="#">Nah... I want to register with my email id</a>
-                </div>    
-             </div>   
     </div>
 
-    <!-- Register -->
-
-    <div class="popup register">
-        <div class="popupHead">
-            <div class="popupRow cf">
-                <h4>Register</h4>
-                <div class="overClose"><span>Close</span></div>
-            </div>
-
-        </div>
-        <div class="popupContain">
-            <div class="popupRow">
-                <div class="popupLoginWap">
-                    <input type="text"  placeholder="Name">
-                    <input type="text"  placeholder="Email">
-                    <input type="text"  placeholder="Mobile">
-                    <input type="password" placeholder="Password">
-                    <input type="password" placeholder="Confirm Password">
-                </div>
-            </div>
-            <div class="popupRow">
-                <div class="popupButtonWap cf">
-                    
-                    <div class="popupBlogin">
-                        <div class="button">Register</div>
-                    </div>
-                </div>    
-            </div>
-            
-                <div class="popupOr">
-                    <span>or</span>
-                </div>
-
-                <div class="socialButton">
-                    <div class="popupRow">
-                        <a href="#">
-                            <img src="img/facebook-login.png" />
-                        </a>
-                    </div>
-                    <div class="popupRow">
-                        <a href="#">
-                            <img src="img/google-login.png" />
-                        </a>
-                    </div>
-                        
-                </div>
-            </div>
-            <div class="popupFooter">
-                <div class="popupRow">
-                    <a href="#">Nah... I want to register with my email id</a>
-                </div>    
-             </div>   
-    </div>
-
-    <!-- Register -->
+    
 </div>
 
     
