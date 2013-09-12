@@ -64,6 +64,21 @@
 }
 .location{
 	margin-top:10px;
+
+	.control-group{
+		width:120px;
+
+		.dropDown{
+			select{
+				border:0;
+				@include box-shadow(0 0 0);
+				outline: 0;
+			}
+			.icon{
+				right:20px;
+			}
+		}
+	}
 }
 .stepContentWap{
 	padding-top:35px;
@@ -319,6 +334,27 @@ ul{
 
 		}
 	}
+
+
+
+	.tfsDropdown{
+		-moz-appearance: none;
+	    -webkit-appearance: none;
+	    border:0;
+	    text-indent: 0.01px;
+	    text-overflow: '';
+	    
+	    width: 80%;
+		
+		@include border-radius(4px);
+		background-color: #fff;
+		@include box-shadow(0 1px 3px rgba(0,0,0,0.2));
+		border: solid 1px #c2c2c2;
+		padding: 5px 10px;
+		color: #5e5e57;
+		font-size: 14px;
+	    
+	}
 }
 
 .inputAdd{
@@ -543,7 +579,7 @@ ul{
 			
 			
 		}
-		button,a{
+		button,a,input{
 			font-size:18px;
 			color: #5e5e57;
 			padding:15px 15px 12px 30px;	
@@ -564,19 +600,33 @@ ul{
 				top: 17px;
 }
 		}
+
+		.inputIcon{
+
+				position: absolute;
+				@include icon;
+				background-position: -284px -227px;
+				width: 12px;
+				height: 10px;
+				content: "";
+				left: 12px;
+				top: 17px;
+		}
 		
 	}
 }
 
+
+
 .FirstStepContain{
-		
+	display:none;			
 }
 
 .SecondStepContain{
 	display:none;
 }
 .ThirdStepContain{
-display:none;	
+
 }
 
 .WaitingStepContain{
@@ -1278,3 +1328,74 @@ z-index:60;
 	float:right;
 }
 
+
+$alpha : #F8DA15;
+.loadingWap {
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	background:rgba(0, 0, 0, 0.4);
+	z-index:1000;
+	width:100%;
+	height:100%;
+
+	span{
+
+
+  line-height : 100px;
+  border-radius: 50%;
+  text-align: center;
+  background : #fff;
+  margin: 0;
+  color : #555;
+  width : 100px;
+  height:100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left:-50px;
+  margin-top:-50px;
+  box-shadow : 0px 0px 20px 0px lighten(#000, 50%);
+  -webkit-animation:loading 2s ease infinite;
+  
+ background:#fff url(#{$path}/cab.png) no-repeat;
+ background-size:50px;
+ background-position:24px 27px;
+
+
+  z-index:1001;
+  }
+
+}
+
+
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+@include keyframes(loading) {
+  50% {
+
+    box-shadow :  
+      0px 0px 20px 0px lighten(#000, 50%),
+      inset 0px 0px 0px 3px $alpha,
+      inset 0px 0px 0px 6px lighten($alpha, 10%),
+      inset 0px 0px 0px 9px lighten($alpha, 20%),
+      inset 0px 0px 0px 12px lighten($alpha, 30%),
+      inset 0px 0px 0px 15px lighten($alpha, 40%);    
+  }
+
+}

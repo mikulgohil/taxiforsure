@@ -47,9 +47,12 @@
                                 <div class="normal lineHeight-m">
                                     <div class="location">  <!-- Select City Drop down -->
                                         <div class="control-group"> 
-                                            <div class="controls arrow blank"> 
-                                                <input type="text" id="location" value="Bangalore">
-                                                <i class="icon"></i>
+                                            <div class="controls arrow dropDown">
+                                                <select class="tfsDropdown" name="" id="">
+                                                    <option value="Bangalore">Bangalore</option>
+                                                    <option value="Pune">Pune</option>
+                                                </select>
+                                              <i class="icon"></i>
                                             </div>
                                         </div>
                                     </div>   <!-- Select City Drop down -->
@@ -127,7 +130,7 @@
                                                 <div class="control-group defAdd">
                                                     <label class="control-label" for="pickArea">Pickup Area</label>
                                                     <div class="controls arrow">
-                                                      <input type="text" data-error="error message" id="pickArea" data-validate="step1"  placeholder="Select">
+                                                      <input type="text" data-error="error message" id="pickArea" data-validate="step1"  placeholder="Select" tabindex="1">
                                                       <i class="icon"></i>
                                                     </div>
                                                     <ul class="defAddUl">
@@ -141,7 +144,7 @@
                                                 <div class="control-group">
                                                     <label class="control-label" for="dropArea">Drop Area</label>
                                                     <div class="controls arrow">
-                                                      <input type="text" id="dropArea" data-validate="step1" placeholder="Select">
+                                                      <input type="text" id="dropArea" data-validate="step1" placeholder="Select"  tabindex="2">
                                                       <i class="icon"></i>
                                                     </div>
                                                 </div>
@@ -166,7 +169,7 @@
                                                     <div class="control-group">
                                                         <label class="control-label" for="datepicker">Pick up Date</label>
                                                         <div class="controls date">
-                                                          <input type="text" id="datepicker" placeholder="Select">
+                                                          <input type="text" id="datepicker" placeholder="Select" tabindex="3">
                                                           <i class="icon"></i>
                                                         </div>
                                                     </div>
@@ -176,7 +179,7 @@
                                                     <div class="control-group">
                                                         <label class="control-label" for="timepicker">Pick up Time</label>
                                                         <div class="controls time">
-                                                          <input type="text" id="timepicker" placeholder="Select">
+                                                          <input type="text" id="timepicker" placeholder="Select" tabindex="4">
                                                           <i class="icon"></i>
                                                         </div>
                                                     </div>
@@ -284,8 +287,12 @@
                                             <div class="stepContentColumn">
                                                 <div class="control-group">
                                                     <label class="control-label" for="dropArea">Address</label>
-                                                    <div class="controls arrow">
-                                                      <input type="text" id="savedAdd" placeholder="Select">
+                                                    <div class="controls arrow dropDown">
+                                                        <select class="tfsDropdown" name="" id="tfsDropdown">
+                                                            <option value="Home">Home</option>
+                                                            <option value="Office">Office</option>
+                                                        </select>
+                                                      <!-- input type="text" id="savedAdd" placeholder="Select" -->
                                                       <i class="icon"></i>
                                                     </div>
                                                 </div>
@@ -299,6 +306,7 @@
                                                 <div class="addSingleBlock areaWapper">
                                                     <span class="dfText">Area: </span>
                                                     <!-- span class="inText">Jayanagar</span -->
+
                                                     <input type="text" class="areaAddress" placeholder="Pickup Area">
                                                 </div>
                                                 <div class="addressWapper">
@@ -375,7 +383,9 @@
                                     <div class="stepFooter"> <!-- stepFooter  -->
                                         <div class="contentRow">
                                             <div class="stepNextButton">
-                                            <button class="next booked" data-form="step3" >Confirm &amp; Book Taxi</button>
+                                            <!-- button class="next booked" data-form="step3" >Confirm &amp; Book Taxi</button -->
+                                            <i class="inputIcon"></i>
+                                            <input name="Submit" type="submit" class="next booked" data-form="step3" value="Confirm Book Taxi">
                                                 <!-- a  href="#" class="next booked">Book Taxi</a -->
                                             </div>
                                         </div>
@@ -731,6 +741,9 @@
     <script  type="text/javascript" src="javascripts/picker.date.js"></script>
     <script  type="text/javascript" src="javascripts/picker.time.js"></script>
     <script  type="text/javascript" src="javascripts/legacy.js"></script>
+
+    
+
 
 <script src="javascripts/taxiforsure.js"></script>
 

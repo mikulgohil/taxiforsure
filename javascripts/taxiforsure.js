@@ -36,6 +36,9 @@ window.taxiforsure = {
 
 		taxiforsure.currentBooking();
 		taxiforsure.ourStory();
+		taxiforsure.dropDown();
+
+		taxiforsure.Loading();
 		//taxiforsure.dataSubmit();
 		
 		
@@ -693,6 +696,39 @@ window.taxiforsure = {
 
 
 
+	},
+
+	dropDown:function(){
+
+var doClick = function() {
+    'use strict';
+    var event = document.createEvent('MouseEvents');
+    event.initMouseEvent('mousedown', true, true, window);
+    return event;
+}
+
+
+
+    
+
+
+		$('.dropDown').each(function(index) {
+			var i = $(this).find('i');
+			var select = $(this).find('select');
+			i.click(function(event) {
+				console.log("activting");
+				select.focus().get(0).dispatchEvent(doClick());
+			});
+
+			
+		});
+	},
+
+	Loading:function(){
+		$('body').append('<div class="loadingWap"><span></span></div>');
+			$('.loading').bind('click', function(event) {
+			//	$('.loadingWap').show();
+			});	
 	}
 
 }
