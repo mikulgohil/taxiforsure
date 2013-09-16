@@ -48,11 +48,18 @@
                                     <div class="location">  <!-- Select City Drop down -->
                                         <div class="control-group"> 
                                             <div class="controls arrow dropDown">
-                                                <select class="tfsDropdown" name="" id="">
-                                                    <option value="Bangalore">Bangalore</option>
-                                                    <option value="Pune">Pune</option>
-                                                </select>
-                                              <i class="icon"></i>
+                                                    <dl class="cityDrop">
+                                                        <dt><a><span>Bangalore</span></a></dt>
+                                                            <dd>
+                                                                <ul>
+                                                                    <li><a>Delhi</a></li>
+                                                                    <li><a>Mumbai</a></li>
+                                                                    <li><a>Chennai</a></li>
+                                                                    <li><a>Pune</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                    </dl>
+                                              
                                             </div>
                                         </div>
                                     </div>   <!-- Select City Drop down -->
@@ -81,7 +88,7 @@
                     </div>
                     <div class="large-6-1 columns topIconBox last">
                         <ul>
-                            <li><a href="#"><span><i class="icon icall"></i></span><em>Call back</em></a></li>
+                            <li><a href="#" class="openPopup" data-popup="game"><span><i class="icon icall"></i></span><em>Call back</em></a></li>
                             <li><a href="#" class="openPopup" data-popup="login"><span><i class="icon ilogin"></i></span><em>Login</em></a></li>
                             <li><a href="#" class="openPopup"  data-popup="register"><span><i class="icon iregister"></i></span><em>Register</em></a></li>
                              <!-- <li><a href="#"><span><i class="icon ibooking"></i></span><em>Booking</em><q>3</q></a></li> -->
@@ -383,10 +390,8 @@
                                     <div class="stepFooter"> <!-- stepFooter  -->
                                         <div class="contentRow">
                                             <div class="stepNextButton">
-                                            <!-- button class="next booked" data-form="step3" >Confirm &amp; Book Taxi</button -->
-                                            <i class="inputIcon"></i>
-                                            <input name="Submit" type="submit" class="next booked" data-form="step3" value="Confirm Book Taxi">
-                                                <!-- a  href="#" class="next booked">Book Taxi</a -->
+                                                <i class="inputIcon"></i>
+                                                <input name="Submit" type="submit" class="next booked" data-form="step3" value="Confirm Book Taxi">
                                             </div>
                                         </div>
                                     </div>   <!--  stepFooter  -->
@@ -399,6 +404,9 @@
                 </div>  <!-- Left content -->
 
                 <div class="large-6-1 columns">  <!-- Right content -->
+                    <div class="backtoOld">
+                        <a href="#">Back to old site</a>
+                    </div>
                     <div class="premium">
                             <a href="#"><i class="icon ipremium"></i>Premium car</a>
                         </div>
@@ -725,6 +733,11 @@
 
 
     <!-- Forget password -->
+
+
+    <div class="popup game">
+        <canvas id="stage" height="400" width="520"></canvas>
+    </div>
 </div>
 
     
@@ -732,15 +745,17 @@
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
-      <!-- script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script -->
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <script src="javascripts/gmap.js"></script>
 
-  <!-- script src="javascripts/gmap.js"></script -->
 <script src="javascripts/css3-mediaqueries.js"></script>
 
 <script  type="text/javascript" src="javascripts/picker.js"></script>
     <script  type="text/javascript" src="javascripts/picker.date.js"></script>
     <script  type="text/javascript" src="javascripts/picker.time.js"></script>
     <script  type="text/javascript" src="javascripts/legacy.js"></script>
+
+<script  type="text/javascript" src="javascripts/game.js"></script>
 
     
 

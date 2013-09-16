@@ -69,6 +69,11 @@ body{
 	background-size:cover;
 
 }
+
+body.overflow{
+	overflow:hidden;
+}
+
 .fl{
 	float: left;
 }
@@ -212,10 +217,22 @@ ul{
 	}
 }
 
+@mixin cf(){
+	&:before,
+	&:after {
+	    content: " ";
+	    /* 1 */
+	    display: table;
+	    /* 2 */
+	}
+	&:after {
+	    clear: both;
+	}
+}
 
 
 .topBox{
-	@include clearfix;
+	@include cf;
 	background: #fff;
 	@include border-radius(0 0 3px 3px);
 }
@@ -812,7 +829,7 @@ input.error{
 }
 #map-canvas{
 	width:325px;
-	height:615px;
+	height: 528px;
 }
 
 input.areaAddress{

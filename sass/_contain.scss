@@ -26,10 +26,10 @@
 }
 
 @mixin animation ($name,$time) {
-    -webkit-animation: $name $time infinite; /* Safari 4+ */
-  -moz-animation:    $name $time infinite; /* Fx 5+ */
-  -o-animation:      $name $time infinite; /* Opera 12+ */
-  animation:         $name $time infinite; /* IE 10+ */
+    -webkit-animation: $name $time 1 ease-out; /* Safari 4+ */
+  -moz-animation:    $name $time 1 ease-out; /* Fx 5+ */
+  -o-animation:      $name $time 1 ease-out; /* Opera 12+ */
+  animation:         $name $time 1 ease-out; /* IE 10+ */
 }
 .content{
 	@include clearfix;
@@ -79,7 +79,67 @@
 			}
 		}
 	}
+
+	
 }
+
+.cityDrop {
+	margin:0;
+}
+.cityDrop dd, .cityDrop dt, .cityDrop ul {
+  margin: 0px;
+  padding: 0px;
+}
+.cityDrop dd {
+  position: relative;
+}
+.cityDrop dt a {
+  background: #FFFFFF url('#{$path}/arrow.png') no-repeat scroll right center;
+  display: block;
+  padding: 0;
+  border: 1px solid #B8BFC5;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #424649;
+}
+.cityDrop dt a span {
+  cursor: pointer;
+  display: block;
+  padding: 7px 7px;
+  font-size: 14px;
+}
+.cityDrop dd ul {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #B8BFC5;
+  border-radius: 0 0 3px 3px;
+  display: none;
+  list-style: none;
+  padding: 5px 0px;
+  position: absolute;
+  left: 0px;
+  top: -2px;
+  min-width: 120px;
+  z-index: 100;
+}
+.cityDrop span.value {
+  display: none;
+}
+.cityDrop dd ul li a {
+  padding: 7px 7px;
+  display: block;
+  text-decoration: none;
+  color: #424649;
+}
+.cityDrop dd ul li a:hover {
+  background-color: #F8DA15;
+  color: #000;
+}
+.cityDrop dt a:hover, .cityDrop dt a:active {
+  border-color: #858C92;
+}
+
+
+
 .stepContentWap{
 	padding-top:35px;
 
@@ -433,6 +493,16 @@ ul{
 	}
 }
 
+.backtoOld{
+	float: left;
+	padding:35px 0 10px 0;
+
+	a{
+		font-size: 14px;
+		color: #FFF;
+		opacity: .7;
+	}
+}
 
 .stepWap{
 
@@ -619,14 +689,14 @@ ul{
 
 
 .FirstStepContain{
-	display:none;			
+				
 }
 
 .SecondStepContain{
 	display:none;
 }
 .ThirdStepContain{
-
+display:none;
 }
 
 .WaitingStepContain{
@@ -860,6 +930,15 @@ display:none;
 			display: block;
 			width:700px;
 			left: 40%;
+		}
+	}
+
+	&.gameActive{
+		display: block;
+		.popup.game{
+			display: block;
+			left: 42%;
+			width:560px;
 		}
 	}
 
@@ -1398,4 +1477,12 @@ $alpha : #F8DA15;
       inset 0px 0px 0px 15px lighten($alpha, 40%);    
   }
 
+}
+
+
+//  Popup 
+
+canvas {
+  border: 2px solid rgb(151, 149, 149);
+  margin:20px;
 }

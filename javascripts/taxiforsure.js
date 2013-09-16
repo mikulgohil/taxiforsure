@@ -39,6 +39,9 @@ window.taxiforsure = {
 		taxiforsure.dropDown();
 
 		taxiforsure.Loading();
+		taxiforsure.cityDrop();
+
+		taxiforsure.waiting();
 		//taxiforsure.dataSubmit();
 		
 		
@@ -310,7 +313,7 @@ window.taxiforsure = {
 
 		$('.showMap').click(function(event) {
 		    $('.googleMap').toggleClass('active');
-		    //calcRoute("jayanagar, bangalore","jp nagar, bangalore");
+		    calcRoute("jayanagar, bangalore","jp nagar, bangalore");
 		    $('.showMap').toggleClass('active');
 		            //calcRoute();
 		      //      return false;
@@ -336,6 +339,7 @@ window.taxiforsure = {
 			var getPopup = $(this).attr('data-popup');
 			$('.popupWapper').attr('class','popupWapper');
 			$('.popupWapper').addClass(getPopup+'Active');
+			$('body').addClass('overflow');
 			console.log($('.'+getPopup).width());
 			event.preventDefault();
 			 
@@ -352,6 +356,8 @@ window.taxiforsure = {
 
 		$('.overClose,.popupWapper').bind('click', function(event) {
 			$('.popupWapper').attr('class','popupWapper');
+
+			$('body').removeClass('overflow');
 			event.preventDefault();
 		});
 
@@ -700,17 +706,12 @@ window.taxiforsure = {
 
 	dropDown:function(){
 
-var doClick = function() {
-    'use strict';
-    var event = document.createEvent('MouseEvents');
-    event.initMouseEvent('mousedown', true, true, window);
-    return event;
-}
-
-
-
-    
-
+		var doClick = function() {
+		    'use strict';
+		    var event = document.createEvent('MouseEvents');
+		    event.initMouseEvent('mousedown', true, true, window);
+		    return event;
+		}
 
 		$('.dropDown').each(function(index) {
 			var i = $(this).find('i');
@@ -724,11 +725,48 @@ var doClick = function() {
 		});
 	},
 
+	cityDrop:function(){
+			$(".cityDrop dt a").click(function() {
+			    $(".cityDrop dd ul").toggle();
+			});
+			$(".cityDrop dd ul li a").click(function() {
+			    var text = $(this).html();
+			    $(".cityDrop dt a span").html(text);
+			    $(".cityDrop dd ul").hide();
+			});
+			$(document).bind('click', function(e) {
+			    var $clicked = $(e.target);
+			    if (! $clicked.parents().hasClass("cityDrop"))
+			        $(".cityDrop dd ul").hide();
+			});
+	},
+
 	Loading:function(){
 		$('body').append('<div class="loadingWap"><span></span></div>');
 			$('.loading').bind('click', function(event) {
 			//	$('.loadingWap').show();
 			});	
+	},
+
+	waiting:function(){
+		$(function() {
+
+		  var $target = $(".waitingWapHead");
+		  var classes = ['first', 'second', 'third', 'forth'];
+		  var current = 0;
+		  var timer = null;
+		  $(".waitingWapHead").addClass('active');	
+		  timer = setInterval(function() {
+		    $target.removeClass(classes[current]);
+		    current = (current+1)%classes.length;
+		    check = current+1;
+		    if(check == classes.length){
+		    	clearInterval(timer);
+		    }
+		    $target.addClass(classes[current]);
+		  }, 5000); // 1500 ms loop
+		});
+
 	}
 
 }
