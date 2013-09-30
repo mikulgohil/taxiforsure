@@ -44,36 +44,31 @@
                                 <a href="#"><img src="img/logo.png" alt="" /></a>
                             </div>
                             <div class="large-6 columns paddZero">
-                                <div class="normal lineHeight-m">
-                                    <div class="location">  <!-- Select City Drop down -->
-                                        <div class="control-group"> 
-                                            <div class="controls arrow dropDown">
-                                                    <dl class="cityDrop">
-                                                        <dt><a><span>Bangalore</span></a></dt>
-                                                            <dd>
-                                                                <ul>
-                                                                    <li><a>Delhi</a></li>
-                                                                    <li><a>Mumbai</a></li>
-                                                                    <li><a>Chennai</a></li>
-                                                                    <li><a>Pune</a></li>
-                                                                </ul>
-                                                            </dd>
-                                                    </dl>
-                                              
-                                            </div>
+                                <div class="row">
+                                    <div class="large-8 columns">
+                                        <div class="normal lineHeight-m">
+                                            <div class="location">  <!-- Select City Drop down -->
+                                                <div class="control-group"> 
+                                                    <div class="controls arrow dropDown">
+                                                            <dl class="cityDrop">
+                                                                <dt><a><span>Bangalore</span></a></dt>
+                                                            </dl>
+                                                    </div>
+                                                </div>
+                                            </div>   <!-- Select City Drop down -->
                                         </div>
-                                    </div>   <!-- Select City Drop down -->
+                                    </div> 
+                                    <div class="large-6 columns">
+                                        <div class="welcomeMsg">
+                                            <p>Hi <b>Mikul</b></p>
+                                        </div>
+                                    </div>    
                                 </div>
                             </div>
                             <div class="large-6 columns TellNumberWapper">
                                 <div class="row">
                                     <div class="large-6 columns textR tellNumber">
-                                        <span class="small-m">
-                                            BLR <b>080</b>
-                                        </span>
-                                        <span class="small-m">
-                                            DEL <b>011</b>
-                                        </span>
+                                        <span class="nub">080</span>
                                     </div>
                                     <div class="large-10 columns paddingL-none">
                                         <div class="dialBox">
@@ -88,7 +83,7 @@
                     </div>
                     <div class="large-6-1 columns topIconBox last">
                         <ul>
-                            <li><a href="#" class="openPopup" data-popup="game"><span><i class="icon icall"></i></span><em>Call back</em></a></li>
+                            <li><a href="#" class="openPopup" data-popup="verification"><span><i class="icon icall"></i></span><em>Call back</em></a></li>
                             <li><a href="#" class="openPopup" data-popup="login"><span><i class="icon ilogin"></i></span><em>Login</em></a></li>
                             <li><a href="#" class="openPopup"  data-popup="register"><span><i class="icon iregister"></i></span><em>Register</em></a></li>
                              <!-- <li><a href="#"><span><i class="icon ibooking"></i></span><em>Booking</em><q>3</q></a></li> -->
@@ -123,15 +118,19 @@
 
                                 <div class="stepWap">
                                    <ul >
-                                       <li class="stepFirst active"><span class="count">01</span> Location</li>
-                                       <li class="stepSecond"><span class="count">02</span> Taxi</li>
+                                       <li class="stepFirst active" data-step="step1"><span class="count">01</span> Location</li>
+                                       <li class="stepSecond" data-step="step2"><span class="count">02</span> Taxi</li>
                                        <li class="stepThird"><span class="count">03</span> Pickup Detail</li>
                                    </ul>
                                 </div>
 
                                    <div class="stepContentWap FirstStepContain" data-modal="step1">  <!-- Step 1 -->
             
-                                    <div class="stepContent">
+                                    <div class="stepContent errorWap">
+                                        <div class="contentRow">
+                                            <div class="errorTxt">Error some thing have gone wrong</div>
+                                        </div>    
+
                                         <div class="contentRow">
                                             <div class="stepContentColumn">
                                                 <div class="control-group defAdd">
@@ -175,7 +174,7 @@
                                                 <div class="stepContentColumn">
                                                     <div class="control-group">
                                                         <label class="control-label" for="datepicker">Pick up Date</label>
-                                                        <div class="controls date">
+                                                        <div class="controls datePick">
                                                           <input type="text" id="datepicker" placeholder="Select" tabindex="3">
                                                           <i class="icon"></i>
                                                         </div>
@@ -185,7 +184,7 @@
                                                 <div class="stepContentColumn">
                                                     <div class="control-group">
                                                         <label class="control-label" for="timepicker">Pick up Time</label>
-                                                        <div class="controls time">
+                                                        <div class="controls timePicker">
                                                           <input type="text" id="timepicker" placeholder="Select" tabindex="4">
                                                           <i class="icon"></i>
                                                         </div>
@@ -416,19 +415,8 @@
                         </div>
 
                         <div class="rightSlider">
-                             <div class="highlight">
-                            <ul class="highlightAds cf">
-                                <li>
-                                    <img src="img/block.jpg" alt="" />
-                                </li>
-                                <li class="last">
-                                    <img src="img/block1.jpg" alt="" />
-                                </li>
-                            </ul>
-                        </div>
                                                     
-
-                        <div class="sumDetail cf">
+                        <div class="sumDetail sumDetailAni cf sticky">
                             <div class="bdetail">
                                 <div class="bdetailRow">
                                     <h3>Booking Summary</h3>
@@ -467,10 +455,16 @@
                            </div>
                         </div> 
 
+                <ul class="bxslider">
+                    
+                      <li>
+                            <img src="img/330-x-380.jpg" alt="">
+                        </li>
+
+                         <li>
                         <div class="commentWapper">
                             <div class="commentBox">
                                 <div class="icon iconBox imedia">
-                                    
                                 </div>
                                 <div class="quoteWapper ">
                                     <div class="quote">
@@ -479,9 +473,8 @@
                                     </div>
                                 </div>  
                             </div>
-                            <div class="commentBox last">
+                            <div class="commentBox">
                                 <div class="icon iconBox  ifb">
-                                    
                                 </div>
                                 <div class="quoteWapper">
                                     <div class="quote">
@@ -492,7 +485,7 @@
                                     </div>
                                 </div>  
                             </div>
-                            <!-- div class="commentBox ">
+                            <div class="commentBox last">
                                 <div class="icon iconBox  imail">
                                     
                                 </div>
@@ -504,15 +497,11 @@
                                         - Pankaj on mail
                                     </div>
                                 </div>  
-                            </div -->
+                            </div>
                         </div>    
-                        
+                        </li>
                        
-                        <div class="highlight">
-                            <span class="mobileText">Download on mobile for free.</span>
-                            <a href="#"><img src="img/apps.jpg" alt="" /></a>
-                            <a href="#"><img src="img/play.jpg" alt="" /></a>
-                        </div>
+                    </ul>
                      </div>   
                     </div>
                 </div>  <!-- Right content -->
@@ -596,6 +585,30 @@
             
         </div>  
     </div>        
+
+<div class="alertPopup" style="display:none">
+    <div class="popup forgetPass">
+        
+        <div class="popupContain">
+            <div class="popupRow">
+                <div class="popupAlertMsg">
+                    Alert text goes here
+                </div>
+            </div>
+            <div class="popupRow divLine cf">
+                <div class="popupButtonWap cf">
+                    <div class="popupBlogin option">
+                        <div class="button">Cancel</div>
+                    </div>
+                    <div class="popupBlogin">
+                        <div class="button">Send</div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div class="popupWapper">
     <div class="popup login">
@@ -732,20 +745,56 @@
     </div>
 
 
-    <!-- Forget password -->
 
+    <div class="popup verification">
+        <div class="popupHead cf">
+            <div class="popupRow">
+                <h4>Verification code</h4>
+                <div class="overClose"><span>Close</span></div>
+            </div>
 
-    <div class="popup game">
-        <canvas id="stage" height="400" width="520"></canvas>
+        </div>
+        <div class="popupContain">
+            <div class="popupRow">
+                <div class="popupLoginWap">
+                    <input type="text" placeholder="Code">
+                </div>
+            </div>
+
+            <div class="popupRow divLine cf">
+                <div class="popupButtonWap cf">
+                    <div class="popupBlogin option">
+                        <div class="button">Verify</div>
+                    </div>
+                    <div class="popupBlogin">
+                        <div class="button">Resend</div>
+                    </div>
+                </div>    
+            </div>
+        </div>
     </div>
+
+
+
 </div>
 
+<div class="CityModalWap"></div>
+<div class="CityModal">
+    <h2>Select Your city</h2>
+    <ul class="cityUL">
+        <li> <a href="#" data-city="Delhi"><i class="icon"></i> Delhi</a> </li>
+        <li> <a href="#" data-city="Banglore"><i class="icon"></i> Bangalore</a></li>
+        <li> <a href="#" data-city="Pune"><i class="icon"></i> Pune</a></li>
+    </ul>
+</div>
     
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    
+  <script src="javascripts/jquery-1.9.1.js"></script>
+  <script src="javascripts/jquery-ui.js"></script>
 
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  
+
   <script src="javascripts/gmap.js"></script>
 
 <script src="javascripts/css3-mediaqueries.js"></script>
@@ -753,9 +802,11 @@
 <script  type="text/javascript" src="javascripts/picker.js"></script>
     <script  type="text/javascript" src="javascripts/picker.date.js"></script>
     <script  type="text/javascript" src="javascripts/picker.time.js"></script>
+
+<script  type="text/javascript" src="javascripts/jquery.bxslider.min.js"></script>
+
     <script  type="text/javascript" src="javascripts/legacy.js"></script>
 
-<script  type="text/javascript" src="javascripts/game.js"></script>
 
     
 
@@ -765,6 +816,15 @@
 
 <script>
  $(document).ready(function() {
+
+
+    $(document).ready(function(){
+  $('.bxslider').bxSlider({
+    auto: true,
+  });
+});
+
+
     //  $("html").niceScroll({
     //     cursorcolor:"#fff000",
     //     cursorwidth:'10px'

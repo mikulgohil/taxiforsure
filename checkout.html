@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html ng-app class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Taxi for sure</title>  
+    
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+
+        <meta name="viewport" content="width=1024">
+
+
+<script  type="text/javascript" src="javascripts/html5.js"></script>
+
+<link rel="shortcut icon" type="image/ico" href="http://www.taxiforsure.com/static/favicon.ico"/>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        
+        <!--script src="js/vendor/modernizr-2.6.2.min.js"></script -->
+    </head>
+    <style>
+    body {
+background: url(img/bg_image.png) fixed;
+background-size: cover;
+color: #222;
+padding: 0;
+margin: 0;
+font-family: 'TaxiForSure-Normal',sans-serif;
+font-weight: normal;
+font-style: normal;
+}
+        .checkout{
+            width:100%;
+            min-height: 100%;
+        }
+        .checkoutCenterWap{
+            width:300px;
+            height:260px;
+            background: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            top:100px;
+            left:50%;
+            padding:10px 0;
+            margin-left:-150px;
+            text-align: center;
+            border-radius: 4px;
+
+
+
+        }
+        .loadingWapC {
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+background: none;
+z-index: 1000;
+width: 100%;
+height: 100%;
+}
+
+        .loadingWapC span {
+line-height: 100px;
+border-radius: 50%;
+text-align: center;
+background: #FFF;
+margin: 0;
+color: #555;
+width: 100px;
+height: 100px;
+position: absolute;
+left: 50%;
+top: 150px;
+margin-left: -50px;
+margin-top: -50px;
+box-shadow: 0px 0px 20px 0px #808080;
+-webkit-animation: loading 2s ease infinite;
+background: #FFF url(img/cab.png) no-repeat;
+background-size: 50px;
+background-position: 24px 27px;
+z-index: 1001;
+}
+
+@-webkit-keyframes loading {
+  50% {
+    box-shadow: 0px 0px 20px 0px gray, inset 0px 0px 0px 3px #f8da15, inset 0px 0px 0px 6px #f9e247, inset 0px 0px 0px 9px #fbea78, inset 0px 0px 0px 12px #fcf1aa, inset 0px 0px 0px 15px #fef9db;
+  }
+}
+
+@-moz-keyframes loading {
+  50% {
+    box-shadow: 0px 0px 20px 0px gray, inset 0px 0px 0px 3px #f8da15, inset 0px 0px 0px 6px #f9e247, inset 0px 0px 0px 9px #fbea78, inset 0px 0px 0px 12px #fcf1aa, inset 0px 0px 0px 15px #fef9db;
+  }
+}
+
+@-ms-keyframes loading {
+  50% {
+    box-shadow: 0px 0px 20px 0px gray, inset 0px 0px 0px 3px #f8da15, inset 0px 0px 0px 6px #f9e247, inset 0px 0px 0px 9px #fbea78, inset 0px 0px 0px 12px #fcf1aa, inset 0px 0px 0px 15px #fef9db;
+  }
+}
+
+@keyframes loading {
+  50% {
+    box-shadow: 0px 0px 20px 0px gray, inset 0px 0px 0px 3px #f8da15, inset 0px 0px 0px 6px #f9e247, inset 0px 0px 0px 9px #fbea78, inset 0px 0px 0px 12px #fcf1aa, inset 0px 0px 0px 15px #fef9db;
+  }
+}
+.loadingWapC span:after{
+
+            content:attr(data-text);
+            top: 120px;
+            left: -90px;
+            font-size: 18px;
+            color: #1e1e1e;
+            position: absolute;
+            width: 280px;
+            line-height: 24px;
+            text-align: center;
+        
+}
+    </style>
+    <body class="checkout">
+
+        <!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script -->
+        <!-- script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script -->
+    
+    <div class="checkoutCenterWap">
+        <img src="img/logo.png" alt="" />
+
+        <div class="loadingWapC paymentLoading"><span data-text="Redirecting to payment gateway. Please wait..."></span></div>
+    </div>
+   
+    
+    
+  <script src="javascripts/jquery-1.9.1.js"></script>
+
+<script src="javascripts/css3-mediaqueries.js"></script>
+
+
+
+
+<script>
+ $(document).ready(function() {
+
+    $('body').height($(window).height());
+
+    function checkOut(){
+        $('body').append('<div class="loadingWap"><span></span></div>');
+    }
+
+               
+            });
+</script>
+  
+  
+  <script>
+
+  </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

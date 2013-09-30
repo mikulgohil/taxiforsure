@@ -135,10 +135,44 @@
   color: #000;
 }
 .cityDrop dt a:hover, .cityDrop dt a:active {
-  border-color: #858C92;
+  //border-color: #858C92;
 }
 
+.dropdown .cityDrop{
+	width: 80%;
+		
+		@include border-radius(4px);
+		background-color: #fff;
+		@include box-shadow(0 1px 3px rgba(0,0,0,0.2));
+		color: #5e5e57;
+		font-size: 14px;
+}
 
+.dropdown .cityDrop dt a{
+	background:none;
+	position: relative;
+	&:after{
+		
+		width: 18px;
+		height: 18px;
+		@include icon;
+		position: absolute;
+		cursor: pointer;
+			background-position:-259px -181px;
+			right: 10px;
+			top: 5px;
+			content: "";
+
+	}
+
+	span{
+		color: #5E5E57;
+	}
+}
+
+.dropdown .cityDrop dd ul{
+	width:100%;
+}
 
 .stepContentWap{
 	padding-top:35px;
@@ -153,8 +187,27 @@
 	}
 }
 
+.errorTxt{
+	display:none;
+}
 .stepContent{
 	padding:25px 0;
+
+	&.errorWap{
+		padding-top: 10px;
+
+		.errorTxt{
+			  background: rgba(204, 51, 51, 0.15);
+			  border: 1px solid #C33;
+			  padding:7px 10px;
+			  margin-bottom: 5px;
+			  font-size: 14px;
+			  display: block;
+			  @include border-radius(3px);
+
+		}
+
+	}
 }
 
 .control-group{
@@ -254,6 +307,8 @@
 	color:#fff;
 	@include SansationRegular;
 	margin-bottom: 10px;
+	display:block;
+	clear:both;
 }
 .fontNL{
 	font-size:16px;
@@ -307,6 +362,27 @@
 		font-size: 14px;
 
 	}
+&.datePick{
+	input{
+		background: url(#{$path}/dateIcon.png) no-repeat 95%;
+		cursor: pointer;
+
+	}
+	.icon{
+		display: none;
+	}
+}
+
+&.timePicker{
+	input{
+		background: url(#{$path}/timeIcon.png) no-repeat 95%;
+		cursor: pointer;
+
+	}
+	.icon{
+		display: none;
+	}
+}
 
 	.icon{
 		width: 18px;
@@ -425,10 +501,10 @@ ul{
 	cursor: pointer;
 	@include border-radius(3px);
 	margin-left: 5px;
-	display:none;
+	display:inline-block;	
 
 	&.show{
-		display:inline-block;	
+		
 	}
 
 	span{
@@ -603,6 +679,7 @@ ul{
 			&.done{
 				background: #f1f1f1;
 				color: #353533;
+				cursor: pointer;
 				&:after{
 					border-left: 15px solid #f1f1f1;
 				}
@@ -712,13 +789,13 @@ display:none;
 .carTr{
 	 &.active{
 		.taxiIcon{
-			opacity: 1;
-			left: 140px;
+			// opacity: 1;
+			// left: 140px;
 		}
 
 		.taxiData{
-			left: -50px;
-			background:#fdf9dd;
+			// left: -50px;
+			// background:#fdf9dd;
 		}
 	}
 }
@@ -737,7 +814,7 @@ display:none;
 		position: relative;
 		left: 0;
 		opacity: 0.3;
-	@include animate(.4s);
+	
 
 		&.hasBack{
 			background-position:-320px -221px;	
@@ -760,15 +837,6 @@ display:none;
 		float: left;
 		position: relative;
 		left: 15px;
-
-		
-
-  -o-transition: left .4s ease-out;
-    -ms-transition: left .4s ease-out;
-    -moz-transition: left .4s ease-out;
-    -webkit-transition: left .4s ease-out;
-    transition: left .4s ease-out;
-
 
 		.taxiName{
 			font-size: 20px;
@@ -859,12 +927,109 @@ display:none;
 }
 
 
-.ui-menu .ui-menu-item a.ui-state-focus,.ui-menu .ui-menu-item a.ui-state-active{background:#ccc;margin:0;}.ui-menu .ui-menu-item a{font-size:12px;-webkit-border-radius:0;-moz-border-radius:0;-ms-border-radius:0;-o-border-radius:0;border-radius:0;border:0;}.ui-autocomplete{max-height:200px;overflow-y:scroll;overflow-x:hidden;font-size:12px;}.cf{*zoom:1;}select{color:#5e5e57;}#ui-datepicker-div{font-size:14px;}.ui-timepicker-wrapper{overflow-y:auto;height:150px;width:140px;background:#fff;border:1px solid #ddd;-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.2);-moz-box-shadow:0 1px 3px rgba(0,0,0,0.2);box-shadow:0 1px 3px rgba(0,0,0,0.2);outline:none;z-index:10001;}.ui-timepicker-wrapper.ui-timepicker-with-duration{width:11em;}.ui-timepicker-list{margin:0;padding:0;list-style:none;}.ui-timepicker-duration{margin-left:5px;color:#888;}.ui-timepicker-list:hover .ui-timepicker-duration{color:#888;}.ui-timepicker-list li{padding:3px 0 3px 5px;cursor:pointer;white-space:nowrap;color:#000;list-style:none;margin:0;}.ui-timepicker-list:hover .ui-timepicker-selected{background:#fff;color:#000;}li.ui-timepicker-selected,.ui-timepicker-list li:hover,.ui-timepicker-list .ui-timepicker-selected:hover{background:#1980EC;color:#fff;}li.ui-timepicker-selected .ui-timepicker-duration,.ui-timepicker-list li:hover .ui-timepicker-duration{color:#ccc;}.ui-timepicker-list li.ui-timepicker-disabled,.ui-timepicker-list li.ui-timepicker-disabled:hover,.ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled{color:#888;cursor:default;}.ui-timepicker-list li.ui-timepicker-disabled:hover,.ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled{background:#f2f2f2;}.ui-datepicker-current{display:none;}.ui-timepicker-div .ui-widget-header{margin-bottom:8px;}.ui-timepicker-div dl{text-align:left;}.ui-timepicker-div dl dt{height:25px;margin-bottom:-25px;}.ui-timepicker-div dl dd{margin:0 10px 10px 65px;}.ui-timepicker-div td{font-size:90%;}.ui-tpicker-grid-label{background:none;border:none;margin:0;padding:0;}.ui-timepicker-rtl{direction:rtl;}.ui-timepicker-rtl dl{text-align:right;}.ui-timepicker-rtl dl dd{margin:0 65px 10px 10px;}body{background:url(#{$path}/bg_image.png) fixed;background-size:cover;}.fl{float:left;}.fr{float:right;}a{color:#5e5e57;text-decoration:none;}em{font-style:normal;}
+.ui-menu .ui-menu-item a.ui-state-focus,.ui-menu .ui-menu-item a.ui-state-active{background:#ccc;margin:0;}.ui-menu .ui-menu-item a{font-size:12px;-webkit-border-radius:0;-moz-border-radius:0;-ms-border-radius:0;-o-border-radius:0;border-radius:0;border:0;}.ui-autocomplete{max-height:200px;overflow-y:scroll;overflow-x:hidden;font-size:12px;}.cf{*zoom:1;}select{color:#5e5e57;}#ui-datepicker-div{font-size:14px;}.ui-timepicker-wrapper{overflow-y:auto;height:150px;width:140px;background:#fff;border:1px solid #ddd;-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.2);-moz-box-shadow:0 1px 3px rgba(0,0,0,0.2);box-shadow:0 1px 3px rgba(0,0,0,0.2);outline:none;z-index:10001;}.ui-timepicker-wrapper.ui-timepicker-with-duration{width:11em;}.ui-timepicker-list{margin:0;padding:0;list-style:none;}.ui-timepicker-duration{margin-left:5px;color:#888;}.ui-timepicker-list:hover .ui-timepicker-duration{color:#888;}.ui-timepicker-list li{padding:3px 0 3px 5px;cursor:pointer;white-space:nowrap;color:#000;list-style:none;margin:0;}.ui-timepicker-list:hover .ui-timepicker-selected{background:#fff;color:#000;}li.ui-timepicker-selected,.ui-timepicker-list li:hover,.ui-timepicker-list .ui-timepicker-selected:hover{background:#1980EC;color:#fff;}li.ui-timepicker-selected .ui-timepicker-duration,.ui-timepicker-list li:hover .ui-timepicker-duration{color:#ccc;}.ui-timepicker-list li.ui-timepicker-disabled,.ui-timepicker-list li.ui-timepicker-disabled:hover,.ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled{color:#888;cursor:default;}.ui-timepicker-list li.ui-timepicker-disabled:hover,.ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled{background:#f2f2f2;}.ui-datepicker-current{display:none;}.ui-timepicker-div .ui-widget-header{margin-bottom:8px;}.ui-timepicker-div dl{text-align:left;}.ui-timepicker-div dl dt{height:25px;margin-bottom:-25px;}.ui-timepicker-div dl dd{margin:0 10px 10px 65px;}.ui-timepicker-div td{font-size:90%;}.ui-tpicker-grid-label{background:none;border:none;margin:0;padding:0;}.ui-timepicker-rtl{direction:rtl;}.ui-timepicker-rtl dl{text-align:right;}.ui-timepicker-rtl dl dd{margin:0 65px 10px 10px;}
+
+.fl{float:left;}.fr{float:right;}a{color:#5e5e57;text-decoration:none;}em{font-style:normal;}
 
 .ui-menu .ui-menu-item a.ui-state-focus, .ui-menu .ui-menu-item a.ui-state-active{
 	background: #5E5E57;
 	color:#fff;
 	cursor: pointer;
+}
+
+
+.alertPopup,.verification{
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.27);
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+
+	.popupAlertMsg{
+		font-size: 20px;
+		padding:10px 0;
+		@include normal;
+
+	}
+
+
+
+	.popup{
+		position: relative;
+		z-index: 55;
+		width: 300px;
+		margin:0 auto;
+		background:#fff;
+		@include border-radius(4px);
+		left: 50%;
+		margin-left: -150px;
+		top: 145px;
+		z-index: 60;
+		
+	}
+
+
+	
+	.popupRow{
+		width: 100%;
+		clear: both;
+		padding:0 15px;
+
+	}
+
+		.divLine{
+		border-top:#ECECEC 1px solid;
+		padding: 10px 15px 10px 25px;
+	}
+
+
+	.popupContain{
+		padding:10px 0;
+	}	
+
+	.popupRow{
+		
+		.popupBlogin{
+		background:#f8da15;
+		padding:6px 14px;
+		color: #5e5e57;
+		font-size: 14px;
+		cursor: pointer;
+		display: inline-block;
+		@include border-radius(3px);
+		float:right;
+		margin:0 0 0 15px;
+		@include animate(.2s);
+		@include translateY(3px);
+
+		&.option{
+			background:#ccc;
+
+			&:hover{
+				@include box-shadow(0 3px 0 #A9A9A9);
+				
+			}
+		}
+
+		&:hover{
+			
+		@include box-shadow(0 3px 0 #bda61a);
+			  @include translateY(0px);
+
+			
+			
+		}
+	}
+
+		.button,a{
+			&:before{
+				display: none;
+			}
+		}
+	}
 }
 
 
@@ -930,15 +1095,14 @@ display:none;
 			display: block;
 			width:700px;
 			left: 40%;
+			margin-left: -200px;
 		}
 	}
 
-	&.gameActive{
+	&.verificationActive{
 		display: block;
-		.popup.game{
+		.popup.verification{
 			display: block;
-			left: 42%;
-			width:560px;
 		}
 	}
 
@@ -1064,12 +1228,13 @@ display:none;
 .fareActive{
 	.popup.fare{
 		width:700px!important;
+		
 	}
 }
 
 .fareDetailPopup{
 	width:100%;
-	height:380px;
+	height:415px;
 	@include border-radius(3px);
 	background:#fff;
 }
@@ -1090,6 +1255,18 @@ display:none;
 
 .fareMap{
 	float: left;
+	margin: 0;
+width: 453px;
+border: 0;
+
+
+}
+
+#os-map{
+	width: 453px;
+	height:415px;
+	float: left;
+	position: relative;
 }
 
 .fareBreakCol{
@@ -1411,7 +1588,7 @@ z-index:60;
 $alpha : #F8DA15;
 .loadingWap {
 	display:none;
-	position:fixed;
+	position:absolute;
 	top:0;
 	left:0;
 	background:rgba(0, 0, 0, 0.4);
@@ -1486,3 +1663,77 @@ canvas {
   border: 2px solid rgb(151, 149, 149);
   margin:20px;
 }
+
+.CityModalWap{
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background:rgba(0, 0, 0, 0.6);
+	z-index:9998;
+	display:none;
+}
+.CityModal{
+	position: fixed;
+	top:20%;
+	left:50%;
+	margin-left:-200px;
+	min-height:100px;
+	background:#fff;
+	padding:15px 15px;
+	z-index:9999;
+	display:none;
+	min-width:400px;
+
+
+	h2{
+		margin: 0 0 15px 0;
+		padding:0 0 10px 0;
+		border-bottom:1px solid #ccc;
+		font-size: 14px;
+	}
+}
+
+.cityUL{
+	margin:0;
+	padding:0;
+	list-style:none;
+
+	li{
+		@include cf;
+		margin-right: 15px;
+		padding:10px 0;
+
+		a{
+			font-size: 30px;
+			color: #333;
+
+			.icon{
+				background:url(#{$path}/icons.png) no-repeat -212px -491px;
+				width:14px;
+				height: 20px;
+				opacity: 0;
+				margin-left: 5px;
+			}
+
+			&:hover,&.active{
+				color: #999;
+
+				.icon{
+					opacity: 1;
+
+				}
+			}	
+		}
+		
+	}
+}
+
+
+
+
+
+
+
+
