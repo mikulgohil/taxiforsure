@@ -30,14 +30,6 @@ if(st){
     var start = document.getElementById('pick').value + ", bangalore";
     var end = document.getElementById('drop').value + ", bangalore";
 }
-
-
-  
-
-
-
-  // var start = document.getElementById('pick').value + ", bangalore";
-  // var end = document.getElementById('drop').value + ", bangalore";
   
   var request = {
       origin:start,

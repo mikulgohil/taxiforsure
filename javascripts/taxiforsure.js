@@ -169,7 +169,7 @@ window.taxiforsure = {
 		        }).focus(function(){            
 		                $(this).autocomplete("search");
 		        });
-		    $('#pickArea,#dropArea,#location').next('.icon').click(function() {
+		    $('#pickArea,#dropArea,#location,#g_airport').next('.icon').click(function() {
 			    $(this).prev('input').trigger("focus");
 			});
 		    $( "#dropArea" ).autocomplete({

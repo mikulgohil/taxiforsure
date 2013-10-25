@@ -15,7 +15,7 @@
 
 <link rel="shortcut icon" type="image/ico" href="http://www.taxiforsure.com/static/favicon.ico"/>
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+                <link rel="stylesheet" href="stylesheets/jquery-ui.css" />
         <link rel="stylesheet" href="stylesheets/main.css">
         <!--script src="js/vendor/modernizr-2.6.2.min.js"></script -->
     </head>
@@ -147,7 +147,7 @@
                                    <div class="stepContentWap FirstStepContain" data-modal="step1">  <!-- Step 1 -->
             
                                     <div class="stepContent">
-                                        <div class="contentRow">
+                                        <div class="contentRow"> <!-- Updated Code -->
 
                                             <nav class="toggleAirPort" data-tab="true">
                                                 <a href="#" class="goA active" data-target="goingAirSelect"><i class="icon igAir"></i>Going to Airport</a>
@@ -158,26 +158,42 @@
                                             <div class="trow">
                                                 <div class="inputWapper airWap goingAirSelect">
                                                     <div class="pre styled styledairport">
-                                                        <div class="control-group">
-                                                            <div class="controls arrow">
-                                                              <input type="text" id="g_airport" class="airportGoing" data-validate="step1" placeholder="Select">
-                                                              <i class="icon"></i>
+                                                        <div class="control-group defAdd">
+                                                            <div class="controls arrow dropdown">
+                                                                <dl class="cityDrop cDlarge">
+                                                        <dt><a><span>Airport</span></a></dt>
+                                                            <dd>
+                                                                <ul>
+                                                                    <li><a>Airport 1</a></li>
+                                                                    <li><a>Airport 2</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                    </dl>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+ 
+
                                                 <div class="inputWapper airWap comingAirSelect">
                                                     <div class="pre styled styledairport">
-                                                        <div class="control-group">
-                                                            <div class="controls arrow">
-                                                              <input type="text" id="c_airport" class="airportComing"  placeholder="Select">
-                                                              <i class="icon"></i>
+                                                        <div class="control-group defAdd">
+                                                            <div class="controls arrow dropdown">
+                                                                <dl class="cityDrop cDlarge">
+                                                        <dt><a><span>Airport</span></a></dt>
+                                                            <dd>
+                                                                <ul>
+                                                                    <li><a>Airport 1</a></li>
+                                                                    <li><a>Airport 2</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                    </dl>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                              </div><!--tabs end-->
-                                        </div>    
+                                        </div>    <!-- Updated Code -->
                                         
                                          <div class="contentRow">
                                             
@@ -206,8 +222,8 @@
                                                 </div>
                                             </div>
                                             
-                                            <div class="stepContentColumn">
-                                                <div class="control-group defAdd airportPick ">
+                                            <div class="stepContentColumn">    <!-- Updated Code -->
+                                                <div class="control-group defAdd airportPick zindexDown">
                                                     <label class="control-label" for="pickArea">Pickup Area</label>
                                                     <div class="controls arrow">
                                                       <input type="text" data-error="error message" id="pickArea" data-validate="step1"  placeholder="Select">
@@ -221,7 +237,7 @@
                                                 </div>
 
 
-                                                <div class="control-group airportDrop defAdd hide">
+                                                <div class="control-group airportDrop defAdd hide zindexDown">
                                                     <label class="control-label" for="dropArea">Drop Area</label>
                                                     <div class="controls arrow">
                                                       <input type="text" id="dropArea"  placeholder="Select">
@@ -233,7 +249,7 @@
                                                         <li><a href="#">Client Place</a></li>
                                                     </ul>
                                                 </div>
-                                            </div>    
+                                            </div>      <!-- Updated Code -->
                                          </div>  
                                     </div>
 
@@ -691,11 +707,11 @@
 </div>
 
     
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <!-- script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script -->
+  <script src="javascripts/jquery-1.9.1.js"></script>
+  <script src="javascripts/jquery-ui.js"></script>
 
-      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+      <!-- script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script -->
 
   <script src="javascripts/gmap.js"></script>
 <script src="javascripts/css3-mediaqueries.js"></script>
@@ -707,7 +723,7 @@
 
 <script src="javascripts/taxiforsure.js"></script>
 
-<script src="http://cdn.webrupee.com/js" type="text/javascript"></script>
+
 
 <script>
  $(document).ready(function() {
@@ -723,11 +739,11 @@
   </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
+        <!-- script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src='//www.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
+        </script -->
     </body>
 </html>

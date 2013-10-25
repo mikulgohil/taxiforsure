@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html ng-app class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Taxi for sure</title>  
+    
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+
+        <meta name="viewport" content="width=device-width">
+
+<link rel="shortcut icon" type="image/ico" href="http://www.taxiforsure.com/static/favicon.ico"/>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <link rel="stylesheet" href="stylesheets/main.css">
+        <!--script src="js/vendor/modernizr-2.6.2.min.js"></script -->
+    </head>
+    <style>
+    .trow{
+
+    }
+    </style>
+    <body>
+
+        <!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script -->
+        <!-- script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script -->
+
+    <div class="main">
+        <div class="bgimg">
+            <div class="row">
+                <div class="topBox">  <!-- Header box -->
+                    <div class="large-10-1 columns paddingTop-s">
+                        <div class="row">
+                            <div class="large-4 columns">
+                                <a href="#"><img src="img/logo.png" alt="" /></a>
+                            </div>
+                            <div class="large-6 columns paddZero">
+                                <div class="normal lineHeight-m">
+                                    <div class="location">  <!-- Select City Drop down -->
+                                        <div class="control-group"> 
+                                            <div class="controls arrow blank"> 
+                                                <input type="text" id="location" value="Bangalore">
+                                                <i class="icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>   <!-- Select City Drop down -->
+                                </div>
+                            </div>
+                            <div class="large-6 columns TellNumberWapper">
+                                <div class="row">
+                                    <div class="large-6 columns textR tellNumber">
+                                        <span class="small-m">
+                                            BLR <b>080</b>
+                                        </span>
+                                        <span class="small-m">
+                                            DEL <b>011</b>
+                                        </span>
+                                    </div>
+                                    <div class="large-10 columns paddingL-none">
+                                        <div class="dialBox">
+                                            <img src="img/tell.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>      
+                    </div>
+                    <div class="large-6-1 columns topIconBox last">
+                        <ul>
+                            <li><a href="#"><span><i class="icon icall"></i></span><em>Call back</em></a></li>
+                            <li><a href="#"><span><i class="icon ilogin"></i></span><em>Login</em></a></li>
+                            <li><a href="#"><span><i class="icon iregister"></i></span><em>Register</em></a></li>
+                             <!-- <li><a href="#"><span><i class="icon ibooking"></i></span><em>Booking</em><q>3</q></a></li> -->
+                             <!-- <li><a href="#"><span><i class="icon isetting"></i></span><em>Setting</em></a></li>
+                             <li><a href="#"><span><i class="icon ilogout"></i></span><em>Logout</em></a></li> -->
+                        </ul>
+                    </div>
+                </div>    <!-- .Header box --> 
+            </div>
+            <div class="row"><!-- content -->
+                <div class="large-16 columns padding-none">  <!-- Left content -->
+
+                    <div class="settingSlideWapper">
+                            <nav class="tab-menu">  
+                                <a href="index.html"><i class="icon iptp"></i>Point to Point</a>
+                                <a href="airport-transfer.html"><i class="icon iat"></i>Airport Transfer</a>
+                                <a href="half-full-day.html"><i class="icon ihd"></i>Half/full Day</a>
+                                <a href="outstation.html"><i class="icon iout"></i>Outstation</a>
+                            </nav>
+
+                            <div class="premiumCar">
+                                <div class="premium">
+                                    <a href="#"><i class="icon ipremium"></i>Premium car</a>
+                                </div>
+                            </div>
+                            <div class="contentcf cf">
+                                <div class="SettingWap seo">
+                                    <div class="seoContainer">
+                                        <div class="seoContainerLeft">
+                                            <h2 class="seoContainerHeading">Point-To-Point Travel</h2>
+
+                                            <div class="seoContainerForm">
+                                                <div class="control-group defAdd">
+                                                    <div class="controls arrow">
+                                                      <input type="text" data-error="error message" id="pickArea" data-validate="step1"  placeholder="Pickup Area" tabindex="1">
+                                                      <i class="icon"></i>
+                                                    </div>
+                                                </div>    
+
+                                                <div class="control-group defAdd">
+                                                    <div class="controls arrow">
+                                                      <input type="text" data-error="error message" id="pickArea" data-validate="step1"  placeholder="Drop Area" tabindex="1">
+                                                      <i class="icon"></i>
+                                                    </div>
+                                                </div>    
+
+                                                <div class="control-group defAdd">
+                                                     <div class="controls datePick">
+                                                          <input type="text" id="datepicker" placeholder="Date" tabindex="3">
+                                                          <i class="icon"></i>
+                                                     </div>
+                                                </div>  
+
+                                                 <div class="control-group defAdd">
+                                                     <div class="controls timePicker">
+                                                          <input type="text" id="timepicker" placeholder="Time" tabindex="4">
+                                                          <i class="icon"></i>
+                                                    </div>
+                                                </div>    
+                                            </div>
+
+                                            <div class="stepFooter">
+                                            <div class="stepNextButton">
+                                                <button data-step="step2" class="next book" data-section="ptp" data-form="step1" value="Find Taxi">Book</button>
+                                                <!-- a href="#" data-step="step2" class="next">Find Taxi</a -->
+                                        </div>
+                                    </div>
+                                        </div>
+
+                                        <div class="seoContainerRight">
+                                            <h1 class="seoContainerHeading">Gurgaon DlF Phase 3 to New Delhi Railway Station Cab Hire</h1>
+
+                                            <p>Bangalore to Pune route is spread over at a distance of 889Kms. With a total of 67, redBus offers options to choose from 12 operators for Bangalore to Pune route. SRS Travels Bangalore, National Travels, Sharma Transports Bangalore are the major operators of Bangalore to Pune route. On Average, Bangalore to Pune travel time is 11hrs 30min and can go up to 21hrs depending on the type of bus and the operator operating. Buses from Bangalore to Pune are available from 06:30 AM to 10:55 PM. Minimum Bangalore to Punebus fare is Rs.650 and maximum being Rs.2500, lowest fares provided by redBus depending on the operator you choose.</p>
+
+                                            <p>Bangalore to Pune route is spread over at a distance of 889Kms. With a total of 67, redBus offers options to choose from 12 operators for Bangalore to Pune route. SRS Travels Bangalore, National Travels, Sharma Transports Bangalore are the major operators of Bangalore to Pune route. On Average, Bangalore to Pune travel time is 11hrs 30min and can go up to 21hrs depending on the type of bus and the operator operating. Buses from Bangalore to Pune are available from 06:30 AM to 10:55 PM. Minimum Bangalore to Punebus fare is Rs.650 and maximum being Rs.2500, lowest fares provided by redBus depending on the operator you choose.</p>
+
+                                            <ul class="seoList">
+                                                <li>Lorem ipsum Eiusmod sed sint Excepteur labore anim esse ad eiusmod aliqua.</li>
+                                                <li>Lorem ipsum Eiusmod sed sint Excepteur labore anim esse ad eiusmod aliqua.</li>
+                                                <li>Lorem ipsum Eiusmod sed sint Excepteur labore anim esse ad eiusmod aliqua.</li>
+                                                <li>Lorem ipsum Eiusmod sed sint Excepteur labore anim esse ad eiusmod aliqua.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="reviewSection">
+                                        <h2 class="reviewHeading">
+                                            User Reviews
+                                        </h2>
+
+                                        <div class="reviewContain">
+                                            <ul class="reviewList">
+                                                <li>Lorem ipsum Dolore adipisicing id incididunt consectetur laborum Excepteur culpa in incididunt pariatur occaecat laborum dolore est incididunt consequat fugiat est amet Duis est esse Duis veniam dolore est pariatur aute aliqua occaecat reprehenderit nostrud sint sunt pariatur amet veniam ex consectetur pariatur cupidatat sit ut consectetur proident eiusmod cupidatat ullamco est ea id irure nisi ad deserunt sit sed cillum ut ullamco pariatur pariatur culpa exercitation elit veniam ad veniam ut dolor elit in sed aute dolore consectetur sit cupidatat non non minim id ut <b>laborum tempor exercitation et Ut exercitation ea sit irure enim irure.</b></li>
+                                                <li>Lorem ipsum Dolore adipisicing id incididunt consectetur laborum Excepteur culpa in incididunt pariatur occaecat laborum dolore est incididunt consequat fugiat est amet Duis est esse Duis veniam dolore est pariatur aute aliqua occaecat reprehenderit nostrud sint sunt pariatur amet veniam ex consectetur pariatur cupidatat sit ut consectetur proident eiusmod cupidatat ullamco est ea id irure nisi ad deserunt sit sed <b>cillum ut ullamco</b> pariatur pariatur culpa exercitation elit veniam ad veniam ut dolor elit in sed aute dolore consectetur sit cupidatat non non minim id ut laborum tempor exercitation et Ut exercitation ea sit irure enim irure.</li>
+                                                <li>Lorem ipsum Dolore adipisicing id incididunt consectetur laborum Excepteur culpa in incididunt pariatur occaecat laborum dolore est incididunt consequat fugiat est amet Duis est esse Duis veniam dolore est pariatur aute aliqua occaecat reprehenderit nostrud sint sunt pariatur amet veniam ex consectetur pariatur cupidatat sit ut consectetur proident eiusmod cupidatat ullamco est ea id irure nisi ad deserunt sit sed cillum ut ullamco pariatur pariatur culpa exercitation elit veniam ad veniam ut dolor elit in sed aute dolore consectetur sit cupidatat non non minim id ut laborum tempor exercitation et Ut exercitation ea sit irure enim irure.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>  <!-- Left content -->
+
+                
+            </div><!-- content -->
+
+            
+                <footer> <!-- Footer -->
+                    <div class="layer1">
+                        <div class="row">
+                            <h3>Read about us</h3>
+                           <div id="gallery-wrap">
+                                <div class="gg">
+                                    <ul id="gallery" class="cf">
+                                        <li><a href="#"><img src="img/bangalore-mirror.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/live-mint.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/the-economic-times.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/bangalore-mirror.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/the-economic-times.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/the-times-of-india.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/bangalore-mirror.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/live-mint.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="img/the-economic-times.png" alt="" /></a></li>
+                                    </ul>
+                                </div>    
+                                <div class="gc">
+                                    <div id="gallery-controls">
+                                        <a href="#" id="gallery-prev"><img src="img/prev.png" alt="" /></a><a href="#" id="gallery-next"><img src="img/next.png" alt="" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="layer2">
+                        <div class="row">
+                            <h3>TaxiForSure has enabled <b>4590</b> customers travel <b>2189400</b> kms </h3>
+
+                            
+                            <div class="footerMenu">
+                                <nav>
+                                    <a href="#">About Us</a>
+                                    <a href="#">Blog</a>
+                                    <a href="#">FAQ</a>
+                                    <a href="#">Press</a>
+                                    <a href="#">Careers</a>
+                                    <a href="#">Services</a>
+                                    <a href="#">Our Partners</a>
+                                    <a class="last" href="#">Contact Us</a>
+                                </nav>
+                            <span class="copyright">© 2011 Serendipity Infolabs Pvt. Ltd</span> 
+                            <a href="#">Privacy Policy</a> <a class="last" href="#">Terms of Use</a>
+
+                            <div class="otherSite">
+                                <div class="large-8 columns">
+                                    <nav class="footerCity">
+                                        <a href="#">bangalore</a><a class="last" href="">Delhi</a>
+                                    </nav>
+                                    <a  class="mobileSite last" href="">Goto to Mobile site</a>
+                                </div>
+                                <div class="large-8 columns">
+                                    <div class="netbramha">
+                                        <a  class="last" href="#">Designed by NetBramha Studios</a>
+                                    </div>    
+                                </div>
+                            </div>
+                           </div> 
+                        <div class="brand">
+                            <img src="img/taxi.png" alt="" />
+                        </div>
+                        </div>
+                    </div>
+                    <div class="layer3">
+                        <div class="row">
+                            <span>Popular Cars: Toyota Innova Taxi Cab, Tata Indica Taxi Cab, Tata Indigo Taxi Cab, Chevrolet Tavera Taxi Cab, Mercedes Benz Taxi Cab</span>
+                            
+                        </div>
+                        
+                    </div>
+                </footer><!-- Footer -->
+            
+        </div>  
+    </div>        
+
+
+
+    
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+  <script src="javascripts/gmap.js"></script>
+<script src="javascripts/css3-mediaqueries.js"></script>
+<script src="javascripts/taxiforsure.js"></script>
+
+  <script src="javascripts/jquery-ui-timepicker-addon.js"></script>
+
+<script>
+ $(document).ready(function() {
+                taxiforsure.Init();
+            });
+</script>
+  
+  
+  <script>
+
+  </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
